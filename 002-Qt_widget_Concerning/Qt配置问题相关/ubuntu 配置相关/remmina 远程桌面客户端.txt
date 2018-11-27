@@ -1,0 +1,229 @@
+libo@libo-OptiPlex-990:~$ ls /usr/share/re
+readline/      recovery-mode/ reportbug/     
+libo@libo-OptiPlex-990:~$ ls /usr/share/re
+readline/      recovery-mode/ reportbug/     
+libo@libo-OptiPlex-990:~$ ls /usr/lib
+lib/     lib32/   libexec/ libx32/  
+libo@libo-OptiPlex-990:~$ ls /usr/lib/remmina/plugins/remmina-plugin-
+remmina-plugin-rdp.so  remmina-plugin-vnc.so  
+libo@libo-OptiPlex-990:~$ ls /usr/lib/remmina/plugins/remmina-plugin-
+ls: 无法访问/usr/lib/remmina/plugins/remmina-plugin-: 没有那个文件或目录
+libo@libo-OptiPlex-990:~$ ls /usr/lib/remmina/plugins/remmina-plugin-* -l
+-rw-r--r-- 1 root root 70136  7月 15  2013 /usr/lib/remmina/plugins/remmina-plugin-rdp.so
+-rw-r--r-- 1 root root 40408  7月 15  2013 /usr/lib/remmina/plugins/remmina-plugin-vnc.so
+libo@libo-OptiPlex-990:~$ sudo apt-get purge remmina
+remmina             remmina-plugin-rdp  
+remmina-common      remmina-plugin-vnc  
+libo@libo-OptiPlex-990:~$ sudo apt-get purge remmina-plugin-vnc 
+[sudo] password for libo: 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包将被【卸载】：
+  remmina-plugin-vnc*
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 284 个软件包未被升级。
+解压缩后将会空出 88.1 kB 的空间。
+您希望继续执行吗？ [Y/n] 
+(正在读取数据库 ... 系统当前共安装有 256390 个文件和目录。)
+正在卸载 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+libo@libo-OptiPlex-990:~$ sudo apt-get install remmina-plugin-vnc
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列【新】软件包将被安装：
+  remmina-plugin-vnc
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 284 个软件包未被升级。
+需要下载 20.1 kB 的软件包。
+解压缩后会消耗掉 88.1 kB 的额外空间。
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ trusty/main remmina-plugin-vnc amd64 1.0.0-4ubuntu3 [20.1 kB]
+下载 20.1 kB，耗时 0秒 (94.3 kB/s)            
+正在选中未选择的软件包 remmina-plugin-vnc。
+(正在读取数据库 ... 系统当前共安装有 256387 个文件和目录。)
+正准备解包 .../remmina-plugin-vnc_1.0.0-4ubuntu3_amd64.deb  ...
+正在解包 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+正在设置 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+libo@libo-OptiPlex-990:~$ sudo killall remmina 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ sudo apt-get install remmina-plugin-
+remmina-plugin-gnome      remmina-plugin-rdp        remmina-plugin-vnc
+remmina-plugin-nx         remmina-plugin-telepathy  remmina-plugin-xdmcp
+libo@libo-OptiPlex-990:~$ sudo apt-get install remmina-plugin-vnc 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+remmina-plugin-vnc 已经是最新的版本了。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 284 个软件包未被升级。
+libo@libo-OptiPlex-990:~$ sudo apt-get purge remmina
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包将被【卸载】：
+  remmina* remmina-plugin-rdp* remmina-plugin-vnc*
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 3 个软件包，有 284 个软件包未被升级。
+解压缩后将会空出 568 kB 的空间。
+您希望继续执行吗？ [Y/n] 
+(正在读取数据库 ... 系统当前共安装有 256390 个文件和目录。)
+正在卸载 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+正在卸载 remmina-plugin-rdp (1.0.0-4ubuntu3) ...
+正在卸载 remmina (1.0.0-4ubuntu3) ...
+正在清除 remmina (1.0.0-4ubuntu3) 的配置文件 ...
+正在处理用于 man-db (2.6.7.1-1ubuntu1) 的触发器 ...
+正在处理用于 mime-support (3.54ubuntu1.1) 的触发器 ...
+正在处理用于 gnome-menus (3.10.1-0ubuntu2) 的触发器 ...
+正在处理用于 desktop-file-utils (0.22-1ubuntu1) 的触发器 ...
+正在处理用于 bamfdaemon (0.5.1+14.04.20140409-0ubuntu1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+libo@libo-OptiPlex-990:~$ sudo killall remmina
+libo@libo-OptiPlex-990:~$ sudo apt-get  install remmina
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+将会安装下列额外的软件包：
+  remmina-plugin-rdp remmina-plugin-vnc
+下列【新】软件包将被安装：
+  remmina remmina-plugin-rdp remmina-plugin-vnc
+升级了 0 个软件包，新安装了 3 个软件包，要卸载 0 个软件包，有 284 个软件包未被升级。
+需要下载 161 kB/181 kB 的软件包。
+解压缩后会消耗掉 568 kB 的额外空间。
+您希望继续执行吗？ [Y/n] 
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ trusty/main remmina amd64 1.0.0-4ubuntu3 [129 kB]
+获取：2 http://cn.archive.ubuntu.com/ubuntu/ trusty/main remmina-plugin-rdp amd64 1.0.0-4ubuntu3 [31.6 kB]
+下载 161 kB，耗时 0秒 (1,278 kB/s)            
+正在选中未选择的软件包 remmina。
+(正在读取数据库 ... 系统当前共安装有 256374 个文件和目录。)
+正准备解包 .../remmina_1.0.0-4ubuntu3_amd64.deb  ...
+正在解包 remmina (1.0.0-4ubuntu3) ...
+正在选中未选择的软件包 remmina-plugin-rdp。
+正准备解包 .../remmina-plugin-rdp_1.0.0-4ubuntu3_amd64.deb  ...
+正在解包 remmina-plugin-rdp (1.0.0-4ubuntu3) ...
+正在选中未选择的软件包 remmina-plugin-vnc。
+正准备解包 .../remmina-plugin-vnc_1.0.0-4ubuntu3_amd64.deb  ...
+正在解包 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+正在处理用于 mime-support (3.54ubuntu1.1) 的触发器 ...
+正在处理用于 gnome-menus (3.10.1-0ubuntu2) 的触发器 ...
+正在处理用于 desktop-file-utils (0.22-1ubuntu1) 的触发器 ...
+正在处理用于 bamfdaemon (0.5.1+14.04.20140409-0ubuntu1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+正在处理用于 man-db (2.6.7.1-1ubuntu1) 的触发器 ...
+正在设置 remmina (1.0.0-4ubuntu3) ...
+正在设置 remmina-plugin-rdp (1.0.0-4ubuntu3) ...
+正在设置 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+libo@libo-OptiPlex-990:~$ sudo remmina 
+Remmina plugin RDP (type=协议) registered.
+Remmina plugin RDPF (type=文件) registered.
+Remmina plugin RDPS (type=首选项) registered.
+Failed to load plugin: /usr/lib/remmina/plugins/remmina-plugin-vnc.so.
+Remmina plugin SFTP (type=协议) registered.
+Remmina plugin SSH (type=协议) registered.
+
+
+^Clibo@libo-OptiPlex-990:~$ ll /usr/lib/remmina/plugins/remmina-plugin-vnc.so
+-rw-r--r-- 1 root root 40408  7月 15  2013 /usr/lib/remmina/plugins/remmina-plugin-vnc.so
+libo@libo-OptiPlex-990:~$ sudo apt-get install libvncclient0
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+E: 未发现软件包 libvncclient0
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ sudo apt-get install libvncserver
+libvncserver0        libvncserver-config  
+libvncserver0-dbg    libvncserver-dev     
+libo@libo-OptiPlex-990:~$ sudo apt-get install libvncserver
+libvncserver0        libvncserver-config  
+libvncserver0-dbg    libvncserver-dev     
+libo@libo-OptiPlex-990:~$ sudo apt^C
+libo@libo-OptiPlex-990:~$ sudo apt-get install libvncserver0
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+libvncserver0 已经是最新的版本了。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 284 个软件包未被升级。
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ sudo apt-get remove libvncserver0
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包将被【卸载】：
+  libvncserver0 remmina-plugin-vnc
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 2 个软件包，有 284 个软件包未被升级。
+解压缩后将会空出 445 kB 的空间。
+您希望继续执行吗？ [Y/n] 
+(正在读取数据库 ... 系统当前共安装有 256390 个文件和目录。)
+正在卸载 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+正在卸载 libvncserver0:amd64 (0.9.9+dfsg-6~ubuntu14.04.1~ppa1) ...
+正在处理用于 libc-bin (2.19-0ubuntu6.6) 的触发器 ...
+libo@libo-OptiPlex-990:~$ sudo apt-get install libvncserver0
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  libgnutls28 libhogweed2
+Use 'apt-get autoremove' to remove them.
+建议安装的软件包：
+  libvncserver0-dbg
+下列【新】软件包将被安装：
+  libvncserver0
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 284 个软件包未被升级。
+需要下载 168 kB 的软件包。
+解压缩后会消耗掉 479 kB 的额外空间。
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ trusty-updates/main libvncserver0 amd64 0.9.9+dfsg-1ubuntu1.1 [168 kB]
+下载 168 kB，耗时 0秒 (1,280 kB/s)    
+正在选中未选择的软件包 libvncserver0:amd64。
+(正在读取数据库 ... 系统当前共安装有 256382 个文件和目录。)
+正准备解包 .../libvncserver0_0.9.9+dfsg-1ubuntu1.1_amd64.deb  ...
+正在解包 libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+正在设置 libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+正在处理用于 libc-bin (2.19-0ubuntu6.6) 的触发器 ...
+libo@libo-OptiPlex-990:~$ sudo apt-get  install remmina-plugin-rdp 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+remmina-plugin-rdp 已经是最新的版本了。
+remmina-plugin-rdp 被设置为手动安装。
+下列软件包是自动安装的并且现在不需要了：
+  libgnutls28 libhogweed2
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 284 个软件包未被升级。
+libo@libo-OptiPlex-990:~$ sudo apt-get  install remmina-plugin-vnc 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  libgnutls28 libhogweed2
+Use 'apt-get autoremove' to remove them.
+下列【新】软件包将被安装：
+  remmina-plugin-vnc
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 284 个软件包未被升级。
+需要下载 0 B/20.1 kB 的软件包。
+解压缩后会消耗掉 88.1 kB 的额外空间。
+正在选中未选择的软件包 remmina-plugin-vnc。
+(正在读取数据库 ... 系统当前共安装有 256392 个文件和目录。)
+正准备解包 .../remmina-plugin-vnc_1.0.0-4ubuntu3_amd64.deb  ...
+正在解包 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+正在设置 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+libo@libo-OptiPlex-990:~$ sudo remmina 
+Remmina plugin RDP (type=协议) registered.
+Remmina plugin RDPF (type=文件) registered.
+Remmina plugin RDPS (type=首选项) registered.
+Remmina plugin VNC (type=协议) registered.
+Remmina plugin VNCI (type=协议) registered.
+Remmina plugin SFTP (type=协议) registered.
+Remmina plugin SSH (type=协议) registered.
+
+
+
+
+^Clibo@libo-OptiPlex-990:~$ ^C
+libo@libo-OptiPlex-990:~$ ^C
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+libo@libo-OptiPlex-990:~$ 
+

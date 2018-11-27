@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mknod -m 644 /dev/dial c 200 0
+
+cd /usr/bst/SYSTEM/Physical/Dial/
+insmod dial.ko
+cd /

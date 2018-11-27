@@ -1,0 +1,2 @@
+file:///home/libo/Qt5.7.1/5.7/gcc_64/qml/QtQuick/Controls/Private/BasicTableView.qml:613:17: QML : Binding loop detected for property "width"
+FileDialog 打开时会报这个warning，而window下则报 CreateFile cfg.xml Error: 2读取cfg.xml失败m_CfgData IS NullGet cfg.xml data error CreateFile cfg.xml Error: 2读取cfg.xml失败m_CfgData IS Null

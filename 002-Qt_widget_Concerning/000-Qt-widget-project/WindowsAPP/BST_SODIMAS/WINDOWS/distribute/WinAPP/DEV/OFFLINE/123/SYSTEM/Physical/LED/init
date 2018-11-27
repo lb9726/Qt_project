@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mknod -m 644 /dev/led c 9 0
+
+cd /usr/bst/SYSTEM/Physical/LED/
+insmod led.ko
+cd /

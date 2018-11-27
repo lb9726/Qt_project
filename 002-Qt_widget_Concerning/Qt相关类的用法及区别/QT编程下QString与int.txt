@@ -1,0 +1,111 @@
+http://blog.sina.com.cn/s/blog_660659dc0101953o.html
+
+QT编程下QString与int的相互转换 (2013-03-16 17:00:40)转载▼
+标签： qstring与int的相互转 it	分类： qt
+今天尝试用QT做一个计算机软件练练手,没想到输出一大堆乱码..
+ 
+原来我输入text框里的东西,QT会自动把他变成QString类型的数据..
+QSrting的数据,压根不能加不能减啊!!
+ 
+本想着搁置这个问题,截个图找找老师问下..
+然后心理嘀咕着,这活儿好像不算很难,那可得了口呀..
+ 
+记得不知道什么年代的时候,看过一个 "C语言也能干大事"这个视频..貌似记得String中有个toint()公共函数是可以将其类型转为int整型变量的..这下欣喜若狂了~想到就做:
+int b;
+b=a.toInt（）
+ 
+加上代码之后,嘿嘿..神奇的事情又再次出现了..
+原本不可加不可减的QString类型数据,一下子可运算了
+ 
+想把int变回QString也是很简单:
+ 
+QString b;
+b=QString::number(a)
+这下可以继续折腾了QT编程下QString与int的相互转换
+ 
+ 
+ 网上找了半天，全是QString转int和char等的，就没有int转QString的，但是还是找到啦，我来整合一下哦~
+
+Qt中 int ,float ,double转换为QString
+有两种方法
+1.使用
+QString::number();
+如:
+[cpp]view plain copy print?
+long a = 63;  
+QString s = QString::number(a, 10);             // s == "63"  
+QString t = QString::number(a, 16).toUpper();     // t == "3F"  
+(解释，变量a为int型或者float，double。10和16为进制) toUpper是大写
+2.使用
+[cpp]view plain copy print?
+long a = 63;  
+QString s = QString("%1").arg(a);  
+这个嘛，我不常用
+
+把QString转换为 double类型
+方法1.
+[cpp]view plain copy print?
+QString str="123.45";  
+double val=str.toDouble(); //val=123.45  
+
+
+方法2.很适合科学计数法形式转换
+[cpp]view plain copy print?
+bool ok;  
+double d;  
+d=QString("1234.56e-02").toDouble(&ok); //ok=true;d;12.3456.  
+
+
+ 
+把QString转换为float形
+1.
+[cpp]view plain copy print?
+QString str="123.45";  
+float d=str.toFloat(); //d=123.45  
+2.
+[html]view plain copy print?
+QString str="R2D2";  
+bool ok;  
+float d=str.toFloat(&ok); //转换是被时返回0.0,ok=false;  
+把QString形转换为整形
+1.转换为十进制整形
+注意：基数默认为10。当基数为10时，并且基数必须在2到36之
+间。如果基数为0，若字符串是以0x开头的就会转换为16进制，若以0开头就转换为八进制，否则就转换为十进制。
+[cpp]view plain copy print?
+Qstring str="FF";  
+bool ok;  
+int dec=str.toInt(&ok,10); //dec=255 ; ok=rue  
+int hex =str.toInt(&ok,16); //hex=255;ok=true;  
+
+
+3.常整形转换为Qstring形
+[cpp]view plain copy print?
+long a =63;  
+QString str=QString::number(a,16); //str="3f";  
+QString str=QString::number(a,16).toUpper(); //str="3F";  
+
+
+Qstring 转换char*问题!
+方法一:
+[cpp]view plain copy print?
+QString qstr("hello,word");  
+const char * p = qstr.toLocal8Bit().data();  
+
+
+方法二:
+[cpp]view plain copy print?
+const char *p = qstr.toStdString().data();  
+
+
+转换过来的是常量
+把当前时间转化为QString...
+public QDateTime qdate = QDateTime.currentDateTime();
+datetime = qdate.toString("yyyy年MM月dd日ddddhh:mm:ss");
+如果不是QTime和QDate类比如说：通过TCP/IP接收到的char unsigned char 类等如何转换为QString类
+QString Time2String( DWORD dwTime)
+{
+char cTime[50] = {0};
+memset(cTime,0,50);
+strftime(cTime,32,"%Y-%m-%d %H:%M:%S",localtime(&time_t(dwTime)));
+return QString(cTime);
+}

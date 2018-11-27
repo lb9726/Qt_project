@@ -1,0 +1,35 @@
+在Qt多线程变成里面，有时候会出现QObject: Cannot create children for a parent that is in a different thread.此类错误。说到底就是信号与槽分别处于主线程和从线程，信号与槽不在一个线程上。并且在Qt编程中又少不了信号与槽的关联，那么怎么解决这个问题了？我们可以这么做：
+
+1、建立一个类，（假如这个类叫Demo:public QObject）继承于QObject，将这个类完整的表述，实现其功能；
+
+2、然后建立一个指针QThread * thread = new QThread；
+
+3、Demo *newDemo = new Demo；
+
+      newDemo->moveToThread(thread)；
+
+      然后调用这个Demo类展开信号与槽链接，或者由其他信号启动这个类，
+
+     下来执行thread->start();
+
+     这样就把一个类放到一个单独线程中运行，而且根本不必重写run函数。
+
+     如果你需要多次调用这个类，那么只需要建立相应多的线程，将其moveto到这个线程就可以了。
+
+     这样信号与槽都会在这个建立的线程中运行，再也不会出现上述错误。
+
+
+
+以上是自己开发中一点小技巧，欢迎批评指正！
+
+
+在使用Qt线程时, 在线程里跑上一个定时器。定时器时间超限时触发信号，传递给主线程做其他的事情。
+继承QThread后在实现run()函数后，m_pTimer = new QTimer(this);   new一个定时器对象,并传入this指针---注意此时的this指针是主线程的
+但每次创建线程时会出现以下提示:
+QObject: Cannot create children for a parent that is in a different thread
+
+传入this指针------相当于在子线程里为主线程建立了对象，所以出现跨线程警告
+
+另外QT中继承Qthread类后,在类中定义的对象或或对象的指针都是属于主线程的。次线程正真意义上的实体内容实在实现run()函数里。
+
+http://blog.csdn.net/sydnash/article/details/7425947

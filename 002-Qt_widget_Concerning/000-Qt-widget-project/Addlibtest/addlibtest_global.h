@@ -1,0 +1,12 @@
+#ifndef ADDLIBTEST_GLOBAL_H
+#define ADDLIBTEST_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(ADDLIBTEST_LIBRARY)
+#  define ADDLIBTESTSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define ADDLIBTESTSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // ADDLIBTEST_GLOBAL_H

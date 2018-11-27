@@ -1,0 +1,4135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceManageForm</class>
+ <widget class="QWidget" name="DeviceManageForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>982</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>982</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>982</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#page1_language { border-image: url(:/1_language/rc/1_language/bg.png);}
+QWidget#page1_1_selectpro { border-image: url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page2_mainpage { border-image: url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page2_1_createpro { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page2_2_downloadpro { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page2_4_simplepro { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page2_21_fromrwifi { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page2_3_importpro { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page3_modify { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page31_layout { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page32_style { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page32_1_import { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page32_2_create { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page321_floor { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page322_arrow { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page323_logo { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page324_background { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page33_language { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page33_1_import { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page33_2_new { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+QWidget#page34_setting { border-image:url(:/2_mainpage/rc/2_mainpage/bg.png); }
+
+
+QWidget#page31_saf, QWidget#page31_com, QWidget#page_33_saf_openmsg, QWidget#page_33_com_openmsg { background-color: rgba(255, 255, 255, 0); }
+
+QTableWidget#table_flrmap{ background-color: rgba(255, 255, 255, 0); color: rgba(255, 143, 16, 255);  icon-size: 90px 90px; space : 40px; font: bold large &quot;Arial&quot;; font-size: 25pt;}
+QTableWidget::item{  /*padding-top: 4px;padding-bottom: 4px;border-bottom: 1px solid #343434;*/}
+QTableWidget::item:selected{background-color:rgba(254, 158, 37, 255); border: none;}
+QTableWidget::item:selected:active{border: none;}
+QTableWidget::item:selected:!active{border: none;}
+
+QWidget#contents_map, QWidget#page341_volume, QWidget#page342_floors, QWidget#page343_backlight, QWidget#page344_logo, QWidget#page345_wifi{ background-color:rgba(195, 195, 195, 0); }
+
+QScrollBar:vertical { background: rgba(0, 0, 0, 0);  width: 9px;  margin: 0px 0 0px 0; }
+QScrollBar::handle:vertical { background: rgba(195, 195, 195, 255); min-height: 20px;  margin: 2px 0px 1px 0px;   border-radius: 3px;  border: 0px dashed rgba(180,130,100,255); }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0px; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {  background: none; }
+
+QScrollBar:horizontal  { background: rgba(0, 0, 0, 0);  height: 9px;  margin: 0px 0 0px 0; }
+QScrollBar::handle:horizontal  { background: rgba(195, 195, 195, 255);  min-width: 20px;  margin: 2px 0px 1px 0px;   border-radius: 3px;  border: 0px dashed rgba(180,130,100,255); }
+QScrollBar::add-line:horizontal , QScrollBar::sub-line:horizontal  { height: 0px; }
+QScrollBar::add-page:horizontal , QScrollBar::sub-page:horizontal  {  background: none; }
+
+QSlider::groove:horizontal {  border: 1px rgba(254, 158, 37, 255);  height: 2px;  margin: 0px 0; left: 22px; right: 22px;  }
+QSlider::handle:horizontal {   border-image: url(:/rc/12_SetVolume/sliderdot.png);  width: 40px; height : 40px;  margin: -20px -20px -20px -20px; }
+QSlider::sub-page:horizontal{  background: rgba(254, 158, 37, 255); }
+QSlider::add-page:horizontal{ background: rgba(100, 100, 100, 255); }
+QSlider::indicator { right : 22px}
+
+/*Style for all non specific QListWidget*/
+QListWidget{ icon-size: 40px 40px; background-color: rgba(255, 255, 255, 0); alternate-background-color: #1b1b1b;  selection-
+background-color: rgba(254, 158, 37, 255);  color: rgba(254, 254, 254, 255);  gridline-color:#343434;   border: 1px solid #29292a;  border-radius: 6px;  padding: 0px;  font: bold large &quot;Arial&quot;; font-size: 30pt; }
+QListWidget::item{  /*padding-top: 4px;padding-bottom: 4px;border-bottom: 1px solid #343434;*/}
+QListWidget::item:selected{background-color:rgba(254, 158, 37, 255); border: none;}
+QListWidget::item:selected:active{border: none;}
+QListWidget::item:selected:!active{border: none;}
+
+QListWidget#list_32_style{ icon-size: 60px 60px; background-color: rgba(255, 255, 255, 0); alternate-background-color: #1b1b1b;  selection-
+background-color: rgba(254, 158, 37, 255);  color: rgba(254, 254, 254, 255);  gridline-color:#343434;   border: 1px solid #29292a;  border-radius: 6px;  padding: 0px;  font: bold large &quot;Arial&quot;; font-size: 20pt; }
+
+QComboBox#combo_arrowspeed {  font: bold large &quot;Arial&quot;; font-size: 16pt; }
+
+QPushButton#btn_enter{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(198,210,225,250); }
+QPushButton#btn_enter::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(198,210,225,250); }
+
+QPushButton#lang_en_banner{ border-image: url(:/1_language/rc/1_language/english.png);}
+QPushButton#lang_en_banner::checked{ border-image: url(:/1_language/rc/1_language/english_en.png); }
+
+QPushButton#lang_fra_banner{ border-image: url(:/1_language/rc/1_language/french.png); }
+QPushButton#lang_fra_banner::checked{ border-image: url(:/1_language/rc/1_language/french_en.png); }
+
+QPushButton#lang_deu_banner{ border-image: url(:/1_language/rc/1_language/germany.png);  }
+QPushButton#lang_deu_banner::checked{ border-image: url(:/1_language/rc/1_language/germany_en.png);  }
+
+QPushButton#lang_ned_banner{ border-image: url(:/1_language/rc/1_language/holland.png);}
+QPushButton#lang_ned_banner::checked{ border-image: url(:/1_language/rc/1_language/holland_en.png);  }
+
+QLabel#label_logo{ border-image: url(:/1_language/rc/1_language/logo.png);}
+
+QPushButton#btn_explorer{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_explorer::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_download{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_download::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_modify{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_modify::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_close{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_close::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_new{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_new::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_open{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_open::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_export{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_export::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_remove{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_remove::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_test{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_test::checked{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_exit{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_exit::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_autotest{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_autotest::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_save{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_save::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_layout{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_layout::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_style{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_style::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_application{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_application::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_language{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_language::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_setting{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_setting::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_4_ok{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_4_ok::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_1_1_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_1_1_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_1_1_new{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_1_1_new::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_1_1_local{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_1_1_local::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_3_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_3_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_autotest{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_autotest::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_1_create{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_1_create::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_1_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_1_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_2_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_2_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_21_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_21_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_remove{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_remove::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_text{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_text::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_wifi{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_wifi::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_usb{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_usb::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_logindev{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_logindev::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_scandev{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_scandev::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_testdev{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_testdev::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_downloaddev{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_downloaddev::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_3_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_3_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_3_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_3_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_3_selectfolder{ border-image: url(:/0_common/rc/0_common/btngo.png); }
+QPushButton#btn_2_3_selectfolder::pressed{ border-image: url(:/0_common/rc/0_common/btngolight.png); }
+
+QPushButton#btn_screensize{ border-image: url(:/0_common/rc/0_common/check1.png); }
+QPushButton#btn_screensize::checked{ border-image: url(:/0_common/rc/0_common/check2.png);  }
+
+QLabel#label_screenbig, QLabel#label_screensmall { font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_31_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_31_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_create{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_create::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_save{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_save::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_apply{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_apply::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_323_save{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_323_save::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_1_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_1_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_1_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_1_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_1_selectfolder{ border-image: url(:/0_common/rc/0_common/btngo.png); }
+QPushButton#btn_32_1_selectfolder::pressed{ border-image: url(:/0_common/rc/0_common/btngolight.png); }
+
+QPushButton#btn_32_1_selectfolder_pro{ border-image: url(:/0_common/rc/0_common/btngo.png); }
+QPushButton#btn_32_1_selectfolder_pro::pressed{ border-image: url(:/0_common/rc/0_common/btngolight.png); }
+
+QPushButton#btn_32_1_selectzip{ border-image: url(:/0_common/rc/0_common/zip.png); }
+QPushButton#btn_32_1_selectzip::pressed{ border-image: url(:/0_common/rc/0_common/ziplight.png); }
+
+QPushButton#btn_33_1_selectzip{ border-image: url(:/0_common/rc/0_common/zip.png); }
+QPushButton#btn_33_1_selectzip::pressed{ border-image: url(:/0_common/rc/0_common/ziplight.png); }
+
+QPushButton#btn_32_1_import_project{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_1_import_project::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_2_selectzip{ border-image: url(:/0_common/rc/0_common/zip.png); }
+QPushButton#btn_33_2_selectzip::pressed{ border-image: url(:/0_common/rc/0_common/ziplight.png); }
+
+QPushButton#btn_32_2_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_2_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_2_next{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_2_next::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_2_save{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_2_save::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_32_export{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_32_export::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_321_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_321_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_321_next{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_321_next::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_321_remove{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_321_remove::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_321_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_321_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_321_test{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_321_test::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_322_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_322_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_322_next{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_322_next::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_322_remove{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_322_remove::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_322_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_322_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_322_test{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_322_test::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_323_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_323_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_323_next{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_323_next::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_323_remove{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_323_remove::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_323_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_323_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_323_test{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_323_test::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_324_remove{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_324_remove::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_324_test{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_324_test::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_324_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_324_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_324_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_324_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_324_save{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_324_save::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_test{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_test::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_addfile{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_addfile::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_delfile{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_delfile::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_new{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_new::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_delete{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_delete::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_save{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_save::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_1_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_1_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_1_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_1_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_1_selectfolder{ border-image: url(:/0_common/rc/0_common/btngo.png); }
+QPushButton#btn_33_1_selectfolder::pressed{ border-image: url(:/0_common/rc/0_common/btngolight.png); }
+
+QPushButton#btn_33_2_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_2_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_2_next{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_2_next::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_2_import{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_33_2_import::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_33_2_selectfolder{ border-image: url(:/0_common/rc/0_common/btngo.png); }
+QPushButton#btn_33_2_selectfolder::pressed{ border-image: url(:/0_common/rc/0_common/btngolight.png); }
+
+
+QPushButton#btn_2_4_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_4_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_342_ok{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_342_ok::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QLabel#label_3_ssid, QLabel#label_3_passwd { font: large &quot;Arial&quot;; font-size: 14pt; color: rgba(255,255,225,250); }
+
+QLineEdit#edit_2_1_name, QLineEdit#edit_2_3_name, QLineEdit#edit_2_3_path, QLineEdit#edit_32_1_name, QLineEdit#edit_32_1_path, QLineEdit#edit_32_1_path_pro, QLineEdit#edit_32_2_name, QLineEdit#edit_323_text1, QLineEdit#edit_323_text2, QLineEdit#edit_33_1_name, QLineEdit#edit_33_1_path, QLineEdit#edit_33_2_path, QLineEdit#edit_33_2_name, QLineEdit#edit_wifipasswd, QLineEdit#edit_wifiip, QLineEdit#edit_321_cur, QLineEdit#edit_322_cur, QLineEdit#edit_323_cur, QLineEdit#edit_324_cur, QLineEdit#edit_ssid, QLineEdit#edit_passwd { font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(255,255,225,250); border-image: url(:/0_common/rc/0_common/input.png); }
+
+QLabel#label_1_title,QLabel#label_1_1_title, QLabel#label_2_title, QLabel#label_3_title, QLabel#label_2_1_title, QLabel#label_2_2_title, QLabel#label_2_3_title, QLabel#label_2_4_title , QLabel#label_31_title, QLabel#label_32_title, QLabel#label_32_1_title,  QLabel#label_32_1_title_pro, QLabel#label_32_2_title, QLabel#label_321_title, QLabel#label_322_title, QLabel#label_323_title, QLabel#label_324_title, QLabel#label_33_title, QLabel#label_33_1_title, QLabel#label_33_2_title, QLabel#label_2_21_title { font: bold large &quot;Arial&quot;; font-size: 38pt; color: rgba(198,210,225,250); }
+
+QLabel#label_2_preview, QLabel#label_3_preview, QLabel#label_31_preview, QLabel#label_32_preview, QLabel#label_321_preview, QLabel#label_322_preview, QLabel#label_323_preview, QLabel#label_324_preview { font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(198,210,225,250); }
+
+QLabel#label_info_name_1, QLabel#label_info_appver_1, QLabel#label_info_sysver_1, QLabel#label_info_devtype_1 { font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(200,200,200,250); }
+QLabel#label_info_name_2, QLabel#label_info_appver_2, QLabel#label_info_sysver_2, QLabel#label_info_devtype_2 { font: large &quot;Arial&quot;; font-size: 14pt; color: rgba(255,255,225,250); }
+
+QLabel#label_2_1_name, QLabel#label_2_3_name, QLabel#label_2_3_path, QLabel#label_32_1_name, QLabel#label_32_1_path,  QLabel#label_32_1_path_pro, QLabel#label_32_2_name, QLabel#label_33_1_name, QLabel#label_33_1_path,QLabel#label_33_2_name, QLabel#label_33_2_path, QLabel#label_wifipasswd { font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(255,255,225,250); }
+
+QLabel#label_323_text1, QLabel#label_323_text2 { font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(255,255,225,250); }
+
+QLabel#label_version{ font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(255,255,225,250); }
+
+QLabel#label_backlight_enable, QLabel#label_volume_enable { font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(255,255,225,250); }
+
+QRadioButton { font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QRadioButton::indicator { width: 30px; height: 30px;  }
+QRadioButton::indicator::unchecked { image: url(:/0_common/rc/0_common/radio.png); }
+QRadioButton::indicator::checked { image: url(:/0_common/rc/0_common/radiolight.png); }
+
+QCheckBox { font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QCheckBox::indicator { width: 60px; height: 60px;  }
+QCheckBox::indicator::unchecked { image: url(:/0_common/rc/0_common/checkoff.png); }
+QCheckBox::indicator::checked { image: url(:/0_common/rc/0_common/checkon.png); }
+
+QPushButton#btn_34_backlight{ border-image: url(:/0_common/rc/0_common/btndark1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_34_backlight::checked{ border-image: url(:/0_common/rc/0_common/btnlight1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_34_floors{ border-image: url(:/0_common/rc/0_common/btndark1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_34_floors::checked{ border-image: url(:/0_common/rc/0_common/btnlight1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_34_logo{ border-image: url(:/0_common/rc/0_common/btndark1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_34_logo::checked{ border-image: url(:/0_common/rc/0_common/btnlight1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_34_volume{ border-image: url(:/0_common/rc/0_common/btndark1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_34_volume::checked{ border-image: url(:/0_common/rc/0_common/btnlight1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_34_wifi{ border-image: url(:/0_common/rc/0_common/btndark1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_34_wifi::checked{ border-image: url(:/0_common/rc/0_common/btnlight1.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_34_save{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_34_save::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_34_return{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_34_return::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QPushButton#btn_2_4_ok_md{ border-image: url(:/0_common/rc/0_common/btndark.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+QPushButton#btn_2_4_ok_md::pressed{ border-image: url(:/0_common/rc/0_common/btnlight.png); font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(198,210,225,250); }
+
+QSlider::groove:horizontal {  border: 1px rgba(254, 158, 37, 255);  height: 2px;  margin: 0px 0; left: 22px; right: 22px;  }
+QSlider::handle:horizontal {   border-image: url(:/0_common/rc/0_common/sliderdot.png);  width: 40px; height : 40px;  margin: -20px -20px -20px -20px; }
+QSlider::sub-page:horizontal{  background: rgba(254, 158, 37, 255); }
+QSlider::add-page:horizontal{ background: rgba(100, 100, 100, 255); }
+QSlider::indicator { right : 22px}
+
+QStackedWidget#SettingStacked { border: 1px solid rgba(198,210,225, 150); }
+
+QPushButton#btn_341_confirm{ border-image: url(:/0_common/rc/0_common/checkoff.png); }
+QPushButton#btn_341_confirm::checked{ border-image: url(:/0_common/rc/0_common/checkon.png); }
+
+QPushButton#btn_344_select{ border:none; font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(198,210,225,255); }
+QPushButton#btn_344_select::checked{ border:none; font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(255,255,225,255); }
+
+QLabel#label_341_title, QLabel#label_344_title { font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(255,255,225,250); }
+QLabel#label_msg, QLabel#label_gong, QLabel#label_music { font: large &quot;Arial&quot;; font-size: 22pt; color: rgba(255,255,225,250); }
+QLabel#label_msg_icon1, QLabel#label_gong_icon1, QLabel#label_music_icon1 { border-image: url(:/0_common/rc/0_common/voldel.png); }
+QLabel#label_msg_icon2, QLabel#label_gong_icon2, QLabel#label_music_icon2 { border-image: url(:/0_common/rc/0_common/voladd.png); }
+
+QLabel#label_normal, QLabel#label_standby, QLabel#label_delay { font: large &quot;Arial&quot;; font-size: 22pt; color: rgba(255,255,225,250); }
+QLabel#label_normal_max, QLabel#label_normal_min, QLabel#label_standby_max, QLabel#label_standby_min, QLabel#label_delay_max, QLabel#label_delay_min, QLabel#label_standby_unit { font: large &quot;Arial&quot;; font-size: 17pt; color: rgba(255,255,225,250); }
+
+QLabel#label_msg_value, QLabel#label_gong_value, QLabel#label_music_value, QLabel#label_arrowspeed { font: large &quot;Arial&quot;; font-size: 17pt; color: rgba(255,255,225,250); }
+
+QLabel#label_2_1_devtype{ font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(255,255,225,250); }
+
+QLabel#label_flrmap{ font: large &quot;Arial&quot;; font-size: 25pt; color: rgba(255,255,225,250); }
+
+
+QLabel#label_33_langlist, QLabel#label_33_audiolist{ font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(255,255,225,250); }
+
+QGroupBox {font: large &quot;Arial&quot;; font-size: 20pt; color: rgba(255,255,225,250);}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="MainStackedWidget">
+     <widget class="QWidget" name="page1_language">
+      <widget class="QLabel" name="label_1_title">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>110</y>
+         <width>811</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Lift Color Display Designer</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="lang_ned_banner">
+       <property name="geometry">
+        <rect>
+         <x>609</x>
+         <y>377</y>
+         <width>111</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="lang_en_banner">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>377</y>
+         <width>111</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="lang_deu_banner">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>377</y>
+         <width>111</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="lang_fra_banner">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>377</y>
+         <width>111</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_logo">
+       <property name="geometry">
+        <rect>
+         <x>409</x>
+         <y>473</y>
+         <width>165</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_version">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>450</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>V1.0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_1_1_local">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>250</y>
+         <width>271</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OPEN A PROJECT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_1_1_new">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>250</y>
+         <width>271</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NEW PROJECT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_download">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>250</y>
+         <width>378</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>UPLOAD FROM DISPLAY</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page2_mainpage">
+      <widget class="QLabel" name="label_2_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>501</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Project </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="img_2_preview">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>168</y>
+         <width>480</width>
+         <height>272</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2_preview">
+       <property name="geometry">
+        <rect>
+         <x>86</x>
+         <y>110</y>
+         <width>331</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_modify">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>470</y>
+         <width>146</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>MODIFY</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_remove">
+       <property name="geometry">
+        <rect>
+         <x>472</x>
+         <y>470</y>
+         <width>147</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DELETE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_exit">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>470</y>
+         <width>131</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>EXIT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_export">
+       <property name="geometry">
+        <rect>
+         <x>625</x>
+         <y>470</y>
+         <width>147</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>EXPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_close">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>470</y>
+         <width>191</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_2_info" native="true">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>100</y>
+         <width>381</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_info_name_1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>120</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>NAME:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_name_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>10</y>
+          <width>241</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_appver_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>70</y>
+          <width>241</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_appver_1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>70</y>
+          <width>120</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>APP:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_sysver_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>130</y>
+          <width>241</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_sysver_1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>130</y>
+          <width>120</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>SYS:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_devtype_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>190</y>
+          <width>241</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info_devtype_1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>190</y>
+          <width>120</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TYPE:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_test">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>370</y>
+         <width>251</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TEST</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page2_1_createpro">
+      <widget class="QLabel" name="label_2_1_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>791</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Create a new project</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2_1_name">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>250</y>
+         <width>301</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Project Name  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_2_1_name">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>240</y>
+         <width>411</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_1_return">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_1_create">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CREATE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2_1_devtype">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>360</y>
+         <width>301</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Device Type  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_canopen">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>360</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CANOPEN</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_saf">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>360</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SAF</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page2_2_downloadpro">
+      <widget class="QLabel" name="label_2_2_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>821</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Download a project</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_wifi">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>190</y>
+         <width>191</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>WIFI</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_usb">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>293</y>
+         <width>191</width>
+         <height>78</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>USB</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_2_return">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page2_4_simplepro">
+      <widget class="QLabel" name="label_2_4_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>781</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select components:</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="check_application">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>120</y>
+         <width>400</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Application</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="check_conffile">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>190</y>
+         <width>400</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Configure Files</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="check_sysfile">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>260</y>
+         <width>400</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>System Files</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="check_style">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>330</y>
+         <width>400</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Style</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_4_ok">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>470</y>
+         <width>231</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>To LocalFolder</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="check_audio">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>400</y>
+         <width>400</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Audio</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="check_all">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>120</y>
+         <width>400</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>   All</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_4_return">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_4_ok_md">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>470</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>To MobileDisk</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page2_21_fromrwifi">
+      <widget class="QListWidget" name="list_device">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>100</y>
+         <width>501</width>
+         <height>411</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2_21_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>701</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select Device</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_scandev">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>70</y>
+         <width>269</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Scan Device</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_wifipasswd">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>220</y>
+         <width>231</width>
+         <height>51</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_21_return">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>450</y>
+         <width>266</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_wifipasswd">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>160</y>
+         <width>191</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Password:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_logindev">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>350</y>
+         <width>269</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DownLoad</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_wifiip">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>290</y>
+         <width>231</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>192.168.1.10</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page2_3_importpro">
+      <widget class="QLabel" name="label_2_3_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>791</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Import a project</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2_3_name">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>170</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name  :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_2_3_name">
+       <property name="geometry">
+        <rect>
+         <x>285</x>
+         <y>160</y>
+         <width>409</width>
+         <height>63</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2_3_path">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>250</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select folder :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_2_3_path">
+       <property name="geometry">
+        <rect>
+         <x>285</x>
+         <y>240</y>
+         <width>406</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_3_selectfolder">
+       <property name="geometry">
+        <rect>
+         <x>692</x>
+         <y>239</y>
+         <width>58</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_3_import">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>240</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_2_3_return">
+       <property name="geometry">
+        <rect>
+         <x>773</x>
+         <y>470</y>
+         <width>193</width>
+         <height>74</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page3_modify">
+      <widget class="QLabel" name="label_3_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>731</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modify project</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_style">
+       <property name="geometry">
+        <rect>
+         <x>205</x>
+         <y>468</y>
+         <width>194</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>STYLE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_setting">
+       <property name="geometry">
+        <rect>
+         <x>592</x>
+         <y>468</y>
+         <width>192</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>SETTING</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_3_return">
+       <property name="geometry">
+        <rect>
+         <x>784</x>
+         <y>468</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_language">
+       <property name="geometry">
+        <rect>
+         <x>398</x>
+         <y>468</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>LANGUAGE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_layout">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>468</y>
+         <width>194</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>LAYOUT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3_preview">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>90</y>
+         <width>300</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="img_3_preview">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>150</y>
+         <width>480</width>
+         <height>272</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_explorer">
+       <property name="geometry">
+        <rect>
+         <x>-200</x>
+         <y>380</y>
+         <width>191</width>
+         <height>78</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>20000</width>
+         <height>20000</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>EXPLORER</string>
+       </property>
+      </widget>
+      <widget class="QStackedWidget" name="stacked_arrowspeed">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>250</y>
+         <width>321</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="page31_saf">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>311</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Arrow Speed</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>9</number>
+          </property>
+          <property name="leftMargin">
+           <number>9</number>
+          </property>
+          <property name="topMargin">
+           <number>9</number>
+          </property>
+          <property name="rightMargin">
+           <number>9</number>
+          </property>
+          <property name="bottomMargin">
+           <number>9</number>
+          </property>
+          <item>
+           <widget class="QComboBox" name="combo_arrowspeed">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>35</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Lower speed</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Normal speed</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Faster speed</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Highest speed</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page31_com"/>
+      </widget>
+      <widget class="QPushButton" name="btn_application">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>150</y>
+         <width>321</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>APPLICATION</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page31_layout">
+      <widget class="QLabel" name="label_31_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>721</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modify layout</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_31_preview">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>110</y>
+         <width>300</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="img_31_preview">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>480</width>
+         <height>272</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_srn_arrow">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>277</y>
+         <width>321</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>arrow at the front</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_srn_floor">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>330</y>
+         <width>321</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>arrow at the behind</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_31_return">
+       <property name="geometry">
+        <rect>
+         <x>784</x>
+         <y>468</y>
+         <width>192</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_srn_4_3">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>210</y>
+         <width>151</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>4.3 inch</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_srn_4">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>210</y>
+         <width>151</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>4 inch</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_srn_180">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>140</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>180</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_srn_90">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>140</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>90</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_srn_270">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>140</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>270</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page32_style">
+      <widget class="QLabel" name="label_32_preview">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>110</y>
+         <width>300</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="img_32_preview">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>480</width>
+         <height>272</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>681</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modify style</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_import">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_return">
+       <property name="geometry">
+        <rect>
+         <x>784</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="list_32_style">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>60</y>
+         <width>401</width>
+         <height>381</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_export">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>470</y>
+         <width>171</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>EXPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_remove">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>470</y>
+         <width>181</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DELETE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_text">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TEXT</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page32_1_import">
+      <widget class="QLabel" name="label_32_1_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>731</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Import a style</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_32_1_name">
+       <property name="geometry">
+        <rect>
+         <x>287</x>
+         <y>160</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32_1_name">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>170</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_1_import">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>240</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32_1_path">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>250</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select style :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_32_1_path">
+       <property name="geometry">
+        <rect>
+         <x>286</x>
+         <y>240</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_1_selectfolder">
+       <property name="geometry">
+        <rect>
+         <x>691</x>
+         <y>240</y>
+         <width>61</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_1_return">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>470</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_1_selectzip">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>240</y>
+         <width>61</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_1_import_project">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>320</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_32_1_path_pro">
+       <property name="geometry">
+        <rect>
+         <x>286</x>
+         <y>320</y>
+         <width>391</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32_1_path_pro">
+       <property name="geometry">
+        <rect>
+         <x>52</x>
+         <y>330</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select project :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_1_selectfolder_pro">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>320</y>
+         <width>61</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page32_2_create">
+      <widget class="QLabel" name="label_32_2_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>791</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Create a new style</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_32_2_name">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>240</y>
+         <width>411</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32_2_name">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>250</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_2_return">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_2_next">
+       <property name="geometry">
+        <rect>
+         <x>776</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NEXT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_32_2_save">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>470</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SAVE</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page321_floor">
+      <widget class="QLabel" name="img_321_preview">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>480</width>
+         <height>272</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_321_next">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>NEXT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_321_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>811</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modify floor display</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_321_preview">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>110</y>
+         <width>300</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_321_return">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_321_import">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_321_test">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="list_321_floor">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>110</y>
+         <width>401</width>
+         <height>251</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_321_cur">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>380</y>
+         <width>401</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page322_arrow">
+      <widget class="QLabel" name="label_322_preview">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>110</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_322_import">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_322_next">
+       <property name="geometry">
+        <rect>
+         <x>784</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>NEXT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_322_return">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_322_test">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="img_322_preview">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>480</width>
+         <height>272</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_322_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>641</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modify arrows</string>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="list_322_arrows">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>60</y>
+         <width>401</width>
+         <height>301</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_322_cur">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>380</y>
+         <width>401</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page323_logo">
+      <widget class="QLabel" name="label_323_title">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>10</y>
+         <width>641</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select logo</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_323_return">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_323_text1">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>200</y>
+         <width>401</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_323_text1">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>150</y>
+         <width>281</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Text line 1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_323_text2">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>260</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Text line 2</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_323_text2">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>310</y>
+         <width>401</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="list_323_logo">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>100</y>
+         <width>401</width>
+         <height>331</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page324_background">
+      <widget class="QLabel" name="label_324_preview">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>110</y>
+         <width>301</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_324_import">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_324_return">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="img_324_preview">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>480</width>
+         <height>272</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>272</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_324_title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>701</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select background</string>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="list_324_background">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>70</y>
+         <width>401</width>
+         <height>301</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_324_test">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>470</y>
+         <width>193</width>
+         <height>77</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_324_cur">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>390</y>
+         <width>401</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page33_language">
+      <widget class="QPushButton" name="btn_33_import">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>460</y>
+         <width>201</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_return">
+       <property name="geometry">
+        <rect>
+         <x>752</x>
+         <y>460</y>
+         <width>221</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>511</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select language</string>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="list_33_language">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>361</width>
+         <height>291</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="list_33_audio">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>140</y>
+         <width>361</width>
+         <height>291</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_test">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>110</y>
+         <width>191</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>TEST</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_addfile">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>200</y>
+         <width>191</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Add File</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_delfile">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>300</y>
+         <width>191</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Delete File</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_delete">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>460</y>
+         <width>191</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DELETE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_langlist">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>361</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Language List:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_audiolist">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>90</y>
+         <width>361</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Current Audios List:</string>
+       </property>
+      </widget>
+      <widget class="QStackedWidget" name="stacked_openmsg">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>10</y>
+         <width>411</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="page_33_saf_openmsg">
+        <widget class="QCheckBox" name="check_openmsg">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>401</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string>OpenMessage Enable</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_33_com_openmsg"/>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page33_1_import">
+      <widget class="QLineEdit" name="edit_33_1_path">
+       <property name="geometry">
+        <rect>
+         <x>286</x>
+         <y>240</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_1_selectfolder">
+       <property name="geometry">
+        <rect>
+         <x>692</x>
+         <y>239</y>
+         <width>63</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_1_path">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>250</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_33_1_name">
+       <property name="geometry">
+        <rect>
+         <x>287</x>
+         <y>160</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_1_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>811</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Import a language library</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_1_name">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>170</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_1_return">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>470</y>
+         <width>196</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_1_import">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>240</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_1_selectzip">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>240</y>
+         <width>61</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page33_2_new">
+      <widget class="QLineEdit" name="edit_33_2_name">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>170</y>
+         <width>411</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_2_return">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>460</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_2_next">
+       <property name="geometry">
+        <rect>
+         <x>756</x>
+         <y>460</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NEXT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_2_title">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>751</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Create a new Language</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_2_name">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>180</y>
+         <width>211</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edit_33_2_path">
+       <property name="geometry">
+        <rect>
+         <x>276</x>
+         <y>260</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_2_selectzip">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>260</y>
+         <width>61</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_2_selectfolder">
+       <property name="geometry">
+        <rect>
+         <x>682</x>
+         <y>259</y>
+         <width>63</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_33_2_import">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>260</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IMPORT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33_2_path">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>270</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path  :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page34_setting">
+      <property name="styleSheet">
+       <string notr="true">QSlider::groove:horizontal {  border: 1px rgba(254, 158, 37, 255);  height: 2px;  margin: 0px 0; left: 22px; right: 22px;  }
+QSlider::handle:horizontal {   border-image: url(:/0_common/rc/0_common/sliderdot.png);  width: 40px; height : 40px;  margin: -20px -20px -20px -20px; }
+QSlider::sub-page:horizontal{  background: rgba(254, 158, 37, 255); }
+QSlider::add-page:horizontal{ background: rgba(100, 100, 100, 255); }
+QSlider::indicator { right : 22px}
+QSlider::hover{  border: 2px rgba(254, 158, 37, 255); }</string>
+      </property>
+      <widget class="QStackedWidget" name="SettingStacked">
+       <property name="geometry">
+        <rect>
+         <x>344</x>
+         <y>94</y>
+         <width>614</width>
+         <height>359</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="page341_volume">
+        <widget class="QLabel" name="label_msg">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>58</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Message</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_gong">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>148</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Gong</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_music">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>250</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Music</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_msg_icon1">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>111</y>
+           <width>39</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="MySlider" name="slider_message_volume">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>100</y>
+           <width>340</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="pageStep">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_msg_icon2">
+         <property name="geometry">
+          <rect>
+           <x>454</x>
+           <y>110</y>
+           <width>36</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_gong_icon2">
+         <property name="geometry">
+          <rect>
+           <x>454</x>
+           <y>208</y>
+           <width>36</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="MySlider" name="slider_gong_volume">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>200</y>
+           <width>340</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="pageStep">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_gong_icon1">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>208</y>
+           <width>39</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_music_icon2">
+         <property name="geometry">
+          <rect>
+           <x>454</x>
+           <y>310</y>
+           <width>36</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_music_icon1">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>310</y>
+           <width>39</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="MySlider" name="slider_bgmusic_volume">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>300</y>
+           <width>340</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="pageStep">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_msg_value">
+         <property name="geometry">
+          <rect>
+           <x>501</x>
+           <y>110</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>100</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_gong_value">
+         <property name="geometry">
+          <rect>
+           <x>501</x>
+           <y>208</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>100</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_music_value">
+         <property name="geometry">
+          <rect>
+           <x>500</x>
+           <y>310</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>100</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>10</y>
+           <width>481</width>
+           <height>42</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_36">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_volume_enable">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Volume Enable</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="check_volume_enable">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page342_floors">
+        <widget class="QStackedWidget" name="stacked_flrmap">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>611</width>
+           <height>351</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget { background-color: rgba(255, 255, 255, 0); }</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QTableWidget" name="table_flrmap">
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="showGrid">
+              <bool>false</bool>
+             </property>
+             <property name="gridStyle">
+              <enum>Qt::NoPen</enum>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderCascadingSectionResizes">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>748</number>
+             </attribute>
+             <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderCascadingSectionResizes">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>71</number>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>新建列</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_flrmap">
+             <property name="text">
+              <string>Only for SAF!</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page343_backlight">
+        <widget class="QLabel" name="label_standby_min">
+         <property name="geometry">
+          <rect>
+           <x>67</x>
+           <y>210</y>
+           <width>39</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_normal">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>68</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Normal</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_normal_max">
+         <property name="geometry">
+          <rect>
+           <x>424</x>
+           <y>108</y>
+           <width>161</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>100</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="MySlider" name="slider_backlight">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>100</y>
+           <width>340</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="pageStep">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_standby_max">
+         <property name="geometry">
+          <rect>
+           <x>424</x>
+           <y>210</y>
+           <width>161</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>50</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_delay_max">
+         <property name="geometry">
+          <rect>
+           <x>425</x>
+           <y>310</y>
+           <width>161</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>100</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_standby">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>163</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Standby</string>
+         </property>
+        </widget>
+        <widget class="MySlider" name="slider_standby">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>200</y>
+           <width>340</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>50</number>
+         </property>
+         <property name="pageStep">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_delay">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>263</y>
+           <width>321</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Delay before standby</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_delay_min">
+         <property name="geometry">
+          <rect>
+           <x>67</x>
+           <y>310</y>
+           <width>39</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_normal_min">
+         <property name="geometry">
+          <rect>
+           <x>67</x>
+           <y>109</y>
+           <width>39</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="MySlider" name="slider_delay">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>300</y>
+           <width>340</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>50</number>
+         </property>
+         <property name="pageStep">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>10</y>
+           <width>471</width>
+           <height>42</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_35">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_backlight_enable">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Standby Enable</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="check_backlight_enable">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page344_logo">
+        <widget class="QPushButton" name="btn_344_select">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>290</y>
+           <width>185</width>
+           <height>53</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>SELECT &gt;</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="wid_logo" native="true">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>571</width>
+           <height>261</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="label_344_logo">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>361</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page345_wifi">
+        <widget class="QLineEdit" name="edit_passwd">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>210</y>
+           <width>481</width>
+           <height>51</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3_passwd">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Password:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="edit_ssid">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>90</y>
+           <width>481</width>
+           <height>51</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3_ssid">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>SSID:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_34_volume">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>120</y>
+         <width>185</width>
+         <height>53</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Volume</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_34_floors">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>210</y>
+         <width>185</width>
+         <height>53</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Floors</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_34_backlight">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>300</y>
+         <width>185</width>
+         <height>53</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Backlight</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_34_logo">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10000</x>
+         <y>320</y>
+         <width>185</width>
+         <height>53</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Customer logo</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_34_return">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>470</y>
+         <width>196</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RETURN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_34_wifi">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>390</y>
+         <width>185</width>
+         <height>53</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>WIFI</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MySlider</class>
+   <extends>QSlider</extends>
+   <header>bstui.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

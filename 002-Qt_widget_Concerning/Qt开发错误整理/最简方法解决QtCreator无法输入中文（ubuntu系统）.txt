@@ -1,0 +1,31 @@
+http://www.cnblogs.com/qieguo/p/5379520.html
+
+在Ubuntu环境下用了两天Qt，今天突然发现在Qt 5的代码编辑器里面居然无法输入中文！生成的输入框也同样无法输入中文！
+
+在其他软件里面把中文复制过去，调试也没发现有任何显示问题，搜索了一下，原来是输入法框架的问题。再看一下解决办法，各种各样：装软件、复制中文支持文件、写脚本、改系统配置，甚至还有重新编译一个程序来实现的，真是八仙过海，各显牛逼。
+
+软件出现漏洞很正常，但是这么有名的产品，我是坚决不相信还需要我们去编译网上的源程序才能解决问题的。很多人说的解决方法都是安装fcitx-frontend-qt5来支持在Qt中输入中文（因为要用搜狗拼音啊，当然是fcitx了）。试过，仍然无解，后面突然想起好像自己的Ubuntu系统好像没有完整的中文语言包，装好语言包之后，竟然好了。。。
+
+总结一下解决过程，非常简单：
+
+（1）安装fcitx-frontend-qt5，命令行里输入sudo apt-get install fcitx-frontend-qt5
+
+（2）进入系统设置的语言支持（Language Support），检查中文包安装情况，无则装之。
+
+（3）装完之后记得点“Apply System-Wide”来应用到系统全局，然后还有输入系统要改成“fcitx”。
+
+（4）关机重启
+
+重启后再打开Qt一般就可以使用搜狗输入法了，这里要注意的是我们常用的输入法切换快捷键 【Ctrl+空格】 很有可能跟软件的快捷键冲突了，请使用【Ctrl+，】或者改了。
+
+假如还是不行，可以试着将安装后的fcitx-frontend-qt5复制到qt安装目。
+
+通常，fcitx-frontend-qt5在下面的目录路径中（可用命令dpkg -L fcitx 看文件安装路径)：
+
+/usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so
+
+将该文件复制到QtCreator安装目录下：//Tools/QtCreator/bin/plugins/platforminputcontexts
+
+还有qt5安装目录：/5.3/gcc_64/plugins/platforminputcontexts
+
+PS：其实很多qt编写的程序无法输入中文，将fcitx-frontend-qt5复制到该程序相应的目录下，就可以正常了，如wps和linux  下的代码阅读软件 understand，用这种方法可以解决输入法无法输入中文的问题。

@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ScreenSet.qml</file>
+        <file>background.png</file>
+        <file>TestLayout.qml</file>
+        <file>LayoutTest.qml</file>
+        <file>ShowDisplay.qml</file>
+        <file>ResultDisplay.qml</file>
+        <file>GroupBoxDemo.qml</file>
+        <file>GridDemos.qml</file>
+        <file>Area1.qml</file>
+        <file>Area2.qml</file>
+        <file>Area3.qml</file>
+        <file>Area4.qml</file>
+        <file>Area5.qml</file>
+        <file>background1.jpg</file>
+        <file>TestArea3.qml</file>
+        <file>SlefDefineArea3.qml</file>
+        <file>blue.png</file>
+        <file>Grey.png</file>
+        <file>handle.png</file>
+        <file>Brown.png</file>
+        <file>Blue.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,37 @@
+protocoldeal.h: In constructor ‘Protocoldeal::Protocoldeal()’:
+protocoldeal.h:264:10: warning: ‘Protocoldeal::VersionComFlag’ will be initialized after [-Wreorder]
+     bool VersionComFlag;
+          ^
+protocoldeal.h:263:9: warning:   ‘int Protocoldeal::RunNormalFlag’ [-Wreorder]
+     int RunNormalFlag;
+         ^
+protocoldeal.cpp:40:1: warning:   when initialized here [-Wreorder]
+ Protocoldeal::Protocoldeal():
+ ^
+
+
+初始化列表的顺序应该是按照你成员声明顺序初始化
+#include <iostream> 
+using namespace std; 
+   
+class Test 
+{ 
+public: 
+  Test(int j)
+      :pb(j)
+      ,pa(pb+5) //和定义顺序有关。。。先初始化pa再初始化pb
+  { 
+    
+  } 
+public: 
+    
+  int pb; //如果pb放在pa前面，pb就先初始化，pa就是15
+  int pa; 
+}; 
+void main() 
+{ 
+  Test a(10); 
+  cout<<a.pa<<endl; 
+  cout<<a.pb<<endl; 
+  cin.get(); 
+}

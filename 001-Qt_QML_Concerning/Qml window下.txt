@@ -1,0 +1,1 @@
+qml window 或者Applicationwindow 下面的id的为全局变量可以在外部的qml中是可以引用的

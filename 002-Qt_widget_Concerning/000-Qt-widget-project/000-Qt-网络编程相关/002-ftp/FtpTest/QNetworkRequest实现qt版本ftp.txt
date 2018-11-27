@@ -1,0 +1,131 @@
+1.绝大部分代码参考子一去二三里的csdn的博客代码
+https://blog.csdn.net/liang19890820/article/details/53188182
+
+
+2. ubuntu 14.04 64位操作系统下配置tftp服务端
+https://www.linuxidc.com/Linux/2016-03/129057.htm
+
+在Ubuntu 14.04 上安装 FTP 服务
+
+第一步>>更新库
+
+linuxidc@linuxidc:~$ sudo apt-get update
+
+第二步>>采用如下命令安装VSFTPD的包
+
+linuxidc@linuxidc:~$ sudo apt-get install vsftpd
+
+第三步>>安装完成后打开 /etc/vsftpd.conf 文件，按如下所述修改。
+
+取消如下行的注释（行号为29和33）
+
+write_enable=YES
+local_umask=022
+
+>> 取消如下行的注释（行号120）来阻止除了用户文件夹意外的文件夹。
+
+chroot_local_user=YES
+
+在文件最后增加如下一行：
+
+allow_writeable_chroot=YES
+
+>>添加如下行开启消极模式
+
+pasv_enable=Yes
+pasv_min_port=40000
+pasv_max_port=40100
+
+第四步>>用如下命令重启vsftpd服务
+
+linuxidc@linuxidc:~$ sudo service vsftpd restart
+
+第五步>>现在ftp服务器正在监听21端口。用如下命令创建用户。用 /usr/sbin/nologin 脚本来阻止ftp用户访问bash脚本。
+
+linuxidc@linuxidc:~$ sudo useradd -m lb1234 -s /usr/sbin/nologin
+linuxidc@linuxidc:~$ sudo passwd lb1234
+
+第六步>>开启nologin脚本的开机访问。打开 /etc/shells 并把如下行添加进去。
+
+/usr/sbin/nologin
+
+现在试着用刚创建的用户通过21端口连接ftp服务器。客户端采用 winscp 或 filezilla  。
+
+在调试过程中出现过一些错误：例如：openssl
+解决Qt5使用SSL的“qt.network.ssl: QSslSocket: cannot resolve SSLv2_client_method”错误
+
+https://www.cnblogs.com/btian/p/6130560.html
+
+解决Qt5使用SSL的“qt.network.ssl: QSslSocket: cannot resolve SSLv2_client_method”错误
+在使用Qt的网络组件连接某些服务器时， 会提示“qt.network.ssl: QSslSocket: cannot resolve SSLv2_client_method”的错误， 导致连接失败。
+
+https://www.cnblogs.com/btian/p/6130560.html
+https://stackoverflow.com/questions/42094214/why-is-qsslsocket-working-with-qt-5-3-but-not-qt-5-7-on-debian-stretch
+
+经查资料得知这是由于SSLv2由于某些漏洞导致的不安全原因， 在某些linux发行版里禁用掉了SSLv2。
+
+解决办法是自己重新编译openssl，加上SSLv2的支持
+
+1.  下载代码：
+git clone https://github.com/openssl/openssl.git
+
+2. 编译
+我的测试结果是openssl1.1不工作，但是openssl1.0工作
+
+git checkout OpenSSL_1_0_0-stable
+./config enable-shared
+make depend
+make -j4
+3. Copy编译结果到$QTDIR/lib, 我的目录是/opt/Qt5.7.0/5.7/gcc_64/lib/
+
+sudo cp libcrypto.so libssl.so libcrypto.so.1.0.0 libssl.so.1.0.0 /opt/Qt5.7.0/5.7/gcc_64/lib/
+4. 从新运行应用， Qt pulgin会自动从新编译的ssl libries里load符号
+
+这时仍然会得到一些warning， 如
+
+qt.network.ssl: QSslSocket: cannot resolve TLSv1_1_client_method
+qt.network.ssl: QSslSocket: cannot resolve TLSv1_2_client_method
+qt.network.ssl: QSslSocket: cannot resolve TLSv1_1_server_method
+qt.network.ssl: QSslSocket: cannot resolve TLSv1_2_server_method
+qt.network.ssl: QSslSocket: cannot resolve SSL_select_next_proto
+qt.network.ssl: QSslSocket: cannot resolve SSL_CTX_set_next_proto_select_cb
+qt.network.ssl: QSslSocket: cannot resolve SSL_get0_next_proto_negotiate
+
+忽略就可以了
+
+改完了这些之后还是不行
+
+void FtpManager::put(const QString &fileName, const QString &path)
+增加了QSslConfiguration config;
+
+    config.setPeerVerifyMode(QSslSocket::VerifyNone);
+    config.setProtocol(QSsl::TlsV1_1);
+    QNetworkRequest pRequset = QNetworkRequest(m_pUrl);
+    pRequset.setSslConfiguration(config);
+
+增加的上述的代码，后面修改
+还是不行，最后搜索了一下， https://bbs.csdn.net/topics/391871215
+这个我试了一下，太慢了，没有用这种方法。
+我找到代码中的原因了，问题在这句：
+url.setPath(name);//文件名
+要是想在根目录下创建文件，就直接写文件名。比如text.txt，那就写成url.setPath("text.txt");
+如果想创建文件夹，然后写文件，比如test/text.txt;就写成url.setPath("test/text.txt");不要写成url.setPath("/test/text.txt");
+我才测试的时候，用的服务器是windows下面的写成url.setPath("/text.txt");可以运行，但是linux的服务器下面这句是不行的。
+但是去掉“/"后，windows和Linux下面都是可行的。
+后来发现是 setPath的路径设置有问题，不能再传绝对路径，传递相对路径下的文件名字即可
+void FtpManager::put(const QString &fileName, const QString &path)
+m_pUrl.setPath(path); ===> m_pUrl.setPath("canfestival_Test.zip");
+
+
+void FtpManager::put(const QString &fileName, const QString &path)
+增加了QSslConfiguration config;
+
+    config.setPeerVerifyMode(QSslSocket::VerifyNone);
+    config.setProtocol(QSsl::TlsV1_1);
+    QNetworkRequest pRequset = QNetworkRequest(m_pUrl);
+    pRequset.setSslConfiguration(config);
+
+增加的上述的代码，后面修改路径之后发现，去掉这些代码也没有什么问题，去掉即可
+
+
+

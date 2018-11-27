@@ -1,0 +1,9 @@
+import QtQuick 2.7
+//import QtQuick.Controls 2.0
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.0
+import QtQuick.Dialogs 1.2
+import QtQuick.Controls.Styles 1.3
+
+//import QtQuick.Controls 2.0
+import QtQuick.Controls 1.3  // 1.3版本可以使用style:, 2.0的版本不可以了

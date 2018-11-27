@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>Button.qml</file>
+        <file>GreenRectangle.qml</file>
+        <file>RedRectangle.qml</file>
+        <file>BlueRectangle.qml</file>
+        <file>Test.qml</file>
+    </qresource>
+</RCC>

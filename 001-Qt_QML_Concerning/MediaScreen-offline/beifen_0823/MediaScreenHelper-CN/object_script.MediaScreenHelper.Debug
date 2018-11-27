@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\usbeventfilter.o
+./debug\usbhelper.o
+./debug\mediascreen.o
+./debug\configureholder.o
+./debug\copyjob.o
+./debug\qrc_qml.o
+./debug\moc_usbhelper.o
+./debug\moc_mediascreen.o
+./debug\moc_configureholder.o
+./debug\moc_copyjob.o
+);

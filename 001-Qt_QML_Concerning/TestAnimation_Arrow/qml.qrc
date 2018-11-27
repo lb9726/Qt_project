@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>images/kone_arrow_up.png</file>
+        <file>images/kone_arrow_down.png</file>
+        <file>PictureAnimation.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <LastModiTime>2015-07-22 09:14:20</LastModiTime>
+    <CreateTime>2015-04-01 15:45:09</CreateTime>
+    <FileType>BST MDP File</FileType>
+    <Showlog>false</Showlog>
+    <Pattern>bst</Pattern>
+    <Passwd>1234</Passwd>
+    <CfgPara>
+        <Physical>
+            <Player>
+                <AoDriver Para="string">LiftFlr,LiftArv,Beep@/dev/dsp,/dev/mixer;AdMusic@/dev/dsp2,/dev/mixer2</AoDriver>
+                <AdAddr Para="string">/mnt/nand1-2/THEME/Sodimas/Music/</AdAddr>
+                <AdVideoVol Para="Num" List="0;100">0</AdVideoVol>
+                <AdMusicVol Para="Num" List="0;100">0</AdMusicVol>
+                <BeepVol Para="Num" List="0;100">100</BeepVol>
+                <LiftArvVol Para="Num" List="0;100">100</LiftArvVol>
+                <LiftFlrVol Para="Num" List="0;100">100</LiftFlrVol>
+            </Player>
+            <MobileDisk>
+                <Movable Para="bool">true</Movable>
+                <Model Para="check" List="UDisk;MMC">UDisk</Model>
+                <Executable Para="bool">false</Executable>
+                <MountBufPath Para="string">/usr/Storage/</MountBufPath>
+            </MobileDisk>
+            <LED>
+                <Normal Para="enum" List="Slow;Fast;High">Fast</Normal>
+                <Busy Para="enum" List="Slow;Fast;High">High</Busy>
+                <Eroor Para="enum" List="Slow;Fast;High">Slow</Eroor>
+            </LED>
+            <Disk>
+                <Model Para="enum" List="NAND;eMMC;SATA">NAND</Model>
+                <BootCatalog Para="string">/mnt/nand1-2/</BootCatalog>
+                <Threshold Para="num" List="80;90">0</Threshold>
+            </Disk>
+            <LCD>
+                <SrnSave Para="num" List="10000;3600000">1800000</SrnSave>
+                <SrnSaveHold Para="num" List="1000;60000">5000</SrnSaveHold>
+                <Luminance Para="num" List="0;100">100</Luminance>
+                <StandBy Para="num" List="0;3600000">300000</StandBy>
+                <DarkLevel Para="num" List="0;100">30</DarkLevel>
+                <Rotation Para="enum" List="0;90;180;270">180</Rotation>
+                <OverLayer Para="check" List="0;1;2;3;4">0</OverLayer>
+            </LCD>
+            <WD>
+                <Freq Para="num" List="1000;3600000">1000</Freq>
+            </WD>
+            <LANC>
+                <UDP Para="num" List="60000;65000">60002</UDP>
+                <TCPS Para="num" List="60000;65000">60001</TCPS>
+                <WIFIIP Para="string">192.168.1.10</WIFIIP>
+                <WIFION Para="bool">false</WIFION>
+                <DHCP Para="bool">true</DHCP>
+            </LANC>
+            <Dial>
+                <Switch0 Para="string">RotSel1</Switch0>
+                <Switch1 Para="string">RotSel0</Switch1>
+                <Switch2 Para="string">AudVol1</Switch2>
+                <Switch3 Para="string">AudVol0</Switch3>
+            </Dial>
+            <SAF>
+                <DebugMode Para="bool">false</DebugMode>
+                <OpenMsg Para="bool">false</OpenMsg>
+                <AreaReuse Para="enum" List="None;Flr_Func">Flr_Func</AreaReuse>
+                <IdleState Para="enum" List="None;Logo;Flr_Logo;Mte_Logo">None</IdleState>
+                <IdleTimeout Para="num" List="1000;3600000">30000</IdleTimeout>
+                <SwitchFreq Para="num" List="1000;3600000">2000</SwitchFreq>
+                <SoundForbid Para="check" List="DoorOpen;DoorClose;StationReport"/>
+                <DebugFrame Para="num" List="0;70">40</DebugFrame>
+                <DebugTimeout Para="num" List="6000;3600000">180000</DebugTimeout>
+                <AutoTest Para="bool">false</AutoTest>
+                <TestFreq Para="Num" List="500;3600000">2500</TestFreq>
+                <Elevator Para="bool">true</Elevator>
+            </SAF>
+        </Physical>
+        <Logic>
+            <ThemeManager>
+                <Location Para="string">0x0</Location>
+                <Layout Para="enum" List="0;1;2;3">2</Layout>
+                <ActiveTheme Mode="Sodimas" Para="enum">Sodimas</ActiveTheme>
+                <Device Para="enum" List="Disk;MobileDisk">Disk</Device>
+            </ThemeManager>
+            <ContentManager>
+                <Backstage Para="bool">false</Backstage>
+                <UserLogo Para="string">logo.png</UserLogo>
+                <Device Para="check" List="LAN;MobileDisk">MobileDisk</Device>
+            </ContentManager>
+        </Logic>
+    </CfgPara>
+</root>

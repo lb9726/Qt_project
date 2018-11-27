@@ -1,0 +1,27 @@
+Item {
+     width: parent.width
+     Text {
+        id: id_videoPathLabel
+        visible: text.length > 0
+        text: videoPath
+        width: parent.width
+        elide: Text.ElideMiddle
+        anchors.centerIn: parent
+    }
+}
+
+注意，当Text的parent为Column时 elide属性的设置无效
+ColumnLayout {
+    id: column_select
+    anchors.fill: parent
+    width: parent.width
+    Text {
+        id: id_videoPathLabel
+        visible: text.length > 0
+        text: videoPath
+        width: parent.width
+        elide: Text.ElideMiddle
+        anchors.centerIn: parent
+    }
+}
+所以此处的设置将无效，上面的Item作为parent，是有效的

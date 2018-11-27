@@ -1,0 +1,3 @@
+sudo groupadd usbfs
+sudo adduser libo vboxusers
+sudo adduser libo usbfs

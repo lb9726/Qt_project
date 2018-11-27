@@ -1,0 +1,84 @@
+1.上官网下载jdk
+http://www.oracle.com/technetwork/java/javase/archive-139210.html
+http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html
+
+下载jdk-7u80-linux-x64.tar.gz  
+tar -xzvf jdk-7u80-linux-x64.tar.gz 解压后生成 jdk1.7.0_80
+然后见一个目录
+sudo mkdir -p /usr/lib/jvm/
+
+直接将这个文件解压到/usr/lib/jvm/ 目录之下
+sudo tar -C /usr/lib/jvm/ -xvzf jdk-8u144-linux-x64.tar.gz
+
+或者也可以直接使用 tar -xzvf jdk-7u80-linux-x64.tar.gz 解压后生成 jdk1.7.0_80
+然后使用mv  sudo mv jdk1.7.0_80/ /usr/lib/jvm/
+
+可以通过配置环境变量命令的方式来解决java -version出错的问题
+$sudo gedit ~/.bashrc
+添加以下代码：到 ~/.bashrc 文件的最后一行即可
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_80
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+jdk1.7.0_80 版本是自己对应的版本的文件夹，不一定相同
+
+查看本机上是否还有java可选。这里用到以下命令
+sudo update-alternatives --list java
+
+以上参考链接 http://jingyan.baidu.com/article/c33e3f48a3365dea15cbb5c9.html
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.7.0_80/bin/java" 1000
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_144//bin/java" 1001
+sudo update-alternatives  --config java
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.7.0_80/bin/java 1000
+引号不要也可以的，后面的1000可以更改为其他值，数值越大，优先级越高而已，无其他意义
+会显示以下的内容
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/jdk1.8.0_144/bin/java   1001      auto mode
+* 1            /usr/lib/jvm/jdk1.7.0_80/bin/java    1000      manual mode
+  2            /usr/lib/jvm/jdk1.8.0_144/bin/java   1001      manual mode
+Press enter to keep the current choice[*], or type selection number: 1
+通过输入数值，选择对应的jdk版本作为默认的版本，编译java文件
+
+
+同理当安装过多个gcc ，g++的版本的时候，也可以随意切换版本进行操作
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 100
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 100
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 100
+
+libo@ubuntu:/usr/lib$ sudo update-alternatives --config gcc
+There are 3 choices for the alternative gcc (providing /usr/bin/gcc).
+
+  Selection    Path              Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/gcc-4.8   100       auto mode
+  1            /usr/bin/gcc-4.6   100       manual mode
+  2            /usr/bin/gcc-4.7   100       manual mode
+* 3            /usr/bin/gcc-4.8   100       manual mode
+
+Press enter to keep the current choice[*], or type selection number: 3
+
+
+同理当安装过多个gcc ，g++的版本的时候，也可以随意切换版本进行操作
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 100
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 100
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 100
+
+
+libo@ubuntu:/usr/lib$ sudo update-alternatives --config g++
+There are 3 choices for the alternative g++ (providing /usr/bin/g++).
+
+  Selection    Path              Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/g++-4.6   100       auto mode
+  1            /usr/bin/g++-4.6   100       manual mode
+  2            /usr/bin/g++-4.7   100       manual mode
+  3            /usr/bin/g++-4.8   100       manual mode
+
+Press enter to keep the current choice[*], or type selection number:3
+

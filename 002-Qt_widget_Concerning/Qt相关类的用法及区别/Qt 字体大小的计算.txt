@@ -1,0 +1,48 @@
+ 
+ http://blog.chinaunix.net/uid-23242876-id-3085826.html
+ [转载]::[QT]Qt 字体大小的计算 2012-02-29 10:20:17
+分类： WINDOWS
+
+计算字符串或者字符宽度的系统函数有：
+1. QLabel::fontMetrics().width(QString s): 获取字符串s的总像素宽度。
+int QFontMetrics::width ( const QString & text, int len = -1 ) const
+Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
+See also boundingRect().
+2. QLabel::fontMetrics().height(): 获取字体的高度。
+int QFontMetrics::height () const
+Returns the height of the font.
+This is always equal to ascent()+descent()+1 (the 1 is for the base line).
+See also leading() and lineSpacing().
+3. QLabel::fontMetrics().lineSpacing(): 获取字体的高度，包括文字的实际宽度和行距。
+4. QLabel::fontMetrics().leading(): 行间距
+int QFontMetrics::leading () const
+Returns the leading of the font.
+This is the natural inter-line spacing.
+See also height() and lineSpacing().
+
+另一方面，QT内部计算字体、像素和字符宽度之间的方法是：
+见地址：http://losemyheaven.blog.163.com/blog/static/17071980920111283934557/
+—————————————ZZ -start ————————————
+在QFont当中有两种方式设置字体大小，一种是PixelSize，另一种是PointSize
+Point实际是磅，也就是 1/72 inch
+我们可以从PainterDevice中得到当前DPI(Dot per inch)。因此 Pixel = DPI * Point / 72
+例如设置字体为20Point。 那么字体的像素大小是 90 * 20 / 72 约等于 25.
+
+可以将字体设置为25Pixel，看到字体的大小就是20Point和25Pixel大小是一样的。
+QFont当中设置的大小，实际上字体的高度，由如下组成。
+
+由PixelSize设置的高度，实际是Asent + 1像素(baseline的高度)。
+在字体大小中涉及了以下知识：
+DPI: Dot per inch，在显示器上也就是每英寸包含的像素。英尺的换算为 1 cm = 0.39 inch, 1 inch = 2.54 cm。
+DPI 可以通过如下计算得来：
+水平 dpi = 水平 resolution * 2.54 / 显示器宽度
+垂直 dpi = 垂直 resolution * 2.54 / 显示器高度
+pixel pitch（点距）: 像素点间距离。可以用25.4mm / DPI得到。
+字体在屏幕上的实际大小 = 字体像素大小 * 点距
+大部分显示器的DPI为90.6左右，垂直和水平点距可能不一样。但windows为了方便就同一了点距，为96。我当前使用的Ubuntu的点距也是96。因此如果想要看到更大的字体可以使用更大的点距。
+
+终于弄明白了 pixel size 是所占的像素大小  这样有一个缺点 有些显示器的分辨率(dpi)比较大  那么单位长度中的像素点就比较多 这样一个字所占的长度就会比较少
+而 point size 则规定了实际中我们肉眼看到的字体的大小 他和pixel无关的～ 他和显示器无关  不管在什么样上的显示器上 规定大小是多少就是多少...
+—————————————ZZ -end ————————————
+

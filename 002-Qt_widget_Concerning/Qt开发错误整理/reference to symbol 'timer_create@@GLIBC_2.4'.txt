@@ -1,0 +1,14 @@
+reference to symbol 'timer_create@@GLIBC_2.4'
+在工程中加入LIBS            += -lrt
+libz
+librt
+libm
+libc
+
+压缩库（Z）
+实时库（real time）
+数学库（math）
+标准C库（C lib）
+
+
+如果你的程序中使用dlopen、dlsym、dlclose、dlerror 显示加载动态库，需要设置链接选项 -ldl

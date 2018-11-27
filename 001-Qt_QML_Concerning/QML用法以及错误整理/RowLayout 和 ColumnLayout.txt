@@ -1,0 +1,2 @@
+在qml中RowLayout和ColumnLayout 布局中往往使得设置 x, y, width, height 这些属性都不会起到作用
+需要再包装一个父窗口Item即可，这样即使是在行列布局里面也一样能够使用 x, y, width, height 这些属性，使之起到相应的作用

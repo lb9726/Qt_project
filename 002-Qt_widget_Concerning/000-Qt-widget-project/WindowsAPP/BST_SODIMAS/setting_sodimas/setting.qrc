@@ -1,0 +1,63 @@
+<RCC>
+    <qresource prefix="/0_common">
+        <file>rc/0_common/btndark.png</file>
+        <file>rc/0_common/btnlight.png</file>
+        <file>rc/0_common/input.png</file>
+        <file>rc/0_common/btngo.png</file>
+        <file>rc/0_common/btngolight.png</file>
+        <file>rc/0_common/radio.png</file>
+        <file>rc/0_common/radiolight.png</file>
+        <file>rc/0_common/checkoff.png</file>
+        <file>rc/0_common/checkon.png</file>
+        <file>rc/0_common/btndark1.png</file>
+        <file>rc/0_common/btnlight1.png</file>
+        <file>rc/0_common/sliderdot.png</file>
+        <file>rc/0_common/voladd.png</file>
+        <file>rc/0_common/voldel.png</file>
+        <file>rc/0_common/check1.png</file>
+        <file>rc/0_common/check2.png</file>
+        <file>rc/0_common/zip.png</file>
+        <file>rc/0_common/ziplight.png</file>
+        <file>rc/0_common/undo.png</file>
+        <file>rc/0_common/btnlight2.png</file>
+        <file>rc/0_common/btnadd.png</file>
+        <file>rc/0_common/btndel.png</file>
+    </qresource>
+    <qresource prefix="/1_language">
+        <file>rc/1_language/english.png</file>
+        <file>rc/1_language/english_en.png</file>
+        <file>rc/1_language/french.png</file>
+        <file>rc/1_language/germany.png</file>
+        <file>rc/1_language/germany_en.png</file>
+        <file>rc/1_language/holland.png</file>
+        <file>rc/1_language/holland_en.png</file>
+        <file>rc/1_language/french_en.png</file>
+        <file>rc/1_language/logo.png</file>
+        <file>rc/1_language/bg.png</file>
+    </qresource>
+    <qresource prefix="/2_mainpage">
+        <file>rc/2_mainpage/bg.png</file>
+    </qresource>
+    <qresource prefix="/Icon">
+        <file>rc/Icon/busy.gif</file>
+        <file>rc/Icon/off.png</file>
+        <file>rc/Icon/on.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>rc/15_Flrmap/audio.png</file>
+        <file>rc/15_Flrmap/bg.png</file>
+        <file>rc/15_Flrmap/btn_audio.png</file>
+        <file>rc/15_Flrmap/btn_flrmap.png</file>
+        <file>rc/15_Flrmap/edit_level.png</file>
+        <file>rc/15_Flrmap/edit_mapping.png</file>
+        <file>rc/15_Flrmap/edit_num.png</file>
+        <file>rc/15_Flrmap/framedark.png</file>
+        <file>rc/15_Flrmap/framelight.png</file>
+        <file>rc/15_Flrmap/level.png</file>
+        <file>rc/15_Flrmap/mapping.png</file>
+        <file>rc/15_Flrmap/num.png</file>
+        <file>rc/15_Flrmap/btndel.png</file>
+        <file>rc/15_Flrmap/btnlight.png</file>
+        <file>rc/15_Flrmap/undo.png</file>
+    </qresource>
+</RCC>

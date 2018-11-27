@@ -1,0 +1,13 @@
+#!/bin/sh
+mkdir /var/ftp
+mkdir /var/ftp/pub
+
+chmod 777 -R /var
+chmod 777 -R /var/ftp
+chmod 777 -R /var/ftp/pub
+
+cp vsftpd.conf /etc/
+mkdir -p /usr/share/empty
+
+cp /usr/bst/SYSTEM/Middleware/FTP/vsftpd.conf /etc/vsftpd.conf
+/usr/bst/SYSTEM/Middleware/FTP/vsftpd &

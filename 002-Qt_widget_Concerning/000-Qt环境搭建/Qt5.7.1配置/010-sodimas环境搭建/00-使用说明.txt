@@ -1,0 +1,15 @@
+工具介绍：
+
+
+	交叉编译工具：gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux.tar.bz2
+	    解压命令：tar jxvf gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux.tar.bz2
+
+	QT编译工具：qt-m6g2c.tar.bz2
+	    解压命令：sudo tar jxvf qt-m6g2c.tar.bz2 -C /opt
+
+	触摸屏校准软件和库：tslib.tar.bz2
+	    解压命令：sudo tar jxvf tslib.tar.bz2 -C /opt
+
+其它说明：
+	qt-m6g2c.tar.bz2和tslib.tar.bz2编译时指定的安装路径为/opt目录。如果要直接使用这两个工具的
+	话，请不要修改上面解压命令的指定路径。

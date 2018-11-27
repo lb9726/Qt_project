@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mknod -m 644 /dev/hmi c 194 0
+
+cd /usr/bst/SYSTEM/Physical/SAF/
+insmod sodimas.ko
+cd /

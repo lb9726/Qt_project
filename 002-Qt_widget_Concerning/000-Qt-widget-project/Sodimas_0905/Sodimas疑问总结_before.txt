@@ -1,0 +1,40 @@
+1.整体架构的思路是什么？Sodimas的产品有哪些具体功能？
+2.componet configure global qmlitem util/media golbalsetting.cpp 
+这些东西之间的层次关系是什么？
+3. componet:分logic，physic，ui 具体是项目的哪些东西？
+logic下还分了themelg（ThemeLg）的initDevice(LG_Type pPHType, QDomElement pElement)
+
+
+bool XmlParse::getItemElement(QString itemPath)这个函数做什么？
+
+mdpparser.cpp 这个是处理xml文件的吗？
+
+/home/libo/Desktop/Repository/Qt_project/BST_Codes/SodimasDisplay/global/globalfun.cpp
+QStringList findFilesInFloder(QString DirName, QString fileName, bool subfolder) 在递归什么，什么功能
+
+QStringList ergodicDirectory(QString d)
+
+
+QStringList QDir::entryList ( const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort ) const
+
+Returns a list of the names of all the files and directories in the directory, ordered according to the name and attribute filters previously set with setNameFilters() and setFilter(), and sorted according to the flags set with setSorting().
+
+The name filter, file attribute filter, and sorting specification can be overridden using the nameFilters, filters, and sort arguments.
+
+Returns an empty list if the directory is unreadable, does not exist, or if nothing matches the specification.
+
+See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
+
+QStringList QDir::entryList ( Filters filters = NoFilter, SortFlags sort = NoSort ) const
+This is an overloaded function.
+Returns a list of the names of all the files and directories in the directory, ordered according to the name and attribute filters previously set with setNameFilters() and setFilter(), and sorted according to the flags set with setSorting().
+
+The attribute filter and sorting specifications can be overridden using the filters and sort arguments.
+
+Returns an empty list if the directory is unreadable, does not exist, or if nothing matches the specification.
+
+Note: To list symlinks that point to non existing files, System must be passed to the filter.
+
+See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
+
+

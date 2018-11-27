@@ -1,0 +1,43 @@
+QOrientationReading class
+http://doc.qt.io/qt-5/qorientationreading.html#orientation-prop
+
+http://doc.qt.io/qt-4.8/qt-widgets-orientation-example.html
+
+QML学习之浅谈Window
+http://blog.csdn.net/kanchuan1905/article/details/53762788
+
+        在Qt Quick的世界里，Window对象用于创建一个与操作系统相关的顶层窗口，包含了如Text, Rectangle, Image等元素。Window还有一个派生类，即大名鼎鼎的ApplicationWindow，也可以作为QML文档的根对象。上一篇文章，我们提到的使用QQuickView加载QML的方式，顶层窗口是由QQuickView创建的。
+        要使用Window对象，需要使用下面这行代码来导入Window模块:
+            import QtQuick.Window 2.2
+        1）Window对象可以创建一个新的顶层窗口来作为Qt Quick的活动场景，它会自动设置好窗口的基本属性，如图标、标题、系统按钮。当然也可以撰写QML代码来设定窗口的属性。下面来谈谈这些属性。
+        Window在桌面上的位置，由x, y属性决定，其大小由width，height属性决定。除此之外，你还可以使用minimumWidth ,  minimumHeight来限制窗口的最小尺寸，使用maximumWidth, maximumHeight来限制窗口的最大尺。作为受窗口管理系统控制的一个窗口，其显示状态有:正常、最小化、最大化、全屏、隐藏。PC操作系统的窗口管理系统多数都支持鼠标拖动改变窗口的大小和位置。
+        Window对象的visibility属性用来设置这个窗口的显示状态，可以取下列值:
+            Window. Windowed,窗口占屏幕的一部分，窗口管理系统支持同时显示多窗口时才有效。
+         Window.Minimized，最小化到任务栏上的一个图标。
+         Window.Maximized，最大化，占用任务栏之外的所有屏幕空间，标题栏依然显示。
+         Window.FullScreen，全屏显示，占用整个屏幕，标题栏隐藏。
+         Window.AutomaticVisibility，给Window一个默认的显示状态，它的实际值与平台实  现有关。
+         Window.Hidden, 隐藏，窗口不可见，与visible属性的效果一样。
+        窗口的隐藏、显示由布尔类型的visible属性控制，设置其为true则显示窗口，为false隐藏窗口。
+        color属性用来设置窗口的背景颜色，可以用“blue",“#RRGGBB ", Qt.rgba()等形式为其赋值;
+        opacity属性用来设置窗口透明度，取值范围是0一1.0; 
+        title属性用来设置窗口的标题，字符串类型;
+        activeFocusItem属性类型是Item，保存窗口中拥有活动焦点的Item，可能为null。
+        contentOrientation属性用来设置窗口的内容布局方向，可以取下列值:
+                Qt.PrimaryOrientation，使用显示设备的首选方向。
+             Qt.LandscapeOrientation，横屏。
+             Qt.PortraitOrientation，竖屏。
+             Qt.InvertedLandscapeOrientation，相对于横屏模式，旋转了180°。
+             Qt.InvertedPortraitOrientation，相对于竖屏模式，旋转了180°。     
+        一个Qt Quick应用可能会有多个窗口，窗口之间的关系由modality(模态)属性决定，一个模态的窗口会阻止其他窗口获取输入事件。modality可以取下列值:
+        a) Qt.NonModal，非模态。
+        b) Qt. WindowModal ,窗口级别的模态，设置此属性的窗口只针对某一个窗口是模态的，如子窗口相对父窗口是模态的，相对同一应用中的其他非父窗口则没有模态效果。
+        c) Qt.ApplicationModal，应用级别的模态，设置此属性的窗口会阻止同一应用的其他窗口获取输入事件。
+       Window的flags属性就是用来设置窗口标志位的，取值与Qt C++一样，不过要通过Qt.Widget, Qt.Popup这种形式来使用。
+       Window的data属性为默认属性，类型是list<Object>。
+       2）ApplicationWindow是Window的派生类，使用它需要使用下面的语句来引入Controls模块:
+         import QtQuick .Controls 1.2
+        ApplicationWindow有点儿像QMainWindow，有menuBar, toolBar, statusBar属性，分别用来设置菜单、工具栏、状态栏，还有contentltem,可以用来设置内容元素的尺寸属性。  
+
+
+

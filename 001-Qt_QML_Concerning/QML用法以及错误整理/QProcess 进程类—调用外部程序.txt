@@ -1,0 +1,182 @@
+http://blog.csdn.net/newbee520/article/details/8279101
+
+QProcess 进程类—调用外部程序QProcess进程类
+        Qt提供了一个QProcess类用于启动外部程序并与之通信，启动一个新的进程的操作非常简单,只需要将待启动的程序名称和启动参数传递给start()函数即可.
+        例如:
+[cpp] view plain copy
+QObject *parent;  
+QString program = "tar"   
+QStringList arguments;  
+arguments << "czvf" << "backup.tar.gz" << "/home";  
+QProcess *myProcess = new QProcess(parent);  
+QProcess->start(program, arguments);  
+
+       当调用start()函数后,myProcess进程立即进入启动状态,但tar程序尚未被调用,不能读写标准输入输出设备.
+当进程完成启动后就进入"运行状态"并向外发出started()信号.在输入输出方面,QProcess将一个进程看做一
+个流类型的I/O设备,可以像使用QTcpSocket读写流类型的网络连接一样来读写一个进程.可以通过QIODevice::write()
+函数向所启动进程的标准输入写数据,也可以通过QIODevice::read()、QIODevice::readLine()和QIODevice::getChar()
+函数从这个进程的标准输出读数据.此外由于QProcess是从QIODevice类继承而来的,因四级,它也可以作QXmlReader
+的数据在源,或者为QFtp产生上传数据.最后,当进程退出时QProcess进入起始状态----"非运行状态",并发出finished()
+信号.
+[cpp] view plain copy
+void finished(int exitCode, QProcess::ExitStatus exitStatus)  
+
+信号在参数中返蜀犬吠日了进程退出的退出码和退出状态,可以调用exitCode()函数和exitStatus()函数分别获取最后退出进程的这两个值.其中,Qt定义的进程"退出
+状态"只有正常退出和进程崩溃两种,分别对应值QProcess::NormalExit(值0)和QProcess::CrashExit(值1).当进程在运
+行中产生错误时,QProcess将发出error()信号,可以通过,调用error()函数返回最后一次产生错误的类型,并通过,state()
+找出此时进程所处的状态.Qt定义了如下的进程错误代码:
+----------------------------------------------------------------
+错误常量                                值       描述
+QProcess::FailedToStart        0        进程启动失败
+QProcess::Crashed                1        进程成功启动后崩溃
+QProcess::Timedout               2        最后一次调用waitFor...()函数超时.此时QProcess状态不变,并可以再次             调用waitFor()类型的函数
+QProcess::WriteError              3        向进程写入时出错.如进程尚未启动,或者输入通道被关闭时
+QProcess::ReadError              4        从进程中读取数据时出错.如进程尚未启动时
+QProcess::UnknownError       5        未知错误.这也是error()函数返回的默认值。
+
+  进程的标准输出：
+  stdout:通常用于控制台下输出
+  stderr:通常用于进程打印错误
+  它们本质上是两个独立的数据流.
+  可以通过调用setReadChanned()函数设置当前的读通道
+  当有可读数据时Qt将发发出readyRead()信号
+  如果是标准输出和标准错误通道中读取数据,还会发出readyReadStandardOutput()信号
+  如果是标准错误也会发出readyReadStandardError()信号
+  readAllStandardOutput()函数从标准输出通道中读取数据
+  readAllStandardErrot()函数从标准错误通道中读取数据
+  在进程启动以前以MergedChannels参数调用setReadChannelMode()函数可以把标准输出通道和标准输错误通道合并
+  例:
+[cpp] view plain copy
+#include <QApplication>  
+#include <QProcess>  
+#include <QString>  
+#include <iostream>  
+  
+int main(int argc, char *argv[])  
+{  
+    QApplication app(argc, argv);  
+  
+    QProcess proc;  
+    QStringList arguments;  
+    arguments << "-na";  
+    proc.start("netstat", arguments);  
+  
+    // 等待进程启动  
+    if (!proc.waitForStarted())  
+    {  
+        std::cout << "启动失败\n";  
+        return false;  
+    }  
+    // 关闭写通道,因为没有向进程写数据,没用到   
+    proc.closeWriteChannel();  
+  
+    // 用于保存进程的控制台输出  
+    QByteArray procOutput;  
+    // 等待进程结束  
+    while (false == proc.waitForFinished())  
+    {  
+       std::cout << "结束失败\n";  
+       return 1;  
+    }   
+    // 读取进程输出到控制台的数据   
+   procOutput = proc.readAll();  
+   // 输出读到的数据   
+   std::cout << procOutput.data() << std::endl;  
+   // 返回   
+   return EXIT_SUCCESS;  
+}  
+[cpp] view plain copy
+<pre name="code" class="cpp"><pre></pre>  
+<pre></pre>  
+<pre></pre>  
+<pre></pre>  
+<pre></pre>  
+<pre></pre>  
+</pre>  
+为了加深对QProcess类的使用，接下来，在这里再贴上自己编写过的一个案例的代码：这个案例是模拟DOS下的命令窗口的。
+"widget.h"头文件
+[cpp] view plain copy
+#ifndef WIDGET_H  
+#define WIDGET_H  
+#include <QProcess>  
+#include <QWidget>  
+  
+namespace Ui {  
+    class Widget;  
+}  
+  
+class Widget : public QWidget  
+{  
+    Q_OBJECT  
+  
+public:  
+    explicit Widget(QWidget *parent = 0);  
+    ~Widget();  
+  
+private:  
+    Ui::Widget *ui;  
+    QProcess *pro;//创建一个进程对象  
+    QString out;  
+private slots:  
+    void on_pushButton_clicked();//运行按钮槽  
+    void readOutput();//从进程中读取数据槽  
+};  
+  
+#endif // WIDGET_H  
+
+"widget.cpp"源文件
+[cpp] view plain copy
+#include "widget.h"  
+#include "ui_widget.h"  
+  
+Widget::Widget(QWidget *parent) :  
+    QWidget(parent),  
+    ui(new Ui::Widget)  
+{  
+    ui->setupUi(this);  
+    this->pro = new QProcess;  
+    this->setWindowFlags(Qt::WindowMinimizeButtonHint);  
+  
+    QObject::connect(ui->lineEdit,SIGNAL(returnPressed()),this,SLOT(on_pushButton_clicked()));  
+    //对ui->lineEdit进行信号和槽连接,光标在ui->lineEdit内时按回车键,达到同点击运行按钮一样的效果  
+    QObject::connect(pro,SIGNAL(readyRead()),this,SLOT(readOutput()));  
+    //当准备从进程里读取数据的时候触发输出数据的槽  
+}  
+  
+Widget::~Widget()  
+{  
+    delete ui;  
+}  
+  
+void Widget::on_pushButton_clicked()  
+{  
+   QString cmd = ui->lineEdit->text();  
+   pro->start(cmd);  
+   out = tr("");  
+   ui->textEdit->setText(out);  
+}  
+  
+void Widget::readOutput()  
+{  
+   out += pro->readAll();  
+   ui->textEdit->setText(out);  
+}  
+
+"main.cpp"源文件
+[cpp] view plain copy
+#include <QtGui/QApplication>  
+#include "widget.h"  
+#include <QTextCodec>  
+int main(int argc, char *argv[])  
+{  
+    QApplication a(argc, argv);  
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("GBK"));  
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("GBK"));  
+    QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));  
+    Widget w;  
+    w.show();  
+  
+    return a.exec();  
+}  
+哦，这个案例的界面是我用Qt Designer拖出来的，所以没有代码部分。请大家借助下面的效果图查看源码。
+再给大家展示上运行的效果图：

@@ -1,0 +1,73 @@
+void Widget::ShiningArrowUp()
+{
+    QPixmap image; //定义一张图片
+    image.load(":/new/prefix1/images/ArrowUp.png");//加载
+    ui->label_Arrow->clear();//清空
+    ui->label_Arrow->setPixmap(image);//加载到Label标签
+    ui->label_Arrow->show();//显示
+
+    QTimer *mytime = new QTimer(this);
+    mtime3 = mytime;
+    connect(mytime, SIGNAL(timeout()), this, SLOT(OnShiningArrowUp()));
+    mytime->start(200);
+}
+
+// 下箭头闪烁
+void Widget::ShiningArrowDn()
+{
+    QPixmap image; //定义一张图片
+    image.load(":/new/prefix1/images/ArrowDn.png");//加载
+    ui->label_Arrow->clear();//清空
+    ui->label_Arrow->setPixmap(image);//加载到Label标签
+    ui->label_Arrow->show();//显示
+
+    QTimer *mytime = new QTimer(this);
+    mtime4 = mytime;
+    connect(mytime, SIGNAL(timeout()), this, SLOT(OnShiningArrowDn()));
+    mytime->start(200);
+}
+
+// 上箭头闪烁的槽函数
+void Widget::OnShiningArrowUp()
+{
+    static float opacity = 0.0;
+    QGraphicsOpacityEffect *effect = new QGraphicsOpacityEffect(this);
+    effect->setOpacity(opacity);
+    if (opacity >= 1.0)
+    {
+        mtime3->stop();
+        opacity = 0.0;
+    }
+    else
+    {
+        effect->setOpacity(opacity);
+        ui->label_Arrow->setGraphicsEffect(effect);
+    }
+    opacity += 0.1;
+}
+
+// 下箭头闪烁的槽函数
+void Widget::OnShiningArrowDn()
+{
+    static float opacity = 0.0;
+    QGraphicsOpacityEffect *effect = new QGraphicsOpacityEffect(this);
+    effect->setOpacity(opacity);
+    if (opacity >= 1.0)
+    {
+        mtime4->stop();
+        opacity = 0.0;
+    }
+    else
+    {
+        effect->setOpacity(opacity);
+        ui->label_Arrow->setGraphicsEffect(effect);
+    }
+    opacity += 0.1;
+}
+
+
+
+
+
+
+

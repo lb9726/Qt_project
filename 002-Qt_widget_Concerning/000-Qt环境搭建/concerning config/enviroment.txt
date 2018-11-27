@@ -1,0 +1,342 @@
+之前的提示为gstreamer plugins is missing 
+安装一下这些库文件，有问题再解决问题
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install gperf
+sudo apt-get install dh-autoreconf
+sudo apt-get install gstreamer0.10-plugins-good
+sudo apt-get install gstreamer0.10-plugins-ugly
+sudo apt-get install gstreamer0.10-plugins-bad
+sudo apt-get install gstreamer0.10-plugins-bad-multiverse
+sudo apt-get install gstreamer0.10-fluendo-mp3
+sudo apt-get install gstreamer0.10-ffmpeg
+sudo apt-get install gstreamer0.10-libav
+sudo apt-get install ffmpeg
+
+sudo apt-get install gstreamer1.0*
+sudo apt-get install libqtgstreamer-0.10-0
+sudo apt-get install libqtgstreamer-dev
+
+
+Qt输出的警告为  Warning: "No decoder available for type 'video/x-h264, stream-format=(string)avc, alignment=(string)au, level=(string)3, profile=(string)high, codec_data=(buffer)0164001effe100176764001eacb4028022d8088000003e80000bb5478b175001000568cf32c8b0, width=(int)1280, height=(int)544, framerate=(fraction)2997/125, pixel-aspect-ratio=(fraction)1/1, parsed=(boolean)true'."
+
+搜索 Ubuntu No decoder available for type   https://askubuntu.com/questions/473625/no-decoder-available-for-type-audio-x-wma
+
+Ubuntu 14.04 does not have this ffmpeg library in its repositories.
+
+The easiest way is to install a PPA:
+
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install gstreamer0.10-ffmpeg
+
+安装这个就可以加载视频的画面了
+
+
+
+
+
+3.3 安装开发工具
+ 64 位系统的32 位软件库支持
+  sudo apt-get install ia32-libs
+
+安装最基本的开发环境
+  sudo apt-get install bison build-essential libncurses5-dev
+ccache 安装
+  sudo apt-get install ccache
+安装QT支持库
+sudo apt-get install libqtcore4
+sudo apt-get install libqtgui4
+sudo apt-get install libqt4-network
+
+sudo apt-get install g++-4.6 gcc-4.6
+sudo apt-get install g++-4.6-multilib
+sudo apt-get install g++-4.7-multilib
+sudo apt-get install android-tools-adb
+sudo apt-get install libxml2-utils
+sudo apt-get install libc6-dev
+sudo apt-get install zlib1g-dev:i386
+sudo apt-get install libncurses5-dev:i386
+sudo apt-get install x11proto-core-dev
+sudo apt-get install libx11-dev:i386
+sudo apt-get install libreadline6-dev:i386
+sudo apt-get install libglapi-mesa:i386
+sudo apt-get install libgl1-mesa-glx:i386
+sudo apt-get install libgl1-mesa-dev
+sudo apt-get install libpulse-dev
+sudo apt-get install libdirectfb-dev
+sudo apt-get install libpango1.0-dev
+sudo apt-get install libdbus-1-dev
+sudo apt-get install libasound2-dev
+sudo apt-get install libesd0-dev
+sudo apt-get install libncurses5-dev
+sudo apt-get install libicu-dev
+sudo apt-get install libxml2-dev
+sudo apt-get install libsqlite3-dev
+sudo apt-get install libegl1-mesa-dev
+sudo apt-get install libgles2-mesa-dev
+sudo apt-get install libevent-dev
+sudo apt-get install libxcursor-dev
+
+
+sudo apt-get install libgstreamer0.10-dev
+sudo apt-get install libgstreamer-plugins-base0.10-dev
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install gperf
+sudo apt-get install dh-autoreconf
+sudo apt-get install gstreamer0.10-plugins-good
+sudo apt-get install gstreamer0.10-plugins-ugly
+sudo apt-get install gstreamer0.10-plugins-bad
+sudo apt-get install gstreamer0.10-plugins-bad-multiverse
+sudo apt-get install gstreamer0.10-fluendo-mp3
+sudo apt-get install gstreamer0.10-ffmpeg
+sudo apt-get install gstreamer0.10-libav
+sudo apt-get install ffmpeg
+sudo apt-get install pyside-tools
+sudo apt-get install python-m2crypto
+sudo apt-get install python-lxml
+sudo apt-get install lib32z1-dev
+sudo apt-get install g++-multilib
+sudo apt-get install gnupg flex
+sudo apt-get install zip
+sudo apt-get install curl
+sudo apt-get install mingw32
+sudo apt-get install tofrodos
+sudo apt-get install python-markdown
+sudo apt-get install xsltproc
+sudo apt-get install xserver-xorg
+sudo apt-get install xserver-common
+
+
+sudo apt-get install rabbitvcs-nautilus rabbitvcs-gedit
+sudo apt-get install libavcodec-dev
+sudo apt-get install libavcodec-dev
+sudo apt-get install libavformat-dev
+sudo apt-get install libavutil-dev
+sudo apt-get install libavdevice-dev
+sudo apt-get install binutils-dev
+sudo apt-get install libc-dev:i386
+sudo apt-get install libc6-dev-i386
+sudo apt-get install lib32ncurses5-dev
+sudo apt-get install libudev-dev
+sudo apt-get install liblog4cxx10
+sudo apt-get install liblog4cxx10-dev
+sudo apt-get install libbluetooth-dev
+sudo apt-get install automake
+sudo apt-get install automake1.11
+sudo apt-get install gstreamer1.0*
+sudo apt-get install libqtgstreamer-0.10-0
+sudo apt-get install libqtgstreamer-dev
+
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
+
+
+U buntu下工具软件众多,日常工作和生活中使用Ubuntu系统已经足够了。下面介
+绍常用的工具软件的开发。
+安装之前,请使用以下命令更新下。
+更新软件源
+  sudo apt-get update
+更新软件包
+  sudo apt-get upgrade
+更新所有软件包
+  sudo apt-get dist-upgrade
+* 整个更新过程会比较漫长
+
+
+在当前位置打开终端
+sudo apt-get install nautilus-open-terminal
+安装rar支持
+sudo apt-get install rar unrar
+安装字典软件stardict
+sudo apt-get install stardict
+装完以后,把字典数据(放在文件服务器的17CY\training\01 - 环境搭建
+\enviroment\Dictionary\stardict\dic)拷贝到/usr/share/stardict/dic目录
+安装ssh支持
+sudo apt-get install fuse-utils sshfs
+modprobe fuse
+sudo apt-get install ssh
+
+
+安装tftp支持
+sudo apt-get install tftpd-hpa
+sudo apt-get install tftp
+
+安装nfs支持
+sudo apt-get install nfs-kernel-server
+安装expect(脚本中经常使用)
+sudo apt-get install expect
+安装python支持库:
+sudo apt-get install python-tk
+sudo apt-get install python-pyside
+Windows 回车符转换CRLF->LF
+  sudo apt-get install dos2unix
+Cmake 工具
+  sudo apt-get install cmake cmake-gui
+
+3.5.1 图像编辑软件 GIMP
+sudo apt-get install gimp
+
+
+
+
+3.5.2 JDK 安装
+把17CY\training\01 - 环境搭建\enviroment\ jdk-6u37-linux-x64 copy到本
+地
+  chmod +x jdk-6u37-linux-x64.bin
+  ./jdk-6u37-linux-x64.bin
+  sudo mkdir -p /usr/lib/jvm/
+  sudo mv jdk1.6.0_37/ /usr/lib/jvm/
+  sudo update-alternatives --install "/usr/bin/java" "java"
+"/usr/lib/jvm/jdk1.6.0_37/bin/java" 1000
+  sudo update-alternatives --config java
+如图所示:
+
+  update-alternatives --install "/usr/bin/javac" "javac"
+"/usr/lib/jvm/jdk1.6.0_37/bin/javac" 1000
+  sudo update-alternatives --config javac
+如图所示:
+
+
+3.5.3 安装 Jude(需要先安装 JDK)
+将文件服务器上的17CY\training\01 - 环境搭建
+\enviroment\astah-community_6.5-1_all.deb拷贝到本地,在ubuntu下找到本
+地文件,打开终端,运行
+sudo dpkg -i astah-community_6.5-1_all.deb
+注意安装完成之后,会提示失败,无视就好。
+使用软件的时候,会提示更新,请不要更新,就用这个版本
+
+
+3.5.4 安装 BeyondCompare
+BeyondCompare是一款很优秀的比较软件,比较幸运的是,BC现在有了官方的
+Ubuntu版本,我已经下来了一份放在17CY\training\01 - 环境搭建
+\enviroment\bcompare-3.3.3.14128_i386.deb。把这个文件拷到本地,双击即
+可安装。
+这个版本是30天试用版,如果30天将要到期了,可以删除他的配置文件,然后又
+可以继续用了。
+rm –rf ~/.beyondcompare
+
+
+3.5.5 安装编辑器
+  sudo apt-get install vim
+
+3.5.6 安装 Git 及配置
+安装:
+sudo apt-get install git git-core
+sudo apt-get install gitk
+配置:
+  git config --global user.name xxx (注:xxx 为申请的邮箱用户名)
+  git config --global user.email xxx@pset.suntec.net(注:xxx 为申请的
+邮箱用户名)
+  git config --global core.autocrlf input(注:行结束符在签入时转换为
+LF,签出时
+不变)
+  git config --global core.safecrlf true (注:签入时检查行结束符,不
+允许混合)
+  git config --global color.ui true (注:打开git色彩显示)
+
+
+配置Bycompare为外部Diff工具。
+1. vi ~/.gitconfig
+2. [diff]
+Tool = bc3
+[difftool]
+Prompt = false
+[merge]
+Tool = bc3
+[mergetool]
+Prompt =false
+配置完成。
+再配置GUI端:
+需要进入代码仓库。
+Cmd 输入 gitk
+选择Edit-〉Preferences -> External Tool 选择 /usr/lib/bcompare
+3. Diff 文件:
+Git difftool xxx文件
+或者在git GUI界面上选择文件之后,选择外部diff工具,就可以用BC了。
+
+
+3.5.7 安装输入法
+  sudo apt-get install fcitx-googlepinyin
+安装语言包,或许中文会比较友好
+打开应用程序->系统工具->系统设置->语言支持
+点击添加删除语言,勾选中文,然后应用变更
+* 在列表中,把中文拖到最前面
+* 键盘输入方式选择fcitx,当然ibus 也是可以的
+至此,重启以后就是中文界面了
+* 不要把桌面、文档、下载等文件夹更换成中文目录,否则命令行操作会很麻烦
+
+
+第四章 基本开发环境配置
+4.1 配置 SSH
+1.生成Key:
+  ssh-keygen -t rsa  生成密钥文件
+  cd ~/.ssh  你的私钥为id_rsa,公钥为id_rsa.pub
+  cp id_rsa.pub YOUR_NAME.pub  拷贝便于识别
+然后把你的公钥copy到如下的位置: 17CY\members\公钥\申请中
+之后17CY环境搭建成功,会帮助大家申请权限。
+
+
+2.登陆Key:
+  ssh-add id_rsa  将私钥添加到认证代理中打开浏览器登录
+http://igerrit.storm
+进入Setting->SSH Public Key->Add Key->复制你的公钥然后点击Add
+打开浏览器登录http://review.iauto.net/iauto/
+进入Setting->SSH Public Key->Add Key->复制你的公钥然后点击Add
+* 注意备份你的私钥和公钥,以防系统出现问题
+注意,添加的时候,公钥后面的机器名或者邮件地址就不要copy上去了。
+
+
+3.追加Config:
+在本地的~/.ssh文件夹下新建config文件
+
+
+将以下内容copy到config文件,并将 User 替换成自己的storm账号.
+Host iauto
+Hostname review.iauto.net
+IdentityFile ~/.ssh/id_rsa
+User iautoci
+Port 29418
+Host igerrit.storm
+Hostname igerrit.storm
+IdentityFile ~/.ssh/id_rsa
+User iautoci
+
+4.2 配置 GCC、G++
+  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7
+40
+  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6
+30
+  sudo update-alternatives --config gcc
+如图所示:
+
+
+  sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 100
+  sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 80
+  sudo update-alternatives --config g++
+如图所示:
+
+
+4.3 配置
+Repo
+至此,你的公钥应该上传至服务器了,然后你就可以拉取代码了
+git clone ssh://igerrit.storm:29418/tools/repo.git
+cd repo
+git checkout -b stable origin/stable
+sudo cp ./repo /usr/bin/repo
+删除本地repo仓库
+  sudo rm –rf ../repo
+
+
+
+
+
+
+
+
+
+
+
+
+
+

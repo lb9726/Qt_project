@@ -1,0 +1,28 @@
+// 显示时间，每秒刷新一次
+//QString Widget::GetTime()
+//{
+//    QDateTime Time = QDateTime::currentDateTime();
+////    QString tim = Time.toString("h:mm ap"); // 12小时制
+//    QString tim = Time.toString("hh:mm"); // 24小时制
+//    qDebug()<<"tim = "<< tim<<'\n';
+//    return tim;
+//}
+
+// 显示时间，每秒刷新一次
+void Widget::showTime()
+{
+    QTime time = QTime::currentTime();
+    QString text = time.toString("hh : mm");
+    if ((time.second() % 2) == 0)
+        text[3] = ' ';
+
+    QFont ft;                    // 设置字号
+    ft.setPointSize(20);
+    ui->label_time->setFont(ft);
+
+    QPalette pe;                // 设置颜色
+    pe.setColor(QPalette::WindowText,Qt::white);
+    ui->label_time->setPalette(pe);
+    ui->label_time->setText(text);
+    qDebug()<< "text = "<< text;
+}

@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>image/background.png</file>
+        <file>SwitchHelper.qml</file>
+        <file>MultiMedia.qml</file>
+        <file>Parameter.qml</file>
+        <file>MakeDisk.qml</file>
+        <file>Area1.qml</file>
+        <file>Area2.qml</file>
+        <file>Area3.qml</file>
+        <file>Area4.qml</file>
+        <file>Area5.qml</file>
+        <file>GridDemos.qml</file>
+        <file>image/handle.png</file>
+        <file>image/blue.png</file>
+        <file>image/Brown.png</file>
+    </qresource>
+</RCC>

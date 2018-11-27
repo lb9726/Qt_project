@@ -1,0 +1,47 @@
+SSHSecureShellClient
+SSHSecureShellClient-3.2.9连接linux非常好用的软件，可以从linux上传和下载文件，还可远程命令控制linux。
+
+http://download.csdn.net/download/allmycheers/2785269
+
+ssh secure shell 配置
+https://jingyan.baidu.com/article/4b52d7029c7ab9fc5c774be2.html
+
+ubuntu 端需要启动ssh的服务，
+
+sudo apt-get update
+sudo apt-get install openssh-server
+ps -e | grep ssh
+/etc/init.d/ssh start
+sudo /etc/init.d/ssh resart
+
+出现这个错误 start: Unknown job: ssh
+这应该算是Ubuntu的一个bug，可以用下面的方法解决：
+ubuntu@ubuntu:~$ sudo /usr/sbin/sshd 
+Missing privilege separation directory: /var/run/sshd 
+ubuntu@ubuntu:~$ sudo mkdir /var/run/sshd 
+ubuntu@ubuntu:~$ sudo /usr/sbin/sshd 
+ubuntu@ubuntu:~$ netstat -nlt 
+Active Internet connections (only servers) 
+Proto Recv-Q Send-Q Local Address Foreign Address State 
+tcp 0 0 127.0.0.1:53 0.0.0.0:* LISTEN 
+tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN 
+tcp 0 0 127.0.0.1:631 0.0.0.0:* LISTEN 
+tcp6 0 0 :::22 :::* LISTEN
+
+或者重启后服务自动开启,监听22
+
+
+++相关/C++_testCodes$ netstat -nlt 
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.1.1:53            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 ::1:631                 :::*                    LISTEN  
+
+
+
+
+
+

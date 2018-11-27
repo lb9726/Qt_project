@@ -1,0 +1,65 @@
+QObject::connect: Parentheses expected, slot Widget::sett in ../Protocol_test/widget.cpp:13
+QObject::connect:  (receiver name: 'Widget')
+QTimer* tim = new QTimer;
+    connect(tim, SIGNAL(timeout()), this, SLOT(sett)); 错误
+    tim->start(3000);
+    
+    
+    QTimer* tim = new QTimer;
+    connect(tim, SIGNAL(timeout()), this, SLOT(sett())); 正确
+    tim->start(3000);
+    
+    
+    QObject::connect: Cannot queue arguments of type 'char[]'
+(Make sure 'char[]' is registered using qRegisterMetaType().)
+
+
+QObject::connect: Cannot queue arguments of type 'char[]' (Make sure 'char[]' is registered using qRegisterMetaType().)
+
+
+背景：一个线程通过signal-slot发送PVCI_CAN_OBJ类型的值到主线程中，
+
+错误提示：
+
+QObject::connect: Cannot queue arguments of type 'PVCI_CAN_OBJ'
+
+(Make sure 'PVCI_CAN_OBJ' is registered using qRegisterMetaType().)
+
+原因：在线程中通过signal-slot传递信息时，参数默认放到队列中的，但PVCI_CAN_OBJ是自定义的参数，不是Qt自带的参数结构。
+
+解决方法：
+
+将不识别的参数结构进行注册，让Qt能够识别。
+
+ 包含头文件
+
+#include <QMetaType>
+
+在构造函数中调用其方法完成注册：
+qRegisterMetaType<PVCI_CAN_OBJ>("PVCI_CAN_OBJ");//注册PVCI_CAN_OBJ类型
+分类: Qt
+
+
+connect 的第五个参数
+主线程中发出一个信号，另一个线程槽函数没有响应，这个问题搞了好几个小时，才发现原来是connect时候的第5个参数写错了，在这里做下备注吧。
+
+connect用于连接qt的信号和槽，在qt编程过程中不可或缺。它其实有第五个参数，只是一般使用默认值，在满足某些特殊需求的时候可能需要手动设置。
+
+Qt::AutoConnection： 默认值，使用这个值则连接类型会在信号发送时决定。如果接收者和发送者在同一个线程，则自动使用Qt::DirectConnection类型。如果接收者和发送者不在一个线程，则自动使用Qt::QueuedConnection类型。
+Qt::DirectConnection：槽函数会在信号发送的时候直接被调用，槽函数运行于信号发送者所在线程。效果看上去就像是直接在信号发送位置调用了槽函数。这个在多线程环境下比较危险，可能会造成奔溃。
+
+Qt::QueuedConnection：槽函数在控制回到接收者所在线程的事件循环时被调用，槽函数运行于信号接收者所在线程。发送信号之后，槽函数不会立刻被调用，等到接收者的当前函数执行完，进入事件循环之后，槽函数才会被调用。多线程环境下一般用这个。
+Qt::BlockingQueuedConnection：槽函数的调用时机与Qt::QueuedConnection一致，不过发送完信号后发送者所在线程会阻塞，直到槽函数运行完。接收者和发送者绝对不能在一个线程，否则程序会死锁。在多线程间需要同步的场合可能需要这个。
+Qt::UniqueConnection：这个flag可以通过按位或（|）与以上四个结合在一起使用。当这个flag设置时，当某个信号和槽已经连接时，再进行重复的连接就会失败。也就是避免了重复连接。
+
+但是在多线程中，线程还是需要调用exec() 的方法，使得线程进入消息队列中，才能收到消息之后，及时处理，不调用exec()的方法的话，则线程中的connect将失去作用，槽函数也不会被调用
+
+
+
+
+
+
+
+
+
+

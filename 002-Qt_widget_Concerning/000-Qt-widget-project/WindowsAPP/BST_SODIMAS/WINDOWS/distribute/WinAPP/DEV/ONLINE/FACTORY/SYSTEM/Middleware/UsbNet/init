@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd /usr/bst/SYSTEM/Middleware/UsbNet/
+insmod asix.ko
+cd /
+
+ifconfig eth0 192.168.1.20 up
+udhcpd -f /usr/bst/SYSTEM/Middleware/UsbNet/udhcpd.conf &

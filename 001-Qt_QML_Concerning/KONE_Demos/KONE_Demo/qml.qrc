@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>images/zn_lift_network.png</file>
+        <file>images/network.png</file>
+        <file>images/lift_network.png</file>
+        <file>images/kone_arrow_up.png</file>
+        <file>images/kone_arrow_null.png</file>
+        <file>images/kone_arrow_down.png</file>
+        <file>MultiMedia.qml</file>
+        <file>FloorNumberShow.qml</file>
+        <file>DateandTime.qml</file>
+        <file>ArrowUpAnimation.qml</file>
+        <file>ArrowDownAnimation.qml</file>
+        <file>ShowTitle.qml</file>
+        <file>TitleAndTime.qml</file>
+        <file>Rollingtext.qml</file>
+        <file>ShowWifi.qml</file>
+        <file>TestAnimation.qml</file>
+    </qresource>
+</RCC>

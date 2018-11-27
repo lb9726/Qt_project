@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>images/ArrowUp.png</file>
+        <file>images/emergency.png</file>
+        <file>images/logo.png</file>
+        <file>images/number0.png</file>
+        <file>images/number1.png</file>
+        <file>images/number2.png</file>
+        <file>images/number3.png</file>
+        <file>images/number4.png</file>
+        <file>images/number5.png</file>
+        <file>images/number6.png</file>
+        <file>images/number7.png</file>
+        <file>images/number8.png</file>
+        <file>images/number9.png</file>
+        <file>images/welcome_text.png</file>
+        <file>images/background.png</file>
+        <file>images.qrc</file>
+        <file>images/ArrowDn.png</file>
+        <file>images/bground.png</file>
+    </qresource>
+</RCC>

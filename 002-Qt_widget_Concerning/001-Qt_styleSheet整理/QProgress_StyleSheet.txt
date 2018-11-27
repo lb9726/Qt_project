@@ -1,0 +1,8 @@
+if (mZipConcernProgress)
+{
+    mZipConcernProgress->setStyleSheet("\
+    QProgressBar {border:5px solid grey;border-radius:10px;\
+    color: rgb(255, 0, 0);text-align:center}\
+    QProgressBar::chunk {background-color: orange;border-radius: 5px}");
+
+}

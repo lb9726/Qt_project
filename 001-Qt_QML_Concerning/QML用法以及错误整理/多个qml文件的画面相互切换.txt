@@ -1,0 +1,3 @@
+恩，现在使用的方法是，用createComponent动态加载qml，然后在主界面中定义一个var来保存窗体变量，然后按钮返回的时候destroy窗体。
+
+http://blog.csdn.net/light1028/article/details/7945301 

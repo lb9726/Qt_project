@@ -1,0 +1,45 @@
+Qt5 开发与实例 33页 QVariant类
+QVariant类类似于C++的联合（union）数据类型，它不仅能保存很多Qt类型的值，包括QColor,QBrush，QFont，QPen,QRect,QString 和QSize等，也能
+存放Qt的容器类型的值。Qt的很多功能都是建立在QVariant基础上的，如Qt的对象属性及数据库功能等。
+
+例子：QVariant类的用法。
+新建Qt Widget Application，项目名称为“myVariant”，基类选择“QWidget”，类名爆出“QWidget"不变，取消选择”创建界面“复选框。建好项目后，在Widget.cpp
+文件中编写如下代码即可：
+#include "widget.h"
+#include <QDebug>
+#include <QVariant>
+#include <QColor>
+
+Widget::Widget(QWidget *parent)
+    : QWidget(parent)
+{
+    QVariant v(709);                                     //(a)
+    qDebug()<<v.toInt();                                 //(b)
+    QVariant w("How are you!");                          //(c)
+    qDebug()<< w.toString();                             //(d)
+    QMap<QString,QVariant>map;                           //(e)
+    map["int"] = 709;                                    //输入整形型
+    map["double"] = 709.709;                             //输入浮点型
+    map["string"] = "How are you! ";                     //输入字符型
+    map["color"] = QColor(255,0,0);                      //输入QColor类型的值
+    // 调用相应的转换函数并输出
+    qDebug()<<map["int"]<<map["int"].toInt();
+    qDebug()<<map["double"]<<map["double"].toDouble();
+    qDebug()<<map["string"]<<map["string"].toString();
+    qDebug()<<map["color"]<<map["color"].value<QColor>();
+    QStringList sl;                                      //创建一个字符串列表
+    sl<<"A"<<"B"<<"C"<<"D";
+    QVariant slv(sl);                                    //将该列表保存在一个QVariant变量中
+    if (slv.type() == QVariant::StringList)
+    {
+        QStringList list = slv.toStringList();
+        for (int i = 0 ;i < list.size() ;++i)
+            qDebug()<<list.at(i);                        //输出列表内容
+    }
+}
+
+Widget::~Widget()
+{
+
+}
+

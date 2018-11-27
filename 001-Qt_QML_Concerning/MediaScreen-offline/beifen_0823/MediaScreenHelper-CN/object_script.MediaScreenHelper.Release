@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\usbeventfilter.o
+./release\usbhelper.o
+./release\mediascreen.o
+./release\configureholder.o
+./release\copyjob.o
+./release\qrc_qml.o
+./release\moc_usbhelper.o
+./release\moc_mediascreen.o
+./release\moc_configureholder.o
+./release\moc_copyjob.o
+);

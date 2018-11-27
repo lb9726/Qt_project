@@ -1,0 +1,77 @@
+1.anchors 属性
+anchors 锚，来进行元素布局 
+
+anchors group
+anchors.top : AnchorLine
+anchors.bottom : AnchorLine
+anchors.left : AnchorLine
+anchors.right : AnchorLine
+anchors.horizontalCenter : AnchorLine
+anchors.verticalCenter : AnchorLine
+anchors.baseline : AnchorLine
+anchors.fill : Item
+anchors.centerIn : Item
+anchors.margins : real
+anchors.topMargin : real
+anchors.bottomMargin : real
+anchors.leftMargin : real
+anchors.rightMargin : real
+anchors.horizontalCenterOffset : real
+anchors.verticalCenterOffset : real
+anchors.baselineOffset : real
+anchors.alignWhenCentered : bool
+
+
+Item {
+    Image {
+        id: pic
+        // ...
+    }
+    Text {
+        id: label
+        anchors.horizontalCenter: pic.horizontalCenter
+        anchors.top: pic.bottom
+        anchors.topMargin: 5
+        // ...
+    }
+}
+
+Item {
+    Image {
+        id: pic
+        // ...
+    }
+    Text {
+        id: label
+        anchors.left: pic.right
+        anchors.leftMargin: 5
+        // ...
+    }
+}
+
+
+
+clip : bool
+This property holds whether clipping is enabled. The default clip value is false.
+
+If clipping is enabled, an item will clip its own painting, as well as the painting of its children, to its bounding rectangle.
+
+clip:true//这一属性设置表示如果他的子类超出了范围，那么就剪切掉，不让他显示和起作用
+
+
+http://blog.csdn.net/chenlong12580/article/details/8652597
+解读QML之四
+QML对象属性
+        每一个QML对象类型都定义了一系列属性。每创建一个该对象类型的实例，该实例的这些属性也自动被创建了。接下来我们讨论几种不同类型的属性。
+
+id属性
+           每一个QML对象类型都有一个唯一确定的id属性。这个属性是由QML语言自身提供的，并且在QML对象类型中不能被重定义和重载。
+
+        我们必须为id属性指定一个值允许该对象被唯一标示并且可用于被其它对象引用。Id属性值必须以小写字母或者下划线开始，只能包含字母，数字和下划线等字符。
+
+        下面是一个TextInput对象和一个Text对象，TextInput对象的id属性值为”myTextInput”。Text对象的text属性值通过myTextInput.text被设置为和TextInput对象的text属性值一样。
+
+
+
+
+

@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ImageSee.qml</file>
+        <file>Horizontal_Image.qml</file>
+        <file>Vertical_Image.qml</file>
+        <file>Horizontal_video.qml</file>
+        <file>Vertical_video.qml</file>
+        <file>images/iot_15_h.png</file>
+        <file>images/iot15_v.png</file>
+        <file>images/Lighthouse.jpg</file>
+        <file>Header_ToolBar_Demo.qml</file>
+        <file>Button_Self.qml</file>
+        <file>images/whiteBg.png</file>
+        <file>images/greyBg.png</file>
+        <file>New_Horizontal.qml</file>
+        <file>New_Vertical.qml</file>
+        <file>Button_Circle.qml</file>
+        <file>images/close.png</file>
+        <file>images/grey_Close.png</file>
+        <file>images/red_Close.png</file>
+    </qresource>
+</RCC>

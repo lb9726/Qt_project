@@ -1,0 +1,32 @@
+/home/libo/Desktop/17Cy
+Fetching projects: 100% (524/524), done.  
+info: A new version of repo is available
+
+
+warning: project 'repo' branch 'stable' is not signed
+warning: Skipped upgrade to unverified version
+Syncing work tree: 100% (524/524), done.  
+
+project packages/QmlApps/Lexus/Home/
+首先，重置头指针以便在上面重放您的工作...
+正应用：change L1DHomeqml load homescreen
+使用索引来重建一个（三路合并的）基础目录树...
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/CdHome_1_2.qml
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/CdHome_1_4.qml
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/CdHome_1_6.qml
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/CdHome_2_3.qml
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/RomHome_1_2.qml
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/RomHome_1_4.qml
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/RomHome_1_6.qml
+M	L1DHome/src/UI/SubView/AudioSubView/DiscSubScreen/RomHome_2_3.qml
+转而在基础版本上打补丁及进行三路合并...
+没有变更 —— 补丁已经应用过。
+正应用：add L2DHome sidescreen_play_pause_specId
+使用索引来重建一个（三路合并的）基础目录树...
+M	L2DHome/src/UI/SideView/AvSideView/DiscSideScreen/Dvd_Side.cpp
+M	L2DHome/src/UI/SideView/AvSideView/DiscSideScreen/Dvd_Side.h
+M	L2DHome/src/UI/SideView/AvSideView/DiscSideScreen/Vcd_Side.cpp
+M	L2DHome/src/UI/SideView/AvSideView/DiscSideScreen/Vcd_Side.h
+转而在基础版本上打补丁及进行三路合并...
+没有变更 —— 补丁已经应用过。
+

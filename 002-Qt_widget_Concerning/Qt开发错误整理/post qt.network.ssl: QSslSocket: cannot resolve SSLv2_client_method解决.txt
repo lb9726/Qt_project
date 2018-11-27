@@ -1,0 +1,31 @@
+QT:使用网络数据传输出现如下问题：
+
+     post qt.network.ssl: QSslSocket: cannot resolve SSLv2_client_method
+
+    post qt.network.ssl: QSslSocket: cannot resolve SSLv2_server_method
+
+QML debugging is enabled. Only use this in a safe environment.
+qt.network.ssl: QSslSocket: cannot resolve SSLv2_client_method
+qt.network.ssl: QSslSocket: cannot resolve SSLv2_server_method
+解决方法：
+
+      1、从网络上下载OpenSSL库的源代码。
+ 
+
+  地址是：http://openssl.org
+      2、进入目录配置一下OpenSSL，让它产生动态链接库，并禁止SSLV2方法
+      ./config  enable-shared -no-ssl2
+     3、执行构建
+        make
+     4、将产生的.so文件，添加到项目目录，并在QT中添加SO库文件
+        libcrypto.so
+
+        libcrypto.so.1.0.0
+
+        libssl.so
+
+        libssl.so.1.0.0
+
+
+
+https://github.com/openssl/openssl 仓库代码

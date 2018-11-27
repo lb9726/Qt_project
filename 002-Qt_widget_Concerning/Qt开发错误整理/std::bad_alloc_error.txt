@@ -1,0 +1,38 @@
+void Protocoldeal::SetContinueFlag(unsigned char*)
+ContinueFlag =  0
+void Protocoldeal::RevVersion(unsigned char*, unsigned char*)
+接收到的数据为 totalBuf = void Protocoldeal::PrintString(unsigned char*, long unsigned int)
+80 1 23 12 15 13 6 0 30 81 
+解析后的数据为 tempBuf = void Protocoldeal::PrintString(unsigned char*, long unsigned int)
+1 23 12 15 13 6 0 30 
+void Protocoldeal::NotifyCompare(unsigned char*)
+void Protocoldeal::FreshTimer(unsigned char*) 
+void Protocoldeal::FreshTimer(unsigned char*) 1
+QString Protocoldeal::Year(unsigned char*) 
+qyear =  "19.6.2017"
+QString Protocoldeal::Time(unsigned char*) 
+qtime =  "21:18"
+t =  "19.6.2017" d =  "21:18"
+emit sendTimer(t, d)
+unsigned char Protocoldeal::BstBvtVerify(unsigned char*, long unsigned int) length =  10
+tempBuf[0] = 1 
+ verify is true 
+qml: tim =  19.6.2017
+bool Protocoldeal::JudgeChange(unsigned char, unsigned char*)
+qml: dat =  21:18
+long unsigned int Protocoldeal::BstBvtGetFrameDatLen(unsigned char)
+id = 1, len = 7
+bool Protocoldeal::JudgeChange(unsigned char, unsigned char*) allocate success! ID =  1
+AllocteFlag = 1
+void Protocoldeal::PrintString(unsigned char*, long unsigned int)
+0 0 0 0 0 0 0 
+the different index i = 0
+before free
+after free
+set NULL
+emit message
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+Aborted
+root@imx6qsabresd:~# 
+

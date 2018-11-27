@@ -1,0 +1,11 @@
+warning: comparison is always false due to limited range of data type [-Wtype]
+
+
+if( ch>127 || ch<32 ) ch为int warning：comparison is always false due to limited range of data type
+
+ch 类型是 signed char 吧
+取值范围是-128~127
+ 
+所以 ch>127 始终是假
+
+还有将无符号数和有符号数比较的时候超过了127 ，0x80等这样会导致这个警告warning

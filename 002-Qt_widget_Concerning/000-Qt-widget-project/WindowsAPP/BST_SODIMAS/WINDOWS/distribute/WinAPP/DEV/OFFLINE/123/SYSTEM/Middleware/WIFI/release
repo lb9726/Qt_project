@@ -1,0 +1,6 @@
+#!/bin/sh
+
+ifconfig ra0 down
+remod rtutil5370ap.ko
+remod rt5370ap.ko
+remod rtnet5370ap.ko

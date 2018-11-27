@@ -1,0 +1,7 @@
+/usr/share/fonts/truetype/ttf-indic-fonts-core
+这是系统文件的路径，包含了一些系统的ttf的文件，可以支持显示的
+
+需要将这些文件拷贝到单片机的/usr/lib/fonts下面， 还有一个需要拷贝到/usr/share/fonts/ttf 中去，可能拷贝的文件不对，
+导致中文还是无法显示
+
+FZCQJW.TTF 这个文件安装之后，在Qt中选择这个字体去设置好之后，重新编译完成，发现可以正常显示文字

@@ -1,0 +1,345 @@
+mount -o remount rw /system
+
+
+
+menghanyong:~$ adb disconnect
+
+menghanyong:~$ adb connect 192.168.5.111
+unable to connect to 192.168.5.111:5555
+menghanyong:~$ 
+menghanyong:~$ 
+menghanyong:~$ 
+menghanyong:~$ adb connect 192.168.5.111
+unable to connect to 192.168.5.111:5555
+menghanyong:~$  http://igerrit/183219
+bash: http://igerrit/183219: 没有那个文件或目录
+menghanyong:~$     http://igerrit/182992
+bash: http://igerrit/182992: 没有那个文件或目录
+menghanyong:~$ 
+menghanyong:~$ adb connect 192.168.5.111
+unable to connect to 192.168.5.111:5555
+menghanyong:~$ adb connect 192.168.5.111
+connected to 192.168.5.111:5555
+menghanyong:~$ adb root
+error: device not found
+menghanyong:~$ adb connect 192.168.5.111
+connected to 192.168.5.111:5555
+menghanyong:~$ adb root
+adbd is already running as root
+menghanyong:~$ remount
+remount：未找到命令
+menghanyong:~$ adb remount
+remount succeeded
+menghanyong:~$ adb push ~/Desktop/libLDUICommonInfo.so /usr/lib
+2110 KB/s (285050 bytes in 0.131s)
+menghanyong:~$ adb push ~/Desktop/L1DHome.cpk /tmp
+2550 KB/s (976176 bytes in 0.373s)
+menghanyong:~$ adb shell
+root@nutshell:/ # cpkp -l
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+<<<< Start thread [EvsDispatcher] TC: 228578.
+<<<< Start thread [NCIPCPOLLER_TR] TC: 228578.
+<<<< Thread [NCIPCPOLLER_TR] run (1700, 0x1700) prio: -6, TC: 228578.
+<<<< Thread [EvsDispatcher] run (1699, 0x1699) prio: -4, TC: 228579.
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+net.suntec.app.dcudebug
+net.suntec.app.l15voicetagope
+net.suntec.app.l1apps
+net.suntec.app.l1av
+net.suntec.app.l1dhome
+net.suntec.app.l1dsystemui
+net.suntec.app.l1info
+net.suntec.app.l1phone
+net.suntec.app.l1setup
+net.suntec.app.l1vr
+net.suntec.app.ldcudiag
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+root@nutshell:/ # cpkp -i /tmp/L1DHome.cpk                                     
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+<<<< Start thread [EvsDispatcher] TC: 241452.
+<<<< Thread [EvsDispatcher] run (1708, 0x1708) prio: -4, TC: 241453.
+<<<< Start thread [NCIPCPOLLER_TR] TC: 241453.
+<<<< Thread [NCIPCPOLLER_TR] run (1709, 0x1709) prio: -6, TC: 241455.
+<<<< Start thread [EVIP_PROXY] TC: 241456.
+installPackage(/tmp/L1DHome.cpk).
+<<<< Thread [P-ackagemanager] run (1710, 0x1710) prio: 0, TC: 241460.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+package path: [/tmp/L1DHome.cpk].
+Installation Failure.
+Error code   : [1]
+Error message: [The same package has been installed in device. (packageId:net.suntec.app.l1dhome) ]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<<<< Thread [P-ackagemanager] quit (1710, 0x1710) TC: 241479.
+1|root@nutshell:/ # menghanyong:~$ 
+menghanyong:~$ adb connect 192.168.5.111
+connected to 192.168.5.111:5555
+menghanyong:~$ adb shell
+uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutsh -u -kv 1 vehicle/videorestrict -s off                                        <
+/bin/sh: provider_tool: not found
+127|uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/ $ 
+127|uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/ $ 
+127|uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/ $ 
+127|uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/ $ 
+127|uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/ $ exit      
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+failed to copy '/home/menghanyong/Desktop/provider_tool' to '/bin/sh': Read-only file system
+menghanyong:~$ mount -o remount rw /bin/sh
+挂臷：只有 root 用户才能执行
+menghanyong:~$ adb shell
+uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/ $ cd root
+/bin/sh: cd: /root - Permission denied
+1|uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/ $ exit
+menghanyong:~$ adb remount
+remount failed: Operation not permitted
+menghanyong:~$ cd root
+bash: cd: root: 没有那个文件或目录
+menghanyong:~$ adb root
+restarting adbd as root
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+error: device not found
+menghanyong:~$ adb connect 192.168.5.111
+connected to 192.168.5.111:5555
+menghanyong:~$ adb root
+adbd is already running as root
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+failed to copy '/home/menghanyong/Desktop/provider_tool' to '/bin/sh': Read-only file system
+menghanyong:~$ adb remount
+remount succeeded
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+failed to copy '/home/menghanyong/Desktop/provider_tool' to '/bin/sh': Read-only file system
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+failed to copy '/home/menghanyong/Desktop/provider_tool' to '/bin/sh': Read-only file system
+menghanyong:~$ mount -o remount rw /bin
+挂臷：只有 root 用户才能执行
+menghanyong:~$ cd root
+bash: cd: root: 没有那个文件或目录
+menghanyong:~$ sudo mount -o remount rw /bin
+[sudo] password for menghanyong: 
+对不起，请重试。
+[sudo] password for menghanyong: 
+mount：您必须指定文件系统类型
+menghanyong:~$ chmod 777 ~~/Desktop/provider_tool
+chmod: 无法访问"~~/Desktop/provider_tool": 没有那个文件或目录
+menghanyong:~$ chmod 777 ~/Desktop/provider_tool
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+failed to copy '/home/menghanyong/Desktop/provider_tool' to '/bin/sh': Read-only file system
+menghanyong:~$ adb remount
+remount succeeded
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+failed to copy '/home/menghanyong/Desktop/provider_tool' to '/bin/sh': Read-only file system
+menghanyong:~$ adb root
+adbd is already running as root
+menghanyong:~$ adb push ~/Desktop/provider_tool /bin/sh
+failed to copy '/home/menghanyong/Desktop/provider_tool' to '/bin/sh': Read-only file system
+menghanyong:~$ sudo su
+root@menghanyong:/home/menghanyong# adb push ~/Desktop/provider_tool /bin/sh
+cannot stat '/root/Desktop/provider_tool': No such file or directory
+root@menghanyong:/home/menghanyong# adb push /Desktop/provider_tool /bin/sh
+cannot stat '/Desktop/provider_tool': No such file or directory
+root@menghanyong:/home/menghanyong# adb push Desktop/provider_tool /bin/sh
+failed to copy 'Desktop/provider_tool' to '/bin/sh': Read-only file system
+root@menghanyong:/home/menghanyong# mount -o remount rw /bin
+mount: you must specify the filesystem type
+root@menghanyong:/home/menghanyong# adb push Desktop/provider_tool /bin/sh
+failed to copy 'Desktop/provider_tool' to '/bin/sh': Read-only file system
+root@menghanyong:/home/menghanyong# mount -o remount rw /bin/bin
+mount: you must specify the filesystem type
+root@menghanyong:/home/menghanyong# mount -o remount rw /bin/sh
+mount: you must specify the filesystem type
+root@menghanyong:/home/menghanyong# mount -o remount rw -t EXT4-fs /bin/sh
+mount: /bin/sh not mounted or bad option
+root@menghanyong:/home/menghanyong# adb push Desktop/provider_tool /tmp
+380 KB/s (17996 bytes in 0.046s)
+root@menghanyong:/home/menghanyong# cd /tmp
+root@menghanyong:/tmp# adb shell
+root@nutshell:/ # cd /tmp/                                                     
+root@nutshell:/tmp # ls
+LibDaemonPid
+LibDaemonPipeL1
+LibDaemonPipeL10
+LibDaemonPipeL2
+LibDaemonPipeL3
+LibDaemonPipeL4
+LibDaemonPipeL5
+LibDaemonPipeL6
+LibDaemonPipeL7
+LibDaemonPipeL8
+LibDaemonPipeL9
+bargein
+bluetooth
+diag
+magiclog
+mediainfo.db
+mtp1
+mtp2
+named.conf
+navi.PSMEM_BL_ALL_IN_ONE
+nutshell
+pbphoto.db
+provider_tool
+pulse
+setting
+settings.plist
+tmpCaFile
+tsip_socket
+wayland-0
+wayland-0.lock
+wliautoserver.txt
+root@nutshell:/tmp # ./provider_tool                                           
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+usage:
+    ./provider_tool uri -q -pj pj_num [projections] -sl selection args_num [selectionArgs] -or order      
+    ./provider_tool uri -u -kv key_num [key -i/-ll/-d/-f/-s value] -sl selection args_num [selectionArgs] 
+    ./provider_tool uri -i -kv key_num [key -i/-ll/-d/-f/-s value]                                        
+    ./provider_tool uri -r -sl selection args_num [selectionArgs]                                         
+
+note: -q query, -u update, -i insert, -r remove
+note: pj = projection, kv = contentvalue, sl = selection, -or = order, [] is multil
+note: -i = int32, -ll = int64, -d = double, -f = float, -s = string
+
+example:
+    ./provider_tool content://setting/info?language -i -kv 2 type -s string value -s en-us
+tem/info -u -kv 1 vehicle/videorestrict -s off                                <
+/bin/sh: provider_tool: not found
+ol content://system/info -u -kv 1 vehicle/videorestrict -s off                <
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+./provider_tool provider_tool content://system/info -u -kv 1 vehicle/videorestrict -s off 
+not support command
+root@nutshell:/tmp # ./provider_tool                                           
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+usage:
+    ./provider_tool uri -q -pj pj_num [projections] -sl selection args_num [selectionArgs] -or order      
+    ./provider_tool uri -u -kv key_num [key -i/-ll/-d/-f/-s value] -sl selection args_num [selectionArgs] 
+    ./provider_tool uri -i -kv key_num [key -i/-ll/-d/-f/-s value]                                        
+    ./provider_tool uri -r -sl selection args_num [selectionArgs]                                         
+
+note: -q query, -u update, -i insert, -r remove
+note: pj = projection, kv = contentvalue, sl = selection, -or = order, [] is multil
+note: -i = int32, -ll = int64, -d = double, -f = float, -s = string
+
+example:
+    ./provider_tool content://setting/info?language -i -kv 2 type -s string value -s en-us
+255|root@nutshell:/tmp # ls -l
+-rw-rw---- root     0               4 1970-01-01 00:00 LibDaemonPid
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL1
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL10
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL2
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL3
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL4
+prw-rw---- root     0                 2001-01-01 01:00 LibDaemonPipeL5
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL6
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL7
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL8
+prw-rw---- root     0                 1970-01-01 00:00 LibDaemonPipeL9
+drwx------ root     1000              2001-01-01 01:00 bargein
+drwx------ root     1000              2001-01-01 01:00 bluetooth
+drwxrwxr-x root     1000              2001-01-01 01:00 diag
+drwx------ root     1000              2001-01-01 01:00 magiclog
+-rw-r----- root     1000         9216 2001-01-01 01:18 mediainfo.db
+d--------- 1000     1000              1970-01-01 00:00 mtp1
+d--------- 1000     1000              1970-01-01 00:00 mtp2
+-rw-r--r-- root     0             507 1970-01-01 00:00 named.conf
+-rw-rw---- root     1000          129 2001-01-01 01:00 navi.PSMEM_BL_ALL_IN_ONE
+drwxr-x--- root     1000              2001-01-01 01:00 nutshell
+-rw-r----- root     1000         4096 2001-01-01 01:00 pbphoto.db
+-rwxrwxrwx root     0           17996 2016-03-13 21:55 provider_tool
+drwxrwxrwx root     1000              2001-01-01 01:00 pulse
+drwxr-x--- root     1000              2001-01-01 01:26 setting
+-rw-r----- root     1000        16250 2001-01-01 01:00 settings.plist
+-rw-rw---- root     0               0 1970-01-01 00:00 tmpCaFile
+srwxrwx--x root     0                 1970-01-01 00:00 tsip_socket
+srwxrwxrwx root     0                 2001-01-01 01:00 wayland-0
+-rw-rw---- root     0               0 2001-01-01 01:00 wayland-0.lock
+-rw-rw-rw- root     0            2659 2001-01-01 01:27 wliautoserver.txt
+root@nutshell:/tmp # ls -l provider_tool                                       
+-rwxrwxrwx root     0           17996 2016-03-13 21:55 provider_tool
+root@nutshell:/tmp # ./provider_tool                                           
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+usage:
+    ./provider_tool uri -q -pj pj_num [projections] -sl selection args_num [selectionArgs] -or order      
+    ./provider_tool uri -u -kv key_num [key -i/-ll/-d/-f/-s value] -sl selection args_num [selectionArgs] 
+    ./provider_tool uri -i -kv key_num [key -i/-ll/-d/-f/-s value]                                        
+    ./provider_tool uri -r -sl selection args_num [selectionArgs]                                         
+
+note: -q query, -u update, -i insert, -r remove
+note: pj = projection, kv = contentvalue, sl = selection, -or = order, [] is multil
+note: -i = int32, -ll = int64, -d = double, -f = float, -s = string
+
+example:
+    ./provider_tool content://setting/info?language -i -kv 2 type -s string value -s en-us
+ystem/info -u -kv 1 vehicle/videorestrict -s off                              <
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+./provider_tool content://system/info -u -kv 1 vehicle/videorestrict -s off 
+update success count : 1
+root@nutshell:/tmp # 
+
+
+
+
+
+
+
+root@menghanyong:/tmp# 
+root@menghanyong:/tmp# adb push Desktop/provider_tool /tmp
+error: device not found
+root@menghanyong:/tmp# adb connect 192.168.5.111
+connected to 192.168.5.111:5555
+root@menghanyong:/tmp# adb push Desktop/provider_tool /tmp
+cannot stat 'Desktop/provider_tool': No such file or directory
+root@menghanyong:/tmp# adb push ~/Desktop/provider_tool /tmp
+cannot stat '/root/Desktop/provider_tool': No such file or directory
+root@menghanyong:/tmp# cd ~
+root@menghanyong:~# adb push ~/Desktop/provider_tool /tmp
+cannot stat '/root/Desktop/provider_tool': No such file or directory
+root@menghanyong:~# su menghangyong
+No passwd entry for user 'menghangyong'
+root@menghanyong:~# adb disconnect
+
+root@menghanyong:~# adb connect 192.168.5.111
+connected to 192.168.5.111:5555
+root@menghanyong:~# su menghanyong
+menghanyong:/root$ cd ~
+menghanyong:~$ adb push ~/Desktop/provider_tool /tmp
+377 KB/s (17996 bytes in 0.046s)
+menghanyong:~$ adb shell
+ell:/ $ cd /tmp/                                                               hell:/ $ cd    
+uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/tmp $ ls
+LibDaemonPid
+LibDaemonPipeL1
+LibDaemonPipeL10
+LibDaemonPipeL2
+LibDaemonPipeL3
+LibDaemonPipeL4
+LibDaemonPipeL5
+LibDaemonPipeL6
+LibDaemonPipeL7
+LibDaemonPipeL8
+LibDaemonPipeL9
+bargein
+bluetooth
+diag
+magiclog
+mediainfo.db
+mtp1
+mtp2
+named.conf
+navi.PSMEM_BL_ALL_IN_ONE
+nutshell
+pbphoto.db
+provider_tool
+pulse
+setting
+settings.plist
+tmpCaFile
+tsip_socket
+wayland-0
+wayland-0.lock
+wliautoserver.txt
+ell:/tmp $ ls -l provider_tool                                                 hell:/tmp $ ls -l      
+-rwxrwxrwx 2000     2000        17996 2016-03-13 21:55 provider_tool
+uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/tmp $ ./provider_tool content://system/info -u -knfo -u -kv 1 vehicle/videorestrict -s off                                     <
+connected to the server [/dev/socket/socket.nclog.LOG_FILTER_WACTHER_SRV]
+./provider_tool content://system/info -u -kv 1 vehicle/videorestrict -s off 
+update success count : 1
+uid=2000 gid=2000 groups=1003,1004,1007,1009,1011,1015,3001,3002,3003,3006@nutshell:/tmp $ 
+

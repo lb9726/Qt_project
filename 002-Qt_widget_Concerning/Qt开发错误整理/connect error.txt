@@ -1,0 +1,91 @@
+
+devin@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test$ make
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIE -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_TESTLIB_LIB -DQT_SERIALPORT_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=\"/home/devin/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test\" -I/home/devin/Qt5.4.0/5.4/gcc_64/mkspecs/linux-g++ -I. -I/home/devin/Qt5.4.0/5.4/gcc_64/include -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtGui -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtTest -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtSerialPort -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore -I. -I. -o main.o main.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIE -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_TESTLIB_LIB -DQT_SERIALPORT_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=\"/home/devin/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test\" -I/home/devin/Qt5.4.0/5.4/gcc_64/mkspecs/linux-g++ -I. -I/home/devin/Qt5.4.0/5.4/gcc_64/include -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtGui -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtTest -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtSerialPort -I/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore -I. -I. -o widget.o widget.cpp
+widget.cpp: In constructor ‘Widget::Widget(QWidget*)’:
+widget.cpp:16:87: error: no matching function for call to ‘Widget::connect(Protocoldeal*&, const char [31], Widget* const, const char [20])’
+     connect(pro, SIGNAL(AcceptDataFormBottom(QString)), this ,SLOT(setstring(QString)));
+                                                                                       ^
+widget.cpp:16:87: note: candidates are:
+In file included from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/qwidget.h:38:0,
+                 from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/QWidget:1,
+                 from widget.h:5,
+                 from widget.cpp:1:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:196:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const char*, const QObject*, const char*, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const char *signal,
+                                    ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:196:36: note:   no known conversion for argument 1 from ‘Protocoldeal*’ to ‘const QObject*’
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:199:36: note: static QMetaObject::Connection QObject::connect(const QObject*, const QMetaMethod&, const QObject*, const QMetaMethod&, Qt::ConnectionType)
+     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,
+                                    ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:199:36: note:   no known conversion for argument 1 from ‘Protocoldeal*’ to ‘const QObject*’
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:477:32: note: QMetaObject::Connection QObject::connect(const QObject*, const char*, const char*, Qt::ConnectionType) const
+ inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,
+                                ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:477:32: note:   no known conversion for argument 1 from ‘Protocoldeal*’ to ‘const QObject*’
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:213:43: note: template<class Func1, class Func2> static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const typename QtPrivate::FunctionPointer<Func2>::Object*, Func2, Qt::ConnectionType)
+     static inline QMetaObject::Connection connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,
+                                           ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:213:43: note:   template argument deduction/substitution failed:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h: In substitution of ‘template<class Func1, class Func2> static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const typename QtPrivate::FunctionPointer<Func2>::Object*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+widget.cpp:16:87:   required from here
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:213:43: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer<const char*>’
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:245:13: note: template<class Func1, class Func2> static typename QtPrivate::QEnableIf<((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0), QMetaObject::Connection>::Type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 slot)
+             ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:245:13: note:   template argument deduction/substitution failed:
+widget.cpp:16:87: note:   candidate expects 3 arguments, 4 provided
+     connect(pro, SIGNAL(AcceptDataFormBottom(QString)), this ,SLOT(setstring(QString)));
+                                                                                       ^
+In file included from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/qwidget.h:38:0,
+                 from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/QWidget:1,
+                 from widget.h:5,
+                 from widget.cpp:1:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:254:13: note: template<class Func1, class Func2> static typename QtPrivate::QEnableIf<(((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0) && (! QtPrivate::FunctionPointer<Func2>::IsPointerToMemberFunction)), QMetaObject::Connection>::Type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:254:13: note:   template argument deduction/substitution failed:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h: In substitution of ‘template<class Func1, class Func2> static typename QtPrivate::QEnableIf<(((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0) && (! QtPrivate::FunctionPointer<Func2>::IsPointerToMemberFunction)), QMetaObject::Connection>::Type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+widget.cpp:16:87:   required from here
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:254:13: error: invalid use of incomplete type ‘struct QtPrivate::QEnableIf<false, QMetaObject::Connection>’
+In file included from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtGui/qwindowdefs.h:37:0,
+                 from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/qwidget.h:37,
+                 from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/QWidget:1,
+                 from widget.h:5,
+                 from widget.cpp:1:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qglobal.h:1056:45: error: declaration of ‘struct QtPrivate::QEnableIf<false, QMetaObject::Connection>’
+ template <bool B, typename T = void> struct QEnableIf;
+                                             ^
+In file included from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/qwidget.h:38:0,
+                 from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/QWidget:1,
+                 from widget.h:5,
+                 from widget.cpp:1:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:285:13: note: template<class Func1, class Func2> static typename QtPrivate::QEnableIf<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == (-1)), QMetaObject::Connection>::Type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, Func2)
+             connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 slot)
+             ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:285:13: note:   template argument deduction/substitution failed:
+widget.cpp:16:87: note:   candidate expects 3 arguments, 4 provided
+     connect(pro, SIGNAL(AcceptDataFormBottom(QString)), this ,SLOT(setstring(QString)));
+                                                                                       ^
+In file included from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/qwidget.h:38:0,
+                 from /home/devin/Qt5.4.0/5.4/gcc_64/include/QtWidgets/QWidget:1,
+                 from widget.h:5,
+                 from widget.cpp:1:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:293:13: note: template<class Func1, class Func2> static typename QtPrivate::QEnableIf<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == (-1)), QMetaObject::Connection>::Type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)
+             connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+             ^
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:293:13: note:   template argument deduction/substitution failed:
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h: In substitution of ‘template<class Func1, class Func2> static typename QtPrivate::QEnableIf<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == (-1)), QMetaObject::Connection>::Type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = const char*]’:
+widget.cpp:16:87:   required from here
+/home/devin/Qt5.4.0/5.4/gcc_64/include/QtCore/qobject.h:293:13: error: no type named ‘Object’ in ‘struct QtPrivate::FunctionPointer<const char*>’
+widget.cpp: In destructor ‘virtual Widget::~Widget()’:
+widget.cpp:22:12: warning: deleting object of polymorphic class type ‘Protocoldeal’ which has non-virtual destructor might cause undefined behaviour [-Wdelete-non-virtual-dtor]
+     delete pro;
+            ^
+widget.cpp: At global scope:
+widget.cpp:37:6: warning: unused parameter ‘str’ [-Wunused-parameter]
+ void Widget::DealData(char str[])
+      ^
+make: *** [widget.o] Error 1
+devin@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test$ error: declaration of ‘struct QtPrivate::QEnableIf<false, QMetaObject::Connection>’
+

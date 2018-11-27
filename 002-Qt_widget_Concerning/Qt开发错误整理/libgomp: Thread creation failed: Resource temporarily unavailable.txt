@@ -1,0 +1,46 @@
+后来，我终于发现了问题的答案。原来，在linux上，线程也是特殊进程，叫Light Weight Process(LWP) ，轻量级进程。如果算上线程，那么在同一时刻，整个系统的进程肯定较 多，因为光tomcat就会创建很多线程来处理请求。具体的数可以用 ps -eLf 查看。
+
+问题找到了，解决方案就简单 了。用root权限打开 /etc/security/limits.d/90-nproc.conf ， 将 nproc 的的值设置大一些，我暂时设置成了10240，如下：
+
+*          soft    nproc     10240
+
+10240要是不够用，以后再改大点就是了。改完保存，再用ulimit -u确认下， 搞定！
+
+
+   今天在一个测试程序中使用pthread_create创建了大量线程，但是如果线程数量增加到400后，就会出现线程创建失败，perror打印出的错误原因是：Resource temporarily unavailable。
+
+       在网上查了下，原因如下，Linux系统中每个线程都拥有独立的栈空间，而我的系统上调用ulimit -a看到的结果如下：
+
+
+ 使用pthread_create创建大量线程时，创建线程失败，Resource temporarily unavailable的解决办法
+ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 20
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 16382
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) unlimited
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+可以看到stack size是8M,  400个线程就需要8*400=3200M，虚拟内存不够用。
+
+
+解决办法有两种：
+
+1.使用ulimit -s 1024*1024命令，将线程栈大小临时设置成1M,经过试验能同时创建2000个线程了。
+
+2.使用pthread_attr_setstacksize在程序中改变线程栈大小。
+
+
+出现这个的原因是在子线程中操作了主线程的UI相关的类
+
+

@@ -1,0 +1,89 @@
+Qt5点几及其以上的版本
+XML，全称为“可扩展标记语言”(extensible markuplanguage).是一种非常方便的数据交换与数据存储的工具。
+我们在取得一个XML格式的文件后，需要作句法分析去提取发布方提供的信息。而Qt为XML提供了很好的支持，包括DOM方式的实现和SAX方式的实现。
+二者主要区别是：
+DOM(DocumentObject Model)实现方式操作非常简单，但不适合处理过大文件；而SAX实现方式是能处理很大的XML文件，但是需要开发者写一些复杂的代码。Qt提供了对应于这两种用于读取、操作和编写XML的实现类，分别是QDomDocument类和QXmlStreamReader类，这里我们选QDomDocument类来处理XML文件。
+
+Header:
+#include <QDomDocument>
+#include <QDomElement>
+qmake:   QT += xml
+
+
+bool Widget::readXml()
+{
+    qDebug()<<__FUNCTION__;
+    QString path = QCoreApplication::applicationDirPath();
+    qDebug()<<"path = "<< path;
+    QFile file(path + "/test.xml");
+    if(!file.open(QFile::ReadOnly| QFile::Text)) {
+        qDebug()<<"open file error!";
+        return false;
+    }
+    QString errorStr;
+    int errorLine;
+    int errorColumn;
+    QDomDocument doc;
+    if(!doc.setContent(&file, false, &errorStr, &errorLine, &errorColumn))
+    { //setContent 是将指定的内容指定给QDomDocument 解析，第一参数可以是QByteArray或者是文件名等。
+        qDebug()<<"return false";
+        return false;
+    }
+    file.close();
+    QDomNodeList list = doc.childNodes();
+    qDebug()<<"list.count()="<< list.count();
+    for(int i = 0; i<list.count(); i++)
+    {
+        QDomNode  node  =list.at(i);
+        qDebug()<<"node name is"<<node.nodeName();
+        qDebug()<<"node type is"<<node.nodeType();
+    }
+    return true;
+}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<root releasedate="2017/09/12">
+    <parameter>
+        <volume>0</volume>
+        <brightness>0</brightness>
+        <timearea>true</timearea>
+        <fullscreen>false</fullscreen>
+        <scrollingarea>true</scrollingarea>
+        <titlearea>true</titlearea>
+    </parameter>
+</root>
+
+readXml
+path =  "C:/Users/yonghao/Documents/build-Qtxml_Demo_0913-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug"
+list.count()= 2
+node name is "xml"
+node type is 7
+node name is "root"
+node type is 1
+
+NodeType QDomNode::nodeType() const
+Returns the type of the node.
+NodeType 返回值是表明其类型的
+
+enum QDomNode::NodeType
+This enum defines the type of the node:
+
+QDomNode::ElementNode 1
+QDomNode::AttributeNode 2
+QDomNode::TextNode 3
+QDomNode::CDATASectionNode 4
+QDomNode::EntityReferenceNode 5
+QDomNode::EntityNode 6
+QDomNode::ProcessingInstructionNode 7 
+QDomNode::CommentNode 8 
+QDomNode::DocumentNode 9 
+QDomNode::DocumentTypeNode 10
+QDomNode::DocumentFragmentNode 11
+QDomNode::NotationNode 12 
+QDomNode::BaseNode 21
+A QDomNode object, i.e. not a QDomNode subclass.
+QDomNode::CharacterDataNode 22
+ 
+
+
+

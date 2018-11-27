@@ -1,0 +1,118 @@
+http://blog.csdn.net/caoshangpa/article/details/52784860
+
+http://mobile.51cto.com/symbian-268690_1.htm
+
+http://mobile.51cto.com/symbian-268343.htm
+
+http://blog.csdn.net/learn_sunzhuli/article/details/46290077
+
+http://blog.csdn.net/lynfam/article/details/7081757
+
+#include <QtCore/QCoreApplication>   
+#include <QtCore/QObject>   
+#include <QtCore/QThread>   
+#include <QtCore/QDebug>    
+class Dummy:public QObject 
+{       
+	Q_OBJECT 
+public:     
+	Dummy(QObject* parent=0):QObject(parent){}   
+    public slots: oid emitsig()       
+    {  
+    	emit sig();    
+    } 
+    signals:     
+    void sig(); 
+};    
+class Thread:public QThread 
+{       
+    Q_OBJECT 
+    public:      
+    Thread(QObject* parent=0):QThread(parent) 
+    { //moveToThread(this); }   
+        public slots:     
+        void slot_thread()     
+        {           
+            qDebug()<<"from thread slot_thread:" <<currentThreadId();     
+        }   
+        signals:     
+        void sig(); 
+        protected:     
+        void run()     
+        {           
+            qDebug()<<"thread thread:"<<currentThreadId();          
+            Dummy dummy;           
+            connect(&dummy, SIGNAL(sig()), this, SLOT(slot_thread()));          
+            dummy.emitsig();         
+            exec();       
+        }   
+    };    
+#include "main.moc"  
+int main(int argc, char *argv[]) 
+{       
+	QCoreApplication a(argc, argv);       
+	qDebug()<<"main thread:"<<QThread::currentThreadId();       
+	Thread thread;       
+	thread.start();       
+	return a.exec(); 
+} 
+     
+     
+#include <QtCore/QCoreApplication>   
+#include <QtCore/QObject>   
+#include <QtCore/QThread>   
+#include <QtCore/QDebug>    
+class Dummy:public QObject {       
+Q_OBJECT   
+public:     
+	Dummy(QObject* parent=0):QObject(parent)     
+	{}   
+public slots:     
+	void emitsig()     
+	{         
+		emit sig();       
+	} 
+signals:     
+	void sig(); 
+};    
+
+class Object:public QObject {       
+	Q_OBJECT   
+	public: Object(){} 
+	public slots:
+	void slot() 
+	{    
+		qDebug()<<"from thread slot:" <<QThread::currentThreadId();       
+	}   
+};
+    
+#include "main.moc"  int main(int argc, char *argv[]) 
+{      
+	QCoreApplication a(argc, argv);       
+	qDebug()<<"main thread:"<<QThread::currentThreadId();      
+	QThread thread;       
+	Object obj;       
+	Dummy dummy;       
+	obj.moveToThread(&thread);      
+	QObject::connect(&dummy, SIGNAL(sig()), &obj, SLOT(slot()));      
+	thread.start();       
+	dummy.emitsig();       
+	return a.exec(); 
+}      
+        
+        
+
+
+
+
+
+
+
+
+
+  
+        
+        
+        
+        
+        

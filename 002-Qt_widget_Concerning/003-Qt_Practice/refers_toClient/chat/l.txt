@@ -1,0 +1,28 @@
+Fri Jan 20 11:38:00 2017
+系统信息: 欢迎 l 来到聊天室!
+Fri Jan 20 11:38:43 2017
+系统信息: 欢迎 jie 来到聊天室!
+Fri Jan 20 11:38:49 2017
+jie 对大家说: j
+Fri Jan 20 11:45:16 2017
+系统信息: 欢迎 hua 来到聊天室!
+Fri Jan 20 11:45:32 2017
+hua 对大家说: hua
+Fri Jan 20 11:45:32 2017
+hua 对大家说: is
+Fri Jan 20 11:45:32 2017
+hua 对大家说: coming
+Fri Jan 20 11:46:12 2017
+hua 对大家说: huaiscoming
+Fri Jan 20 11:46:32 2017
+hua 对大家说: exit
+Fri Jan 20 11:46:46 2017
+系统信息: hua leave the chatroom
+
+Fri Jan 20 11:46:46 2017
+系统信息: hua leave the chatroom
+
+Fri Jan 20 11:49:02 2017
+l 对大家说: view
+Fri Jan 20 12:10:59 2017
+你对 jie 说: fuck!

@@ -1,0 +1,48 @@
+<?xmlversion = "1.0" encoding = "GB2312"?>
+<root>
+    <FileType>BST TIPS File</FileType>
+    <Version>1.0.0.1</Version>
+    <CreateTime>2012-10-24</CreateTime>
+    <Tip>
+        <!--Protocol-->
+        <InstruError Para="Warning" >The current instruction [%1] is error!</InstruError>
+        <NetWorkInterrupt Para="Warning" >Network [%1:%2] is interrupted!</NetWorkInterrupt>
+        <SocketInDeadLoop Para="Error" >Socket failed into dead loop!</SocketInDeadLoop>
+        <FilePathError Para="Warning" >The file's filePath [%1] found error!</FilePathError>
+        <CoverFileError Para="Warning" >The file under filePath [%1] can't be coverd!</CoverFileError>
+        <FileDamagedError Para="Warning" >The file going to be transmit is damaged!</FileDamagedError>
+        <FileTransmitInfo Para="Info" >File transmit instruction [%1]!</FileTransmitInfo>
+        <HeartBeatAbnormal Para="Warning" >HeartBeat is abnormal!</HeartBeatAbnormal>
+        <CheckError Para="Warning" >The instruction [%1] the interfaceboard sended is error!</CheckError>
+        <!--Interfaceboard-->
+        <TimeoutError Para="Warning" >Interfaceboard is timeout!</TimeoutError>
+        <!--Theme-->
+        <FloorError Para="Error" >Floor isaplayed error,previous floor num is [%1],current floor num is [%2]</FloorError>
+        <ButtonError Para="Error" >Button isaplayed error,previous Button num is [%1],current Button num is [%2]</ButtonError>
+        <ArrowError Para="Error" >Arrow isaplayed error,previous Arrow is [%1],current Arrow is [%2]</ArrowError>
+        <LogicError Para="Warning" >The phenomenon is wrong on logic!</LogicError>
+        <AccessToResourceError Para="Warning" >The resource can't be get!</AccessToResourceError>
+        <ThemepackDamaged Para="Error" >The theme(Ui) is damaged!</ThemepackDamaged>
+        <DisplayRunError Para="Error" >Application [Display] runned error!</DisplayRunError>
+        <DisplayReset Para="Error" >Application [Display] reseted!</DisplayReset>
+        <DisplayInitInfo Para="Info" >Application [Display]'s Info!</DisplayInitInfo>
+        <!--App-->
+        <DemonRunError Para="Error" >Can't find BOOT.mdp file!</DemonRunError>
+        <MdpFileError Para="Error" >BOOT.mdp file is invalid!</MdpFileError>
+        <ResolutionError Para="Error" >Can't find Resolution information!</ResolutionError>
+        <ThemeError Para="Error" >Can't find default theme on BOOT.mdp!</ThemeError>
+        <ThemePathError Para="Error" >Can't find active theme path!</ThemePathError>
+        <DemonReset Para="Error" >Application [Demon] reseted!</DemonReset>
+        <DemonInitInfo Para="Info" >Application [Demon]'s Info!</DemonInitInfo>
+        <SocketRunError Para="Error" >Application [Socket] runned error!</SocketRunError>
+        <SocketReset Para="Error" >Application [Socket] reseted!</SocketReset>
+        <SocketInitInfo Para="Info" >Application [Socket]'s Info!</SocketInitInfo>
+        <VideoError Para="Error" >The video played error!</VideoError>
+        <MDPParse Para="Info" >MDPParse IP:[%1] Time:[%2]</MDPParse>
+        <PartUpgrade Para="Info" >Upgrade of four areas Update instruction [%1]!</PartUpgrade>
+        <SelectTheme Para="Info" >The selected theme's path is [%1]!</SelectTheme>
+        <ThemeUpgrade Para="Info" >The path of the theme going to update is [%1]!</ThemeUpgrade>
+        <UDiskFunction Para="Info" >The time of the Udisk inserted time is [%1]!</UDiskFunction>
+        <!--Theme Udisk upgrade-->
+    </Tip>
+</root>

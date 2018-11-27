@@ -1,0 +1,113 @@
+http://m.blog.csdn.net/article/details?id=48290129
+
+一、QT中线程使用原则
+在实际的开发中线程的使用频率很高，尤其是在开发界面程序的时候。QT的UI线程负责界面的事件相应，而一些复杂的逻辑运算可以放在一个子线程中进行。QT中线程的使用有一个原则，对于界面的操作只能在UI主线程中操作，子线程不能对UI界面进行操作。如果在子线程中需要对界面进行操作，可以使用信号通知UI主线程，由UI主线程进行操作。
+二、QT中的线程
+在QT中启动线程有三种方法：QThread、QtConcurrent::run、QRunnable
+1、QThread
+QThread是最为常用的启动线程的方法，QThread提供了一种独立管理线程的方法。QThread启动的线程从虚函数run()开始执行，所以通常在使用QThread启动线程时我们需要实现一个QThread的派生类，重写虚函数run()，在run()函数中现实子线程的代码。如果我们只需要把一个对象放在子线程中执行，没有复杂的操作代码，我们也可以使用Qobject::moveToThread函数，把对象移动到子线程中。
+QThread对线程的管理
+（1）线程启动
+我们可以通过start()函数启动线程，start()函数有一个参数Priority线程的优先级，可参考enum QThread::Priority的取值，当线程已经被启动则调用此函数无任何作用。当调用此函数之后，会自动调用函数函数run(),所以run()函数是线程的线程函数
+（2）线程停止
+我们可以通过调用exit()或quit()函数停止线程。调用之后QEventLoop::exec()结束消息循环并返回，exec()返回exit()指定的返回码。通常为了方便，返回0为成功，负数为失败。quit()等同exit(0)。
+也可以调用terminate()函数强制终止线程，需要调用setTerminationEnabled()设置线程为可被终止，但是也不一定会立即终止线程，这个要以来操作系统的调度策略。在terminate()之后使用wait()函数等待，确保线程结束。使用terminate()终止线程一个危险的操作，在程序的任何地方都可以调用此函数终止线程，可能这时线程在修改数据。终止时线程也未释放线程占用的资源（内存、线程锁....），所以之后在不是必须使用的时候，不建议使用
+实例一 实现QThread的派生类：
+class WorkerThread : public QThread
+{
+    Q_OBJECT
+    void run() {
+        QString result;
+        /*线程执行的操作 */
+        emit resultReady(result);
+    }
+signals:
+    void resultReady(const QString &s);
+};
+
+void MyObject::startWorkInAThread()
+{
+    WorkerThread *workerThread = new WorkerThread(this);
+    connect(workerThread, &WorkerThread::resultReady, this, &MyObject::handleResults);
+    connect(workerThread, &WorkerThread::finished, workerThread, &QObject::deleteLater);
+    workerThread->start();
+}
+实例二 特定对象在线程执行，使用moveToThread
+class Worker : public QObject
+{
+    Q_OBJECT
+
+public slots:
+    void doWork(const QString ¶meter) {
+        QString result;
+        /* 线程执行的操作 */
+        emit resultReady(result);
+    }
+
+signals:
+    void resultReady(const QString &result);
+};
+
+class Controller : public QObject
+{
+    Q_OBJECT
+    QThread workerThread;
+public:
+    Controller() {
+        Worker *worker = new Worker;
+        worker->moveToThread(&workerThread);
+        connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
+        connect(this, &Controller::operate, worker, &Worker::doWork);
+        connect(worker, &Worker::resultReady, this, &Controller::handleResults);
+        workerThread.start();
+    }
+    ~Controller() {
+        workerThread.quit();
+        workerThread.wait();
+    }
+public slots:
+    void handleResults(const QString &);
+signals:
+    void operate(const QString &);
+};
+
+注意：
+每一个线程都有一个事件循环，使用QThread创建的线程同样也有一个事件循环。事件循环是信号和槽机制的重要组成部分，如果没有启动事件循环则信号与槽将不起作用。启动事件循环需要执行exec()函数，exec()函数是一个阻塞函数，而当我们派生QThread类重写run()函数时可能不想去执行exec()，因为这样最阻塞。这样就带来了一个问题，在线程中就不能使用信号与槽。如果我们需要在线程中使用信号与槽就必须执行exec()进行事件循环，这种情况可以采用实例二的方法，在封装一个线程操作对象，不进行重写run()函数而是对象在主线程中创建使用moveToThread()移动到子线程，这样在线程中就可以使用信号与槽，因为QThread::run()函数默认调用了exec()函数启动了事件循环
+2、QtConcurrent::run
+QtConcurrent命名空间里提供了一些高级API,利用这些API可以编写多线程程序，而不用直接使用比较低级的一些类，如mutext,lock, waitcondition以及semaphore等。使用QtConcurrent命令空间的API编写的程序会根据处理器的数目自动地调整线程的个数。QtConcurrent包含了用于并行列表处理的函数式编程，包含实现共享内存系统的MapReduce和FilterReduce，　以及管理GUI应用程序中异步计算的类。我们可以使用提供的run()函数，很方便的启动一个线程
+using namespace QtConcurrent;  
+void hello(QString name)  
+{  
+     qDebug() << "Hello" << name << "from" << QThread::currentThread();  
+}  
+int main(int argc, char **argv)  
+{  
+    QApplication app(argc, argv);  
+    QFuture<void> f1 = run(hello, QString("Alice"));  
+    QFuture<void> f2 = run(hello, QString("Bob"));  
+    f1.waitForFinished();  
+    f2.waitForFinished();  
+    return app.exec();  
+}
+注意：同样存在在线程函数中不能使用信号与槽问题
+
+3、QRunnable
+作为Qt类中少有的基类， QRunnable提供了简洁有效的可运行对象的创建.  用QRunnable来创建独立的运行对象来运行 不涉及界面元素的数据处理过程 非常合适.
+优点: 创建过程简洁， 使用方便， 配合着自身的autoDelete特性， 有点“招之即来， 挥之即去”的感觉.
+缺点: 无法实时提供自身的运行状态，没有start函数，需要QThreadPool启动线程
+默认情况，QThreadPool最在线程结束时自动删除QRunnable对象，我们也可以通过QRunnable::setAutoDelete()方法可以改变该默认行为。QThreadPool支持在QRunnable::run方法中通过调用tryStart(this)来多次执行相同的QRunnable。当最后一个线程退出run函数后，如果autoDelete启用的话，将删除QRunnable对象。在autoDelete启用的情况下，调用start()方法多次执行同一QRunnable会产生竞态，就避免这样做。那些在一定时间内会使用的线程将会过期。默认的过期时间是30秒。可通过setExpiryTimeout()方法来设置。设置一个负数的超时值代表禁用超时机制。方法maxThreadCount()可以查询可使用的最大线程数，你也可以设置最大的线程数。activeThreadCount反应的是当前正在被使用中的线程数个数。reserveThread函数保留某个线程为外部用，releaseThread释放该线程，这样就可以被再次使用。
+ class HelloWorldTask : public QRunnable
+{
+    void run()
+    {
+        qDebug() << "Hello world from thread" << QThread::currentThread();
+    }
+}
+HelloWorldTask *hello = new HelloWorldTask();
+// QThreadPool takes ownership and deletes 'hello' automatically
+QThreadPool::globalInstance()->start(hello);
+
+
+4、QThreadPool
+QThreadPool管理一组线程。它负责管理和回收单个QThread对象以减少程序中线程创建的开销。每个Qt应用程序都有一个全局的QThreadPool对象，可通过方法globalInstance()获得。通常和QRunnable结合使用启动线程。在程序退出时也可以调用waitForDone()函数等待所有的线程退出
+

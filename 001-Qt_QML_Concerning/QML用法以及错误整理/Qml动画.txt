@@ -1,0 +1,59 @@
+http://blog.csdn.net/xuancailinggan/article/details/50910909
+组合动画有两种，SequentialAnimation是另一种。它的中文叫队列动画（好吧，我自己翻译的）就是说在它的包含下，所有的动画是一个个按顺序执行的，而不是同时执行。比如之前ParallelAnimation同时执行的那个例子。改变需求：
+
+要求小红方块先向右移动，再向左移动，最后变色。
+
+这个功能还是有很多实现方法，但是当你用队列动画的时候，会很简洁，很方便，而且更加直观。
+
+
+[plain] view plain copy
+import QtQuick 2.3  
+import QtQuick.Window 2.2  
+  
+Window {  
+    visible: true  
+    width: 300  
+    height: 300  
+      
+    MouseArea {  
+        anchors.fill: parent  
+        onClicked: {  
+            test.start()  
+        }  
+    }  
+    Rectangle{  
+        id:rect  
+        width: 100  
+        height: 100  
+        color: "red"  
+    }  
+      
+    SequentialAnimation{  
+        id:test  
+        NumberAnimation {  
+            target: rect  
+            property: "x"  
+            duration: 2000  
+            easing.type: Easing.InOutQuad  
+            from:0  
+            to:200  
+        }  
+        NumberAnimation {  
+            target: rect  
+            property: "y"  
+            duration: 2000  
+            easing.type: Easing.InOutQuad  
+            from:0  
+            to:200  
+        }  
+        ColorAnimation {  
+            target: rect  
+            property: "color"  
+            duration: 2000  
+            easing.type: Easing.InOutQuad  
+            from:"red"  
+            to:"blue"  
+        }  
+    }  
+}  
+动画就不截图了……

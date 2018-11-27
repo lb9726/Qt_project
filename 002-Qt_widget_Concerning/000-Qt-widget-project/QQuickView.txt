@@ -1,0 +1,127 @@
+https://stackoverflow.com/questions/19159928/how-to-change-title-of-a-qtquick-2-window
+
+QML debugging is enabled. Only use this in a safe environment.
+QQuickView only supports loading of root objects that derive from QQuickItem. 
+
+If your example is using QML 2, (such as qmlscene) and the .qml file you 
+loaded has 'import QtQuick 1.0' or 'import Qt 4.7', this error will occur. 
+
+To load files with 'import QtQuick 1.0' or 'import Qt 4.7', use the 
+QDeclarativeView class in the Qt Quick 1 module. 
+
+
+
+This depends on how you want to use your GUI. If you want to use QML for almost everything, from window creation to the elements in your windows, the following solution may be the best option for you.
+
+Qt5.1, only for desktop
+
+If you have Qt5.1, you may use the new ApplicationWindow item from QtQuick.Controls as you root object in a file named main.qml:
+
+import QtQuick 2.0
+import QtQuick.Controls 1.0
+
+ApplicationWindow {
+    visible: true
+    width: 360
+    height: 360
+    title: "MyWindow"
+
+    Text {
+        text: "Hello world!"
+        anchors.centerIn: parent
+    }
+}
+
+
+o avoid the error message you get, you need to start your application with a QQmlApplicationEngine instead of QQuickView. This may be done as follows in your main.cpp file:
+
+#include <QtGui/QGuiApplication>
+#include <QQmlApplicationEngine>
+
+int main(int argc, char *argv[])
+{    
+    QGuiApplication app(argc, argv);    
+    QQmlApplicationEngine engine("main.qml");    
+    return app.exec();
+}
+Qt5.0, (possibly) for environments other than desktop
+
+If using Qt5.1 is not an option for you or you are targeting devices not yet supporting QtQuick.Controls, the alternative is to use Window in the following way. Add this to main.qml:
+
+import QtQuick 2.0
+import QtQuick.Window 2.0
+
+Window {
+    visible: true
+    width: 360
+    height: 360
+    title: "MyWindow"
+
+    Text {
+        text: "Hello world!"
+        anchors.centerIn: parent
+    }
+}
+And let this be your main.cpp:
+
+#include <QtGui/QGuiApplication>
+#include <QQmlEngine>
+#include <QQmlComponent>
+
+int main(int argc, char *argv[])
+{    
+    QGuiApplication app(argc, argv);    
+    QQmlEngine engine;
+    QQmlComponent component(&engine, QUrl::fromLocalFile("main.qml"));
+    component.create();    
+    return app.exec();
+}
+This should open a window with the text "Hello World!".
+
+shareimprove this answer
+edited Oct 3 '13 at 15:36
+answered Oct 3 '13 at 15:07
+
+dragly
+36217
+  	 	
+thank you for your help. – adi Oct 4 '13 at 17:36
+add a comment
+
+up vote
+0
+down vote
+The "Qt Quick Controls - Gallery" sample that ships with Qt 5.1.1 provides a good example. The following code assumes a project structure based on the "Qt Quick 2 APplication (Built-in Types)" template.
+
+In main.qml, use:
+
+ApplicationWindow {
+    title: "Component Gallery"
+...
+In main.cpp, use:
+
+#include <QtQml>
+#include <QtQuick/QQuickView>
+#include <QtCore/QString>
+#include <QtWidgets/QApplication>
+#include "qtquick2applicationviewer.h"
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    QQmlApplicationEngine engine("qml/YourProject/main.qml");
+    QObject* topLevel = engine.rootObjects().value(0);
+    QQuickWindow* window = qobject_cast<QQuickWindow*>(topLevel);
+    window->show();
+    return app.exec();
+}
+
+
+
+
+
+
+
+
+
+

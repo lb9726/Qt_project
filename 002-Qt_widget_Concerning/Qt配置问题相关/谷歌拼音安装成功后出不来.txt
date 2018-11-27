@@ -1,0 +1,2 @@
+点击右侧键盘符号，点击configure，点击+号，将勾选的去掉，搜索google pinyin
+点击添加即可，在inputmode 中可以看到新添加的google pinyin

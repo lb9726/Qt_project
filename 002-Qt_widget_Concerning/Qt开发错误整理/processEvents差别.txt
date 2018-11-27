@@ -1,0 +1,1 @@
+你应该使用QApplication::processEvents()，这个是处理GUI程序的。而QCoreApplication::processEvents()是处理控制台程序的，虽然我没看源码，但你关闭窗体时的closeEvent是widget特有的，而控制台不会产生这个事件，所以你用QCoreApplication::processEvents()根据就不会处理顶层窗体的closeEvent，也就是不会退出程序，而窗体自身对closeEvent的处理只是hide隐藏窗体而已，也就造成你的后台运行现象。

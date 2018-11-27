@@ -1,0 +1,2 @@
+sudo apt-get install intall open-vm-dkms 
+可以解决共享文件不显示的问题

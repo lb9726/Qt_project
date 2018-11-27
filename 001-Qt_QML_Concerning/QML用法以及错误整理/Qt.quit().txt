@@ -1,0 +1,28 @@
+http://blog.csdn.net/nfer_zhuang/article/details/41779905
+
+Starting /home/devin/Desktop/Repository/Qt_project/Qt_project/Qml相关资料/qml-master/Qml-Cplusplus/Qml-Cplusplus...
+QML debugging is enabled. Only use this in a safe environment.
+Signal QQmlEngine::quit() emitted, but no receivers connected to handle it.
+
+
+其本意就是在显示Splash Screen的时候，如果点击Splash Screen图片就会退出整个程序，但实际结果就是报了一行错误：
+Signal QQmlEngine::quit() emitted, but no receivers connected to handle it.
+程序仍然好好的进行着。
+我们使用上面的错误提示信息作为关键字进行搜索，通过bing搜索找到的只有一个有效页面Qt Error: Signal QDeclarativeEngine::quit() emitted, but no receivers connected to handle it，在该页面中提到了正确的使用quit()的语法是：
+
+connect(sender, SIGNAL(signalName(args)), receiver, SLOT(slotName(args)));
+看到这里我是感觉到头痛了，这个什么和什么呢？说的语焉不详的，完全不知道怎么解决当前这个Demo的问题。
+
+从帮助文档入手
+那么就从Qt的帮助文档开始，先了解一下quit()函数的官方说明：
+quit()
+This function causes the QQmlEngine::quit() signal to be emitted. Within the Prototyping with qmlscene, this causes the launcher application to exit; to quit a C++ application when this method is called, connect the QQmlEngine::quit() signal to the QCoreApplication::quit() slot.
+
+帮助文档中提到，如果要退出一个C++的应用程序，需要connect the QQmlEngine::quit() signal to the QCoreApplication::quit() slot.
+
+这个时候我们就知道在上面提到了connect()函数调用就有关联了。
+
+Qt.quit()示例代码
+我们再次使用Qt.quit()作为关键字在bing上搜索，找到一个Closing a Qt Quick application from QML页面。
+
+在示例代码中我们看到调用Qt.quit()函数的地方也是在Qml的MouseArea控件中通过onClicked事件响应函数中完成的，但是和Window示例代码中不同的地方在main.cpp中：

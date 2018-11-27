@@ -1,0 +1,123 @@
+QThread: Destroyed while thread is still running
+end funtion
+QWaitCondition::wakeAll(): mutex lock failure: Invalid argument
+
+
+    Protocoldeal *Protocol = new Protocoldeal; 加了这个就会有问题
+//    Protocol.BstBvtRecoverFrame(totalBuf, j);
+//    QString s = Protocol.ChartoQString(totalBuf);
+//    emit Protocol.AcceptDataFormBottom(s);
+
+
+后面查找资料，在析构函数中加上了
+Protocoldeal::~Protocoldeal()
+{
+    GetDataPthread->requestInterruption();
+    GetDataPthread->quit();
+    GetDataPthread->wait();
+    delete GetDataPthread;
+}
+
+ProducerFromBottom::~ProducerFromBottom()
+{
+
+}
+
+//配置串口参数，连接信号和槽
+void ProducerFromBottom::SetSerialArgument()
+{
+    my_serialport = new QSerialPort;
+    my_serialport->setPortName("/dev/ttymxc1");
+    qDebug() << "Name : " << my_serialport->portName();
+//    connect(my_serialport, SIGNAL(readyRead()), this, SLOT(ReadyreadSlots()));
+    if (my_serialport->open(QIODevice::ReadOnly))  //使用只读的方式打开串口
+    {
+        cout << "enter funtion"<<endl;
+        //设置波特率
+        my_serialport->setBaudRate(QSerialPort::Baud9600);
+        //设置数据位
+        my_serialport->setDataBits(QSerialPort::Data8);
+        //设置校验位
+        my_serialport->setParity(QSerialPort::NoParity);
+        //设置流控制
+        my_serialport->setFlowControl(QSerialPort::NoFlowControl);
+        //设置停止位
+        my_serialport->setStopBits(QSerialPort::OneStop);
+        my_serialport->clearError();
+        my_serialport->clear();
+        cout << "before connect"<<endl;
+        connect(my_serialport, SIGNAL(readyRead()), this, SLOT(ReadyreadSlots()));
+        this->exec();  // 需要在子线程中调用线程的exec的函数，使得进入消息队列
+        cout << "after connect"<<endl;
+    }
+    cout << "end funtion"<<endl;
+}
+
+//void ProducerFromBottom::ReadyreadSlots()
+//{
+//    QByteArray arr = my_serialport->readAll();
+//    qDebug()<< "arr = " << arr;
+
+//    QString s = arr.toHex();
+//    qDebug()<< "s = " << s <<endl;
+//    CopySerialDataToBuf(arr);
+//    cout << "setting sth\n";
+//    cout << "the string changes"<< endl;
+//}
+
+void ProducerFromBottom::ReadyreadSlots()
+{
+    static bool Isstart = false;
+    char str;
+    unsigned long i = 0;
+    unsigned long j = 0;
+    while(1)
+    {
+        my_serialport->read(&str, 1); // 每次读取一个字节到str中存储
+        printf("%X\n", str);
+        if (BVT_STX == str)
+        {
+            Isstart = true;
+            totalBuf[i++] = (unsigned char)str;
+        }
+        else if(Isstart)      // 如果遇到帧头，则将遇到帧尾之前的所有数据保存下来
+        {
+            totalBuf[i++] = (unsigned char)str;
+
+            if (BVT_ETX == str)
+            {
+                Isstart = false;
+                j = i;
+                i = 0;
+                break;
+            }
+        }
+    }
+    Protocoldeal *Protocol = new Protocoldeal;
+//    Protocol.BstBvtRecoverFrame(totalBuf, j);
+//    QString s = Protocol.ChartoQString(totalBuf);
+//    emit Protocol.AcceptDataFormBottom(s);
+    for(i = 0; i < j; i++)
+    {
+        //cout<< totalBuf[i]<< " ";
+        printf("%X ", totalBuf[i]);
+    }
+    printf("\n");
+    qDebug() << "totalBuf"<< totalBuf <<endl;
+    cout << "i = "<< i <<" "<<"j = "<< j << endl;
+    cout << "setting sth\n";
+    cout << "the string changes"<< endl;
+}
+
+http://blog.chinaunix.net/uid-28394603-id-5588747.html
+http://blog.csdn.net/u012474678/article/details/39576659
+http://www.myexception.cn/qt/1755866.html
+http://blog.csdn.net/xytx_823/article/details/51819474
+http://blog.sina.com.cn/s/blog_607142c90100lhat.html
+http://www.2cto.com/kf/201608/536534.html
+http://bbs.csdn.net/topics/392084679
+
+
+
+
+

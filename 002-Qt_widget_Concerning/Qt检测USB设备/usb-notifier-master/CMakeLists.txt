@@ -1,0 +1,25 @@
+project(usb-notifier CXX)
+
+cmake_minimum_required(VERSION 2.8.12)
+
+set(USBNOTIFIER_VERSION_MAJOR 0)
+set(USBNOTIFIER_VERSION_MINOR 1)
+set(USBNOTIFIER_VERSION_ABI 1)
+
+find_package(Qt5 COMPONENTS Core)
+
+set(USBNOTIFIER_LIB_VERSION ${USBNOTIFIER_VERSION_ABI}.${USBNOTIFIER_VERSION_MINOR}.${USBNOTIFIER_VERSION_MAJOR})
+
+set(CMAKE_AUTOMOC TRUE)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+
+
+# C++11
+add_definitions("-std=gnu++11")
+
+# src
+add_subdirectory(src)
+add_subdirectory(example)

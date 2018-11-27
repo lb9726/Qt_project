@@ -1,0 +1,52 @@
+http://bbs.csdn.net/topics/390337842
+
+组件是动态创建的还是静态的？
+是动态创建的。在通信方面，和静态创建的区别主要是什么？
+你可以在主qml里面定义信号与槽的关系，点击的时候发个定义好的信号，其他的qml接收这个信号就可以，具体的内容不好说
+静态创建是在QML里完成的，所以可以使用描述性语法，即onXXX的方式去写，而动态创建的则不行，因为动态对象创建只能在JS里完成，它应该使用connect方法去连接。
+http://doc.qt.io/qt-4.8/qmlevents.html
+请看文档QML Signal and Handler Event System里的Connecting Signals to Methods and Signals部分。
+
+A.qml:
+
+Item{
+ id:_a
+ width:200
+ height:200
+ color:"red"
+ function showB(){
+   var component = Qt.createComponent("B.qml");
+
+        if (component.status == Component.Ready) {
+            var bQml = component.createObject(_a);
+            bQml.xClicked.connect(doSomething);// 实现两个qml组件之间的通信
+        }
+ }
+ function doSomething(msg){
+   console.log(msg+"do something");
+ }
+ MouseAea{
+  anchors.fill parent
+  onClicked:showB()
+ }
+}
+
+----------------
+
+B.qml:
+
+Item{
+ id:_b
+ width:100
+ height:100
+ color:"blue"
+ signal xClicked(string msg)
+ MouseArea{
+   anchors.fill:parent
+   onClicked:{
+    _b.xClicked("test")
+    _b.destroy()
+   }
+ }
+}
+

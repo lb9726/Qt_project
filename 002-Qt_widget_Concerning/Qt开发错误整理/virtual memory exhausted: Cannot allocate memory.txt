@@ -1,0 +1,61 @@
+virtual memory exhausted: Cannot allocate memory
+
+devin@ubuntu:~$ free -m
+             total       used       free     shared    buffers     cached
+Mem:          5229       1178       4051         17         82        448
+-/+ buffers/cache:        646       4583
+Swap:         4093       2000       2093
+
+
+可以重启虚拟机试一试，发现交换控件又回来了
+devin@ubuntu:~$ free -m
+             total       used       free     shared    buffers     cached
+Mem:          5229       1178       4051         17         82        448
+-/+ buffers/cache:        646       4583
+Swap:         4093          0       4093
+
+
+Linux编译QT程序出现virtual memory exhausted: Cannot allocate memory    内存被耗尽了。
+
+释放内存：
+（1）：#sync
+（2）：#echo 3 > /proc/sys/vm/drop_caches
+接下来编译程序OK！！！
+ 上述做法仍然会出错
+ 
+http://www.linuxdiyf.com/linux/22195.html
+ 
+ root@ubuntu:/home/devin# free -m
+             total       used       free     shared    buffers     cached
+Mem:          5229        870       4359         48          1        202
+-/+ buffers/cache:        666       4563
+Swap:         4093        482       3611
+
+
+root@ubuntu:/home/devin# mkdir /usr/img
+root@ubuntu:/home/devin# rm -rf /usr/img/swap
+root@ubuntu:/home/devin# dd if=/dev/zero of=/usr/img/swap bs=1024 count=2048000
+2048000+0 records in
+2048000+0 records out
+2097152000 bytes (2.1 GB) copied, 11.108 s, 189 MB/s
+
+
+root@ubuntu:/home/devin# 
+root@ubuntu:/home/devin# mkswap /usr/img/swap 
+Setting up swapspace version 1, size = 2047996 KiB
+no label, UUID=8f98c398-9331-4a23-b028-d06cba6e45b2
+root@ubuntu:/home/devin# 
+
+root@ubuntu:/home/devin# swapon /usr/img/swap 
+root@ubuntu:/home/devin# 
+root@ubuntu:/home/devin# free -m
+             total       used       free     shared    buffers     cached
+Mem:          5229       3063       2166         63         17       2328
+-/+ buffers/cache:        717       4512
+Swap:         6093        479       5614
+root@ubuntu:/home/devin# 
+
+
+出现这种情况是因为我将大一点的视频文件加入到qt 的 qml的资源中去了
+
+

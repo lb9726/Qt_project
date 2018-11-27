@@ -1,0 +1,6 @@
+
+无法下载 bzip2:/var/lib/apt/lists/partial/security.ubuntu.com_ubuntu_dists_trusty-security_multiverse_source_Sources  Hash 校验和不符
+
+解决方案：
+rm /var/lib/apt/lists/* -vf
+apt-get update

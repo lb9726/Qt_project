@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <FileType>BST STC File</FileType>
+    <CreateTime>2014-02-21 13:37:26</CreateTime>
+    <LastModiTime>2014-02-21 13:37:26</LastModiTime>
+    <TestCase>
+        <Module/>
+        <Protocol>
+            <Generator/>
+            <Analyzer/>
+        </Protocol>
+    </TestCase>
+</root>

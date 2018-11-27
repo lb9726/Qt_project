@@ -1,0 +1,1 @@
+FORMAT  /FS:FAT32 /q /y

@@ -1,0 +1,5 @@
+Could not find qmake configuration file default.
+Error while parsing file /home/devin/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test/Protocol_test.pro. Giving up.
+
+
+QObject::killTimer: Timers cannot be stopped from another thread

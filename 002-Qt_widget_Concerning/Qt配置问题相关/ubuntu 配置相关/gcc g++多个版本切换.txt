@@ -1,0 +1,41 @@
+sudo apt-get install g++-4.6 gcc-4.6
+sudo apt-get install g++-4.6-multilib
+sudo apt-get install g++-4.7-multilib
+
+
+同理当安装过多个gcc ，g++的版本的时候，也可以随意切换版本进行操作
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 100
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 100
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 100
+
+libo@ubuntu:/usr/lib$ sudo update-alternatives --config gcc
+There are 3 choices for the alternative gcc (providing /usr/bin/gcc).
+
+  Selection    Path              Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/gcc-4.8   100       auto mode
+  1            /usr/bin/gcc-4.6   100       manual mode
+  2            /usr/bin/gcc-4.7   100       manual mode
+* 3            /usr/bin/gcc-4.8   100       manual mode
+
+Press enter to keep the current choice[*], or type selection number: 3
+
+
+同理当安装过多个gcc ，g++的版本的时候，也可以随意切换版本进行操作
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 100
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 100
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 100
+
+
+libo@ubuntu:/usr/lib$ sudo update-alternatives --config g++
+There are 3 choices for the alternative g++ (providing /usr/bin/g++).
+
+  Selection    Path              Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/g++-4.6   100       auto mode
+  1            /usr/bin/g++-4.6   100       manual mode
+  2            /usr/bin/g++-4.7   100       manual mode
+  3            /usr/bin/g++-4.8   100       manual mode
+
+Press enter to keep the current choice[*], or type selection number:3
+

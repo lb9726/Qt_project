@@ -1,0 +1,7 @@
+<RCC>
+	  <qresource>
+        <file>rc/15_Flrmap/bg.png</file>
+        <file>rc/15_Flrmap/framedark.png</file>
+        <file>rc/15_Flrmap/framelight.png</file>
+    </qresource>
+</RCC>

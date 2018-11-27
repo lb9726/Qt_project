@@ -1,0 +1,16 @@
+在qml中property alias idMtest: mtest ，这个id是可以全局使用的，在其他的*.qml 中可以使用的，idMtest和mtest
+无论是 QQmlApplicationEngine 还是 QQuickView 加载的qml文件，这个文件中的id可以在其他qml文件中使用
+//    QQmlApplicationEngine engine;
+//    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    QQuickView mview;
+    QObject::connect(mview.engine(), SIGNAL(quit()), &app, SLOT(quit()));
+    //不这样写，quit会直接提示没有接受者处理这个handle
+    //Signal QQmlEngine::quit() emitted, but no receivers connected to handle it.
+    mview.setSource(QUrl(QStringLiteral("qrc:/Main2.qml")));
+    mview.show();
+    
+在其他qml中相互引用时，这个id，除本文件以外，不能在其他文件中引用这个id变量作为对象，只有实例化的对象的id才有可能被
+全局引用得到
+
+似乎上面的理解不太正确，编写的qml的文件可以在其他任意一个qml中引用，如果想要使得id成为全局的好像不太容易理解
+尽量不要使用id作为全局变量的用法，这无疑是增大了模块之间的耦合度，可以使用实例，qt的信号和槽函数来解决

@@ -1,0 +1,39 @@
+Starting /home/devin/Qt-Demo-Files/Qt-Quick-Controls/build-Flickable-Desktop_Qt_5_5_1_GCC_64bit-Debug/Flickable...
+QML debugging is enabled. Only use this in a safe environment.
+qrc:/DateandTime.qml:15:5: QML Text: Possible anchor loop detected on centerIn.
+qrc:/DateandTime.qml:20:5: QML Text: Possible anchor loop detected on vertical anchor.
+qrc:/DateandTime.qml:20:5: QML Text: Possible anchor loop detected on vertical anchor.
+
+
+import QtQuick 2.0
+import QtQuick.Controls 1.4
+Item {
+    property string timeanddate : ""
+    Timer {
+        interval: 1000; running: true; repeat: true
+        onTriggered: time.text = Qt.formatDateTime(new Date(), "hh:mm:ss")
+    }
+
+    Timer {
+        interval: 1000; running: true; repeat: true
+        onTriggered: date.text = Qt.formatDateTime(new Date(), "MM-dd-yyyy")
+    }
+
+    Label { // x:781; y:27
+        id: time
+        text: Qt.formatDateTime(new Date(), "hh:mm:ss")
+        anchors.centerIn: date
+    }
+    Label {
+        id: date
+        text: Qt.formatDateTime(new Date(), "MM-dd-yyyy")
+        anchors.top: time.bottom
+//        anchors.right: screen.right
+    }
+//    function GetCurrentSystemTime()
+//    {
+
+//    }
+}
+
+

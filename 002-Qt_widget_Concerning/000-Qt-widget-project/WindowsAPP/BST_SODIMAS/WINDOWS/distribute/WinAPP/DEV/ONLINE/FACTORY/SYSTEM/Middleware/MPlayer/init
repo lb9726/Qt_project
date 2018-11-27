@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bst/SYSTEM/Middleware/MPlayer/mplayer_brdg &

@@ -1,0 +1,78 @@
+error: ‘staticMetaObject’ is not a member of ‘QGraphicsPixmapItem
+
+https://blog.csdn.net/dzh0622/article/details/47783989
+继承QGraphicsItem 编译错误:error: no member named 'staticMetaObject' in 'QGraphicsItem'; did you mean sim
+
+继承QGraphicsItem，必须同时继承QObject类，并且多继承的时候，QObject放在第一个。
+Class TestItem : public QObject, public QGraphicsItem
+{
+    Q_OBJECT
+    public:
+        explicit TestItem(QGraphicsItem *item=0);
+ 
+   ...
+ 
+} 
+
+
+
+moc_mygraphicspixmapitem.cpp:64:8: error: ‘staticMetaObject’ is not a member of ‘QGraphicsPixmapItem’
+../MyMine-2018-08-07/mygraphicspixmapitem.h:16: Warning: Class MyGraphicsPixmapItem implements the interface QGraphicsItem but does not list it in Q_INTERFACES. qobject_cast to QGraphicsItem will not work!
+
+解决方法： https://blog.csdn.net/qq_26374395/article/details/80286076
+原文链接：https://blog.csdn.net/qq319923400/article/details/60141230
+
+注意:一定要将public QObject放在public QGraphicsItem的前面,并且在该类的定义中添加Q_OBJECT宏.
+
+
+
+编译时出现警告 Warning: Class Node implements the interface QGraphicsItem but does not list it in Q_INTERFACES. qobject_cast to QGraphicsItem will not work!
+
+在类的声明（Q_OBJECT下面）中添加:Q_INTERFACES(QGraphicsItem)可解决该问题.
+
+
+
+
+
+#ifndef MYGRAPHICSPIXMAPITEM_H
+#define MYGRAPHICSPIXMAPITEM_H
+
+#include <QObject>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsSceneMouseEvent>
+#include <QString>
+#include <QMessageBox>
+
+/*
+ * class MyGraphicsPixmapItem : public QGraphicsItem
+ * we must Inherits:QObject, otherwise will encounter error as follows
+ * Compile error: ‘staticMetaObject’ is not a member of ‘QGraphicsPixmapItem
+*/
+class MyGraphicsPixmapItem : public QObject, public QGraphicsItem
+{
+    Q_OBJECT
+//    Q_INTERFACES(QGraphicsItem)
+    /*Warning: Class Node implements the interface QGraphicsItem
+     * but does not list it in Q_INTERFACES.
+     *  qobject_cast to QGraphicsItem will not work!
+     * so we need add Q_INTERFACES(QGraphicsItem) after Q_OBJECT
+    */
+public:
+    explicit MyGraphicsPixmapItem();
+    void setImage(QString pPicName); //设置图片
+
+protected:
+    virtual void mousePressEvent(QGraphicsSceneMouseEvent *event ); //鼠标点击事件
+
+signals:
+
+public slots:
+};
+
+#endif // MYGRAPHICSPIXMAPITEM_H
+
+
+
+
+
+

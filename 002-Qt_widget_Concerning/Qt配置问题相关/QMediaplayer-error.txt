@@ -1,0 +1,29 @@
+defaultServiceProvider::requestService(): no service found for - "org.qt-project.qt.mediaplayer"
+
+运行时提示上述错误
+
+sudo apt-get install bison build-essential libncurses5-dev
+sudo apt-get install ccache
+安装QT支持库
+sudo apt-get install libqtcore4
+sudo apt-get install libqtgui4
+sudo apt-get install libqt4-network
+
+sudo apt-get install libgstreamer0.10-dev
+sudo apt-get install libgstreamer-plugins-base0.10-dev
+
+sudo add-apt-repository ppa:mc3man/trusty-media
+
+sudo apt-get update
+sudo apt-get install gstreamer0.10-plugins-good
+sudo apt-get install gstreamer0.10-plugins-ugly
+sudo apt-get install gstreamer0.10-plugins-bad
+sudo apt-get install gstreamer0.10-plugins-bad-multiverse
+sudo apt-get install gstreamer0.10-fluendo-mp3
+sudo apt-get install gstreamer0.10-ffmpeg
+sudo apt-get install gstreamer0.10-libav
+sudo apt-get install ffmpeg
+sudo apt-get install gstreamer1.0*
+sudo apt-get install libqtgstreamer-0.10-0
+sudo apt-get install libqtgstreamer-dev
+

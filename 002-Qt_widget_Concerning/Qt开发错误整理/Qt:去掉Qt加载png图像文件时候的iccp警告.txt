@@ -1,0 +1,13 @@
+概述
+
+用QML加载png文件时显示如下警告（图像正常加载显示）
+
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: cHRM chunk does not match sRGB
+
+用ps去掉png图像的icc配置文件就可以了 
+另存为时勾去配置文件，覆盖原文件，警告消失
+
+http://blog.csdn.net/x356982611/article/details/52995112
+
+

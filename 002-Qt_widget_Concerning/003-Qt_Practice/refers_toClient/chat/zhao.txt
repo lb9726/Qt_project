@@ -1,0 +1,21 @@
+Mon Jul 13 08:29:08 2015
+系统信息: 欢迎 zhao 来到聊天室!
+Mon Jul 13 08:29:22 2015
+你对 libo 说: 
+Mon Jul 13 08:29:22 2015
+系统信息: 
+Mon Jul 13 08:29:28 2015
+系统信息: libo leave the chatroom
+
+Mon Jul 13 08:29:42 2015
+你对 libo 说: 
+Mon Jul 13 08:29:42 2015
+系统信息: 
+Mon Jul 13 08:29:49 2015
+你对 libo 说: dfk
+Mon Jul 13 08:29:49 2015
+系统信息: dfk
+Mon Jul 13 08:29:51 2015
+你对 libo 说: fsf
+Mon Jul 13 08:29:51 2015
+系统信息: fsf

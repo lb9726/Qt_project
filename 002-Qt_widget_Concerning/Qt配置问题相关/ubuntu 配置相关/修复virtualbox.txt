@@ -1,0 +1,1269 @@
+groups: 无法找到ID 为125 的用户的属组
+zhanghe@zhanghe:/run/user/1000/gvfs/smb-share:server=172.26.10.69,share=projects/17CY/training/01 - 环境搭建/window xp 虚拟机安装$ sudo dpkg -i virtualbox-4.3_4.3.12-93733~Ubuntu~raring_amd64.deb 
+[sudo] password for zhanghe: 
+dpkg: error processing archive virtualbox-4.3_4.3.12-93733~Ubuntu~raring_amd64.deb (--install):
+ 无法访问归档文件: 权限不够
+在处理时有错误发生：
+ virtualbox-4.3_4.3.12-93733~Ubuntu~raring_amd64.deb
+zhanghe@zhanghe:/run/user/1000/gvfs/smb-share:server=172.26.10.69,share=projects/17CY/training/01 - 环境搭建/window xp 虚拟机安装$ cp virtualbox-4.3_4.3.12-93733~Ubuntu~raring_amd64.deb /tmp/
+zhanghe@zhanghe:/run/user/1000/gvfs/smb-share:server=172.26.10.69,share=projects/17CY/training/01 - 环境搭建/window xp 虚拟机安装$ cp Oracle_VM_VirtualBox_Extension_Pack-4.3.12-93733.vbox-extpack /tmp
+zhanghe@zhanghe:/run/user/1000/gvfs/smb-share:server=172.26.10.69,share=projects/17CY/training/01 - 环境搭建/window xp 虚拟机安装$ 
+
+
+
+
+
+安装vnc
+zhanghe@zhanghe:~/Desktop$ dpkg --list | grep vnc
+ii  libvncserver0:amd64                                   0.9.9+dfsg-6~ubuntu14.04.1~ppa1                     amd64        API to write one's own vnc server
+ii  remmina-plugin-vnc                                    1.0.0-4ubuntu3                                      amd64        VNC plugin for remmina remote desktop client
+zhanghe@zhanghe:~/Desktop$ sudo apt-get purge libvncserver0:amd64 
+[sudo] password for zhanghe: 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  dkms libgsoap4 virtualbox-dkms
+Use 'apt-get autoremove' to remove them.
+将会安装下列额外的软件包：
+  virtualbox-dkms
+下列软件包将被【卸载】：
+  libvncserver0* remmina-plugin-vnc* virtualbox* virtualbox-qt*
+下列软件包将被升级：
+  virtualbox-dkms
+升级了 1 个软件包，新安装了 0 个软件包，要卸载 4 个软件包，有 826 个软件包未被升级。
+需要下载 567 kB 的软件包。
+解压缩后将会空出 80.0 MB 的空间。
+您希望继续执行吗？ [Y/n] 
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ trusty-updates/multiverse virtualbox-dkms all 4.3.36-dfsg-1+deb8u1ubuntu1.14.04.1 [567 kB]
+下载 567 kB，耗时 1秒 (441 kB/s)         
+(正在读取数据库 ... 系统当前共安装有 263022 个文件和目录。)
+Removing virtualbox-qt (4.3.10-dfsg-1ubuntu4) ...
+Purging configuration files for virtualbox-qt (4.3.10-dfsg-1ubuntu4) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.13-1) ...
+Processing triggers for shared-mime-info (1.2-0ubuntu3) ...
+Unknown media type in type 'all/all'
+Unknown media type in type 'all/allfiles'
+Unknown media type in type 'uri/mms'
+Unknown media type in type 'uri/mmst'
+Unknown media type in type 'uri/mmsu'
+Unknown media type in type 'uri/pnm'
+Unknown media type in type 'uri/rtspt'
+Unknown media type in type 'uri/rtspu'
+Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
+Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
+Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1) ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers for mime-support (3.54ubuntu1) ...
+(正在读取数据库 ... 系统当前共安装有 262865 个文件和目录。)
+Preparing to unpack .../virtualbox-dkms_4.3.36-dfsg-1+deb8u1ubuntu1.14.04.1_all.deb ...
+
+-------- Uninstall Beginning --------
+Module:  virtualbox
+Version: 4.3.10
+Kernel:  3.13.0-39-generic (x86_64)
+-------------------------------------
+
+Status: Before uninstall, this module version was ACTIVE on this kernel.
+
+vboxdrv.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.13.0-39-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxnetadp.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.13.0-39-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxnetflt.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.13.0-39-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxpci.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.13.0-39-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+depmod........
+
+DKMS: uninstall completed.
+
+------------------------------
+Deleting module version: 4.3.10
+completely from the DKMS tree.
+------------------------------
+Done.
+Unpacking virtualbox-dkms (4.3.36-dfsg-1+deb8u1ubuntu1.14.04.1) over (4.3.10-dfsg-1ubuntu4) ...
+(正在读取数据库 ... 系统当前共安装有 262864 个文件和目录。)
+Removing virtualbox (4.3.10-dfsg-1ubuntu4) ...
+ * Stopping VirtualBox kernel modules                                    [ OK ] 
+Purging configuration files for virtualbox (4.3.10-dfsg-1ubuntu4) ...
+dpkg：警告：while removing virtualbox, directory '/usr/lib/virtualbox/ExtensionPacks' not empty so not removed
+Removing remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+Removing libvncserver0:amd64 (0.9.9+dfsg-6~ubuntu14.04.1~ppa1) ...
+Purging configuration files for libvncserver0:amd64 (0.9.9+dfsg-6~ubuntu14.04.1~ppa1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+正在设置 virtualbox-dkms (4.3.36-dfsg-1+deb8u1ubuntu1.14.04.1) ...
+Loading new virtualbox-4.3.36 DKMS files...
+Building only for 3.13.0-39-generic
+Building initial module for 3.13.0-39-generic
+Done.
+
+vboxdrv:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/3.13.0-39-generic/updates/dkms/
+
+vboxnetadp.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/3.13.0-39-generic/updates/dkms/
+
+vboxnetflt.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/3.13.0-39-generic/updates/dkms/
+
+vboxpci.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/3.13.0-39-generic/updates/dkms/
+
+depmod....
+
+DKMS: install completed.
+zhanghe@zhanghe:~/Desktop$ sudo apt-get install libvncserver0:amd64 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  dkms libgcrypt20 libgnutls28 libgsoap4 libhogweed2 virtualbox-dkms
+Use 'apt-get autoremove' to remove them.
+建议安装的软件包：
+  libvncserver0-dbg
+下列【新】软件包将被安装：
+  libvncserver0
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 826 个软件包未被升级。
+需要下载 168 kB 的软件包。
+解压缩后会消耗掉 479 kB 的额外空间。
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ trusty-updates/main libvncserver0 amd64 0.9.9+dfsg-1ubuntu1.1 [168 kB]
+下载 168 kB，耗时 0秒 (362 kB/s)      
+Selecting previously unselected package libvncserver0:amd64.
+(正在读取数据库 ... 系统当前共安装有 262722 个文件和目录。)
+Preparing to unpack .../libvncserver0_0.9.9+dfsg-1ubuntu1.1_amd64.deb ...
+Unpacking libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+正在设置 libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+zhanghe@zhanghe:~/Desktop$ sudo killall remmina
+zhanghe@zhanghe:~/Desktop$ sudo killall remmina
+zhanghe@zhanghe:~/Desktop$ dpkg --list | grep vnc
+ii  libvncserver0:amd64                                   0.9.9+dfsg-1ubuntu1.1                               amd64        API to write one's own vnc server
+zhanghe@zhanghe:~/Desktop$ sudo apt-get purge libvncserver0:amd64 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  dkms libgcrypt20 libgnutls28 libgsoap4 libhogweed2 virtualbox-dkms
+Use 'apt-get autoremove' to remove them.
+下列软件包将被【卸载】：
+  libvncserver0*
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 826 个软件包未被升级。
+解压缩后将会空出 479 kB 的空间。
+您希望继续执行吗？ [Y/n] 
+(正在读取数据库 ... 系统当前共安装有 262731 个文件和目录。)
+Removing libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+Purging configuration files for libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+zhanghe@zhanghe:~/Desktop$ sudo apt-get install libvncserver0:amd64 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  dkms libgcrypt20 libgnutls28 libgsoap4 libhogweed2 virtualbox-dkms
+Use 'apt-get autoremove' to remove them.
+建议安装的软件包：
+  libvncserver0-dbg
+下列【新】软件包将被安装：
+  libvncserver0
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 826 个软件包未被升级。
+需要下载 0 B/168 kB 的软件包。
+解压缩后会消耗掉 479 kB 的额外空间。
+Selecting previously unselected package libvncserver0:amd64.
+(正在读取数据库 ... 系统当前共安装有 262722 个文件和目录。)
+Preparing to unpack .../libvncserver0_0.9.9+dfsg-1ubuntu1.1_amd64.deb ...
+Unpacking libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+正在设置 libvncserver0:amd64 (0.9.9+dfsg-1ubuntu1.1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+zhanghe@zhanghe:~/Desktop$ ps -ef | grep remmina
+zhanghe   6276  1962  0 17:51 pts/6    00:00:00 grep remmina
+zhanghe@zhanghe:~/Desktop$ remmina 
+Remmina plugin RDP (type=协议) registered.
+Remmina plugin RDPF (type=文件) registered.
+Remmina plugin RDPS (type=首选项) registered.
+Remmina plugin SFTP (type=协议) registered.
+Remmina plugin SSH (type=协议) registered.
+
+
+^C
+zhanghe@zhanghe:~/Desktop$ 
+zhanghe@zhanghe:~/Desktop$ 
+zhanghe@zhanghe:~/Desktop$ 
+zhanghe@zhanghe:~/Desktop$ sudo apt-cache search vnc
+gir1.2-gtk-vnc-2.0 - GObject introspection data for GTK-VNC.
+libgtk-vnc-1.0-0 - VNC viewer widget for GTK+2 (runtime libraries)
+libgtk-vnc-1.0-0-dbg - VNC viewer widget for GTK+2 (debugging symbols)
+libgtk-vnc-1.0-dev - VNC viewer widget for GTK+2 (development files)
+libgtk-vnc-2.0-0 - VNC viewer widget for GTK+3 (runtime libraries)
+libgtk-vnc-2.0-0-dbg - VNC viewer widget for GTK+3 (debugging symbols)
+libgtk-vnc-2.0-dev - VNC viewer widget for GTK+3 (development files)
+libgvnc-1.0-0 - VNC gobject wrapper (runtime libraries)
+libgvnc-1.0-0-dbg - VNC gobject wrapper (debugging symbols)
+libgvnc-1.0-dev - VNC GObject wrapper (development files)
+libvncserver-config - API to write one's own vnc server - library utility
+libvncserver-dev - API to write one's own vnc server - development files
+libvncserver0 - API to write one's own vnc server
+libvncserver0-dbg - debugging symbols for libvncserver
+python-gtk-vnc - VNC viewer widget for GTK+2 (Python binding)
+remmina - remote desktop client for GNOME desktop environment
+remmina-plugin-vnc - VNC plugin for remmina remote desktop client
+vino - VNC server for GNOME
+virt-manager - desktop application for managing virtual machines
+tightvnc-java - TightVNC java applet and command line program
+vnc-java - VNC java applet and command line program
+archipel-agent-virtualmachine-vnc - Virtual Machine Orchestration (Agent Virtualmachine VNC)
+autocutsel - Keep the X clipboard and the cutbuffer in sync
+chaosreader - trace network sessions and export it to html format
+conspy - Remote control of Linux virtual consoles
+directvnc - VNC client using the framebuffer as display
+dmtcp - Checkpoint/Restart functionality for Linux processes
+dmtcp-dbg - Debug package for dmtcp
+gitso - simple frontend for reverse VNC connections (remote assistance)
+guacamole-tomcat - Tomcat-based Guacamole install with VNC support
+guacd - Guacamole proxy daemon
+gvncviewer - VNC viewer using gtk-vnc
+hydra - very fast network logon cracker
+hydra-gtk - very fast network logon cracker - GTK+ based GUI
+libdmtcpaware-dev - DMTCP programming interface -- developer package
+libdmtcpaware1 - DMTCP programming interface
+libguac-client-vnc0 - VNC support plugin for Guacamole
+libmtcp-dev - Developer package for libmtcp
+libmtcp1 - DMTCP library needed for checkpointing a standalone process
+libnb-svnclientadapter-java - High-level Java API to subversion
+libnb-svnclientadapter-java-doc - High-level Java API to subversion javadoc
+libnet-vnc-perl - Perl module implementing a simple VNC client
+libsvnclientadapter-java - High-level Java API for Subversion (library)
+libsvnclientadapter-java-doc - High-level Java API for Subversion (documentation)
+libsvncpp-dev - Subversion C++ library (development files)
+libsvncpp3 - Subversion C++ shared library
+libsvnqt7 - Qt wrapper library for Subversion
+libturbojpeg - IJG JPEG compliant runtime library.
+linuxvnc - VNC server to allow remote access to a tty
+nova-console - OpenStack Compute - Console
+nova-novncproxy - OpenStack Compute - NoVNC proxy
+nova-xvpvncproxy - OpenStack Compute - XVP VNC proxy
+novnc - HTML5 VNC client - daemon and programs
+openstack-resource-agents - pacemaker resource agents for OpenStack
+python-novnc - HTML5 VNC client - libraries
+pyvnc2swf - screen recording tool with Flash (SWF) output
+ssvnc - Enhanced TightVNC viewer with SSL/SSH tunnel helper
+tightvncserver - virtual network computing server software
+ubuntu-remote-debug-host-tools - Metapackage with tools to aid in remote debugging in Ubuntu
+vim-scripts - plugins for vim, adding bells and whistles
+virt-viewer - Displaying the graphical console of a virtual machine
+vnc4server - Virtual network computing server software
+vncsnapshot - A utility that takes JPEG snapshots from VNC servers
+vtgrab - A VNC like console monitoring
+websockify - WebSockets support for any application/server
+winswitch - tool to start and control remote sessions
+x11vnc-data - data files for x11vnc
+xenwatch - Virtualization utilities, mostly for Xen
+xorg-server-source - Xorg X server - source files
+xpra - tool to detach/reattach running X programs
+xpra-dbg - xpra -- debugging symbols
+xrdp - Remote Desktop Protocol (RDP) server
+xtightvncviewer - virtual network computing client software for X
+xvnc4viewer - Virtual network computing client software for X
+avahi-ui-utils - Avahi GTK+ utilities
+gnome-rdp - GNOME 中使用的远程桌面客户端
+gtkvncviewer - 小巧的 GNOME VNC 客户端
+krdc - Remote Desktop Connection client
+krfb - Desktop Sharing utility
+vinagre - GNOME 的远程桌面客户端
+x11vnc - 允许远程访问图形界面会话的 VNC 服务端
+x2vnc - Link a VNC and an X display together, simulating a multiheaded display
+xorg-server-source-lts-utopic - Xorg X server - source files
+xorg-server-source-lts-vivid - Xorg X server - source files
+xorg-server-source-lts-wily - Xorg X server - source files
+xorg-server-source-lts-xenial - Xorg X server - source files
+zhanghe@zhanghe:~/Desktop$ sudo apt-get install libvncserver0
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+libvncserver0 已经是最新的版本了。
+下列软件包是自动安装的并且现在不需要了：
+  dkms libgcrypt20 libgnutls28 libgsoap4 libhogweed2 virtualbox-dkms
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 826 个软件包未被升级。
+zhanghe@zhanghe:~/Desktop$ sudo apt-cache search remmina
+remmina - remote desktop client for GNOME desktop environment
+remmina-common - common files for remmina remote desktop client
+remmina-plugin-rdp - RDP plugin for remmina remote desktop client
+remmina-plugin-vnc - VNC plugin for remmina remote desktop client
+remmina-plugin-gnome - GNOME plugin for remmina remote desktop client
+remmina-plugin-nx - NX plugin for remmina remote desktop client
+remmina-plugin-telepathy - Telepathy plugin for remmina remote desktop client
+remmina-plugin-xdmcp - XDMCP plugin for remmina remote desktop client
+zhanghe@zhanghe:~/Desktop$ sudo apt-get install remmina-plugin-vnc
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  dkms libgcrypt20 libgnutls28 libgsoap4 libhogweed2 virtualbox-dkms
+Use 'apt-get autoremove' to remove them.
+下列【新】软件包将被安装：
+  remmina-plugin-vnc
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 826 个软件包未被升级。
+需要下载 20.1 kB 的软件包。
+解压缩后会消耗掉 88.1 kB 的额外空间。
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ trusty/main remmina-plugin-vnc amd64 1.0.0-4ubuntu3 [20.1 kB]
+下载 20.1 kB，耗时 0秒 (584 kB/s)             
+Selecting previously unselected package remmina-plugin-vnc.
+(正在读取数据库 ... 系统当前共安装有 262732 个文件和目录。)
+Preparing to unpack .../remmina-plugin-vnc_1.0.0-4ubuntu3_amd64.deb ...
+Unpacking remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+正在设置 remmina-plugin-vnc (1.0.0-4ubuntu3) ...
+zhanghe@zhanghe:~/Desktop$ 
+zhanghe@zhanghe:~/Desktop$ 
+zhanghe@zhanghe:~/Desktop$ 
+zhanghe@zhanghe:~/Desktop$ 
+zhanghe@zhanghe:~/Desktop$ sudo killall remmina
+zhanghe@zhanghe:~/Desktop$ sudo apt-get install remmina-plugin-vnc
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+remmina-plugin-vnc 已经是最新的版本了。
+下列软件包是自动安装的并且现在不需要了：
+  dkms libgcrypt20 libgnutls28 libgsoap4 libhogweed2 virtualbox-dkms
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 826 个软件包未被升级。
+zhanghe@zhanghe:~/Desktop$ locate virtual
+/etc/default/virtualbox
+/etc/init.d/virtualbox
+/etc/rc0.d/K20virtualbox
+/etc/rc1.d/K20virtualbox
+/etc/rc2.d/S20virtualbox
+/etc/rc3.d/S20virtualbox
+/etc/rc4.d/S20virtualbox
+/etc/rc5.d/S20virtualbox
+/etc/rc6.d/K20virtualbox
+/home/wangqi/.cache/software-center/download-cache/screenshots.ubuntu.com_screenshot-with-version_virtualbox-qt_4.3.10-dfsg-1
+/home/wangqi/.cache/software-center/piston-helper/rec.ubuntu.com,api,1.0,recommend_app,virtualbox-3.1,,cfef8e97c684892c57378bccc17f2895
+/home/wangqi/.cache/software-center/piston-helper/rec.ubuntu.com,api,1.0,recommend_app,virtualbox-qt,,0c8c8d188e9eeb3dc3256a1e210c405c
+/home/wangqi/.cache/software-center/rnrclient/reviews.ubuntu.com,reviews,api,1.0,reviews,filter,en,any,any,any,virtualbox-3.1,page,1,helpful,,7c0b93a5304f73703715aa4de491164f
+/home/wangqi/.cache/software-center/rnrclient/reviews.ubuntu.com,reviews,api,1.0,reviews,filter,en,ubuntu,trusty,any,virtualbox-qt,page,1,helpful,,0707cebde6840d3646c91ffc5ad2379f
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.1.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.2.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.3.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.4.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.5.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.6.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.7.gz
+/home/wangqi/.thunderbird/mhjuvesm.default/virtualFolders.dat
+/home/wangqi/Desktop/Lexus/基本设计/MY_21_UI/21_UI/ProcessDef/OutputTools/4_ScheduleRedmineToAp/excelTool/setuptools-0.6c11/virtual-python.py
+/home/wangqi/Desktop/Lexus/基本设计/MY_21_UI/21_UI/ProcessDef/OutputTools/5_ReviewKESchecklistSummary/excelTool/setuptools-0.6c11/virtual-python.py
+/home/wangqi/GDB/QT5.3.1/5.3/gcc_64/include/QtDBus/qdbusvirtualobject.h
+/home/wangqi/GDB/QT5.3.1/5.3/gcc_64/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/wangqi/GDB/QT5.3.1/5.3/iautosdk/native_sdk/platform/emulator/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/wangqi/GDB/QT5.3.1/Docs/Qt-5.3/qtdbus/qdbusvirtualobject-members.html
+/home/wangqi/GDB/QT5.3.1/Docs/Qt-5.3/qtdbus/qdbusvirtualobject.html
+/home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.1.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.2.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.3.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.4.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.5.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.6.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.7.gz
+/home/zhanghe/.thunderbird/d165ye6u.default/virtualFolders-1.dat
+/home/zhanghe/.thunderbird/d165ye6u.default/virtualFolders.dat
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/Makefile.in
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/README
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/cleanall.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/common
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/conf.sh.in
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/run.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/runall.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/setup.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/start.pl
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/start.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/stop.pl
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/stop.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/testsock.pl
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/vtwrapper.c
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/clean.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/ns1
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/setup.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/tests.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/ns1/example.db.in
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/ns1/named.conf
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/ns1/root.db
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/ns1/sign.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-ksk/ns1/wrap.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/clean.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/ns1
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/setup.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/tests.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/ns1/example.db.in
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/ns1/named.conf
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/ns1/root.db
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/ns1/sign.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/autosign-zsk/ns1/wrap.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/common/controls.conf
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/common/rndc.conf
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/common/root.hint
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/clean.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/ns1
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/setup.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/tests.sh
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/ns1/example.db.in
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/ns1/named.conf
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/ns1/root.db
+/home/zhanghe/Desktop/17Cy/externals/bind/bin/tests/virtual-time/slave/ns1/wrap.sh
+/home/zhanghe/Desktop/17Cy/externals/libsndfile/tests/virtual_io_test.c
+/home/zhanghe/Desktop/17Cy/externals/pulseaudio/src/module-virtual-sink-symdef.h
+/home/zhanghe/Desktop/17Cy/externals/pulseaudio/src/module-virtual-source-symdef.h
+/home/zhanghe/Desktop/17Cy/externals/pulseaudio/src/module-virtual-surround-sink-symdef.h
+/home/zhanghe/Desktop/17Cy/externals/pulseaudio/src/modules/module-virtual-sink.c
+/home/zhanghe/Desktop/17Cy/externals/pulseaudio/src/modules/module-virtual-source.c
+/home/zhanghe/Desktop/17Cy/externals/pulseaudio/src/modules/module-virtual-surround-sink.c
+/home/zhanghe/Desktop/17Cy/vendor/renesas/qt/dcu_e2/5.3/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/zhanghe/Desktop/17Cy/vendor/renesas/qt/dcu_m2n/5.3/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/zhanghe/Desktop/17Cy/vendor/renesas/qt/generic_dcue2/5.3/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/zhanghe/Desktop/17Cy/vendor/renesas/qt/generic_dcum2n/5.3/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/zhanghe/Desktop/17Cy/vendor/renesas/qt/generic_meum2w/5.3/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/zhanghe/Desktop/17Cy/vendor/renesas/qt/meu_m2w/5.3/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/zhanghe/Desktop/17Cy/vendor/x86/qt/generic_x86/5.3/include/QtNfc/5.3.1/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/home/zhanghe/Desktop/git_clone/21_UI/ProcessDef/OutputTools/4_ScheduleRedmineToAp/excelTool/setuptools-0.6c11/virtual-python.py
+/home/zhanghe/Desktop/git_clone/21_UI/ProcessDef/OutputTools/5_ReviewKESchecklistSummary/excelTool/setuptools-0.6c11/virtual-python.py
+/home/zhanghe/Qt5.4.2/5.4/gcc_64/include/QtDBus/qdbusvirtualobject.h
+/home/zhanghe/Qt5.4.2/5.4/gcc_64/include/QtNfc/5.4.2/QtNfc/private/qnearfieldmanagervirtualbase_p.h
+/lib/modules/3.13.0-24-generic/kernel/drivers/regulator/virtual.ko
+/lib/modules/3.13.0-39-generic/kernel/drivers/regulator/virtual.ko
+/lib/udev/rules.d/40-virtualbox-dkms.rules
+/lib/udev/rules.d/40-virtualbox.rules
+/usr/bin/virtualbox
+/usr/include/boost/gil/virtual_locator.hpp
+/usr/include/boost/python/pure_virtual.hpp
+/usr/include/boost/type_traits/has_virtual_destructor.hpp
+/usr/include/boost/type_traits/is_virtual_base_of.hpp
+/usr/include/qt4/Qt/qdbusvirtualobject.h
+/usr/include/qt4/QtDBus/qdbusvirtualobject.h
+/usr/lib/virtualbox
+/usr/lib/2013.com.canonical.certification:checkbox/bin/virtualization
+/usr/lib/kde4/activitymanager_plugin_virtualdesktopswitch.so
+/usr/lib/pulse-4.0/modules/module-virtual-sink.so
+/usr/lib/pulse-4.0/modules/module-virtual-source.so
+/usr/lib/pulse-4.0/modules/module-virtual-surround-sink.so
+/usr/lib/python3/dist-packages/unity_scope_virtualbox-0.1.egg-info
+/usr/lib/virtualbox/ExtensionPacks
+/usr/lib/virtualbox/VBoxAuth.so
+/usr/lib/virtualbox/VBoxAuthSimple.so
+/usr/lib/virtualbox/VBoxAutostart
+/usr/lib/virtualbox/VBoxBalloonCtrl
+/usr/lib/virtualbox/VBoxDD.so
+/usr/lib/virtualbox/VBoxDD2.so
+/usr/lib/virtualbox/VBoxDD2GC.gc
+/usr/lib/virtualbox/VBoxDD2R0.r0
+/usr/lib/virtualbox/VBoxDDGC.gc
+/usr/lib/virtualbox/VBoxDDR0.r0
+/usr/lib/virtualbox/VBoxDDU.so
+/usr/lib/virtualbox/VBoxDbg.so
+/usr/lib/virtualbox/VBoxDragAndDropSvc.so
+/usr/lib/virtualbox/VBoxEFI32.fd
+/usr/lib/virtualbox/VBoxEFI64.fd
+/usr/lib/virtualbox/VBoxExtPackHelperApp
+/usr/lib/virtualbox/VBoxGuestControlSvc.so
+/usr/lib/virtualbox/VBoxGuestPropSvc.so
+/usr/lib/virtualbox/VBoxHeadless
+/usr/lib/virtualbox/VBoxHeadless.so
+/usr/lib/virtualbox/VBoxHostChannel.so
+/usr/lib/virtualbox/VBoxKeyboard.so
+/usr/lib/virtualbox/VBoxManage
+/usr/lib/virtualbox/VBoxNetAdpCtl
+/usr/lib/virtualbox/VBoxNetDHCP
+/usr/lib/virtualbox/VBoxNetDHCP.so
+/usr/lib/virtualbox/VBoxNetNAT.so
+/usr/lib/virtualbox/VBoxOGLhostcrutil.so
+/usr/lib/virtualbox/VBoxOGLhosterrorspu.so
+/usr/lib/virtualbox/VBoxOGLrenderspu.so
+/usr/lib/virtualbox/VBoxPython.so
+/usr/lib/virtualbox/VBoxPython2_7.so
+/usr/lib/virtualbox/VBoxREM.so
+/usr/lib/virtualbox/VBoxRT.so
+/usr/lib/virtualbox/VBoxSDL
+/usr/lib/virtualbox/VBoxSDL.so
+/usr/lib/virtualbox/VBoxSVC
+/usr/lib/virtualbox/VBoxSharedClipboard.so
+/usr/lib/virtualbox/VBoxSharedCrOpenGL.so
+/usr/lib/virtualbox/VBoxSharedFolders.so
+/usr/lib/virtualbox/VBoxTestOGL
+/usr/lib/virtualbox/VBoxVMM.so
+/usr/lib/virtualbox/VBoxVMMPreload.so
+/usr/lib/virtualbox/VBoxXPCOM.so
+/usr/lib/virtualbox/VBoxXPCOMC.so
+/usr/lib/virtualbox/VBoxXPCOMIPCD
+/usr/lib/virtualbox/VMMGC.gc
+/usr/lib/virtualbox/VMMR0.r0
+/usr/lib/virtualbox/VirtualBox
+/usr/lib/virtualbox/VirtualBox.so
+/usr/lib/virtualbox/components
+/usr/lib/virtualbox/libvboxjxpcom.so
+/usr/lib/virtualbox/sdk
+/usr/lib/virtualbox/vboxshell.py
+/usr/lib/virtualbox/vboxshell.pyc
+/usr/lib/virtualbox/vboxwebsrv
+/usr/lib/virtualbox/webtest
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack
+/usr/lib/virtualbox/ExtensionPacks/VNC
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack-license.html
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack-license.rtf
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack-license.txt
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack.manifest
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack.signature
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack.xml
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/PXE-Intel.rom
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxEhciR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxHostWebcam.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxPuelMain.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxUsbCardReaderR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxUsbWebcamR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxVRDP.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxEhciR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxHostWebcam.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxPuelMain.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxUsbCardReaderR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxUsbWebcamR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxVRDP.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxEhciR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxHostWebcam.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPciRawDrv.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPciRawR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPciRawR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPuelMain.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxUsbCardReaderR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxUsbWebcamR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxVRDP.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxEhciR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxHostWebcam.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPciRawDrv.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPciRawR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPciRawR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPuelMain.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxUsbCardReaderR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxUsbWebcamR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxVRDP.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxEhciR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxPuelMain.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxUsbCardReaderR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxUsbWebcamR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxVRDP.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxEhciR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxHostWebcam.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxPuelMain.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxUsbCardReaderR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxUsbWebcamR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxVRDP.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxEhciR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxHostWebcam.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxPuelMain.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxUsbCardReaderR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxUsbWebcamR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxVRDP.dll
+/usr/lib/x86_64-linux-gnu/gedit/plugins/quickopen/virtualdirs.py
+/usr/share/virtualbox
+/usr/share/2013.com.canonical.certification:checkbox/jobs/virtualization.txt.in
+/usr/share/app-install/desktop/virtualbox-qt:virtualbox.desktop
+/usr/share/app-install/icons/virtualbox.png
+/usr/share/applications/virtualbox.desktop
+/usr/share/apport/package-hooks/source_virtualbox.py
+/usr/share/dbus-1/services/unity-scope-virtualbox.service
+/usr/share/doc/unity-scope-virtualbox
+/usr/share/doc/virtualbox
+/usr/share/doc/virtualbox-dkms
+/usr/share/doc/virtualbox-qt
+/usr/share/doc/unity-scope-virtualbox/changelog.Debian.gz
+/usr/share/doc/unity-scope-virtualbox/copyright
+/usr/share/doc/virtualbox-dkms/README.Debian
+/usr/share/doc/virtualbox-dkms/changelog.Debian.gz
+/usr/share/doc/virtualbox-dkms/copyright
+/usr/share/help/C/gnome-help/color-virtualdevice.page
+/usr/share/help/C/ubuntu-help/color-virtualdevice.page
+/usr/share/help/am/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ar/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ast/ubuntu-help/color-virtualdevice.page
+/usr/share/help/az/ubuntu-help/color-virtualdevice.page
+/usr/share/help/bg/ubuntu-help/color-virtualdevice.page
+/usr/share/help/bo/ubuntu-help/color-virtualdevice.page
+/usr/share/help/br/ubuntu-help/color-virtualdevice.page
+/usr/share/help/bs/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ca/gnome-help/color-virtualdevice.page
+/usr/share/help/ca/ubuntu-help/color-virtualdevice.page
+/usr/share/help/cs/gnome-help/color-virtualdevice.page
+/usr/share/help/cs/ubuntu-help/color-virtualdevice.page
+/usr/share/help/da/ubuntu-help/color-virtualdevice.page
+/usr/share/help/de/gnome-help/color-virtualdevice.page
+/usr/share/help/de/ubuntu-help/color-virtualdevice.page
+/usr/share/help/el/gnome-help/color-virtualdevice.page
+/usr/share/help/el/ubuntu-help/color-virtualdevice.page
+/usr/share/help/en_AU/ubuntu-help/color-virtualdevice.page
+/usr/share/help/en_CA/ubuntu-help/color-virtualdevice.page
+/usr/share/help/en_GB/ubuntu-help/color-virtualdevice.page
+/usr/share/help/es/gnome-help/color-virtualdevice.page
+/usr/share/help/es/ubuntu-help/color-virtualdevice.page
+/usr/share/help/et/ubuntu-help/color-virtualdevice.page
+/usr/share/help/eu/ubuntu-help/color-virtualdevice.page
+/usr/share/help/fi/gnome-help/color-virtualdevice.page
+/usr/share/help/fi/ubuntu-help/color-virtualdevice.page
+/usr/share/help/fo/ubuntu-help/color-virtualdevice.page
+/usr/share/help/fr/gnome-help/color-virtualdevice.page
+/usr/share/help/fr/ubuntu-help/color-virtualdevice.page
+/usr/share/help/gl/gnome-help/color-virtualdevice.page
+/usr/share/help/gl/ubuntu-help/color-virtualdevice.page
+/usr/share/help/he/ubuntu-help/color-virtualdevice.page
+/usr/share/help/hi/gnome-help/color-virtualdevice.page
+/usr/share/help/hi/ubuntu-help/color-virtualdevice.page
+/usr/share/help/hr/ubuntu-help/color-virtualdevice.page
+/usr/share/help/hu/gnome-help/color-virtualdevice.page
+/usr/share/help/hu/ubuntu-help/color-virtualdevice.page
+/usr/share/help/id/gnome-help/color-virtualdevice.page
+/usr/share/help/id/ubuntu-help/color-virtualdevice.page
+/usr/share/help/it/gnome-help/color-virtualdevice.page
+/usr/share/help/it/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ja/gnome-help/color-virtualdevice.page
+/usr/share/help/ja/ubuntu-help/color-virtualdevice.page
+/usr/share/help/kk/ubuntu-help/color-virtualdevice.page
+/usr/share/help/kn/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ko/ubuntu-help/color-virtualdevice.page
+/usr/share/help/lt/ubuntu-help/color-virtualdevice.page
+/usr/share/help/lv/gnome-help/color-virtualdevice.page
+/usr/share/help/lv/ubuntu-help/color-virtualdevice.page
+/usr/share/help/mg/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ms/ubuntu-help/color-virtualdevice.page
+/usr/share/help/my/ubuntu-help/color-virtualdevice.page
+/usr/share/help/nb/ubuntu-help/color-virtualdevice.page
+/usr/share/help/nl/gnome-help/color-virtualdevice.page
+/usr/share/help/nl/ubuntu-help/color-virtualdevice.page
+/usr/share/help/oc/ubuntu-help/color-virtualdevice.page
+/usr/share/help/pa/gnome-help/color-virtualdevice.page
+/usr/share/help/pl/ubuntu-help/color-virtualdevice.page
+/usr/share/help/pt/ubuntu-help/color-virtualdevice.page
+/usr/share/help/pt_BR/gnome-help/color-virtualdevice.page
+/usr/share/help/pt_BR/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ro/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ru/gnome-help/color-virtualdevice.page
+/usr/share/help/ru/ubuntu-help/color-virtualdevice.page
+/usr/share/help/si/ubuntu-help/color-virtualdevice.page
+/usr/share/help/sk/ubuntu-help/color-virtualdevice.page
+/usr/share/help/sl/gnome-help/color-virtualdevice.page
+/usr/share/help/sl/ubuntu-help/color-virtualdevice.page
+/usr/share/help/sq/ubuntu-help/color-virtualdevice.page
+/usr/share/help/sr/gnome-help/color-virtualdevice.page
+/usr/share/help/sr/ubuntu-help/color-virtualdevice.page
+/usr/share/help/sr@latin/gnome-help/color-virtualdevice.page
+/usr/share/help/sv/gnome-help/color-virtualdevice.page
+/usr/share/help/sv/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ta/ubuntu-help/color-virtualdevice.page
+/usr/share/help/te/gnome-help/color-virtualdevice.page
+/usr/share/help/te/ubuntu-help/color-virtualdevice.page
+/usr/share/help/tg/ubuntu-help/color-virtualdevice.page
+/usr/share/help/th/ubuntu-help/color-virtualdevice.page
+/usr/share/help/tl/ubuntu-help/color-virtualdevice.page
+/usr/share/help/tr/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ug/ubuntu-help/color-virtualdevice.page
+/usr/share/help/uk/ubuntu-help/color-virtualdevice.page
+/usr/share/help/ur/ubuntu-help/color-virtualdevice.page
+/usr/share/help/uz/ubuntu-help/color-virtualdevice.page
+/usr/share/help/vi/gnome-help/color-virtualdevice.page
+/usr/share/help/zh_CN/ubuntu-help/color-virtualdevice.page
+/usr/share/help/zh_HK/ubuntu-help/color-virtualdevice.page
+/usr/share/help/zh_TW/ubuntu-help/color-virtualdevice.page
+/usr/share/help-langpack/en_AU/ubuntu-help/color-virtualdevice.page
+/usr/share/help-langpack/en_CA/ubuntu-help/color-virtualdevice.page
+/usr/share/help-langpack/en_GB/ubuntu-help/color-virtualdevice.page
+/usr/share/help-langpack/zh_CN/ubuntu-help/color-virtualdevice.page
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/16x16/apps/virtualbox.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/32x32/apps/virtualbox.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/48x48/apps/virtualbox.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/64x64/apps/virtualbox.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/unity-icon-theme/places/svg/service-virtualbox.svg
+/usr/share/kde4/apps/konqsidebartng/virtual_folders
+/usr/share/kde4/apps/konqsidebartng/virtual_folders/remote
+/usr/share/kde4/apps/konqsidebartng/virtual_folders/remote/virtualfolder_network.desktop
+/usr/share/kde4/services/activitymanager-plugin-virtualdesktopswitch.desktop
+/usr/share/lintian/overrides/virtualbox
+/usr/share/lintian/overrides/virtualbox-qt
+/usr/share/man/man1/virtualbox.1.gz
+/usr/share/man/man7/virtual-filesystems.7.gz
+/usr/share/menu/virtualbox-qt
+/usr/share/mime/application/x-virtualbox-hdd.xml
+/usr/share/mime/application/x-virtualbox-ova.xml
+/usr/share/mime/application/x-virtualbox-ovf.xml
+/usr/share/mime/application/x-virtualbox-vbox-extpack.xml
+/usr/share/mime/application/x-virtualbox-vbox.xml
+/usr/share/mime/application/x-virtualbox-vdi.xml
+/usr/share/mime/application/x-virtualbox-vhd.xml
+/usr/share/mime/application/x-virtualbox-vmdk.xml
+/usr/share/mime/packages/virtualbox.xml
+/usr/share/pixmaps/virtualbox.xpm
+/usr/share/python/runtime.d/virtualbox.rtupdate
+/usr/share/unity/scopes/boxes/virtualbox.scope
+/usr/share/unity-scopes/virtualbox
+/usr/share/unity-scopes/virtualbox/__init__.py
+/usr/share/unity-scopes/virtualbox/unity_virtualbox_daemon.py
+/usr/src/virtualbox-4.3.10
+/usr/src/linux-headers-3.13.0-24-generic/include/config/virtualization.h
+/usr/src/linux-headers-3.13.0-24-generic/include/config/regulator/virtual
+/usr/src/linux-headers-3.13.0-24-generic/include/config/regulator/virtual/consumer.h
+/usr/src/linux-headers-3.13.0-39-generic/include/config/virtualization.h
+/usr/src/linux-headers-3.13.0-39-generic/include/config/regulator/virtual
+/usr/src/linux-headers-3.13.0-39-generic/include/config/regulator/virtual/consumer.h
+/var/crash/_usr_lib_virtualbox_VirtualBox.0.crash
+/var/lib/dkms/virtualbox
+/var/lib/dkms/virtualbox/4.3.10
+/var/lib/dkms/virtualbox/kernel-3.13.0-39-generic-x86_64
+/var/lib/dpkg/info/unity-scope-virtualbox.list
+/var/lib/dpkg/info/unity-scope-virtualbox.md5sums
+/var/lib/dpkg/info/virtualbox-dkms.list
+/var/lib/dpkg/info/virtualbox-dkms.md5sums
+/var/lib/dpkg/info/virtualbox-dkms.postinst
+/var/lib/dpkg/info/virtualbox-dkms.preinst
+/var/lib/dpkg/info/virtualbox-dkms.prerm
+/var/lib/dpkg/info/virtualbox-qt.list
+/var/lib/dpkg/info/virtualbox-qt.md5sums
+/var/lib/dpkg/info/virtualbox-qt.postinst
+/var/lib/dpkg/info/virtualbox-qt.postrm
+/var/lib/dpkg/info/virtualbox.conffiles
+/var/lib/dpkg/info/virtualbox.list
+/var/lib/dpkg/info/virtualbox.md5sums
+/var/lib/dpkg/info/virtualbox.postinst
+/var/lib/dpkg/info/virtualbox.postrm
+/var/lib/dpkg/info/virtualbox.preinst
+/var/lib/dpkg/info/virtualbox.prerm
+/var/log/upstart/procps-virtual-filesystems.log.1.gz
+/var/log/upstart/procps-virtual-filesystems.log.2.gz
+/var/log/upstart/procps-virtual-filesystems.log.3.gz
+/var/log/upstart/procps-virtual-filesystems.log.4.gz
+/var/log/upstart/procps-virtual-filesystems.log.5.gz
+/var/log/upstart/procps-virtual-filesystems.log.6.gz
+/var/log/upstart/procps-virtual-filesystems.log.7.gz
+zhanghe@zhanghe:~/Desktop$ locate virtualbox
+/etc/default/virtualbox
+/etc/init.d/virtualbox
+/etc/rc0.d/K20virtualbox
+/etc/rc1.d/K20virtualbox
+/etc/rc2.d/S20virtualbox
+/etc/rc3.d/S20virtualbox
+/etc/rc4.d/S20virtualbox
+/etc/rc5.d/S20virtualbox
+/etc/rc6.d/K20virtualbox
+/home/wangqi/.cache/software-center/download-cache/screenshots.ubuntu.com_screenshot-with-version_virtualbox-qt_4.3.10-dfsg-1
+/home/wangqi/.cache/software-center/piston-helper/rec.ubuntu.com,api,1.0,recommend_app,virtualbox-3.1,,cfef8e97c684892c57378bccc17f2895
+/home/wangqi/.cache/software-center/piston-helper/rec.ubuntu.com,api,1.0,recommend_app,virtualbox-qt,,0c8c8d188e9eeb3dc3256a1e210c405c
+/home/wangqi/.cache/software-center/rnrclient/reviews.ubuntu.com,reviews,api,1.0,reviews,filter,en,any,any,any,virtualbox-3.1,page,1,helpful,,7c0b93a5304f73703715aa4de491164f
+/home/wangqi/.cache/software-center/rnrclient/reviews.ubuntu.com,reviews,api,1.0,reviews,filter,en,ubuntu,trusty,any,virtualbox-qt,page,1,helpful,,0707cebde6840d3646c91ffc5ad2379f
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.1.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.2.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.3.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.4.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.5.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.6.gz
+/home/wangqi/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.7.gz
+/home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.1.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.2.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.3.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.4.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.5.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.6.gz
+/home/zhanghe/.cache/upstart/update-notifier-crash-_var_crash__usr_lib_virtualbox_VirtualBox.0.crash.log.7.gz
+/lib/udev/rules.d/40-virtualbox-dkms.rules
+/lib/udev/rules.d/40-virtualbox.rules
+/usr/bin/virtualbox
+/usr/lib/virtualbox
+/usr/lib/python3/dist-packages/unity_scope_virtualbox-0.1.egg-info
+/usr/lib/virtualbox/ExtensionPacks
+/usr/lib/virtualbox/VBoxAuth.so
+/usr/lib/virtualbox/VBoxAuthSimple.so
+/usr/lib/virtualbox/VBoxAutostart
+/usr/lib/virtualbox/VBoxBalloonCtrl
+/usr/lib/virtualbox/VBoxDD.so
+/usr/lib/virtualbox/VBoxDD2.so
+/usr/lib/virtualbox/VBoxDD2GC.gc
+/usr/lib/virtualbox/VBoxDD2R0.r0
+/usr/lib/virtualbox/VBoxDDGC.gc
+/usr/lib/virtualbox/VBoxDDR0.r0
+/usr/lib/virtualbox/VBoxDDU.so
+/usr/lib/virtualbox/VBoxDbg.so
+/usr/lib/virtualbox/VBoxDragAndDropSvc.so
+/usr/lib/virtualbox/VBoxEFI32.fd
+/usr/lib/virtualbox/VBoxEFI64.fd
+/usr/lib/virtualbox/VBoxExtPackHelperApp
+/usr/lib/virtualbox/VBoxGuestControlSvc.so
+/usr/lib/virtualbox/VBoxGuestPropSvc.so
+/usr/lib/virtualbox/VBoxHeadless
+/usr/lib/virtualbox/VBoxHeadless.so
+/usr/lib/virtualbox/VBoxHostChannel.so
+/usr/lib/virtualbox/VBoxKeyboard.so
+/usr/lib/virtualbox/VBoxManage
+/usr/lib/virtualbox/VBoxNetAdpCtl
+/usr/lib/virtualbox/VBoxNetDHCP
+/usr/lib/virtualbox/VBoxNetDHCP.so
+/usr/lib/virtualbox/VBoxNetNAT.so
+/usr/lib/virtualbox/VBoxOGLhostcrutil.so
+/usr/lib/virtualbox/VBoxOGLhosterrorspu.so
+/usr/lib/virtualbox/VBoxOGLrenderspu.so
+/usr/lib/virtualbox/VBoxPython.so
+/usr/lib/virtualbox/VBoxPython2_7.so
+/usr/lib/virtualbox/VBoxREM.so
+/usr/lib/virtualbox/VBoxRT.so
+/usr/lib/virtualbox/VBoxSDL
+/usr/lib/virtualbox/VBoxSDL.so
+/usr/lib/virtualbox/VBoxSVC
+/usr/lib/virtualbox/VBoxSharedClipboard.so
+/usr/lib/virtualbox/VBoxSharedCrOpenGL.so
+/usr/lib/virtualbox/VBoxSharedFolders.so
+/usr/lib/virtualbox/VBoxTestOGL
+/usr/lib/virtualbox/VBoxVMM.so
+/usr/lib/virtualbox/VBoxVMMPreload.so
+/usr/lib/virtualbox/VBoxXPCOM.so
+/usr/lib/virtualbox/VBoxXPCOMC.so
+/usr/lib/virtualbox/VBoxXPCOMIPCD
+/usr/lib/virtualbox/VMMGC.gc
+/usr/lib/virtualbox/VMMR0.r0
+/usr/lib/virtualbox/VirtualBox
+/usr/lib/virtualbox/VirtualBox.so
+/usr/lib/virtualbox/components
+/usr/lib/virtualbox/libvboxjxpcom.so
+/usr/lib/virtualbox/sdk
+/usr/lib/virtualbox/vboxshell.py
+/usr/lib/virtualbox/vboxshell.pyc
+/usr/lib/virtualbox/vboxwebsrv
+/usr/lib/virtualbox/webtest
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack
+/usr/lib/virtualbox/ExtensionPacks/VNC
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack-license.html
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack-license.rtf
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack-license.txt
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack.manifest
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack.signature
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/ExtPack.xml
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/PXE-Intel.rom
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxEhciR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxHostWebcam.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxPuelMain.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxUsbCardReaderR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxUsbWebcamR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.amd64/VBoxVRDP.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxEhciR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxHostWebcam.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxPuelMain.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxUsbCardReaderR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxUsbWebcamR3.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/darwin.x86/VBoxVRDP.dylib
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxEhciR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxHostWebcam.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPciRawDrv.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPciRawR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPciRawR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxPuelMain.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxUsbCardReaderR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxUsbWebcamR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.amd64/VBoxVRDP.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxEhciR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxHostWebcam.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPciRawDrv.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPciRawR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPciRawR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxPuelMain.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxUsbCardReaderR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxUsbWebcamR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.x86/VBoxVRDP.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxEhciR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxPuelMain.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxUsbCardReaderR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxUsbWebcamR3.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/solaris.amd64/VBoxVRDP.so
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxEhciR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxHostWebcam.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxPuelMain.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxUsbCardReaderR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxUsbWebcamR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.amd64/VBoxVRDP.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxEhciR0.r0
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxEhciR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxEhciRC.rc
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxHostWebcam.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxPuelMain.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxUsbCardReaderR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxUsbWebcamR3.dll
+/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/win.x86/VBoxVRDP.dll
+/usr/share/virtualbox
+/usr/share/app-install/desktop/virtualbox-qt:virtualbox.desktop
+/usr/share/app-install/icons/virtualbox.png
+/usr/share/applications/virtualbox.desktop
+/usr/share/apport/package-hooks/source_virtualbox.py
+/usr/share/dbus-1/services/unity-scope-virtualbox.service
+/usr/share/doc/unity-scope-virtualbox
+/usr/share/doc/virtualbox
+/usr/share/doc/virtualbox-dkms
+/usr/share/doc/virtualbox-qt
+/usr/share/doc/unity-scope-virtualbox/changelog.Debian.gz
+/usr/share/doc/unity-scope-virtualbox/copyright
+/usr/share/doc/virtualbox-dkms/README.Debian
+/usr/share/doc/virtualbox-dkms/changelog.Debian.gz
+/usr/share/doc/virtualbox-dkms/copyright
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/128x128/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/16x16/apps/virtualbox.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/16x16/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/24x24/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/256x256/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/32x32/apps/virtualbox.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/32x32/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/48x48/apps/virtualbox.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/48x48/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/64x64/apps/virtualbox.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/64x64/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/72x72/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-hdd.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-ova.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-ovf.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vbox-extpack.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vbox.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vdi.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vhd.png
+/usr/share/icons/hicolor/96x96/mimetypes/virtualbox-vmdk.png
+/usr/share/icons/unity-icon-theme/places/svg/service-virtualbox.svg
+/usr/share/lintian/overrides/virtualbox
+/usr/share/lintian/overrides/virtualbox-qt
+/usr/share/man/man1/virtualbox.1.gz
+/usr/share/menu/virtualbox-qt
+/usr/share/mime/application/x-virtualbox-hdd.xml
+/usr/share/mime/application/x-virtualbox-ova.xml
+/usr/share/mime/application/x-virtualbox-ovf.xml
+/usr/share/mime/application/x-virtualbox-vbox-extpack.xml
+/usr/share/mime/application/x-virtualbox-vbox.xml
+/usr/share/mime/application/x-virtualbox-vdi.xml
+/usr/share/mime/application/x-virtualbox-vhd.xml
+/usr/share/mime/application/x-virtualbox-vmdk.xml
+/usr/share/mime/packages/virtualbox.xml
+/usr/share/pixmaps/virtualbox.xpm
+/usr/share/python/runtime.d/virtualbox.rtupdate
+/usr/share/unity/scopes/boxes/virtualbox.scope
+/usr/share/unity-scopes/virtualbox
+/usr/share/unity-scopes/virtualbox/__init__.py
+/usr/share/unity-scopes/virtualbox/unity_virtualbox_daemon.py
+/usr/src/virtualbox-4.3.10
+/var/crash/_usr_lib_virtualbox_VirtualBox.0.crash
+/var/lib/dkms/virtualbox
+/var/lib/dkms/virtualbox/4.3.10
+/var/lib/dkms/virtualbox/kernel-3.13.0-39-generic-x86_64
+/var/lib/dpkg/info/unity-scope-virtualbox.list
+/var/lib/dpkg/info/unity-scope-virtualbox.md5sums
+/var/lib/dpkg/info/virtualbox-dkms.list
+/var/lib/dpkg/info/virtualbox-dkms.md5sums
+/var/lib/dpkg/info/virtualbox-dkms.postinst
+/var/lib/dpkg/info/virtualbox-dkms.preinst
+/var/lib/dpkg/info/virtualbox-dkms.prerm
+/var/lib/dpkg/info/virtualbox-qt.list
+/var/lib/dpkg/info/virtualbox-qt.md5sums
+/var/lib/dpkg/info/virtualbox-qt.postinst
+/var/lib/dpkg/info/virtualbox-qt.postrm
+/var/lib/dpkg/info/virtualbox.conffiles
+/var/lib/dpkg/info/virtualbox.list
+/var/lib/dpkg/info/virtualbox.md5sums
+/var/lib/dpkg/info/virtualbox.postinst
+/var/lib/dpkg/info/virtualbox.postrm
+/var/lib/dpkg/info/virtualbox.preinst
+/var/lib/dpkg/info/virtualbox.prerm
+zhanghe@zhanghe:~/Desktop$ locate virtualbox*deb
+zhanghe@zhanghe:~/Desktop$ locate *。deb
+zhanghe@zhanghe:~/Desktop$ locate *.deb
+/home/wangqi/.local/share/Trash/files/astah-community_6.5-1_all.deb
+/home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb
+/home/wangqi/工具/astah/astah-community_6.4_all.deb
+/home/wangqi/工具/astah/astah-community_6.5-1_all.deb
+/home/wangqi/工具/bcompare/bcompare-3.3.3.14128_i386.deb
+/home/wangqi/工具/office2007/wps-office_8.1.0.3724~b1p2_i386.deb
+/home/wangqi/工具/sougou/sougou_64.deb
+zhanghe@zhanghe:~/Desktop$ sudo dpkg -i /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb
+dpkg: error processing archive /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb (--install):
+ parsing file '/var/lib/dpkg/tmp.ci/control' near line 2 package 'virtualbox-3.1':
+ error in 'Version' field string '3.1.0-55467_Ubuntu_karmic': 版本号后的字符串无效
+在处理时有错误发生：
+ /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb
+zhanghe@zhanghe:~/Desktop$ pwd
+/home/zhanghe/Desktop
+zhanghe@zhanghe:~/Desktop$ ls /home/
+wangqi/  zhanghe/ 
+zhanghe@zhanghe:~/Desktop$ ls /home/wangqi/
+.adobe/                 .gnome/                 .stardict/
+.android/               .gnome2/                .subversion/
+.astah/                 .gnome2_private/        Templates/
+.bash_history           .gvfs/                  .thumbnails/
+.bash_logout            .ICEauthority           .thunderbird/
+.bashrc                 id_rsa.pub              Untitled Document
+.beyondcompare/         .java/                  Untitled Document~
+.cache/                 .kde/                   Videos/
+.compiz/                .lesshst                .viminfo
+.config/                .local/                 VirtualBox VMs/
+.dbus/                  .macromedia/            wq.txt~
+.designer/              .mozilla/               .Xauthority
+Desktop/                Music/                  .xinputrc
+dic/                    .pam_environment        .xsession-errors
+.dmrc                   Pictures/               .xsession-errors.old
+Documents/              .pki/                   编译步骤~
+Downloads/              .profile                代码同步步骤~
+examples.desktop        Public/                 工具/
+.gconf/                 .qt/                    下周任务~
+GDB/                    .repoconfig/            卸载
+.gimp-2.8/              .repopickle_.gitconfig  卸载~
+.gitconfig              .ssh/                   
+zhanghe@zhanghe:~/Desktop$ ls /home/wangqi/
+.adobe/                 .gnome/                 .stardict/
+.android/               .gnome2/                .subversion/
+.astah/                 .gnome2_private/        Templates/
+.bash_history           .gvfs/                  .thumbnails/
+.bash_logout            .ICEauthority           .thunderbird/
+.bashrc                 id_rsa.pub              Untitled Document
+.beyondcompare/         .java/                  Untitled Document~
+.cache/                 .kde/                   Videos/
+.compiz/                .lesshst                .viminfo
+.config/                .local/                 VirtualBox VMs/
+.dbus/                  .macromedia/            wq.txt~
+.designer/              .mozilla/               .Xauthority
+Desktop/                Music/                  .xinputrc
+dic/                    .pam_environment        .xsession-errors
+.dmrc                   Pictures/               .xsession-errors.old
+Documents/              .pki/                   编译步骤~
+Downloads/              .profile                代码同步步骤~
+examples.desktop        Public/                 工具/
+.gconf/                 .qt/                    下周任务~
+GDB/                    .repoconfig/            卸载
+.gimp-2.8/              .repopickle_.gitconfig  卸载~
+.gitconfig              .ssh/                   
+zhanghe@zhanghe:~/Desktop$ ls /home/wangqi/工具/
+astah/      bcompare/   Layout/     office2007/ sougou/     VM/
+zhanghe@zhanghe:~/Desktop$ sudo dpkg -i ls /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb 
+dpkg: error processing archive ls (--install):
+ 无法访问归档文件: 没有那个文件或目录
+dpkg: error processing archive /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb (--install):
+ parsing file '/var/lib/dpkg/tmp.ci/control' near line 2 package 'virtualbox-3.1':
+ error in 'Version' field string '3.1.0-55467_Ubuntu_karmic': 版本号后的字符串无效
+在处理时有错误发生：
+ ls
+ /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb
+zhanghe@zhanghe:~/Desktop$ sudo dpkg -i /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb 
+dpkg: error processing archive /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb (--install):
+ parsing file '/var/lib/dpkg/tmp.ci/control' near line 2 package 'virtualbox-3.1':
+ error in 'Version' field string '3.1.0-55467_Ubuntu_karmic': 版本号后的字符串无效
+在处理时有错误发生：
+ /home/wangqi/工具/VM/virtualbox-3.1_3.1.0-55467_Ubuntu_karmic_i386.deb
+zhanghe@zhanghe:~/Desktop$ 
+					-				○																																			
+
+

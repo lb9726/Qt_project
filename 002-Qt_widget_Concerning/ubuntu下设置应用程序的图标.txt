@@ -1,0 +1,18 @@
+libo@ubuntu:~/Desktop$ sudo cp -v Text.desktop /usr/share/applications/
+https://blog.csdn.net/daoming1112/article/details/54146753
+命名文件一Desktop为后缀，例如：Test.Desktop
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=TestQquickView
+Comment=IconTest Link
+Exec=/home/libo/Desktop/Repository/Qt_project/006-All_Test_Demo/build-TestQquickView-Desktop-Debug/TestQquickView     
+Icon=/home/libo/Desktop/Repository/Qt_project/006-All_Test_Demo/TestQquickView/icon.ico
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Application;Development;
+
+/usr/share/applications/ 在这里有应用程序对应的图标的显示
+当编辑完成之后，可以在dash页面搜索对应的Name，一般就能显示出对应的图标来
+例如：使用Qt运行对应的应用程序时，就会出现你设置的那个图标了。

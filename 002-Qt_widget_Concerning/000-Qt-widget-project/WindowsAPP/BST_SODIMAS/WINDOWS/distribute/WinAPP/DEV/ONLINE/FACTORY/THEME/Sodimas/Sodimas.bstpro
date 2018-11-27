@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <FileType>BST Solution File</FileType>
+    <CreateTime>2014-01-14 12:37:40</CreateTime>
+    <LastModiTime>2014-02-21 13:37:26</LastModiTime>
+    <FileList>
+        <UI>Theme.ui</UI>
+        <MAP>Event.map</MAP>
+        <STC>Software.stc</STC>
+        <STO>Chart.sto</STO>
+    </FileList>
+</root>

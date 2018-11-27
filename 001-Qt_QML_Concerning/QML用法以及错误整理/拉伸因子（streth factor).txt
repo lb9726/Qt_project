@@ -1,0 +1,62 @@
+拉伸因子（streth factor） 2012-06-26 16:35:31
+分类： C/C++
+目前用得比较多的布局是 QGridLayout，它将界面划分为若干个网格，
+而控件可以按需要放到对应的格子，确保了控件的准确定位。
+m_layout->addWidget(m_calender,0,0);   //calendar放在第一行第一列
+m_layout->addWidget(m_tblList,0,1);   //table放在第一行第二列
+但是我们还需要控件在窗体缩放的时候也按比例缩放，
+这个时候就需要用到拉伸因子这个东东。拉伸因子决定了窗体尺寸发生改变时，控件发生改变的比例。
+每个布局都有相应的拉伸因子设置函数。以下是QGridLayout里面的设置函数
+void setColumnStretch ( int column, int stretch );
+void setRowStretch ( int row, int stretch );
+具体使用如下
+m_layout->setColumnStretch(0,3);
+m_layout->setColumnStretch(1,1);
+这样在窗体反正改变的时候，m_calender与m_tblList会按3：1的比例发生改变。
+并且，在不进行其他尺寸设置的时候（最大值最小值固定什么的），控件也会以这个比例显示在界面上。
+
+
+ 槽函数也可以有返回值 2012-06-26 19:30:51
+分类： C/C++
+QML的数据处理能力偏弱，因此想到将需要处理的数据传回C++中进行处理
+行之有效的方式是在C++中定义一个槽函数，然后将对象暴露给QML，以对象.slot的形式调用。
+但是有时候还需要将处理后的结果返回给QML，比如计算一个角度，这个时候可以让槽函数有返回值，
+在QML中接收这个返回值并进行处理。
+
+
+ Using QML Bindings in C++ Applications 2012-06-27 08:46:02
+分类： C/C++
+内容殷实，略其皮毛然受益颇多
+原文地址：http://qt-project.org/doc/qt-4.8/qtbinding.html
+http://doc.qt.io/qt-4.8/qtbinding.html
+
+
+QML的property支持的类型[感慨文] 
+http://blog.chinaunix.net/uid-693168-id-3256496.html
+
+
+
+mingw编译Qt5正式版[亲测可用] 
+http://blog.chinaunix.net/uid-693168-id-3446114.html
+
+
+
+生成Qt文档 
+http://blog.chinaunix.net/uid-693168-id-3453297.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

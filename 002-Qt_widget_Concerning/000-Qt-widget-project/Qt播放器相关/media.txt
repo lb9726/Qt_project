@@ -1,0 +1,99 @@
+https://forum.qt.io/topic/27196/use-qml-videooutput-item-with-c-qmediaplayer/2
+
+is it possible to render video from the C++ class QMediaPlayer in Quick2's VideoOutput item?
+
+I need to use real c++ features like the QVideoProbe, but still display via the Quick2 engine. I have tried to expose the QMediaPlayer object to QML like so,
+
+@QMediaPlayer player;
+QQuickView view;
+view.engine()->rootContext()->setContextProperty("mediaplayer", &player);
+@
+
+and then use it in QML like this:
+
+@ VideoOutput {
+id: videooutput
+width: 320
+height: 240
+source: mediaplayer
+}@
+
+But that does not seem to work, no video and no error message. Same code works with the QML MediaPlayer as source though.
+
+Thanks!
+
+You have to extend QMediaPlayer.
+
+Look at this from qdeclarativevideooutput.cpp source code:
+@
+/*
+\qmlproperty variant QtMultimedia::VideoOutput::source
+
+This property holds the source item providing the video frames like MediaPlayer or Camera.
+
+If you are extending your own C++ classes to interoperate with VideoOutput, you can either provide a QObject based class with a \c mediaObject property that exposes a QMediaObject derived class that has a QVideoRendererControl available, or you can provide a QObject based class with a writable \c videoSurface property that can accept a QAbstractVideoSurface based class and can follow the correct protocol to deliver QVideoFrames to it.
+*/
+@
+
+So, if you do like this:
+
+MyMediaPlayer.h
+@
+#include <QMediaPlayer>
+
+class MyMediaPlayer: public QMediaPlayer
+{
+Q_OBJECT
+Q_PROPERTY(QAbstractVideoSurface* videoSurface READ getVideoSurface WRITE setVideoSurface )
+
+public:
+MyMediaPlayer(QObject * parent = 0, Flags flags = 0);
+
+public slots:
+
+void setVideoSurface(QAbstractVideoSurface surface);
+QAbstractVideoSurface getVideoSurface();
+
+private:
+QAbstractVideoSurface* m_surface;
+};
+@
+
+MyMediaPlayer.cpp
+@
+#include "MyMediaPlayer.h"
+MyMediaPlayer::MyMediaPlayer(QObject* parent, Flags flags): QMediaPlayer(parent, flags)
+{
+}
+
+void MyMediaPlayer::setVideoSurface(QAbstractVideoSurface* surface)
+{
+qDebug() << "Changing surface";
+m_surface = surface;
+setVideoOutput(m_surface);
+}
+
+QAbstractVideoSurface* MyMediaPlayer::getVideoSurface()
+{
+return m_surface;
+}
+@
+
+then:
+@
+MyMediaPlayer* player = new MyMediaPlayer();
+QQuickView view;
+view.engine()->rootContext()->setContextProperty("mediaplayer", player);
+@
+
+your qml:
+@
+VideoOutput {
+id: videooutput
+width: 320
+height: 240
+source: mediaplayer
+}
+@
+
+It works. I've just tested it with Qt 5.2

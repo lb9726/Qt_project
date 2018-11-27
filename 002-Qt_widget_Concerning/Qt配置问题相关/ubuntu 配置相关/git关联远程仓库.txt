@@ -1,0 +1,36 @@
+android-123@tworkshop:$ git remote add origin http://10.200.13.100:8002/BAN-17-0020
+android-123@tworkshop:$ git remote -v
+origin  http://10.200.13.100:8002/BAN-17-0020 (fetch)
+origin  http://10.200.13.100:8002/BAN-17-0020 (push)
+android-123@tworkshop:$ git push origin master
+Username for 'http://10.200.13.100:8002': libo1
+Password for 'http://libo1@10.200.13.100:8002': 
+fatal: Authentication failed for 'http://10.200.13.100:8002/BAN-17-0020/'
+android-123@tworkshop:$ git push origin master
+Username for 'http://10.200.13.100:8002': libo1
+Password for 'http://libo1@10.200.13.100:8002': 
+fatal: Authentication failed for 'http://10.200.13.100:8002/BAN-17-0020/'
+android-123@tworkshop:$ git remote add origin ssh://libo1@10.200.13.100:29418/BAN-17-0020
+fatal: remote origin already exists.
+android-123@tworkshop:$ git remote rm origin
+android-123@tworkshop:$ git remote -v 
+android-123@tworkshop:$ git remote add origin ssh://libo1@10.200.13.100:29418/BAN-17-0020
+android-123@tworkshop:$ git remote -v
+origin  ssh://libo1@10.200.13.100:29418/BAN-17-0020 (fetch)
+origin  ssh://libo1@10.200.13.100:29418/BAN-17-0020 (push)
+android-123@tworkshop:$ git push origin master 
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+android-123@tworkshop:$ vi .git/config 
+
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[remote "origin"]
+        url = ssh://libo1@10.200.13.100:29418/BAN-17-0020
+        fetch = +refs/heads/*:refs/remotes/origin/*

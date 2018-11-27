@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/Network">
+        <file>rc/Network/bluetooth.svg</file>
+        <file>rc/Network/cell.svg</file>
+        <file>rc/Network/gprs.svg</file>
+        <file>rc/Network/lan.svg</file>
+        <file>rc/Network/umts.svg</file>
+        <file>rc/Network/unknown.svg</file>
+        <file>rc/Network/wlan.svg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,17 @@
+使用软链接的方式解决qmake的错误问题
+如果已经正确的安装了Qt，那么不要再抱有qmake没有安装上的幻想，它真的已经在你的电脑上了，在哪里呢，到你的安装目录下，找找什么Qt啊，bin啊，你总会看到一个叫做qmake的东西，所以现在的问题就是qmake没有写到环境变量里，当然一个比较简单的方法就是把这个路径直接加到$PATH里，在/etc/profile里添加，至于要填什么上网搜一下就可以了，或者打开那个文件看一会儿也就知道该怎么填了。
+    如果像我这样有精神洁癖这个优点的话，可以采用第二种方法，就是在已有路径里添加链接。
+    为了方便操作，最好在root权限下进行。首先updatedb来更新一下文件数据库，更完之后执行"locate bin/qmake"，如果顺利的话你会看到一堆路径，这是完整安装Qt SDK version 1.1.2之后的结果，我需要的是Desktop下的qmake，所以就复制路径里有Desktop的那个qmake的路径，比如我的是"/home/wbs/program/QtSDK/Desktop/Qt/473/gcc/bin/qmake"，复制完之后执行"echo $PATH"，看看哪些路径已经在$PATH里，原则上这些路径都可以，但是不排除有些路径压根就不存在，我选择的是"/usr/local/bin"，然后创建软链接，"ln -s /home/wbs/program/QtSDK/Desktop/Qt/473/gcc/bin/qmake /usr/local/bin"。这样系统就能找到qmake命令了，到终端里执行一下"qmake -v"，应该可以看到版本号了
+
+
+sudo ln -s /home/libo/Qt5.5.1/5.5/gcc/bin/qmake /usr/local/sbin/
+
+在~/.bashrc中添加了导出了路径：export PATH=$PATH:/home/libo/Qt5.7.1/5.7/gcc_64/bin
+source之后还是有如下错误
+qmake: could not exec '/usr/lib/x86_64-linux-gnu/qt4/bin/qmake': No such file or directory
+
+/usr/lib/x86_64-linux-gnu/qt-default/qtchooser下的default.conf
+改为以下的，第一条为当前你要使用的qt的版本的qmake
+/home/libo/Qt5.7.1/5.7/gcc_64/bin
+/usr/lib/x86_64-linux-gnu/qt4/bin
+/usr/lib/x86_64-linux-gnu

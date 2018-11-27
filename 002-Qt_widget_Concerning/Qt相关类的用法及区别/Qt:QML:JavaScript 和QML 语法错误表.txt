@@ -1,0 +1,96 @@
+http://blog.csdn.net/x356982611/article/details/53762573
+
+语法错误表
+
+Id	Severity	Message	Description
+M1	Error	Invalid value for enum	无效的枚举值
+M2	Error	Enum value must be a string or a number	枚举值必须为字符串或数字
+M3	Error	Number value expected	
+M4	Error	Boolean value expected	
+M5	Error	String value expected	
+M6	Error	Invalid URL	无效的URL
+M7	Warning	File or directory does not exist	文件或目录不存在
+M8	Error	Invalid color	无效的颜色
+M9	Error	Anchor line expected	
+M10	Error	Duplicate property binding	
+M11	Error	Id expected	
+M14	Error	Invalid id	无效的id
+M15	Error	Duplicate id	id
+M16	Error	Invalid property name name	无效属性名
+M17	Error	Name does not have members	
+M18	Error	Field is not a member of object	
+M19	Warning	Assignment in condition	It could be a typing error.If it is intentional, wrap the assignment in parentheses.
+M20	Warning	Unterminated non - empty case block	Case blocks should either be empty or end in a flow control statement such as break, return or continue.Alternatively you can indicate intentional fall through by ending with a // fall through comment.
+M23	Warning	Do not use eval	
+M28	Warning	Unreachable	Indicates that the underlined statement will never be executed.
+M29	Warning	Do not use with	
+M30	Warning	Do not use comma expressions	
+M31	Warning	Unnecessary message suppression	
+M103	Warning	Name is already a formal parameter	
+M104	Warning	Name is already a function	
+M105	Warning	Var name is used before its declaration	
+M106	Warning	Name is already a var	
+M107	Warning	Name is declared more than once	Variables declared in a function are always visible everywhere in the function, even when declared in nested blocks or for statement conditions.Redeclaring a variable has no effect.
+M108	Warning	Function name is used before its declaration	
+M109	Warning	Do not use Boolean as a constructor	
+M110	Warning	Do not use String as a constructor	
+M111	Warning	Do not use Object as a constructor	
+M112	Warning	Do not use Array as a constructor	
+M113	Warning	Do not use Function as a constructor	
+M114	Hint	The function keyword and the opening parenthesis should be separated by a single space	
+M115	Warning	Do not use stand - alone blocks	Blocks do not affect variable scoping.Thus blocks that are not associated to if, while, etc.have no effect and should be avoided.
+M116	Warning	Do not use void expressions	
+M117	Warning	Confusing pluses	
+M119	Warning	Confusing minuses	
+M121	Hint	Declare all function vars on a single line	
+M123	Hint	Unnecessary parentheses	
+M126	Warning	== and != may perform type coercion, use == = or != = to avoid it	The non - strict equality comparison is allowed to convert its arguments to a common type.That can lead to unexpected results such as ’ \t\r\n’ == 0 being true.Use the strict equality operators == = and != = and be explicit about conversions you require.
+M127	Warning	Expression statements should be assignments, calls or delete expressions only	
+M128	Error	A state cannot have the specified child item	
+M201	Hint	Place var declarations at the start of a function	
+M202	Hint	Use only one statement per line	
+M203	Warning	Imperative code is not supported in the Qt Quick Designer	
+M204	Warning	This QML type is not supported in the Qt Quick Designer	
+M205	Warning	Reference to parent QML type cannot be resolved correctly by the Qt Quick Designer	
+M206	Warning	This visual property binding cannot be evaluated in the local context and might not show up in Qt Quick Designer as expected	
+M207	Warning	Qt Quick Designer only supports states in the root QML type	
+M208	Error	This id might be ambiguous and is not supported in the Qt Quick Designer.	
+M209	Error	This type(type name) is not supported as a root element by Qt Quick Designer.	
+M220	Error	This type(type name) is not supported as a root element of a Qt Quick UI form.	
+M221	Error	This type(type name) is not supported in a Qt Quick UI form.	
+M222	Error	Functions are not supported in a Qt Quick UI form.	
+M223	Error	Java Script blocks are not supported in a Qt Quick UI form.	
+M224	Error	Behavior type is not supported in a Qt Quick UI form.	
+M225	Error	States are only supported in the root item in a Qt Quick UI form.	
+M226	Error	Referencing the parent of the root item is not supported in a Qt Quick UI form.	
+M300	Error	Unknown component	
+M301	Error	Could not resolve the prototype name of object	
+M302	Error	Could not resolve the prototype name	
+M303	Error	Prototype cycle, the last non - repeated component is name	
+M304	Error	Invalid property type name	
+M305	Warning	== and != perform type coercion, use == = or != = to avoid it	See M126.
+M306	Warning	Calls of functions that start with an uppercase letter should use new	By convention, functions that start with an uppercase letter are constructor functions that should only be used with new.
+M307	Warning	Use new only with functions that start with an uppercase letter	
+M308	Warning	Do not use Number as a constructor	
+M309	Hint	Use spaces around binary operators	
+M310	Warning	Unintentional empty block, use({}) for empty object literal	
+M311	Hint	Use type instead of var or variant to improve performance	
+M312	Error	Missing property number	
+M313	Error	Object value expected	
+M314	Error	Array value expected	
+M315	Error	Value value expected	
+M316	Error	Maximum number value is number	
+M317	Error	Minimum number value is number	
+M318	Error	Maximum number value is exclusive	
+M319	Error	Minimum number value is exclusive	
+M320	Error	String value does not match required pattern	
+M321	Error	Minimum string value length is number	
+M322	Error	Maximum string value length is number	
+M323	Error	Number elements expected in array value	
+M324	Warning	Using Qt Quick 1 code model instead of Qt Quick 2	The code model might be corrupt or the QML emulation layer might have been built with a different Qt version than the one selected in the build and run kit.For more information, see Resetting the Code Model and Running QML Modules in Qt Quick Designer.
+参考
+
+http://doc.qt.io/qtcreator/creator-checking-code-syntax.html
+顶
+0
+

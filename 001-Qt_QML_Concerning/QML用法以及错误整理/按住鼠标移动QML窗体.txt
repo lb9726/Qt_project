@@ -1,0 +1,313 @@
+http://blog.chinaunix.net/uid-693168-id-3254926.html
+https://stackoverflow.com/questions/10203260/moving-the-window-on-holding-qml-mousearea
+
+
+You can expose the view widget to QML with:
+
+QmlApplicationViewer viewer;
+QDeclarativeContext *context = viewer.rootContext();
+context->setContextProperty("viewerWidget", &viewer);
+Then modify its pos property to move the window:
+
+MouseArea {        
+    anchors.fill: parent
+    property variant previousPosition        
+    onPressed: {
+        previousPosition = Qt.point(mouseX, mouseY)
+    }
+    onPositionChanged: {
+        if (pressedButtons == Qt.LeftButton) {
+            var dx = mouseX - previousPosition.x
+            var dy = mouseY - previousPosition.y
+            viewerWidget.pos = Qt.point(viewerWidget.pos.x + dx, 
+                                        viewerWidget.pos.y + dy)
+        }
+    }
+}    
+
+
+原文地址：http://stackoverflow.com/questions/10203260/moving-the-window-on-holding-qml-mousearea
+
+将 view widget 暴露给QML:
+
+点击(此处)折叠或打开
+QmlApplicationViewer viewer;
+QDeclarativeContext *context = viewer.rootContext();
+context->setContextProperty("viewerWidget", &viewer);
+修改它的pos属性达到移动窗体的效果
+
+点击(此处)折叠或打开
+MouseArea { 
+    anchors.fill: parent
+    property variant previousPosition 
+    onPressed: {
+        previousPosition = Qt.point(mou***, mouseY)
+    }
+    onPositionChanged: {
+        if (pressedButtons == Qt.LeftButton) {
+            var dx = mou*** - previousPosition.x
+            var dy = mouseY - previousPosition.y
+            viewerWidget.pos = Qt.point(viewerWidget.pos.x + dx, 
+                                        viewerWidget.pos.y + dy)
+        }
+    }
+}
+
+
+
+http://blog.chinaunix.net/uid-693168-id-3457767.html
+
+ QML动画------学习总结 
+ http://blog.chinaunix.net/uid-693168-id-3458444.html
+ 
+ 
+ 原始材料源自官方文档,中间夹杂小结
+
+Direct Property Animation
+
+Animations are created by applying animation objects to property values to gradually change the properties over time. These property animations apply smooth movements by interpolating values between property value changes. Property animations provide timing controls and allows different interpolations through easing curves.
+Rectangle {
+id: flashingblob
+width: 75; height: 75
+color: "blue"
+opacity: 1.0
+MouseArea {
+anchors.fill: parent
+onClicked: {
+animateColor.start()
+animateOpacity.start()
+}
+}
+PropertyAnimation {id: animateColor; target: flashingblob; properties: "color"; to: "green"; duration: 100}
+NumberAnimation {
+id: animateOpacity
+target: flashingblob
+properties: "opacity"
+from: 0.99
+to: 1.0
+loops: Animation.Infinite
+easing {type: Easing.OutBack; overshoot: 500}
+}
+}
+Specialized property animation elements have more efficient implementations than the PropertyAnimation element. They are for setting animations to different QML types such as int, color, and rotations. Similarly, the ParentAnimation can animate parent changes.
+
+See the Controlling Animations section for more information about the different animation properties.
+小结：
+target:      指定目标元素
+property:    指定目标元素的属性
+from:        指定起始值
+to:          指定结束值
+loops:       指定循环次数，Animation.Infinite表示无限循环
+easing:      指定动画的过渡形式，比如淡入淡出之类的
+在这里看不出PropertyAnimation和NumberAnimation的区别（后面还会看见ColorAnimation）,都需要指定target和property，另外需要进行触发，比如上面的代码中的XXXXXXXXXXX.start()
+
+--------------------------------------------------------------------------------
+Using Predefined Targets and Properties
+
+In the previous example, the PropertyAnimation and NumberAnimation objects needed to specify particular target and properties values to specify the objects and properties that should be animated. This can be avoided by using the <Animation> on <Property> syntax, which specifies the animation is to be applied as a property value source.
+
+Below are two PropertyAnimation objects that are specified using this syntax:
+
+import QtQuick 2.0
+
+Rectangle {
+    id: rect
+    width: 100; height: 100
+    color: "red"
+
+    PropertyAnimation on x { to: 100 }
+    PropertyAnimation on y { to: 100 }
+}
+The animation starts as soon as the rectangle is loaded, and will automatically be applied to its x and y values. Since the <Animation> on <Property> syntax has been used, it is not necessary to set the target value of the PropertyAnimation objects to rect, and neither is it necessary to set the property values to x and y.
+
+小结：
+    这里引入一个语法：<Animation> on <Property>
+    和Direct Property Animation作用一样，区别如下：
+    不需要指定target,所在元素就是target；
+    on后面就是需要发生变化的属性；
+    在元素被载入结束后，动画就立即触发
+
+This can also be used by grouped animations to ensure that all animations within a group are applied to the same property. For example, the previous example could instead use SequentialAnimation to animate the rectangle's color first to yellow, then to blue:
+
+import QtQuick 2.0
+Rectangle {
+width: 100; height: 100
+color: "red"
+SequentialAnimation on color {
+ColorAnimation { to: "yellow"; duration: 1000 }
+ColorAnimation { to: "blue"; duration: 1000 }
+}
+}
+Since the SequentialAnimation object has been specified on the color property using the <Animation> on <Property> syntax, its child ColorAnimation objects are also automatically applied to this property and do not need to specify target or property animation values.
+
+小结：SequentialAnimation 作用是序列化多个动画，直白的说就是让多个动画依次发生
+
+--------------------------------------------------------------------------------
+Transitions during State Changes
+
+Qt Quick States are property configurations where a property may have different values to reflect different states. State changes introduce abrupt property changes; animations smooth transitions to produce visually appealing state changes.
+
+The Transition element can contain animation elements to interpolate property changes caused by state changes. To assign the transition to an object, bind it to the transitions property.
+
+A button might have two states, the pressed state when the user clicks on the button and a released state when the user releases the button. We can assign different property configurations for each state. A transition would animate the change from the pressed state to the released state. Likewise, there would be an animation during the change from the released state to the pressed state.
+
+Rectangle {
+width: 75; height: 75
+id: button
+state: "RELEASED"
+MouseArea {
+anchors.fill: parent
+onPressed: button.state = "PRESSED"
+onReleased: button.state = "RELEASED"
+}
+states: [
+State {
+name: "PRESSED"
+PropertyChanges { target: button; color: "lightblue"}
+},
+State {
+name: "RELEASED"
+PropertyChanges { target: button; color: "lightsteelblue"}
+}
+]
+transitions: [
+Transition {
+from: "PRESSED"
+to: "RELEASED"
+ColorAnimation { target: button; duration: 100}
+},
+Transition {
+from: "RELEASED"
+to: "PRESSED"
+ColorAnimation { target: button; duration: 100}
+}
+]
+}
+Binding the to and from properties to the state's name will assign that particular transition to the state change. For simple or symmetric transitions, setting the to to property to the wild card symbol, "*", denotes that the transition applies to any state change.
+
+transitions:
+Transition {
+to: "*"
+ColorAnimation { target: button; duration: 100}
+}
+小结：
+状态间的过渡(Transitions during State Changes)
+
+紫色部分是为元素指定默认状态(state)
+红色部分是state的定义，里面有PropertyChanges来对属性进行调整
+粉色部分是对过渡的定义，from和to分别用于指定起始和结束状态
+--------------------------------------------------------------------------------
+Default Animation as Behaviors
+
+Default property animations are set using behavior animations. Animations declared in Behavior elements apply to the property and animates any property value changes. However, Behavior elements have an enabled property to purposely enable or disable the behavior animations.
+
+A ball component might have a behavior animation assigned to its x, y, and color properties. The behavior animation could be set up to simulate an elastic effect. In effect, this behavior animation would apply the elastic effect to the properties whenever the ball moves.
+
+Rectangle {
+    width: 75; height: 75; radius: width
+    id: ball
+    color: "salmon"
+
+    Behavior on x {
+        NumberAnimation {
+            id: bouncebehavior
+            easing {
+                type: Easing.OutElastic
+                amplitude: 1.0
+                period: 0.5
+            }
+        }
+    }
+    Behavior on y {
+        animation: bouncebehavior
+    }
+    Behavior {
+        ColorAnimation { target: ball; duration: 100 }
+    }
+}
+There are several methods of assigning behavior animations to properties. The Behavior on <property> declaration is a convenient way of assigning a behavior animation onto a property.
+
+See the Behaviors example for a demonstration of behavioral animations.
+
+小结：
+Behavior 
+Behavior on <Property>
+可以直接在Behavior里面直接定义动画，Behavior里面还有animation属性，用于指定动画，达到代码复用的作用。如果有on <Property>，那么Behavior内部的动画就不需要再次指定
+
+------------------------------------------------------------------------------------------
+
+Playing Animations in Parallel or in Sequence
+
+Animations can run in parallel or in sequence. Parallel animations will play a group of animations at the same time while sequential animations play a group of animations in order: one after the other. Grouping animations in SequentialAnimation and ParallelAnimation will play the animations in sequence or in parallel.
+
+A banner component may have several icons or slogans to display, one after the other. The opacity property could transform to 1.0 denoting an opaque object. Using the SequentialAnimation element, the opacity animations will play after the preceding animation finishes. The ParallelAnimation element will play the animations at the same time.
+
+Rectangle {
+    id: banner
+    width: 150; height: 100; border.color: "black"
+
+    Column {
+        anchors.centerIn: parent
+        Text {
+            id: code
+            text: "Code less."
+            opacity: 0.01
+        }
+        Text {
+            id: create
+            text: "Create more."
+            opacity: 0.01
+        }
+        Text {
+            id: deploy
+            text: "Deploy everywhere."
+            opacity: 0.01
+        }
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        onPressed: playbanner.start()
+    }
+
+    SequentialAnimation {
+        id: playbanner
+        running: false
+        NumberAnimation { target: code; property: "opacity"; to: 1.0; duration: 200}
+        NumberAnimation { target: create; property: "opacity"; to: 1.0; duration: 200}
+        NumberAnimation { target: deploy; property: "opacity"; to: 1.0; duration: 200}
+    }
+}
+Once individual animations are placed into a SequentialAnimation or ParallelAnimation, they can no longer be started and stopped independently. The sequential or parallel animation must be started and stopped as a group.
+
+The SequentialAnimation element is also useful for playing transition animations because animations are played in parallel inside transitions.
+
+See the Animation basics example for a demonstration of creating and combining multiple animations in QML.
+
+------------------------------------------------------------------------------------------
+Controlling Animations动画控制
+
+
+Animation Playback
+
+All animation types inherit from the Animation element. It is not possible to create Animation objects; instead, this element provides the essential properties and methods for animation elements. Animation elements have start(), stop(), resume(), pause(), restart(), and complete() -- all of these methods control the execution of animations.
+除了start()外，还可以有stop(), resume(), pause(), restart(), and complete()
+Easing
+
+Easing curves define how the animation will interpolate between the start value and the end value. Different easing curves might go beyond the defined range of interpolation. The easing curves simplify the creation of animation effects such as bounce effects, acceleration, deceleration, and cyclical animations.
+
+A QML object may have different easing curve for each property animation. There are also different parameters to control the curve, some of which are exclusive to a particular curve. For more information about the easing curves, visit the easing documentation.
+
+The easing example visually demonstrates each of the different easing types.
+通过指定各种函数实现各种过渡效果
+
+
+
+
+
+
+
+
+
+
+

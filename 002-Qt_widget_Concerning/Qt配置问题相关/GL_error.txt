@@ -1,0 +1,19 @@
+libo@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/AutoCom$ make
+g++ -c -m32 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/home/libo/Qt5.5.1/5.5/gcc/include -I/home/libo/Qt5.5.1/5.5/gcc/include/QtQuick -I/home/libo/Qt5.5.1/5.5/gcc/include/QtWidgets -I/home/libo/Qt5.5.1/5.5/gcc/include/QtGui -I/home/libo/Qt5.5.1/5.5/gcc/include/QtQml -I/home/libo/Qt5.5.1/5.5/gcc/include/QtNetwork -I/home/libo/Qt5.5.1/5.5/gcc/include/QtCore -I. -I/home/libo/Qt5.5.1/5.5/gcc/mkspecs/linux-g++-32 -o main.o main.cpp
+In file included from /home/libo/Qt5.5.1/5.5/gcc/include/QtQuick/qquickwindow.h:39:0,
+                 from /home/libo/Qt5.5.1/5.5/gcc/include/QtQuick/qquickview.h:37,
+                 from /home/libo/Qt5.5.1/5.5/gcc/include/QtQuick/QQuickView:1,
+                 from main.cpp:3:
+/home/libo/Qt5.5.1/5.5/gcc/include/QtGui/qopengl.h:122:21: fatal error: GL/gl.h: No such file or directory
+compilation terminated.
+make: *** [main.o] Error 1
+
+
+qmake AutoPlay.pro
+make 之后就出现了如上的错误，百度关键词/include/QtGui/qopengl.h:122:21: fatal error: GL/gl.h: No such file or directory
+有博客提示：
+sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
+
+而后等待安装完成，再次make，发现确实可以编译通过了
+
+

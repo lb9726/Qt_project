@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>FlickDemo.qml</file>
+        <file>images/ArrowUp.png</file>
+        <file>images/background.png</file>
+        <file>FlickDemo2.qml</file>
+        <file>Rollingtext.qml</file>
+        <file>ArrowUpAnimation.qml</file>
+        <file>ArrowDownAnimation.qml</file>
+        <file>images/ArrowDn.png</file>
+        <file>FileUpdate.qml</file>
+        <file>Test.qml</file>
+    </qresource>
+</RCC>

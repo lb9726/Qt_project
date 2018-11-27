@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>shibai.png</file>
+        <file>haha.png</file>
+        <file>kai.png</file>
+        <file>100.png</file>
+        <file>13.png</file>
+        <file>11.png</file>
+        <file>10.png</file>
+        <file>welcome.png</file>
+        <file>blank1.png</file>
+        <file>kong.png</file>
+        <file>blank.png</file>
+        <file>clock.png</file>
+        <file>flag.png</file>
+        <file>foundMine.png</file>
+        <file>mine.png</file>
+        <file>1.png</file>
+        <file>2.png</file>
+        <file>3.png</file>
+        <file>4.png</file>
+        <file>5.png</file>
+        <file>6.png</file>
+        <file>7.png</file>
+        <file>8.png</file>
+        <file>0.png</file>
+        <file>welcome1.png</file>
+    </qresource>
+</RCC>

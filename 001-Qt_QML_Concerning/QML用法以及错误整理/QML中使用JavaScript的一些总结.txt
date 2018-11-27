@@ -1,0 +1,152 @@
+http://blog.csdn.net/u010002704/article/details/40995797
+
+1、无状态的JavaScript库：
+一些JavaScript文件的行为更像库文件，它们提供了一组无状态的辅助函数来提供输入和计算输出，但是从来不直接
+操作QML组件实例。若每一个QML组件实例都有一个这些库的拷贝就会造成浪费，可以使用pragma来指明一个特定的文件
+是一个没有状态的库：
+.pragma library   //必须在所有JavaScript代码前
+function factoral(a){
+    a = parseInt(a);
+    if(a <= 0){
+        return 1;
+    }else{
+        return a * factorial(a - 1); //此处不能用arguments.callee(a - 1)
+    }
+}
+2、如果一个JavaScript文件需要使用定义在其他JavaScript文件中的函数，可用Qt.include()函数来导入其他文件
+中的所有函数到当前文件的命名空间中。
+eg：
+//factorial.js
+import QtQuick 2.3
+import "script.js" as MyScript
+Item{
+    width: 100; height: 100
+    MouseArea{
+        anchors.fill: parent
+        onClicked: {
+            MyScript.showCalculations(10)
+            console.log("Call factorial() from QML: ", MyScript.factorial(10))
+        }
+    }
+}
+//script.js
+Qt.include("factorial.js")
+function showCalculations(value){
+    console.log("Call factorial() from script.js: ", factorial(value));
+}
+//factorial.js
+function factorial(a){
+    a = parseInt(a);
+    if(a <= 0){
+        return 1;
+    }else{
+        return a * factorial(a - 1);
+    }
+}
+3、在启动时运行JavaScript
+QML de Component元素提供了一个附加的onCompleted属性用来在QML环境完全建立一个切换到启动脚本代码的执行
+eg:
+Rectangle{
+    function startupFunction(){
+        ...
+    }
+    Component.onCompleted: startupFunction();
+}
+//Composition::onDestruction附加属性会在组件销毁时触发
+4、属性绑定：
+        width: otherItem.width    //随绑定值改变而改变
+   属性赋值：
+        width = otherItem.width   //只是使用了JavaScript中的赋值操作实现
+5、在JavaScript中接收QML信号：
+Component.onCompleted: {
+    mouseArea.clicked.connect(MyScript.jsFunction)
+}
+6、动态创建对象
+有两种方法从JavaScript动态创建对象：Qt.createComponent()动态创建Component对象，Qt.createQmlObject()
+从QML字符串来创建对象。若已有一个在.qml文件中定义的组件，并希望动态创建该数组的一个实例，使用第一种方法。
+若QML本身是在运行时产生的，使用第二种方法。
+eg：
+//Qt.createComponent()动态创建Component对象
+//Sprite.qml
+import QtQuick 2.3
+Rectangle{
+    width: 80; height: 50
+    color: "red"
+}
+//main.qml
+import QtQuick 2.3
+import "componentCreation.js" as MyScript
+Rectangle{
+    id: appWindow
+    width: 300; height: 300
+    Component.onCompleted: MyScript.createSpriteObjects()
+}
+//componentCreation.js
+var component;
+var sprite;
+function createSpriteObjects(){
+    component = Qt.createComponent("Sprite.qml");
+    if(component.status == Component.Ready)  //若QML文件是从网上下载的，它不会立即可用
+        finishCreation();
+    else
+        component.statusChanged.connect(finishCreation);
+}
+function finishCreation(){
+    if(component.status == Component.Ready){
+        sprite = component.createObject(appWindow); //创建的对象会成为main.qml中appWindow的子对象
+        if(sprite == null){
+            //错误
+        }else{
+            sprite.x = 100;
+            sprite.y = 100;
+        }
+    }else if(component.status == Component.Error){
+        console.log("Error loading component: ", component.errorString());
+    }
+}
+//用QML字符串创建一个对象
+var newObject = Qt.createQmlObject(
+            "import QtQuick 2.3; Rectangle{ color: "red"; width: 20; height: 20 }",
+            parentItem, "dynamicSnippet");
+第一个参数是要创建的QML字符串，就像一个新的文件一样；第二个参数是父对象，必须是场景中已存在的；
+第三个参数是与新对象相关的文件的路径，用来报告错误。如果QML字符串中导入的文件使用的是相对路径，
+那么需要相对于定义父对象的文件的路径。
+//维护动态创建的对象
+必须确保创建上下文不会在创建的对象销毁前被销毁。
+*若使用了Qt.createComponent(),创建上下文就是该函数的QDeclarativeContext;
+*若使用了Qt.createQmlObject(),创建上下文就是父对象的上下文；
+*若定义了一个Component(),然后在其上调用了createObject(),创建上下文就是该Component中定义的上下文。
+*动态创建的对象没有id值
+//动态删除对象
+永远不要手动删除通过QML元素(如Loader和Repeater)动态生成的对象，不要删除不是自己动态创建的对象。
+使用destroy()函数来删除对象，有一个可选参数：延迟时间，默认为0.
+eg：
+//application.qml
+Item{
+    id: container
+    width: 500; height: 100
+    Component.onCompleted: {
+        var component = Qt.createComponent("SelfDestroyingRect.qml")
+        for(var i = 0; i < 5; ++i){
+            var Object = component.createObject(container);
+            object.x = (object.with + 10) * i;
+        }
+    }
+}
+//SelfDestroyingRect.qml
+import QtQuick 2.3
+Rectange{
+    id: rect
+    width: 80; heigth: 80
+    color: "red"
+    NumberAnimation on opacity{
+        to: 0
+        duration: 1000
+        onRunningChanged: {
+            if(!running){
+                console.log("Destroying...")
+                rect.destroy();
+            }
+        }
+    }
+}

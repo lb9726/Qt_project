@@ -1,0 +1,27 @@
+QString Widget::GainFloorNumber(unsigned char*) start
+s =  "0"
+sstr =  "\u0000\u0000\u0000"
+QString Widget::GainFloorNumber(unsigned char*) end
+void Widget::SetFloorNumber(QString) start
+void Widget::SetFloorNumber(QString) end
+
+
+
+
+devin@ubuntu:/usr/share/fonts/truetype/ubuntu-font-family$ pwd
+/usr/share/fonts/truetype/ubuntu-font-family
+devin@ubuntu:/usr/share/fonts/truetype/ubuntu-font-family$
+
+
+
+main.cpp: In function 'int main(int, char**)':
+main.cpp:9:5: error: 'setCodecForTr' is not a member of 'QTextCodec'
+     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
+     ^
+main.cpp:10:5: error: 'setCodecForCStrings' is not a member of 'QTextCodec'
+     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
+     ^
+make: *** [main.o] Error 1
+
+Qt5 取消了QTextCodec::setCodecForTr()和QTextCodec::setCodecForCString()这两个函数。
+直接将 QTextCodec::setCodecForLocale(QTextCodec::codecForName(“UTF8”)) 至于QApplication实例之前即可解决;

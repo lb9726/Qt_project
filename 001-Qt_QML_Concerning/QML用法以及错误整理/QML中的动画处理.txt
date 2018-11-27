@@ -1,0 +1,81 @@
+http://www.makaidong.com/IT%E5%8D%9A%E5%AE%A2%E5%9B%AD/30608.shtml
+
+qml是一个写界面非常不错的工具，只要你有合适的ui界面，就可以非常快速的编写完ui界面
+ 
+qml也内置了许多动画效果，动画效果一般都是在属性值上的变化，这些变化的方式，就构成了不同的动画效果。从一个点到另一个点的，走法有n多种，采用哪种方法走法，会比较好看，qml内置了一些数学上的走路方式，用easing来描述，不知道中文没关系，记住对应图关系即可，大部分以in，out，inout，outin为前缀，即有quad，cubic，quart，quint，sine，expo，circ，elastic，back，bounce。点击此处查看详细。
+ 
+当元素有一些属性需要修改时，qml定义了一些默认的属性类型动画处理
+propertyanimation
+numberanimation
+vector3danimation
+coloranimation
+rotationanimation
+parentanimation
+anchoranimation
+对于指定的属性，使用指定的属性animation，效率会更好一些。
+ 
+属性的变化，在做成动画时一般和状态变化关联在一起，而状态变化的时候，属性变化状态，又可以通过tranistions这个特殊的属性，进行更加复杂的动画
+
+
+
+处理效果。如下面的例子，在pressed的时候，修改状态为pressed，在released的时候，修改released，states属性将依据修改的状态变化进行属性值修改，而transition则监控状态的切换时属性值是否修改，如果修改则应用该属性值的animation，从而形成动画。
+（ coloranimation用在transition中时，将监控target的color属性，当属性变化时，会应用该coloranimation。）
+ rectangle {
+     width: 75; height: 75
+     id: button
+     state: "released"
+
+     mousearea {
+         anchors.fill: parent
+         onpressed: button.state = "pressed"
+         onreleased: button.state = "released"
+     }
+
+     states: [
+         state {
+             name: "pressed"
+             propertychanges { target: button; color: "lightblue"}
+         },
+         state {
+             name: "released"
+             propertychanges { target: button; color: "lightsteelblue"}
+         }
+     ]
+
+     transitions: [
+         transition {
+             from: "pressed"
+             to: "released"
+             coloranimation { target: button; duration: 100}
+         },
+         transition {
+             from: "released"
+             to: "pressed"
+             coloranimation { target: button; duration: 100}
+         }
+     ]
+ }
+ 
+有时候，可以通过behavior这个属性元素，对某个属性进行监控，如
+behavior on x，则表示监控x的属性值是否有变化，有变化并且enabled为true时，就应用behavior元素中的设置。
+ 
+当我们有多个元素都需要处理成动画效果的时候，那么我们要区分，是同时变化还是按照顺序来变化。
+ 
+ 
+所有的animation元素都是从animation中继承下来，有start,stop,resume,pause,restart,complete等方法。
+ 
+除了常规的属性元素，还有以下的元素
+ 
+pauseanimation
+scriptaction
+propertyaction
+ 
+smoothedanimation
+springanimation
+parentanimation
+anchoranimation
+ 
+
+搜索此文相关文章：QML中的动画处理
+此文链接：http://www.makaidong.com/IT%E5%8D%9A%E5%AE%A2%E5%9B%AD/30608.shtml
+转载请注明出处：QML中的动画处理 - 博客园

@@ -1,0 +1,3 @@
+g++: fatal error: -fuse-linker-plugin, but liblto_plugin-0.dll not found
+
+可能是安装的时候被360拦截了，卸载掉360重新安装Qt即可，安装时勾选MinGW的编译器

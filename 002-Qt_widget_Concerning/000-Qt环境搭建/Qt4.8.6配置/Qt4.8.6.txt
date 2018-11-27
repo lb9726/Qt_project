@@ -1,0 +1,23 @@
+
+linux安装QT的问题 10
+安装QT的时候，在./configure这一步，出现了错误 Basic XLib functionality test failed! You might need to modify the include and library search paths by editing QMAKE_INCDIR_X11 and QMAKE_LIBDIR_X11 in /usr/local/qt/mkspecs/linux-g++. 这要怎么... 展开
+Rang_er_ | 浏览 13358 次
+推荐于2016-01-19 15:31:08
+最佳答案
+
+1.如果在./configure阶段，出现了以下错误 
+Basic XLib functionality test failed! 
+You might need to modify the include and library search paths by editing 
+QMAKE_INCDIR_X11 and QMAKE_LIBDIR_X11 
+那是因为没装有libxtst-dev，使用命令apt-get install libxtst-dev安装 
+2.如果在make阶段，出现一下错误 
+/usr/bin/ld: cannot find -lXrender 
+collect2: ld returned 1 exit status 
+make[1]: *** [../../../../lib/libQtWebKit.so.4.7.3] 错误 1 
+make[1]: Leaving directory `/home/debian/桌面/qt-everywhere-opensource-src-4.7.3/src/3rdparty/webkit/WebCore' 
+make: *** [sub-webkit-make_default-ordered] 错误 2 
+那是因为没有装libxrender-dev 
+3.在qt create中，尝试编译测试，如果找不到qmake，则在工具－选项－QT4中手动设置qmake的位置。qmake的位置默认在/usr/local/Trolltech/Qt-4.7.3/bin/qmake。
+
+
+

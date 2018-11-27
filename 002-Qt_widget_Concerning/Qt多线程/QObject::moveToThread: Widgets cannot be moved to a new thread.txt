@@ -1,0 +1,1 @@
+this->moveToThread(wthread); QWidget 不能放到子线程中跑

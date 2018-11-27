@@ -1,0 +1,20 @@
+libo@libo-OptiPlex-990:~/Desktop/21UI/21_UI$ git push
+ssh: Could not resolve hostname igerrit.storm: Name or service not known
+fatal: Could not read from remote repository.
+是服务器问题链接不上
+
+libo@libo-OptiPlex-990:~/Desktop/21UI/21_UI$ git push
+To ssh://libo@igerrit.storm:29418/Doc/17Model/17Cy/21_UI.git
+ ! [rejected]        master -> master (fetch first)
+error: 无法推送一些引用到 'ssh://libo@igerrit.storm:29418/Doc/17Model/17Cy/21_UI.git'
+提示：更新被拒绝，因为远程版本库包含您本地尚不存在的提交。这通常是因为另外
+提示：一个版本库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
+提示：（如 'git pull ...'）。
+提示：详见 'git push --help' 中的 'Note about fast-forwards' 小节。
+libo@libo-OptiPlex-990:~/Desktop/21UI/21_UI$ git status
+位于分支 master
+您的分支领先 'origin/master' 共 2 个提交。
+  （使用 "git push" 来发布您的本地提交）
+
+无文件要提交，干净的工作区
+git pull --rebase  因为别人提过了版本，推送时必须是最新的版本下进行推送
