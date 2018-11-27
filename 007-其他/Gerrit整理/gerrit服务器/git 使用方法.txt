@@ -1,0 +1,24 @@
+windows 下git clone 出现错误时
+这个出错的情况，使用
+ ssh-add ~/.ssh/libo1，有出现如下错误
+
+可以使用 ssh-agent bash
+或者可以使用
+
+
+down vote
+Could not open a connection to your authentication agent
+
+To resolve this error:
+
+bash:
+
+$ eval `ssh-agent -s`
+tcsh:
+
+$ eval `ssh-agent -c`
+Then use ssh-add as you normally would.
+
+
+然后再执行 ssh-add ~/.ssh/libo1
+

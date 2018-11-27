@@ -1,0 +1,356 @@
+http://blog.sina.com.cn/s/blog_4d4bc1110101dbxs.html
+
+
+libo1@libo1 MINGW64 ~
+$
+
+
+libo1@libo1 MINGW64 ~
+$
+
+libo1@libo1 MINGW64 ~
+$ git clone ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga
+Cloning into 'android-kk4.4.3_2.0.0-ga'...
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+libo1@libo1 MINGW64 ~
+$ git clone ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga && scp -p -P 29418 libo1@10.200.13.100:hooks/commit-msg android-kk4.4.3_2.0.0-ga/.git/hooks/
+Cloning into 'android-kk4.4.3_2.0.0-ga'...
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+libo1@libo1 MINGW64 ~
+$ ??ssh -T git@github.com
+bash: $'\302\226\302\226ssh': command not found
+
+libo1@libo1 MINGW64 ~
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.255.113' (RSA) to the list of known hosts.
+Permission denied (publickey).
+
+libo1@libo1 MINGW64 ~
+$ ??git clone ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga && scp -p -P 29418 libo1@10.200.13.100:hooks/commit-msg android-kk4.4.3_2.0.0-ga/.git/hooks/
+Cloning into 'android-kk4.4.3_2.0.0-ga'...
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+libo1@libo1 MINGW64 ~
+$
+
+
+libo1@libo1 MINGW64 ~
+$
+
+libo1@libo1 MINGW64 ~
+$ ssh-a
+ssh-add.exe    ssh-agent.exe
+
+libo1@libo1 MINGW64 ~
+$ ssh-a
+ssh-add.exe    ssh-agent.exe
+
+libo1@libo1 MINGW64 ~
+$ ssh-add libo1.pub
+Could not open a connection to your authentication agent.
+
+libo1@libo1 MINGW64 ~
+$ ssh-agent bash.
+bash.: No such file or directory
+
+libo1@libo1 MINGW64 ~
+$ ssh-agent bash
+
+libo1@libo1 MINGW64 ~
+$ ssh-add
+Identity added: /c/Users/yonghao/.ssh/id_rsa (/c/Users/yonghao/.ssh/id_rsa)
+
+libo1@libo1 MINGW64 ~
+$ ssh-add ~/.ssh/libo1.pub
+Enter passphrase for /c/Users/yonghao/.ssh/libo1.pub:
+
+libo1@libo1 MINGW64 ~
+$ git clone ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga
+Cloning into 'android-kk4.4.3_2.0.0-ga'...
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+libo1@libo1 MINGW64 ~
+$ ssh-add ~/.ssh/libo1
+libo1      libo1.pub
+
+libo1@libo1 MINGW64 ~
+$ ssh-add ~/.ssh/libo1
+libo1      libo1.pub
+
+libo1@libo1 MINGW64 ~
+$ ssh-add ~/.ssh/libo1
+Identity added: /c/Users/yonghao/.ssh/libo1 (/c/Users/yonghao/.ssh/libo1)
+
+libo1@libo1 MINGW64 ~
+$ git clone ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga
+Cloning into 'android-kk4.4.3_2.0.0-ga'...
+remote: Counting objects: 2, done
+remote: Finding sources: 100% (2/2)
+remote: Total 2 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (2/2), done.
+
+libo1@libo1 MINGW64 ~
+$
+
+
+
+$ scp -i ~/.ssh/libo1 -p -P 29418 libo1@10.200.13.100:hooks/commit-msg .git/hooks
+commit-msg                                    100% 4360   771.1KB/s   00:00
+
+
+
+
+ ssh-add ~/.ssh/libo1
+Could not open a connection to your authentication agent.  出现这个错误
+
+可以使用  ssh-agent bash
+然后再ssh-add ~/.ssh/libo1
+Identity added: /c/Users/yonghao/.ssh/libo1 (/c/Users/yonghao/.ssh/libo1) 提示
+
+git clone ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga 运行这个命令
+
+$ git clone ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga
+Cloning into 'android-kk4.4.3_2.0.0-ga'...
+remote: Counting objects: 2, done
+remote: Finding sources: 100% (2/2)
+remote: Total 2 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (2/2), done.
+
+
+
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git push origin HEAD:refs/for/master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 245 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: Processing changes: refs: 1, done
+remote: ERROR: missing Change-Id in commit message footer
+remote: Suggestion for commit message:
+remote: test config
+remote:
+remote: Change-Id: Ic3cb320d5f6ee3ec98b690bea97f4f1563d93ef7
+remote:
+remote: Hint: To automatically insert Change-Id, install the hook:
+remote:   gitdir=$(git rev-parse --git-dir); scp -p -P 29418 libo1@10.200.13.100       :hooks/commit-msg ${gitdir}/hooks/
+remote:
+remote:
+To ssh://10.200.13.100:29418/android-kk4.4.3_2.0.0-ga
+ ! [remote rejected] HEAD -> refs/for/master (missing Change-Id in commit messag       e footer)
+error: failed to push some refs to 'ssh://libo1@10.200.13.100:29418/android-kk4.       4.3_2.0.0-ga'
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git log
+commit c3cb320d5f6ee3ec98b690bea97f4f1563d93ef7 (HEAD -> master)
+Author: libo1 <libo1@shbst.com>
+Date:   Tue May 16 07:43:49 2017 +0800
+
+    test config
+
+commit 8615a1712edde2111cb419993ce434b2f4e94d9b (origin/master, origin/HEAD)
+Author: admin <scmshbst@shbst.com>
+Date:   Mon May 15 16:28:04 2017 +0800
+
+    Initial empty repository
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git pull --rebase
+Current branch master is up to date.
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git push origin HEAD:refs/for/master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 245 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: Processing changes: refs: 1, done
+remote: ERROR: missing Change-Id in commit message footer
+remote: Suggestion for commit message:
+remote: test config
+remote:
+remote: Change-Id: Ic3cb320d5f6ee3ec98b690bea97f4f1563d93ef7
+remote:
+remote: Hint: To automatically insert Change-Id, install the hook:
+remote:   gitdir=$(git rev-parse --git-dir); scp -p -P 29418 libo1@10.200.13.100:hooks/commit-msg ${gitdir}/hooks/
+remote:
+remote:
+To ssh://10.200.13.100:29418/android-kk4.4.3_2.0.0-ga
+ ! [remote rejected] HEAD -> refs/for/master (missing Change-Id in commit message footer)
+error: failed to push some refs to 'ssh://libo1@10.200.13.100:29418/android-kk4.4.3_2.0.0-ga'
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git commit --amend
+[master 26b0626] test config
+ Date: Tue May 16 07:43:49 2017 +0800
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git commit --amend
+[master ea891b0] test config
+ Date: Tue May 16 07:43:49 2017 +0800
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git log
+commit ea891b0cdada1510d41e377f7e7f9496ef9d125b (HEAD -> master)
+Author: libo1 <libo1@shbst.com>
+Date:   Tue May 16 07:43:49 2017 +0800
+
+    test config
+
+    Change-Id: I60ba6e2e2271aac18beed2a622287faefbdc7c44
+
+commit 8615a1712edde2111cb419993ce434b2f4e94d9b (origin/master, origin/HEAD)
+Author: admin <scmshbst@shbst.com>
+Date:   Mon May 15 16:28:04 2017 +0800
+
+    Initial empty repository
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$ git push origin HEAD:refs/for/master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 287 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: Processing changes: new: 1, refs: 1, done
+remote:
+remote: New Changes:
+remote:   http://10.200.13.100:8002/24 test config
+remote:
+To ssh://10.200.13.100:29418/android-kk4.4.3_2.0.0-ga
+ * [new branch]      HEAD -> refs/for/master
+
+libo1@libo1 MINGW64 ~/android-kk4.4.3_2.0.0-ga (master)
+$
+
+http://blog.csdn.net/nadyhuayue/article/details/8292117    gerrit审批流程设置
+
+
+gerrit 验证邮件链接点击无效
+
+
+
+
+
+
+
+
+
+
+
+
+android-123@tworkshop:$ git re
+rebase         relink         repack         request-pull   revert 
+reflog         remote         replace        reset          
+android-123@tworkshop:$ git remote add origin http://10.200.13.100:8002/BAN-17-0020
+android-123@tworkshop:$ git remote -v
+origin  http://10.200.13.100:8002/BAN-17-0020 (fetch)
+origin  http://10.200.13.100:8002/BAN-17-0020 (push)
+android-123@tworkshop:$ git push origin master
+Username for 'http://10.200.13.100:8002': libo1
+Password for 'http://libo1@10.200.13.100:8002': 
+fatal: Authentication failed for 'http://10.200.13.100:8002/BAN-17-0020/'
+android-123@tworkshop:$ git push origin master
+Username for 'http://10.200.13.100:8002': libo1
+Password for 'http://libo1@10.200.13.100:8002': 
+fatal: Authentication failed for 'http://10.200.13.100:8002/BAN-17-0020/'
+android-123@tworkshop:$ git remote add origin ssh://libo1@10.200.13.100:29418/BAN-17-0020
+fatal: remote origin already exists.
+android-123@tworkshop:$ git remote rm origin
+android-123@tworkshop:$ git remote -v 
+android-123@tworkshop:$ git remote add origin ssh://libo1@10.200.13.100:29418/BAN-17-0020
+android-123@tworkshop:$ git remote -v
+origin  ssh://libo1@10.200.13.100:29418/BAN-17-0020 (fetch)
+origin  ssh://libo1@10.200.13.100:29418/BAN-17-0020 (push)
+android-123@tworkshop:$ git push origin master 
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+android-123@tworkshop:$ vi .git/config 
+
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[remote "origin"]
+        url = ssh://libo1@10.200.13.100:29418/BAN-17-0020
+        fetch = +refs/heads/*:refs/remotes/origin/*
+~
+~
+~
+~
+~
+~
+~
+android-123@tworkshop:$ 
+android-123@tworkshop:$ git push origin master 
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+android-123@tworkshop:$ git push origin HEAD:/refs/for/master
+fatal: remote part of refspec is not a valid name in HEAD:/refs/for/master
+android-123@tworkshop:$ git push origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+android-123@tworkshop:$ git push origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+android-123@tworkshop:$ 
+
+
+
+
+git push origin HEAD:refs/for/master 提示
+
+To ssh://10.200.13.100:29418/BAN-17-0020
+ ! [remote rejected] HEAD -> refs/for/master (missing Change-Id in commit message footer)
+
+运行：
+gitdir=$(git rev-parse --git-dir);scp -p -P 29418 libo1@10.200.13.100:hooks/commit-msg ${gitdir}/hooks
+
+然后git commit --amend
+然后再 git push origin HEAD:refs/for/master
+
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 282 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: Processing changes: new: 1, refs: 1, done
+remote:
+remote: New Changes:
+remote:   http://10.200.13.100:8002/25 add test
+remote:
+To ssh://10.200.13.100:29418/BAN-17-0020
+ * [new branch]      HEAD -> refs/for/master
+

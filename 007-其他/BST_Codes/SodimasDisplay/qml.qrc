@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Arrow.qml</file>
+        <file>qml/Desktop.qml</file>
+        <file>qml/Floor.qml</file>
+        <file>qml/Function.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/MeassageBar.qml</file>
+        <file>qml/ProgressBar.qml</file>
+        <file>qml/UiElement.qml</file>
+        <file>qml/Icon.qml</file>
+        <file>qml/bootScreen.qml</file>
+        <file>qml/RealtimeText.qml</file>
+        <file>qml/FullText.qml</file>
+    </qresource>
+</RCC>

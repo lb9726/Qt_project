@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainForm</class>
+ <widget class="QMainWindow" name="MainForm">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>1280</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>1280</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>1280</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="WidgetBase" name="MainWidget">
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>1280</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>1280</height>
+    </size>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{background-color:rgba(255, 255, 255,0);}
+QWidget#MainWidget {border-image:url(D:/mls/BVT5/510/Glari_510.1A/BST_PLUGIN_JULI_101_1280x800_0420V2/usrfs/THEME/PLUGIN/Theme.png);}
+
+
+QLabel#date {font: 9pt &quot;宋体&quot;; font-size:40pt;  color:rgb(255, 255, 255);} 
+
+QLabel#time {font: 9pt &quot;宋体&quot;; font-size:40pt;  color:rgb(255, 255, 255);}
+
+
+
+
+</string>
+   </property>
+   <widget class="WidgetFloor" name="Floor" native="true">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>660</y>
+      <width>226</width>
+      <height>153</height>
+     </rect>
+    </property>
+    <widget class="WidgetBase" name="single" native="true">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>0</y>
+       <width>113</width>
+       <height>153</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="WidgetBase" name="ten" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>113</width>
+       <height>153</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="time">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>80</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>11:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="date">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>77</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2016-07-27</string>
+    </property>
+   </widget>
+   <widget class="WidgetButton" name="Button_1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>960</y>
+      <width>309</width>
+      <height>117</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetMedia" name="Media" native="true">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>140</y>
+      <width>786</width>
+      <height>398</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetButton" name="Button_close" native="true">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>1100</y>
+      <width>309</width>
+      <height>117</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetBase" name="Function" native="true">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>650</y>
+      <width>200</width>
+      <height>50</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetButton" name="Button_open" native="true">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>1100</y>
+      <width>309</width>
+      <height>117</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetArrow" name="Arrow" native="true">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>670</y>
+      <width>117</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetButton" name="Button_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>960</y>
+      <width>309</width>
+      <height>117</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetButton" name="Button_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>820</y>
+      <width>309</width>
+      <height>117</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="WidgetButton" name="Button_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>820</y>
+      <width>309</width>
+      <height>117</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WidgetButton</class>
+   <extends>QWidget</extends>
+   <header>widgetbutton.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetArrow</class>
+   <extends>QWidget</extends>
+   <header location="global">widgetarrow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetBase</class>
+   <extends>QWidget</extends>
+   <header location="global">widgetbase.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetFloor</class>
+   <extends>QWidget</extends>
+   <header location="global">widgetfloor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetMedia</class>
+   <extends>QWidget</extends>
+   <header>widgetmedia.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

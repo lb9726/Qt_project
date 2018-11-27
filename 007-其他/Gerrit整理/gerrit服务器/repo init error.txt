@@ -1,0 +1,65 @@
+http://www.cnblogs.com/dinphy/p/5669384.html
+
+devin@ubuntu:~/Desktop/123-test$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+bash: /home/devin/bin/repo: No such file or directory
+devin@ubuntu:~/Desktop/123-test$ rep
+replace    repo       reportbug  
+devin@ubuntu:~/Desktop/123-test$ repo
+repo       reportbug  
+devin@ubuntu:~/Desktop/123-test$ repo help
+usage: repo COMMAND [ARGS]
+
+repo is not yet installed.  Use "repo init" to install it here.
+
+The most commonly used repo commands are:
+
+  init      Install repo in the current working directory
+  help      Display detailed help on a command
+
+For access to the full online help, install repo ("repo init").
+
+devin@ubuntu:~/Desktop/123-test$ repo init
+gpg: keyring `/home/devin/.repoconfig/gnupg/secring.gpg' created
+gpg: keyring `/home/devin/.repoconfig/gnupg/pubring.gpg' created
+gpg: /home/devin/.repoconfig/gnupg/trustdb.gpg: trustdb created
+gpg: key 920F5C65: public key "Repo Maintainer <repo@android.kernel.org>" imported
+gpg: key 692B382C: public key "Conley Owens <cco3@android.com>" imported
+gpg: Total number processed: 2
+gpg:               imported: 2  (RSA: 1)
+
+
+fatal: Cannot get https://gerrit.googlesource.com/git-repo/clone.bundle
+fatal: error [Errno 101] Network is unreachable
+devin@ubuntu:~/Desktop/123-test$ 
+devin@ubuntu:~/Desktop/123-test$ git clone https://gerrit-googlesource.lug.ustc.edu.cn/git-repo
+Cloning into 'git-repo'...
+remote: Counting objects: 139, done
+remote: Total 3750 (delta 1835), reused 3750 (delta 1835)
+Receiving objects: 100% (3750/3750), 3.81 MiB | 3.51 MiB/s, done.
+Resolving deltas: 100% (1835/1835), done.
+Checking connectivity... done.
+devin@ubuntu:~/Desktop/123-test$ 
+
+
+
+
+解决：Cannot get http://gerrit.googlesource.com/git-repo/clone.bundle
+同步cm12.1初始化出现的问题：
+
+fatal: Cannot get https://gerrit.googlesource.com/git-repo/clone.bundle
+fatal: error [Errno 101] Network is unreachable
+
+解决方法,先单独克隆repo,然后将git-repo里面的repo文件复制到bin目录，在同步源码的工作目录新建.repo文件夹，把git-repo重命名为repo复制到.repo目录下：
+
+git clone https://gerrit-googlesource.lug.ustc.edu.cn/git-repo
+重新初始化：
+
+repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
+同步开始
+
+repo sync -c -j8
+
+
+
+
+

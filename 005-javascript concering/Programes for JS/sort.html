@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo">单击按钮升序排列数组。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction(){
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.sort();
+	var x=document.getElementById("demo");
+	x.innerHTML=fruits;
+}
+</script>
+
+</body>
+</html>

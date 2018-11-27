@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/0_common">
+        <file>rc/0_common/bglight.png</file>
+        <file>rc/0_common/error.png</file>
+        <file>rc/0_common/messagebox.png</file>
+        <file>rc/0_common/question.png</file>
+        <file>rc/0_common/success.png</file>
+        <file>rc/0_common/transparent.png</file>
+        <file>rc/0_common/semitransparent.png</file>
+        <file>rc/0_common/bar_dark.png</file>
+        <file>rc/0_common/bar_light.png</file>
+        <file>rc/0_common/back_light.png</file>
+        <file>rc/0_common/back_dark.png</file>
+        <file>rc/0_common/prg_1.png</file>
+        <file>rc/0_common/prg_2.png</file>
+        <file>rc/0_common/prg_bg.png</file>
+        <file>rc/0_common/prg_tip.png</file>
+        <file>rc/0_common/off.png</file>
+        <file>rc/0_common/on.png</file>
+        <file>rc/0_common/next.png</file>
+        <file>rc/0_common/previous.png</file>
+        <file>rc/0_common/busy.gif</file>
+    </qresource>
+    <qresource prefix="/31_setting">
+        <file>rc/31_setting/btncancel.png</file>
+        <file>rc/31_setting/btnok.png</file>
+        <file>rc/31_setting/btnclick.png</file>
+        <file>rc/31_setting/bg.png</file>
+        <file>rc/31_setting/btnadd.png</file>
+        <file>rc/31_setting/btndel.png</file>
+        <file>rc/31_setting/btndisable.png</file>
+        <file>rc/31_setting/btnlight.png</file>
+        <file>rc/31_setting/btnstart.png</file>
+        <file>rc/31_setting/btnstop.png</file>
+        <file>rc/31_setting/sliderdot.png</file>
+        <file>rc/31_setting/subbg.png</file>
+        <file>rc/31_setting/timebg.png</file>
+    </qresource>
+    <qresource prefix="/34_configrue">
+        <file>rc/34_configure/logic.png</file>
+        <file>rc/34_configure/physical.png</file>
+        <file>rc/34_configure/theme.png</file>
+        <file>rc/34_configure/bg.png</file>
+        <file>rc/34_configure/basic.png</file>
+    </qresource>
+</RCC>
+

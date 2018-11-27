@@ -1,0 +1,45 @@
+//File   : sndwav_common.h   
+//Author : Loon <sepnic@gmail.com>   
+  
+#ifndef __SNDWAV_COMMON_H   
+#define __SNDWAV_COMMON_H   
+  
+#include <stdio.h>
+#include <stdbool.h>   
+#include <stdlib.h>   
+#include <unistd.h>   
+#include <fcntl.h>   
+#include "wav_parser.h"   
+  
+typedef long long off64_t;  
+  
+typedef struct SNDPCMContainer {  
+    snd_pcm_t *handle;  
+    snd_output_t *log;  
+    snd_pcm_uframes_t chunk_size;  
+    snd_pcm_uframes_t buffer_size;  
+    snd_pcm_format_t format;  
+    uint16_t channels;  
+    size_t chunk_bytes;  
+    size_t bits_per_sample;  
+    size_t bits_per_frame;  
+    char *data_buf;  
+} SNDPCMContainer_t;  
+
+typedef struct WAVStatus {  
+     bool         Play_voiceEnable;
+     bool         Play_stop;
+     bool         Play_pause;
+     bool         Play_finished;
+     bool         Play_quit;
+   	 char   *Play_path;
+	 char         Play_path_backup[50];
+     char         Play_flag;    
+} WAVStatus_t;  
+
+ssize_t SNDWAV_ReadPcm(SNDPCMContainer_t *sndpcm, size_t rcount);  
+  
+ssize_t SNDWAV_WritePcm(SNDPCMContainer_t *sndpcm, size_t wcount);  
+  
+int SNDWAV_SetParams(SNDPCMContainer_t *sndpcm, WAVContainer_t *wav);  
+#endif /* #ifndef __SNDWAV_COMMON_H */

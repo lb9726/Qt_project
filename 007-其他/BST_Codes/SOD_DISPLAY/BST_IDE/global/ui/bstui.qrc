@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Completer">
+        <file>rc/Completer/countries.txt</file>
+        <file>rc/Completer/wordlist.txt</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

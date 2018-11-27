@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Componet">
+        <file>rc/Componet/animal.png</file>
+        <file>rc/Componet/desktop.png</file>
+    </qresource>
+</RCC>
+

@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetTabBar</class>
+ <widget class="QDialog" name="SetTabBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>749</width>
+    <height>453</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#widget{ border-image: url(:/34_configrue/rc/34_configure/bg.png); }
+
+QScrollArea {background-color: rgba(0,0,0,0); border:none;}
+
+QWidget#page_basic, QWidget#page_physical, QWidget#page_logic, QWidget#page_theme, QWidget#contents_basic, QWidget#contents_physical, QWidget#contents_logic, QWidget#contents_theme{ background-color: rgba(0,0,0,0);}
+
+QGroupBox {font: bold large &quot;Adobe Arabic&quot;; font-size:30pt; color: rgba(255,255,255,250); background-color: rgba(255, 255, 255, 0); }
+QGroupBox::checked{ background-color: rgba(48, 61, 77, 200); }
+
+QWidget#TabBar{ background-color: rgba(48, 61, 77, 100); border-radius:5px; }
+QWidget#TabBar:focus { background-color: rgba(80, 90, 100, 200); border-radius:5px;  }
+/*QWidget#TabBar:hover { background-color: rgba(80, 90, 100, 200); border-radius:5px;  }*/
+
+QWidget#MainStacked{ background-color: rgba(48, 61, 77, 100); border-radius:5px; }
+QWidget#MainStacked:focus { background-color: rgba(80, 90, 100, 200); border-radius:5px;}
+/*QWidget#MainStacked:hover { background-color: rgba(80, 90, 100, 200); border-radius:5px;}*/
+
+QPushButton#btn_bar_basic, QPushButton#btn_bar_physical, QPushButton#btn_bar_logic, QPushButton#btn_bar_theme{ font: bold large &quot;Adobe Arabic&quot;; font-size:30pt; color: rgba(255,255,255,250); }
+
+QPushButton#btn_bar_basic{ background-color: rgba(0, 0, 0, 0); border:none; }
+QPushButton#btn_bar_basic::checked{ background-color: rgba(255, 127, 102, 150); }
+
+QPushButton#btn_bar_physical{ background-color: rgba(0, 0, 0, 0); border:none; }
+QPushButton#btn_bar_physical::checked{ background-color: rgba(255, 127, 102, 150); }
+
+QPushButton#btn_bar_logic{ background-color: rgba(0, 0, 0, 0); border:none; }
+QPushButton#btn_bar_logic::checked{ background-color: rgba(255, 127, 102, 150); }
+
+QPushButton#btn_bar_theme{ background-color: rgba(0, 0, 0, 0); border:none; }
+QPushButton#btn_bar_theme::checked{ background-color: rgba(255, 127, 102, 150); }
+
+/*page31_setting*/
+QWidget#setting_container { border-image: url(:/31_setting/rc/31_setting/subbg.png); }
+
+QGroupBox {font: bold large &quot;Adobe Arabic&quot;; font-size:30pt; color: rgba(255,255,255,250);}
+
+QLabel#label_backlight, QLabel#label_volume { font: bold large &quot;Adobe Arabic&quot;; font-size:30pt; color: rgba(255,255,255,250); }
+QPushButton#btn_testvolume{ font: bold large &quot;Adobe Arabic&quot;; font-size:30pt; color: rgba(255,255,255,250); }
+
+QPushButton#btn_testvolume{ border-image: url(:/31_setting/rc/31_setting/btnadd.png);  }
+QPushButton#btn_testvolume::pressed{ border-image: url(:/31_setting/rc/31_setting/btnlight.png); }
+
+QListWidget#list_protocol{  background-color: rgba(255, 255, 255, 0); alternate-background-color: #1b1b1b;  selection-
+background-color: rgba(254, 158, 37, 255);  color: rgba(254, 254, 254, 255);  icon-size:90px 90px; space : 40px; font: bold large &quot;Adobe Arabic&quot;; font-size:18pt; }
+
+QPushButton#btn_setreset{ border-image: url(:/31_setting/rc/31_setting/btndel.png); font: bold large &quot;Adobe Arabic&quot;; font-size:32pt; color: rgba(255,255,255,250); }
+QPushButton#btn_setreset::pressed{ border-image: url(:/31_setting/rc/31_setting/btnlight.png); }
+
+QPushButton#btn_setok{ border-image: url(:/31_setting/rc/31_setting/btnadd.png); font: bold large &quot;Adobe Arabic&quot;; font-size:32pt; color: rgba(255,255,255,250); }
+QPushButton#btn_setok::pressed{ border-image: url(:/31_setting/rc/31_setting/btnlight.png); }
+
+QPushButton#btn_calibrate{ border-image: url(:/31_setting/rc/31_setting/btnadd.png); font: bold large &quot;Adobe Arabic&quot;; font-size:32pt; color: rgba(255,255,255,250); }
+QPushButton#btn_calibrate::pressed{ border-image: url(:/31_setting/rc/31_setting/btnlight.png); }
+
+QLabel#label_theme_0, QLabel#label_theme_90, QLabel#label_theme_180, QLabel#label_theme_270{font: bold large &quot;Adobe Arabic&quot;; font-size:25pt; color: rgba(255,255,255,250);}
+QPushButton#btn_theme_0{ border-image: url(:/0_common/rc/0_common/off.png); }
+QPushButton#btn_theme_0::checked{ border-image: url(:/0_common/rc/0_common/on.png); }
+
+QPushButton#btn_theme_90{ border-image: url(:/0_common/rc/0_common/off.png); }
+QPushButton#btn_theme_90::checked{ border-image: url(:/0_common/rc/0_common/on.png); }
+
+QPushButton#btn_theme_180{ border-image: url(:/0_common/rc/0_common/off.png); }
+QPushButton#btn_theme_180::checked{ border-image: url(:/0_common/rc/0_common/on.png); }
+
+QPushButton#btn_theme_270{ border-image: url(:/0_common/rc/0_common/off.png); }
+QPushButton#btn_theme_270::checked{ border-image: url(:/0_common/rc/0_common/on.png); }
+
+/*time*/
+QLabel#label_time_colon, QLabel#label_time_h1, QLabel#label_time_h2, QLabel#label_time_space{ font: bold large &quot;Adobe Arabic&quot;; font-size:38pt; color: rgba(255,255,255,250); }
+
+QListWidget#list_time_year, QListWidget#list_time_month, QListWidget#list_time_day, QListWidget#list_time_hour, QListWidget#list_time_minute {font: bold large &quot;Adobe Arabic&quot;; font-size:26pt; color: rgba(255,255,255,250); background-color: rgba(255, 255, 255, 0); alternate-background-color:  rgba(255, 255, 255, 0);  selection-
+background-color:  rgba(255, 255, 255, 0);  gridline-color: rgba(255, 255, 255, 0);   border-radius: 0px;  padding: 0px;  }
+
+QListWidget#list_time_year{border-image: url(:/31_setting/rc/31_setting/timebg.png); color: rgba(10,10,10,250);}
+QListWidget#list_time_month{border-image: url(:/31_setting/rc/31_setting/timebg.png); color: rgba(10,10,10,250);}
+QListWidget#list_time_day{border-image: url(:/31_setting/rc/31_setting/timebg.png); color: rgba(10,10,10,250);}
+QListWidget#list_time_hour{border-image: url(:/31_setting/rc/31_setting/timebg.png); color: rgba(10,10,10,250);}
+QListWidget#list_time_minute{border-image: url(:/31_setting/rc/31_setting/timebg.png); color: rgba(10,10,10,250);}
+
+QListWidget#list_time_year::item:selected{background-color:rgba(254, 158, 37, 0); color: rgba(255, 149, 16,250); border: none;}
+QListWidget#list_time_month::item:selected{background-color:rgba(254, 158, 37, 0); color: rgba(255, 149, 16,250); border: none;}
+QListWidget#list_time_day::item:selected{background-color:rgba(254, 158, 37, 0); color: rgba(255, 149, 16,250); border: none;}
+QListWidget#list_time_hour::item:selected{background-color:rgba(254, 158, 37, 0); color: rgba(255, 149, 16,250); border: none;}
+QListWidget#list_time_minute::item:selected{background-color:rgba(254, 158, 37, 0); color: rgba(255, 149, 16,250); border: none;}
+
+QPushButton#btn_time_adjust{ font: bold large &quot;Adobe Arabic&quot;; font-size:30pt; color: rgba(255,255,255,250); }
+QPushButton#btn_time_adjust{ border-image: url(:/31_setting/rc/31_setting/btnadd.png); }
+QPushButton#btn_time_adjust::pressed{ border-image: url(:/31_setting/rc/31_setting/btnlight.png) }
+QPushButton#btn_time_adjust::disabled{ border-image: url(:/31_setting/rc/31_setting/btndisable.png); }
+
+QScrollBar:vertical { background: rgba(0, 0, 0, 0);  width: 9px;  margin: 0px 0 0px 0; }
+QScrollBar::handle:vertical { background: rgba(195, 195, 195, 255); min-height: 20px;  margin: 2px 0px 1px 0px;   border-radius: 3px;  border: 0px dashed rgba(180,130,100,255); }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0px; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {  background: none; }
+
+QScrollBar:horizontal  { background: rgba(0, 0, 0, 0);  height: 9px;  margin: 0px 0 0px 0; }
+QScrollBar::handle:horizontal  { background: rgba(195, 195, 195, 255);  min-width: 20px;  margin: 2px 0px 1px 0px;   border-radius: 3px;  border: 0px dashed rgba(180,130,100,255); }
+QScrollBar::add-line:horizontal , QScrollBar::sub-line:horizontal  { height: 0px; }
+QScrollBar::add-page:horizontal , QScrollBar::sub-page:horizontal  {  background: none; }
+
+QSlider::groove:horizontal {  border: 1px rgba(254, 158, 37, 255);  height: 2px;  margin: 0px 0; left: 22px; right: 22px;  }
+QSlider::handle:horizontal {  border-image: url(:/31_setting/rc/31_setting/sliderdot.png);  width: 40px; height : 40px;  margin: -20px -20px -20px -20px; }
+QSlider::sub-page:horizontal{  background: rgba(254, 158, 37, 255); }
+QSlider::add-page:horizontal{ background: rgba(100, 100, 100, 255); }
+QSlider::indicator { right : 22px}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_9">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="margin">
+       <number>9</number>
+      </property>
+      <item>
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="opaqueResize">
+         <bool>true</bool>
+        </property>
+        <property name="handleWidth">
+         <number>4</number>
+        </property>
+        <property name="childrenCollapsible">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="TabBar" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btn_bar_basic">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="settab.qrc">
+              <normaloff>:/34_configrue/rc/34_configure/basic.png</normaloff>:/34_configrue/rc/34_configure/basic.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>23</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_bar_physical">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Physical</string>
+            </property>
+            <property name="icon">
+             <iconset resource="settab.qrc">
+              <normaloff>:/34_configrue/rc/34_configure/physical.png</normaloff>:/34_configrue/rc/34_configure/physical.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>23</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_bar_logic">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="text">
+             <string> Logical</string>
+            </property>
+            <property name="icon">
+             <iconset resource="settab.qrc">
+              <normaloff>:/34_configrue/rc/34_configure/logic.png</normaloff>:/34_configrue/rc/34_configure/logic.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>23</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_bar_theme">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="text">
+             <string> Theme</string>
+            </property>
+            <property name="icon">
+             <iconset resource="settab.qrc">
+              <normaloff>:/34_configrue/rc/34_configure/theme.png</normaloff>:/34_configrue/rc/34_configure/theme.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>23</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>71</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QStackedWidget" name="MainStacked">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page_basic">
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <widget class="ScrollArea" name="scroll_basic">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="contents_basic">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>537</width>
+                <height>700</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>700</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>700</height>
+               </size>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_11">
+               <item>
+                <widget class="SrnRotBox" name="ScreenBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>180</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string>Screen</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_16">
+                  <property name="spacing">
+                   <number>16</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_19">
+                      <item>
+                       <widget class="QPushButton" name="btn_theme_0">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_theme_0">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_27">
+                      <item>
+                       <widget class="QPushButton" name="btn_theme_90">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_theme_90">
+                        <property name="text">
+                         <string>90</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_28">
+                      <item>
+                       <widget class="QPushButton" name="btn_theme_180">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_theme_180">
+                        <property name="text">
+                         <string>180</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_29">
+                      <item>
+                       <widget class="QPushButton" name="btn_theme_270">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>30</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_theme_270">
+                        <property name="text">
+                         <string>270</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="TimeSetBox" name="TimeBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>180</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string>Time</string>
+                 </property>
+                 <property name="flat">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_25">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_26">
+                    <item>
+                     <widget class="ListWidget" name="list_time_year">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Adobe Arabic</family>
+                        <pointsize>26</pointsize>
+                        <weight>75</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="verticalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="horizontalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="verticalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerItem</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_time_h1">
+                      <property name="text">
+                       <string>-</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="ListWidget" name="list_time_month">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Adobe Arabic</family>
+                        <pointsize>26</pointsize>
+                        <weight>75</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="verticalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="horizontalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="verticalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerItem</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_time_h2">
+                      <property name="text">
+                       <string>-</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="ListWidget" name="list_time_day">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Adobe Arabic</family>
+                        <pointsize>26</pointsize>
+                        <weight>75</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="verticalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="horizontalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="verticalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerItem</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_time_space">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="ListWidget" name="list_time_hour">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Adobe Arabic</family>
+                        <pointsize>26</pointsize>
+                        <weight>75</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="verticalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="horizontalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="verticalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerItem</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_time_colon">
+                      <property name="text">
+                       <string>:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="ListWidget" name="list_time_minute">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Adobe Arabic</family>
+                        <pointsize>26</pointsize>
+                        <weight>75</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="verticalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="horizontalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="verticalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerItem</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="BLSetBox" name="BacklightBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>140</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string>Backlight</string>
+                 </property>
+                 <property name="flat">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                    <item>
+                     <widget class="Slider" name="slider_backlight">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>50</height>
+                       </size>
+                      </property>
+                      <property name="value">
+                       <number>40</number>
+                      </property>
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_backlight">
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>40%</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="VolSetBox" name="VolumeBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>140</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string>Volume</string>
+                 </property>
+                 <property name="flat">
+                  <bool>false</bool>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="Slider" name="slider_volume">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>50</height>
+                       </size>
+                      </property>
+                      <property name="value">
+                       <number>40</number>
+                      </property>
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_volume">
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>40%</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_physical">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>9</number>
+           </property>
+           <item>
+            <widget class="ScrollArea" name="scroll_physical">
+             <property name="font">
+              <font>
+               <family>Arial</family>
+               <pointsize>20</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="contents_physical">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>100</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6"/>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_logic">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>9</number>
+           </property>
+           <item>
+            <widget class="ScrollArea" name="scroll_logic">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="contents_logic">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>100</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7"/>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_theme">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>9</number>
+           </property>
+           <item>
+            <widget class="ScrollArea" name="scroll_theme">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="contents_theme">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>100</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_8"/>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ScrollArea</class>
+   <extends>QScrollArea</extends>
+   <header>bstui.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Slider</class>
+   <extends>QSlider</extends>
+   <header>bstui.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ListWidget</class>
+   <extends>QListWidget</extends>
+   <header>bstui.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SrnRotBox</class>
+   <extends>QGroupBox</extends>
+   <header>settabclass.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TimeSetBox</class>
+   <extends>QGroupBox</extends>
+   <header>settabclass.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BLSetBox</class>
+   <extends>QGroupBox</extends>
+   <header>settabclass.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VolSetBox</class>
+   <extends>QGroupBox</extends>
+   <header>settabclass.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="settab.qrc"/>
+ </resources>
+ <connections/>
+</ui>
+

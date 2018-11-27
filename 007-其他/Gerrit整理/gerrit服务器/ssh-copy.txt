@@ -1,0 +1,29 @@
+libo1@libo1 MINGW64 ~/.ssh
+$ ssh-copy-id -i libo1.pub android-123@10.200.13.100
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "libo1.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+android-123@10.200.13.100's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'android-123@10.200.13.100'"
+and check to make sure that only the key(s) you wanted were added.
+
+
+libo1@libo1 MINGW64 ~/.ssh
+
+
+
+android-123@tworkshop:$ cd
+android-123@tworkshop:$ cd .ssh/
+android-123@tworkshop:$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts
+android-123@tworkshop:$ cat id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgNBC7EWJpxBChuJMZuEX6f15sb7qsSLdaP2P6CfXvu0yWd9EAMGHzoeQbiZIq96dMdv227QbMOkMfKBwOH4j/Y5QSmKMEGJanvYElfYaQMenoXEbM9nrjB1Z+UEab/szOpijI9UeFPTY/K4lJKKXSwM+aiIRyiLTmVNs0huypqw/scere9wD2qclgW52yXoSKgQ39IYP1REtB9xmfLOvibx+ld25okTvIgq/+Njrpmpp+FzPcy9a1jf5r9mhPSedY/x3ujVEutaKeJV8tGErL2Ht1hlhlwiNeOTyLdceRvZGs0+1JrsxOhoC74GVo2v6PcmesLbQYEVa+l+nJA7FZ android-123@tworkshop
+android-123@tworkshop:$ 
+android-123@tworkshop:$ 
+android-123@tworkshop:$ cd
+android-123@tworkshop:$ cd AndroidDLShare/
+android-123@tworkshop:$ ls
+android_old  dongnan.c  test

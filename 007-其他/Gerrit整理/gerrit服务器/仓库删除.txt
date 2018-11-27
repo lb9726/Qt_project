@@ -1,0 +1,38 @@
+
+lisx@tworkshop:~$ su -
+Password: 
+root@tworkshop:# pwd
+/root
+root@tworkshop:# 
+root@tworkshop:# 
+root@tworkshop:# ls
+lisx_backup  samba-4.4.5  samba-4.4.5.tar.gz  smbshare  usb  userinformation
+root@tworkshop:# cd /
+root@tworkshop:# ls
+bin   etc         lib    libx32      mnt   root  srv  usr
+boot  home        lib32  lost+found  opt   run   sys  var
+dev   initrd.img  lib64  media       proc  sbin  tmp  vmlinuz
+root@tworkshop:# cd /home/gerrit2/
+root@tworkshop:# ls
+review_site
+root@tworkshop:# cd review_site/
+root@tworkshop:# ls
+bin  cache  data  etc  git  index  lib  logs  plugins  static  tmp
+root@tworkshop:# cd git/
+root@tworkshop:# ls
+All-Projects.git              ct15_doc.git        kvt232_916.git
+All-Users.git                 ct15_finding.git    kvt232_c14.git
+android-kk4.4.3_2.0.0-ga.git  CT15.git            KVT232.git_bak
+BAC-16-0087.git               ct15_mcu.git
+ct15_app_android.git          ct15_southeast.git
+root@tworkshop:# pwd
+/home/gerrit2/review_site/git
+root@tworkshop:# 
+
+
+先登录10.200.13.100 使用SecureCRT 设置SSH连接，登录时使用一般用户登录，例如lisx ，密码lisx
+然后su -
+输入密码root
+cd /
+ls 查看一下
+最终找到/home/gerrit2/review_site/git 这个的仓库，如果不要了，可以删除这个仓库

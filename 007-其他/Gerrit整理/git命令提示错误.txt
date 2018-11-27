@@ -1,0 +1,22 @@
+devin@ubuntu:~/Desktop/Repository/Classic-examples-of-practice$ git status
+error: object file .git/objects/55/dc2197d105e93ac0f3af34eed2e0e306a0bda9 is empty
+error: object file .git/objects/55/dc2197d105e93ac0f3af34eed2e0e306a0bda9 is empty
+fatal: loose object 55dc2197d105e93ac0f3af34eed2e0e306a0bda9 (stored in .git/objects/55/dc2197d105e93ac0f3af34eed2e0e306a0bda9) is corrupt
+devin@ubuntu:~/Desktop/Repository/Classic-examples-of-practice$ 
+
+
+标签：git   object   branch   
+
+错误描述：
+
+error: object file .git/objects/9a/83e9c5b3d697d12a2e315e1777ceaf27ea1bab is empty
+fatal: loose object 9a83e9c5b3d697d12a2e315e1777ceaf27ea1bab (stored in .git/objects/9a/83e9c5b3d697d12a2e315e1777ceaf27ea1bab) is corrupt
+
+解决方法：
+
+$ rm -fr .git
+$ git init
+$ git remote add origin your-git-remote-url
+$ git fetch
+$ git reset --hard origin/master
+$ git branch --set-upstream-to=origin/master master 

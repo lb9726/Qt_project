@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MessageBox</class>
+ <widget class="QDialog" name="MessageBox">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>199</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#MessageBox { border-image: url(:/Message/rc/Message/messagebox.png);}
+
+QLabel#label_warn{ font: bold &quot;Arial&quot;; font-size:13pt; color: rgba(255,255,255,250); }
+
+QWidget#icon_warn { border-image: url(:/Message/rc/Message/error.png); }
+
+QPushButton#btn_cancel, QPushButton#btn_ok{ font: bold large &quot;Adobe Arabic&quot;; font-size:30pt; color: rgba(255,255,255,250); }
+
+QPushButton#btn_cancel{ border-image: url(:/Message/rc/Message/btndel.png); }
+QPushButton#btn_cancel::pressed{ border-image: url(:/Message/rc/Message/btnlight.png); }
+QPushButton#btn_cancel::disabled {border-image: url(:/Message/rc/Message/btndisable.png);}
+
+QPushButton#btn_ok{ border-image: url(:/Message/rc/Message/btnadd.png); }
+QPushButton#btn_ok::pressed{ border-image: url(:/Message/rc/Message/btnlight.png); }
+</string>
+  </property>
+  <widget class="QLabel" name="label_warn">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>30</y>
+     <width>431</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cancel">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>123</y>
+     <width>133</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ok">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>123</y>
+     <width>135</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="icon_warn" native="true">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>22</y>
+     <width>86</width>
+     <height>86</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

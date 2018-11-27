@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ui/transparent.png</file>
+        <file>ui/back.png</file>
+        <file>ui/backlight.png</file>
+        <file>ui/timebg.png</file>
+    </qresource>
+</RCC>

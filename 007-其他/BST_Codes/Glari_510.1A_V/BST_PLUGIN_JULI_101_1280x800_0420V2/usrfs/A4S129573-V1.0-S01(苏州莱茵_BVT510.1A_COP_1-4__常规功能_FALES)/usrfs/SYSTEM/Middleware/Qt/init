@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export QWS_SIZE=1280x800
+
+mv /usr/bst/SYSTEM/Middleware/Qt/fonts/*  /usr/local/qt_4.8.2_LPR/lib/fonts/
+
+export QWS_DISPLAY=Transformed:Rot90:$QWS_DISPLAY
+
+echo $QWS_DISPLAY

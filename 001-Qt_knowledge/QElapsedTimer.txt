@@ -1,0 +1,10 @@
+qint64 QElapsedTimer::nsecsElapsed() const
+Returns the number of nanoseconds since this QElapsedTimer was last started. Calling this function in a QElapsedTimer that was invalidated will result in undefined results.
+
+On platforms that do not provide nanosecond resolution, the value returned will be the best estimate available.
+
+This function was introduced in Qt 4.8.
+
+See also start(), restart(), hasExpired(), and invalidate().
+
+

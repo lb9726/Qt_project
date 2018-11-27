@@ -1,0 +1,5 @@
+qthelp://org.qt-project.qtquickcontrols2.571/qtquickcontrols2/qtquickcontrols2-customize.html#customizing-combobox
+
+Qt5.7 版本中搜索combobox 点击 See also Customizing ComboBox and Input Controls.
+进入了控件定制的页面，有很多qml控件的定制方法
+

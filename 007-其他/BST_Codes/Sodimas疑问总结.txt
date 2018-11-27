@@ -1,0 +1,41 @@
+1.整体架构的思路是什么？Sodimas的产品有哪些具体功能？我现在需要做的东西有哪些？
+
+2.componet configure global qmlitem util/media golbalsetting.cpp 
+这些东西之间的层次关系是什么？
+
+3.CanBus到底怎么和应用程序通信的？
+
+4. componet:分logic，physic，ui 具体是项目的哪些东西？
+logic下的themelg（ThemeLg）的initDevice(LG_Type pPHType, QDomElement pElement)
+
+
+5.bool XmlParse::getItemElement(QString itemPath)这个函数做什么？
+
+6.mdpparser.cpp 这个是处理xml文件的吗？
+
+7.bool GlobalSetting::addComponent(COM_TYPE pComType, QDomElement &pComElement)
+
+
+
+8.property int rotateYOffset: (windowsHeight- windowsWidth)/2
+SodimasDisplay/qml/bootScreen.qml的 y:rotateYOffset;这个是设置什么的？
+
+9.util/media下的代码看不懂！
+
+未完……
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

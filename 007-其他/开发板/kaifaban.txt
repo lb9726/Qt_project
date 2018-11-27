@@ -1,0 +1,80 @@
+root@imx6qsabresd:~# ls
+Protocol_test  ShowWifi  WifiScan  a.txt  connect  demo.sh  mnt  test.sh
+root@imx6qsabresd:~# ./Protocol_test -platform wayland
+Using Wayland-EGL
+^C
+root@imx6qsabresd:~# cat /dev/tty
+tty      tty16    tty24    tty32    tty40    tty49    tty57    tty8
+tty0     tty17    tty25    tty33    tty41    tty5     tty58    tty9
+tty1     tty18    tty26    tty34    tty42    tty50    tty59    ttymxc1
+tty10    tty19    tty27    tty35    tty43    tty51    tty6     ttymxc3
+tty11    tty2     tty28    tty36    tty44    tty52    tty60    
+tty12    tty20    tty29    tty37    tty45    tty53    tty61    
+tty13    tty21    tty3     tty38    tty46    tty54    tty62    
+tty14    tty22    tty30    tty39    tty47    tty55    tty63    
+tty15    tty23    tty31    tty4     tty48    tty56    tty7     
+root@imx6qsabresd:~# cat /dev/ttymxc1 
+
+
+
+
+
+devin@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test$ ls
+main.cpp              moc_widget.cpp    Protocol_test           widget.h
+main.o                moc_widget.o      Protocol_test.pro       widget.o
+Makefile              protocoldeal.cpp  Protocol_test.pro.user  widget.ui
+moc_protocoldeal.cpp  protocoldeal.h    ui_widget.h
+moc_protocoldeal.o    protocoldeal.o    widget.cpp
+devin@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test$ scp Protocol_test root@192.168.152.139:/home/root/
+The authenticity of host '192.168.152.139 (192.168.152.139)' can't be established.
+RSA key fingerprint is 7c:8c:c0:69:47:02:02:bb:fe:aa:dc:a0:63:40:1e:68.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.152.139' (RSA) to the list of known hosts.
+Protocol_test                                 100%  758KB 758.0KB/s   00:00    
+devin@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test$ make
+make: Nothing to be done for `first'.
+devin@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test$ scp Protocol_test root@192.168.152.139:/home/root/
+
+
+
+devin@ubuntu:~/Desktop/Repository/Qt_project/Qt_project/Qt-widget-project/Protocol_test$ ssh root@192.168.152.139
+root@imx6qsabresd:~# 
+root@imx6qsabresd:~# 
+root@imx6qsabresd:~# ls
+Protocol_test  ShowWifi  ShowWifi.bak  WifiScan  a.txt	connect  demo.sh  hitme  mnt  test.sh
+root@imx6qsabresd:~# ./Protocol_test 
+This application failed to start because it could not find or load the Qt platform plugin "xcb".
+
+Available platform plugins are: eglfs, minimal, minimalegl, offscreen, wayland-egl, wayland.
+
+Reinstalling the application may fix this problem.
+Aborted
+root@imx6qsabresd:~# ./Protocol_test  platform wayland
+This application failed to start because it could not find or load the Qt platform plugin "xcb".
+
+Available platform plugins are: eglfs, minimal, minimalegl, offscreen, wayland-egl, wayland.
+
+Reinstalling the application may fix this problem.
+Aborted
+root@imx6qsabresd:~# ./Protocol_test  -platform wayland
+Using Wayland-EGL
+
+
+
+
+
+
+Available platform plugins are: eglfs, minimal, minimalegl, offscreen, wayland-egl, wayland.
+
+Reinstalling the application may fix this problem.
+Aborted
+root@imx6qsabresd:~# ./KONE_Demo -platform elfs 
+This application failed to start because it could not find or load the Qt platform plugin "elfs".
+
+Available platform plugins are: eglfs, minimal, minimalegl, offscreen, wayland-egl, wayland.
+
+Reinstalling the application may fix this problem.
+Aborted
+root@imx6qsabresd:~# ./KONE_Demo -platform eglfs&
+eglfs 是指不含有图形界面的参数 wayland是包含图形界面的参数
+
