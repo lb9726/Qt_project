@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FlrmapBar</class>
+ <widget class="QWidget" name="FlrmapBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>730</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#FlrmapBar { background-color: rgba(255, 255, 255, 0); }
+
+QWidget#preview { border-image: url(:/rc/15_Flrmap/edit_num.png);}
+
+QPushButton#btn_del{ font: bold &quot;Arial&quot;; font-size: 24pt; color: rgba(255,255,255,255); }
+
+QPushButton#btn_level, QPushButton#btn_mapping, QPushButton#btn_audio{ font: bold &quot;Arial&quot;; font-size: 24pt; color: rgba(0,160,233,255); }
+
+QPushButton#btn_level{ border-image: url(:/rc/15_Flrmap/framedark.png); }
+QPushButton#btn_level::pressed{ border-image: url(:/rc/15_Flrmap/framelight.png);  background-color: rgb(255, 85, 0); }
+
+QPushButton#btn_mapping{ border-image: url(:/rc/15_Flrmap/framedark.png); }
+QPushButton#btn_mapping::pressed{ border-image: url(:/rc/15_Flrmap/framelight.png);  background-color: rgb(255, 85, 0); }
+
+QPushButton#btn_audtest{ border-image: url(:/rc/15_Flrmap/btn_audio.png); }
+QPushButton#btn_audtest::pressed{ border-image: url(:/rc/15_Flrmap/btn_audio.png);  background-color: rgb(255, 85, 0); }
+
+QPushButton#btn_audio{ border-image: url(:/rc/15_Flrmap/framedark.png); }
+QPushButton#btn_audio::pressed{ border-image: url(:/rc/15_Flrmap/framelight.png);  background-color: rgb(255, 85, 0); }
+
+QPushButton#btn_del{ border-image: url(:/rc/15_Flrmap/btndel.png); }
+QPushButton#btn_del::pressed{ border-image: url(:/rc/15_Flrmap/btnlight.png);  }
+
+QPushButton#btn_switch{ border-image: url(:/rc/15_Flrmap/undo.png); }
+QPushButton#btn_switch::pressed{ border-image: url(:/rc/15_Flrmap/undo.png); background-color: rgb(255, 85, 0);  }
+
+QLineEdit{ border-image: url(:/rc/15_Flrmap/edit_num.png); background-color: rgba(255, 255, 255, 0); font: large &quot;Arial&quot;; font-size: 26pt; color: rgba(255,255,255,250); border: 0px solid rgb(10,10,10);/*border-radius: 15px;*/}
+
+QLabel#label_mapping { border-image: url(:/rc/15_Flrmap/edit_num.png); }
+</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QPushButton" name="btn_level">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Level</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="LineEdit" name="edit_level">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btn_mapping">
+     <property name="text">
+      <string>Text</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stacked_mapping">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page_char">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="LineEdit" name="edit_mapping">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_img">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_mapping">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_switch">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton#btn_switch::pressed { border:none; background-color: qlineargradient(spread:pad, x1:0.04, y1:0, x2:0, y2:1, stop:0 rgba(255, 85, 0, 255), stop:1 rgba(255, 170, 0, 255));}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../../BST_SODIMAS/setting_sodimas/setting.qrc">
+           <normaloff>:/0_common/rc/0_common/undo.png</normaloff>:/0_common/rc/0_common/undo.png</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="preview" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>71</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>71</width>
+       <height>41</height>
+      </size>
+     </property>
+     <widget class="QLabel" name="label_hundred">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>2</y>
+        <width>16</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_ten">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>2</y>
+        <width>16</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_single">
+      <property name="geometry">
+       <rect>
+        <x>47</x>
+        <y>2</y>
+        <width>16</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btn_audio">
+     <property name="text">
+      <string>Audio</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="LineEdit" name="edit_audio">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btn_audtest">
+     <property name="minimumSize">
+      <size>
+       <width>38</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btn_del">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Del</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>btn_level</zorder>
+  <zorder>btn_mapping</zorder>
+  <zorder>edit_level</zorder>
+  <zorder>preview</zorder>
+  <zorder>btn_del</zorder>
+  <zorder>edit_audio</zorder>
+  <zorder>btn_audio</zorder>
+  <zorder>btn_audtest</zorder>
+  <zorder>stacked_mapping</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">bstui.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../BST_SODIMAS/setting_sodimas/setting.qrc"/>
+ </resources>
+ <connections/>
+</ui>
+

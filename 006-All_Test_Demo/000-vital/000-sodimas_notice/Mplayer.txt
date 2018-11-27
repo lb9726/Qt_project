@@ -1,0 +1,28 @@
+mplayer -slave -input file=/tmp/musicplayer_fifo M0.wav > /dev/null &
+mplayer -slave -ao alsa -loop 0 -input file=/tmp/musicplayer_fifo /usr/bst/usrfs/Theme/sodimas/music/M0.wav > /dev/null &
+echo "volume 10 1" > /tmp/musicplayer_fifo 改变音量
+
+
+mplayer -slave -input file=/tmp/musicplayer_fifo M0.wav > /dev/null &
+
+mplayer：mplayer -slave -input file=/tmp/musicplayer_fifo M0.wav > /dev/null &
+
+
+使用如下命令
+创建管道：
+mkfifo /tmp/musicplayer_fifo
+
+
+mplayer -slave -ao alsa -loop 0 -input file=/tmp/musicplayer_fifo /usr/bst/usrfs/Theme/sodimas/music/M0.wav > /dev/null &
+echo "volume 20 1" > /tmp/musicplayer_fifo 使用这条命令控制音量，有效，音量确实减小了，但是紧接着输出了一条警告
+[AO_ALSA] Unable to find simple control 'PCM',0.
+此时如果再多次写音量，不会出现上述的警告
+
+
+等待这wav文件第一次播放完成之后，第二次播放时，音量明显增大，上一步输入的音量不起作用了，必须重新执行一次才生效，而执行完成后又有一条同样的警告
+[AO_ALSA] Unable to find simple control 'PCM',0.
+
+如此循环往复
+
+总结：
+每次在第一次播放音乐时会发出 噗 的声音，每次循环结束，重新播放时也会发出 噗 的声音，在这期间写音量并不会导致发出 噗 的声音

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>LoginScreen.qml</file>
+        <file>RegisterScreen.qml</file>
+        <file>RestorePasswordScreen.qml</file>
+        <file>SwipeScreen.qml</file>
+        <file>SwipeView_Test.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ECMAScript.qml</file>
+        <file>String_Test.qml</file>
+        <file>RegExp_Test.qml</file>
+    </qresource>
+</RCC>

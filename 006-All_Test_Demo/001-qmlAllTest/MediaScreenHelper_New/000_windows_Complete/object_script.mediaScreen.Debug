@@ -1,0 +1,17 @@
+INPUT(
+./debug\main.o
+./debug\configureholder.o
+./debug\ctranslator.o
+./debug\mediascreen.o
+./debug\qdevicewatcher.o
+./debug\qdevicewatcher_win32.o
+./debug\usbeventfilter_win32.o
+./debug\usbhelper_win32.o
+./debug\qrc_qml.o
+./debug\moc_qdevicewatcher.o
+./debug\moc_qdevicewatcher_p.o
+./debug\moc_usbhelper_win32.o
+./debug\moc_configureholder.o
+./debug\moc_ctranslator.o
+./debug\moc_mediascreen.o
+);

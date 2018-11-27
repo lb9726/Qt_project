@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <lastmoditime>2017-06-26 17:02:56</lastmoditime>
+    <createtime>2017-06-26 15:45:09</createtime>
+    <filetype>device_define_file</filetype>
+    <password>1234</password>
+    <configure>
+        <physical>
+            <player>
+                <admusicvol para="num" list="0;100">5</admusicvol>
+                <beepvol para="num" list="0;100">100</beepvol>
+                <liftarvvol para="num" list="0;100">100</liftarvvol>
+                <liftflrvol para="num" list="0;100">100</liftflrvol>
+            </player>
+            <led>
+                <normal para="enum" list="slow;fast;high">fast</normal>
+                <busy para="enum" list="slow;fast;high">high</busy>
+                <error para="enum" list="slow;fast;high">slow</error>
+            </led>
+            <lcd>
+                <rotation para="enum" list="0;90;180;270">0</rotation>
+                <luminance para="num" list="0;100">100</luminance>
+                <standby para="num" list="0;3600000">30000</standby>
+                <standbyluminance para="num" list="0;100">30</standbyluminance>
+                <screensave para="num" list="10000;3600000">1800000</screensave>
+                <screensavehold para="num" list="1000;60000">5000</screensavehold>
+            </lcd>
+            <lanc>
+                <wifion para="bool">false</wifion>
+                <wifiip para="string">192.168.1.10</wifiip>
+                <dhcp para="bool">true</dhcp>
+                <udp para="num" list="60000;65000">60002</udp>
+                <tcp para="num" list="60000;65000">60001</tcp>
+                <waittime para="num" list="10000;3600000">1800000</waittime>
+            </lanc>
+            <com>
+                <autotest para="bool">false</autotest>
+                <testfreq para="num" list="500;3600000">2500</testfreq>
+		<safOpenMessage para="bool">true</safOpenMessage>
+            </com>
+        </physical>
+        <logic>
+            <thememanager>
+                <layout para="enum" list="0;1;2;3">0</layout>
+                <activetheme para="enum" mode="sodimas">sodimas</activetheme>
+            </thememanager>
+        </logic>
+    </configure>
+</root>

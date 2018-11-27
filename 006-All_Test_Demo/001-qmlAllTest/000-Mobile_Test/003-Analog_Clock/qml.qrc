@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Clock.qml</file>
+        <file>ClockBackground.qml</file>
+        <file>ClockDigits.qml</file>
+        <file>ClockHand.qml</file>
+    </qresource>
+</RCC>

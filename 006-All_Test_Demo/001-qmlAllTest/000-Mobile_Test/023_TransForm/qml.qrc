@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>TransForm_Test.qml</file>
+        <file>images/icon512.png</file>
+    </qresource>
+</RCC>

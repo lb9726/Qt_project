@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Shade_Effect.qml</file>
+        <file>images/icon512.png</file>
+    </qresource>
+</RCC>

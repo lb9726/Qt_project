@@ -1,0 +1,32 @@
+#!/bin/sh
+
+mkdir -p /opt/Qt4.5.3-static/lib/fonts
+mount /usr/bst/SYSTEM/Middleware/Qt/fonts /opt/Qt4.5.3-static/lib/fonts
+
+export QWS_DISPLAY=LinuxFB:mmWidth190:mmHeight108:0
+export QWS_SIZE=480x272
+
+BuffFile=/tmp/qtenvir.tmp
+/mnt/nand1-2/SYSTEM/Physical/Dial/GetRotation /mnt/nand1-2/BOOT/Device.mdp 270 90 180
+LCD_ROTATION=$?
+if [ $LCD_ROTATION -eq 1 ];then
+    echo "software rotate 90"
+    export QWS_DISPLAY=Transformed:Rot90:$QWS_DISPLAY
+elif [ $LCD_ROTATION -eq 2 ];then
+    echo "software rotate 180"
+    export QWS_DISPLAY=Transformed:Rot180:$QWS_DISPLAY
+elif [ $LCD_ROTATION -eq 3 ];then
+    echo "software rotate 270"
+    export QWS_DISPLAY=Transformed:Rot270:$QWS_DISPLAY
+else
+    echo "software rotate 0"
+    export QWS_DISPLAY=Transformed:Rot0:$QWS_DISPLAY
+fi
+echo $QWS_DISPLAY > $BuffFile
+
+while read line
+do
+    export QWS_DISPLAY=$line
+done < $BuffFile
+
+echo $QWS_DISPLAY

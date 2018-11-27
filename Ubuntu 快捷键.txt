@@ -1,0 +1,48 @@
+ctrl super d 可以快速进入桌面
+
+显示桌面快捷键：ctrl + super + d　　　可以长按super建，看看快捷键都有哪些　super键即是windows键
+
+
+＊ctrl + A（ahead) ,使终端插入符移动起始位置。
+＊ctrl + Ｅ(end) ,使终端插入符移动末尾位置。
+
+＊lowriter + filename 打开 LibreOfficeWriter文件。
+
+* mplayer -loop n filename 用smplayer 播放filename文件n次，n=0表示重复播放
+
+*在shell命令行下让mplayer循环播放和播放列表
+    $mplayer -playlist <playlist.m3u> -loop <times>
+    times为播放次数，times=0 时一直循环。
+    例如：
+
+    $mplayer -loop 0 xxx.mp3  #循环单首歌曲
+
+＊用shell脚本制作播放列表
+
+    vim music.sh
+    #music.sh
+    #!/bin/sh
+    musicPath="/music/..."      #播放文件目录
+    cd $musicPath
+    ls | grep -G "\.[WwMm].[Aa3]$" > music.lst
+    然后即可使用命令循环播放某目录下音视频文件
+    $mplayer -playlist music.lst -loop 0
+
+
+* nautilus + dir 在图形界面打开dir 目录。  linux如何通过命令行（在终端下）打开一个文件夹，而这个文件夹是以图形模式下打开的。请高手回答呀。比如gksu cd /home好象不行啊，是不是还需要加一个参数啊。
+
+*通过命令xdg-open打开各种格式文件，甚至是网页，像打开文件一样简单
+
+
+
+STEP BY STEP：
+
+1.在左边Software Center 中找到一个新的app名字叫MyUnity，找到后点击install安装
+
+
+2.找到刚才安装的MyUnity，并打开， 在其Desktop 标签下面找到 Active “Show Desktop” icon 
+
+3.点击右边的开关使其变为On 即可
+
+
+4.看左面Launcher最下面有个四四方方的icon这个就是显示桌面按钮了！

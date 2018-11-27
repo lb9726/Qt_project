@@ -1,0 +1,60 @@
+<RCC>
+    <qresource prefix="/SetBar">
+        <file>rc/SetBar/switch-on.png</file>
+        <file>rc/SetBar/button-off.png</file>
+        <file>rc/SetBar/button-on.png</file>
+        <file>rc/SetBar/switch-off.png</file>
+        <file>rc/SetBar/log.png</file>
+        <file>rc/SetBar/theme.png</file>
+        <file>rc/SetBar/chart.png</file>
+        <file>rc/SetBar/check-off.png</file>
+        <file>rc/SetBar/check-on.png</file>
+        <file>rc/SetBar/spinadd-on.png</file>
+        <file>rc/SetBar/spinminus-on.png</file>
+        <file>rc/SetBar/spin-off.png</file>
+        <file>rc/SetBar/spin-on.png</file>
+        <file>rc/SetBar/ip-light.png</file>
+        <file>rc/SetBar/ip-edit.png</file>
+        <file>rc/SetBar/combox-off.png</file>
+        <file>rc/SetBar/combox-add-on.png</file>
+        <file>rc/SetBar/combox-minus-on.png</file>
+        <file>rc/SetBar/time-edit.png</file>
+        <file>rc/SetBar/time-minus-on.png</file>
+        <file>rc/SetBar/ip-add-on.png</file>
+        <file>rc/SetBar/ip-minus-on.png</file>
+        <file>rc/SetBar/time-add-on.png</file>
+    </qresource>
+    <qresource prefix="/Completer">
+        <file>rc/Completer/countries.txt</file>
+        <file>rc/Completer/wordlist.txt</file>
+    </qresource>
+    <qresource prefix="/Clock">
+        <file>rc/Clock/1.png</file>
+        <file>rc/Clock/2.png</file>
+        <file>rc/Clock/3.png</file>
+        <file>rc/Clock/4.png</file>
+        <file>rc/Clock/5.png</file>
+        <file>rc/Clock/6.png</file>
+        <file>rc/Clock/7.png</file>
+        <file>rc/Clock/clock.png</file>
+        <file>rc/Clock/dot.png</file>
+        <file>rc/Clock/hour.png</file>
+        <file>rc/Clock/minute.png</file>
+        <file>rc/Clock/num--.png</file>
+        <file>rc/Clock/num-0.png</file>
+        <file>rc/Clock/num-1.png</file>
+        <file>rc/Clock/num-2.png</file>
+        <file>rc/Clock/num-3.png</file>
+        <file>rc/Clock/num-4.png</file>
+        <file>rc/Clock/num-5.png</file>
+        <file>rc/Clock/num-6.png</file>
+        <file>rc/Clock/num-7.png</file>
+        <file>rc/Clock/num-8.png</file>
+        <file>rc/Clock/num-9.png</file>
+        <file>rc/Clock/num-maohao.png</file>
+        <file>rc/Clock/second.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>rc/bst.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+## set log levels ###
+log4j.rootLogger = debug , E
+
+### 保存异常信息到单独文件 ###
+log4j.appender.E = org.apache.log4j.RollingFileAppender
+log4j.appender.E.MaxBackupIndex=40
+log4j.appender.E.maxFileSize=128KB
+log4j.appender.E.File=
+log4j.appender.E.layout = org.apache.log4j.PatternLayout
+log4j.appender.E.layout.ConversionPattern = %-d{yyyy-MM-dd HH:mm:ss} - [ %p ] %m%n

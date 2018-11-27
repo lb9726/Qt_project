@@ -1,0 +1,85 @@
+{  
+   "appDesc": {  
+      "description": "SomeDescription",  
+      "message": "SomeMessage"  
+   },  
+   "appName": {  
+      "description": "Home",  
+      "message": "Welcome",  
+      "imp":["awesome","best","good"]  
+   }	
+}
+
+{"Array":[true,999,"string"],"Key":"Value","null":null}
+
+{"type":"sendallparameter","info":{"autotest":"false","liftflrvol":"50","liftarvvol":"50","admusicvol":100,"luminance":75,  "darklevel":30,"standby":230765,"rotation": 90,"layout":0}}
+
+
+{	
+    "type":"login",
+    "info":
+        {
+            "ssid":"sodimas",
+            "password":"xxxxx"
+        }
+}
+
+{"type":"login","info":{"ssid":"sodimas","password":"1234"}}
+
+{	
+    "type":"login",
+    "info":
+        {
+            "result":true
+        }
+}
+
+0x80 ID {"type":"login","info":{"result":true}} crc 0x81
+
+
+{
+    "type":"getallparameter",
+    "info":"get"
+}
+
+{"type":"getallparameter","info":"get"}
+		
+{
+    "type":"sendallparameter",
+    "info":
+    {
+        "autotest":false,				
+        "liftflrvol":50,  					
+        "liftarvvol":50,    				
+        "admusicvol":100,  						 
+        "luminance":75,   					
+        "darklevel":30,    					
+        "standby":230765,   			
+        "rotation": 90,    					
+        "layout":0         
+    }
+}
+
+{"type":"sendallparameter","info":{"autotest":false,"liftflrvol":50,"liftarvvol":50,"admusicvol":100,"luminance":75,   "darklevel":30,"standby":230765,"rotation": 90,"layout":0}}
+		
+{"type":"setparameter","info":{"autotest":false}}
+		
+{"type":"appupdateFinished","info":"true"}
+		
+{
+    "type":"reboot",
+    "info":true
+}
+
+{"type":"reboot","info":true} reboot是在设置完成参数之后，手机端发送是否确认修改配置参数，如果是，重启，重写xml文件，如果否
+
+
+    if (crc == BVT_ESC) // 校验位与0x7f &之后 不可能超过0x7f，因此不想要判断0x80和0x81的
+    {
+        mSendBufferFrame.append((char)BVT_ESC);
+        mSendBufferFrame.append((char)BVT_ESC_AF);
+    }
+    else
+    {
+        mSendBufferFrame.append(crc);
+    }

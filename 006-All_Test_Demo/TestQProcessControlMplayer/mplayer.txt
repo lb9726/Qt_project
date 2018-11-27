@@ -1,0 +1,10 @@
+mplayer -slave -idle
+loadfile "/usr/bst/usrfs/Theme/sodimas/music/M0.wav"
+loadfile /usr/bst/usrfs/Theme/sodimas/music/M0.wav
+  
+loadfile /usr/bst/usrfs/Theme/sodimas/media/M42.wav
+mplayer -slave -idle -quiet -ao alsa -volume null
+   
+mplayer -slave -quiet -ao alsa -volume 40 null /usr/bst/usrfs/Theme/sodimas/music/M0.wav
+   
+-idle mplayer是不会退出的

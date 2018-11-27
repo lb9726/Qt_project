@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>WebSocket_Test.qml</file>
+    </qresource>
+</RCC>

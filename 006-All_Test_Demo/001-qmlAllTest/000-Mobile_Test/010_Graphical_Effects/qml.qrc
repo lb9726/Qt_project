@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BrightnessContrastTab.qml</file>
+        <file>DesaturateTab.qml</file>
+        <file>DirectionalBlurTab.qml</file>
+        <file>images/icon512.png</file>
+    </qresource>
+</RCC>

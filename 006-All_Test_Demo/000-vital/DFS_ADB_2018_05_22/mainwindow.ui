@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>1280</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel#label_2,QLabel#label_3{font:bold large &quot;Arial&quot;;font-size: 20px; color:white;}
+
+QWidget{background-color:rgba(255,255,255,0);}
+QWidget#widget_passwd{background-color:rgba(255,255,255,50);border-radius:20px;}
+
+QLabel#label_logo{border-image:url(:/rc/logo.png);}
+QLabel#label_echo{font:bold larger&quot;Arial&quot;;font-size: 150px; color:white;}
+QLabel#label_message,QLabel#label_inputDF{font:bold large &quot;Arial&quot;;font-size: 55px; color:white;}
+QLabel#label_elevator{ font: bold large &quot;Arial&quot;; font-size:100pt; color: rgb(255, 255, 255); }
+QLabel#label_passwd{font:bold large &quot;Arial&quot;;font-size: 51px; color:white;background-color: rgba(100, 100, 100, 50);border-radius:10;}
+QWidget#widget{background-color:rgba(255,255,255,200);}
+
+QScrollArea{border:none;background-color:rgba(0,0,0,0);}
+
+QScrollBar:vertical { background: rgba(0, 0, 0, 0);  width: 9px;  margin: 0px 0 0px 0; }
+QScrollBar::handle:vertical { background: rgba(195, 195, 195, 255); min-height: 20px;  margin: 2px 0px 1px 0px;   border-radius: 3px;  border: 0px dashed rgba(180,130,100,255); }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0px; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {  background: none; }
+
+QScrollBar:horizontal  { background: rgba(0, 0, 0, 0);  height: 9px;  margin: 0px 0 0px 0; }
+QScrollBar::handle:horizontal  { background: rgba(195, 195, 195, 255);  min-width: 20px;  margin: 2px 0px 1px 0px;   border-radius: 3px;  border: 0px dashed rgba(180,130,100,255); }
+QScrollBar::add-line:horizontal , QScrollBar::sub-line:horizontal  { height: 0px; }
+QScrollBar::add-page:horizontal , QScrollBar::sub-page:horizontal {  background: none; }
+
+QWidget#page_elevator{border-image:url(:/rc/bg1.png);}
+QWidget#page_setMenu{border-image:url(:/SetMenu/rc/SetMenu/bg_menu.png);}
+QWidget#page_passwd{border-image:url(:/SetMenu/rc/SetMenu/bg_menu.png);}
+
+QPushButton#btn_0{border-image:url(:/rc/btn_0.png);}
+QPushButton#btn_0::pressed{border-image:url(:/rc/btn_0_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_1{border-image:url(:/rc/btn_1.png);}
+QPushButton#btn_1::pressed{border-image:url(:/rc/btn_1_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_2{border-image:url(:/rc/btn_2.png);}
+QPushButton#btn_2::pressed{border-image:url(:/rc/btn_2_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_3{border-image:url(:/rc/btn_3.png);}
+QPushButton#btn_3::pressed{border-image:url(:/rc/btn_3_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_4{border-image:url(:/rc/btn_4.png);}
+QPushButton#btn_4::pressed{border-image:url(:/rc/btn_4_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_5{border-image:url(:/rc/btn_5.png);}
+QPushButton#btn_5::pressed{border-image:url(:/rc/btn_5_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_6{border-image:url(:/rc/btn_6.png);}
+QPushButton#btn_6::pressed{border-image:url(:/rc/btn_6_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_7{border-image:url(:/rc/btn_7.png);}
+QPushButton#btn_7::pressed{border-image:url(:/rc/btn_7_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_8{border-image:url(:/rc/btn_8.png);}
+QPushButton#btn_8::pressed{border-image:url(:/rc/btn_8_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_9{border-image:url(:/rc/btn_9.png);}
+QPushButton#btn_9::pressed{border-image:url(:/rc/btn_9_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_enter{border-image:url(:/rc/btn_enter.png);}
+QPushButton#btn_enter::pressed{border-image:url(:/rc/btn_enter_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+QPushButton#btn_del{border-image:url(:/rc/btn_delete.png);}
+QPushButton#btn_del::pressed{border-image:url(:/rc/btn_delete_light.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+
+
+
+QPushButton#btn_pass0{border-image:url(:/rc/btn_0.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass0::pressed{border-image:url(:/rc/btn_0_light.png);background-color:rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass1{border-image:url(:/rc/btn_1.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass1::pressed{border-image:url(:/rc/btn_1_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass2{border-image:url(:/rc/btn_2.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass2::pressed{border-image:url(:/rc/btn_2_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass3{border-image:url(:/rc/btn_3.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass3::pressed{border-image:url(:/rc/btn_3_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass4{border-image:url(:/rc/btn_4.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass4::pressed{border-image:url(:/rc/btn_4_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass5{border-image:url(:/rc/btn_5.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass5::pressed{border-image:url(:/rc/btn_5_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass6{border-image:url(:/rc/btn_6.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass6::pressed{border-image:url(:/rc/btn_6_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass7{border-image:url(:/rc/btn_7.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass7::pressed{border-image:url(:/rc/btn_7_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass8{border-image:url(:/rc/btn_8.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass8::pressed{border-image:url(:/rc/btn_8_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_pass9{border-image:url(:/rc/btn_9.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_pass9::pressed{border-image:url(:/rc/btn_9_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_passEnter{border-image:url(:/rc/btn_enter.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_passEnter::pressed{border-image:url(:/rc/btn_enter_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+QPushButton#btn_passdel{border-image:url(:/rc/btn_delete.png);background-color: rgba(200, 200, 200, 50);border-radius:10;}
+QPushButton#btn_passdel::pressed{border-image:url(:/rc/btn_delete_light.png);background-color: rgba(200, 200, 200, 150);border-radius:10;}
+
+
+QWidget#page_setFlrMapping,QWidget#page_setArrMapping{border-image: url(:/SetMenu/rc/SetMenu/setmenu.png);}
+QLabel#label_setmenu,QWidget#page_setmapping,QLabel#label_setmapping,QLabel#label_version{font:bold larger&quot;Arial&quot;;font-size: 30px; color:white;}
+
+
+QLabel#label_elevtAmapping,QLabel#label_elevtBmapping,QLabel#label_elevtCmapping,QLabel#label_elevtDmapping{font:bold larger&quot;Arial&quot;;font-size: 26px; color:white;}
+
+QPushButton#btn_menu{border-image:url(:/SetMenu/rc/btn_menu.png);font:bold larger&quot;Arial&quot;;font-size: 22px; color:white;}
+QPushButton#btn_menu::pressed{border-image:url(:/SetMenu/rc/btn_menu_light.png);font:bold larger&quot;Arial&quot;;font-size: 22px; color:white;}
+QPushButton#btn_mapping{border-image:url(:/SetMenu/rc/btn_menu.png);font:bold larger&quot;Arial&quot;;font-size: 22px; color:white;}
+QPushButton#btn_mapping::pressed{border-image:url(:/SetMenu/rc/btn_menu_light.png);font:bold larger&quot;Arial&quot;;font-size: 22px; color:white;}
+QPushButton#btn_version{border-image:url(:/SetMenu/rc/btn_menu.png);font:bold larger&quot;Arial&quot;;font-size: 22px; color:white;}
+QPushButton#btn_version::pressed{border-image:url(:/SetMenu/rc/btn_menu_light.png);font:bold larger&quot;Arial&quot;;font-size: 22px; color:white;}
+
+QWidget#widget_item1{border-image:url(:/SetMenu/rc/SetMenu/setitem.png);}
+QLabel#label_light_name,QLabel#label_light_value,QLabel#label_volume_name,QLabel#label_volume_value{font:bold larger&quot;Arial&quot;;font-size: 25px; color:white;}
+
+
+
+QPushButton#btn_left_light,QPushButton#btn_left_volume{border-image:url(:/SetMenu/rc/SetMenu/left_off.png);}
+
+QPushButton#btn_left_light::pressed,QPushButton#btn_left_volume::pressed{border-image:url(:/SetMenu/rc/SetMenu/left_on.png);}
+
+QPushButton#btn_right_light,QPushButton#btn_right_volume{border-image:url(:/SetMenu/rc/SetMenu/right_off.png);}
+QPushButton#btn_right_light::pressed,QPushButton#btn_right_volume::pressed{border-image:url(:/SetMenu/rc/SetMenu/right_on.png);}
+
+QLabel#label_Aleft,QLabel#label_Bleft,QLabel#label_Cleft,QLabel#label_Dleft{border-image:url(:/rc/dir_left.png);}
+QLabel#label_Aright,QLabel#label_Bright,QLabel#label_Cright,QLabel#label_Dright{border-image:url(:/rc/dir_right.png);}
+
+/*QLabel#label_direction{border-image:url(:/rc/dir_left.png);}*/
+
+QPushButton#btn_back{border-image:url(:/SetMenu/rc/SetMenu/btn_back.png);}
+QPushButton#btn_back::pressed{border-image:url(:/SetMenu/rc/SetMenu/btn_back_light.png);}
+QPushButton#btn_flrmapping{border-image:url(:/SetMenu/rc/SetMenu/btn_floormap.png);}
+QPushButton#btn_flrmapping::checked{border-image:url(:/SetMenu/rc/SetMenu/btn_floormap_light.png);}
+QPushButton#btn_arrmapping{border-image:url(:/SetMenu/rc/SetMenu/btn_arrowmap.png);}
+QPushButton#btn_arrmapping::checked{border-image:url(:/SetMenu/rc/SetMenu/btn_arrowmap_light.png);}</string>
+  </property>
+  <widget class="QWidget" name="Desktop">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>1280</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>1280</height>
+    </size>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_elevator">
+       <widget class="QStackedWidget" name="stackedWidget_tips">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>60</y>
+          <width>711</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="page_indicator">
+         <widget class="QLabel" name="label_direction">
+          <property name="geometry">
+           <rect>
+            <x>423</x>
+            <y>81</y>
+            <width>129</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_elevator">
+          <property name="geometry">
+           <rect>
+            <x>173</x>
+            <y>70</y>
+            <width>146</width>
+            <height>149</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_echo">
+         <widget class="QLabel" name="label_echo">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>70</y>
+            <width>531</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_message">
+         <widget class="QLabel" name="label_message">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>70</y>
+            <width>671</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_inputDF">
+         <widget class="QLabel" name="label_inputDF">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>691</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>500</y>
+          <width>711</width>
+          <height>691</height>
+         </rect>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>711</width>
+           <height>691</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <widget class="QPushButton" name="btn_5">
+          <property name="geometry">
+           <rect>
+            <x>242</x>
+            <y>199</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_0">
+          <property name="geometry">
+           <rect>
+            <x>242</x>
+            <y>540</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_enter">
+          <property name="geometry">
+           <rect>
+            <x>470</x>
+            <y>540</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_1">
+          <property name="geometry">
+           <rect>
+            <x>25</x>
+            <y>24</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_8">
+          <property name="geometry">
+           <rect>
+            <x>242</x>
+            <y>378</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_9">
+          <property name="geometry">
+           <rect>
+            <x>470</x>
+            <y>378</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_6">
+          <property name="geometry">
+           <rect>
+            <x>470</x>
+            <y>199</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_4">
+          <property name="geometry">
+           <rect>
+            <x>25</x>
+            <y>199</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_del">
+          <property name="geometry">
+           <rect>
+            <x>25</x>
+            <y>539</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_7">
+          <property name="geometry">
+           <rect>
+            <x>25</x>
+            <y>378</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_2">
+          <property name="geometry">
+           <rect>
+            <x>242</x>
+            <y>24</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_3">
+          <property name="geometry">
+           <rect>
+            <x>470</x>
+            <y>24</y>
+            <width>203</width>
+            <height>126</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_passwd">
+       <widget class="QWidget" name="widget_passwd" native="true">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>230</y>
+          <width>731</width>
+          <height>841</height>
+         </rect>
+        </property>
+        <widget class="QPushButton" name="btn_pass7">
+         <property name="geometry">
+          <rect>
+           <x>64</x>
+           <y>550</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass4">
+         <property name="geometry">
+          <rect>
+           <x>64</x>
+           <y>410</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass1">
+         <property name="geometry">
+          <rect>
+           <x>64</x>
+           <y>270</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass8">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>550</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass9">
+         <property name="geometry">
+          <rect>
+           <x>495</x>
+           <y>550</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass5">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>410</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass0">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>693</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass2">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>270</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass6">
+         <property name="geometry">
+          <rect>
+           <x>495</x>
+           <y>410</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_pass3">
+         <property name="geometry">
+          <rect>
+           <x>495</x>
+           <y>270</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_passwd">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>60</y>
+           <width>551</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>64</x>
+           <y>225</y>
+           <width>611</width>
+           <height>3</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_passEnter">
+         <property name="geometry">
+          <rect>
+           <x>495</x>
+           <y>693</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_passdel">
+         <property name="geometry">
+          <rect>
+           <x>64</x>
+           <y>693</y>
+           <width>180</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_setMenu">
+       <widget class="QStackedWidget" name="stacked_MenuPage">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>490</y>
+          <width>471</width>
+          <height>621</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="page_setArrMapping">
+         <widget class="QLabel" name="label_setmenu">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>371</width>
+            <height>66</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Arrow Map</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="MenuItem" name="widget_arrow_A" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>125</y>
+            <width>452</width>
+            <height>82</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="MenuItem" name="widget_arrow_B" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>206</y>
+            <width>452</width>
+            <height>82</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="MenuItem" name="widget_arrow_D" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>369</y>
+            <width>452</width>
+            <height>82</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="MenuItem" name="widget_arrow_C" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>288</y>
+            <width>452</width>
+            <height>82</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_setFlrMapping">
+         <widget class="QLabel" name="label_setmapping">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>371</width>
+            <height>66</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Floor Map</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="MenuItem" name="widget_key_enter" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>125</y>
+            <width>452</width>
+            <height>82</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="MenuItem" name="widget_key_del" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>206</y>
+            <width>452</width>
+            <height>82</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="MenuItem" name="widget_key_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>288</y>
+            <width>451</width>
+            <height>80</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_version">
+         <widget class="QLabel" name="label_version">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>60</y>
+            <width>191</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>version1.0</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="btn_flrmapping">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>301</y>
+          <width>281</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_arrmapping">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>160</y>
+          <width>281</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_back">
+        <property name="geometry">
+         <rect>
+          <x>353</x>
+          <y>245</y>
+          <width>116</width>
+          <height>110</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>60</y>
+          <width>54</width>
+          <height>12</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>v1.0</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MenuItem</class>
+   <extends>QWidget</extends>
+   <header>menuitem.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

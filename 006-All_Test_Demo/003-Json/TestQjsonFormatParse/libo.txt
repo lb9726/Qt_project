@@ -1,0 +1,17 @@
+{"type":"login","info":{"ssid":"sodimas","password":"1234"}}
+{"type":"login","info":{"result":true}}
+{"type":"getallparameter","info":"get"}
+{"info":{"admusicvol":0,"autotest":false,"darklevel":0,"layout":0,"liftarvvol":0,"liftflrvol":0,"luminance":0,"rotation":0,"standby":0},"type":"setparameter"}
+{"type":"setparameter","info":{"autotest":false}}
+{"type":"setparameter","info":{"liftflrvol":50}}
+{"type":"setparameter","info":{"liftarvvol":20}}
+{"type":"setparameter","info":{"admusicvol":99}}
+{"type":"setparameter","info":{"luminance":75}}
+{"type":"setparameter","info":{"standby":230765}}
+{"type":"setparameter","info":{"rotation":90}}
+{"type":"setparameter","info":{"layout":0}}
+{"type":"updateProgress","info": 0}
+{"type":"reboot","info":true}
+{"type":"sendfile","info":{"flag" :true,"filename":"sodimas.zip"}}
+{"type":"heartBeat","info": 1}
+{"type":"appupdateFinished","info":true}	

@@ -1,0 +1,36 @@
+/usr/module
+cat udhcpd.conf 
+
+cat hostapd.conf
+[root@IoT-A6G2C module]# cat udhcpd.conf 
+#璁剧疆璧峰鍜岀粨鏉烮P鍦板潃鑼冨洿
+start 192.168.5.10
+end 192.168.5.30 --->支持21个，可以改成只支持一个的
+
+interface wlan0
+
+option subnet 255.255.255.0
+option router 192.168.5.1
+option domain local
+option lease 864000
+#echo "1" > /proc/sys/net/ipv4/ip_forward
+[root@IoT-A6G2C module]# 
+
+
+[root@IoT-A6G2C ~]# ls /etc/
+asound.conf          issue                qt_pointercal
+bluetooth/           ld.so.cache          random-seed
+dbus-1/              ld.so.conf           resolv.conf
+dropbear/            ld.so.conf.d/        services
+enable_bt.sh         libnl/               shadow
+fstab                mtab                 socketcand.conf
+group                network/             ssh/
+hostname             nsswitch.conf        ssl/
+hosts                os-release           ts.conf
+init.d/              passwd               udev/
+inittab              pointercal           vsftpd.conf
+inputrc              profile              wpa_supplicant.conf
+
+cat /etc/init.d/S70vsftpd 
+
+cat /etc/init.d/

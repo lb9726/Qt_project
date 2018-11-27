@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/0.png</file>
+        <file>images/1.png</file>
+        <file>images/2.png</file>
+        <file>images/3.png</file>
+        <file>images/4.png</file>
+        <file>images/5.png</file>
+        <file>images/6.png</file>
+        <file>images/7.png</file>
+        <file>images/8.png</file>
+        <file>images/failure.png</file>
+        <file>images/flag.png</file>
+        <file>images/foundMine.png</file>
+        <file>images/haha.png</file>
+        <file>images/mine.png</file>
+        <file>images/welcome.png</file>
+        <file>images/welcome1.png</file>
+        <file>images/FirstInit.png</file>
+        <file>images/Smiling_face.png</file>
+    </qresource>
+</RCC>

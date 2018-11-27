@@ -1,0 +1,1 @@
+Ä{"info":{"admusicvol":0,"autotest":false,"darklevel":0,"layout":0,"liftarvvol":0,"liftflrvol":0,"luminance":0,"rotation":0,"standby":0},"type":"sendallparameter"}Å

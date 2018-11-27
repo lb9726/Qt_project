@@ -1,0 +1,135 @@
+ListView用来显示一个条目列表，条目对应的数据来自于Model,而每个条目的外观则由Delegate决定。
+我们可以将Delegate看成如何展示Item的一个模板。Andriod手机上常见的联系人界面，其实就是使用
+ListView实现的，而且Andriod的ListView和Qt Qucik的ListView使用同样的模式：Model,View,Item Template(Delegate).
+要使用ListView，必须为其指定一个Model，一个Delegate。
+Model可以是QML内建类型，如ListModel，XmlListModel，也可以是在C++中实现的QAbstractItemModel
+或QAbstractListModel的派生类。
+
+
+构建了一个简单的手机列表，展示了手机的型号，价格，制造商。使用上下键可以切换不同的手机，选中的手机
+有一个浅蓝色的高亮背景，同时字体放大，文字颜色变为红色。
+为了示例简单，我直接在声明ListView对象的同时为model属性初始化了一个ListModel。ListModel是专门
+定义列表数据的，它内部维护一个ListElement的列表。一个ListElement对象就代表一条数据。使用ListElement
+定义的数据条目可能是简单的，比如只有一个人名;也可能是复杂的，比如还有这个人的出生年月，性别;共同构成一个
+ListElement的一个或多个数据信息被成为role，它包含一个名字(role-name)和一个值(role-value)。role的定义
+就像QML对象属性定义那样简单，语法是这样的：<role-name>:<role-value>, 其中role-name必须以小写字母开头，
+role-value必须是简单的常量，如字符串，布尔值，数字或者是枚举值。
+在ListElement中定义的role，可以在Delegate中通过role-name来访问。示例定义的ListElement包含三个
+role: name , cost, manufacturer, 而Delegate则使用Row管理三个Text对象来展现这三个role，Text对象的text
+属性被绑定到role-name上。
+
+ListView的delegate属性类型是Component，在PhoneList.qml中定义了id为phoneDelegate的Component。phoneDelegate
+的顶层元素是Row，Row内嵌三个Text对象来展示Model定义的ListElement的三个role。ListView给delegate暴露了一个index
+属性，代表当前delegate实例对应的Item的索引位置，必要时可以使用它来访问数据。示例中实现了鼠标点选的效果;给delegate
+添加了MouseArea元素，在onClicked信号处理器中设置了ListView的currentIndex属性。
+
+ListView定义了delayRemove， isCurrentItem, nextSection, previousSection, section, view等附件属性，
+以及add, remove两个附件信号，可以在delegate中之间访问。不过要注意的是，只有delegate的顶层Item才可以
+直接使用这些附加属性和信号，非顶层Item则需要通过顶层Item的id来访问这些附件属性。示例中的delegate组件，
+顶层Item是一个Item对象，用于展示name，cost，manufacturer的Text对象通过wrapper.ListView.isCurrent判断
+本delegate实例呈现的数据是否是当前条目，如果是，则改变文字大小和颜色。注意，我们是通过类名直接访问附加属性的。
+示例中当前选中条目有一个浅蓝色的背景，它有ListView的highlight属性来指定的Component提供，它的Z序小于delegate
+实例化出来的Item对象。示例通过给highlight初始化一个Rectangle定义了高亮背景，如果你想实现复杂的高亮效果，
+也可以专门定义一个Component。与高亮效果相关的，还有很多属性，比如highlightFollowsCurrentItem为true时，
+你可以通过highlightMoveDuration和highlightMoveVelocity来控制动画的速度。与高亮相关的，还有highlightRangeMode，
+highlightResizeDuration，highlightResizeVelocity等属性，请查阅Qt帮助中的ListView文档。
+
+
+13.1.2  header
+通过为ListView的header属性设置一个Component，ListView就可以显示自定义的表头，表头将放在ListView的最开始，
+所有的Item之前。当你使用方向键浏览Item或者用鼠标在ListView内拖动时，表头随着拖动可能会变得不可见。
+表头在某些应用场景下可以让数据的可读性更好。比如前面的手机信息示例，如果添加了表头，别人一看就知道每一列的数据
+含义。PhoneList_Header.qml是修改后的文件。
+
+headerView是我定义表头组件，与delegate组件定义类似，使用三个Text对象分别来描述每一列数据的含义，设定字体大小，
+让字体变粗，还设定了每一列的宽度。ListView的headerItem属性保存了本ListView使用的，由header组件
+创建出来的Item。
+为ListView添加header并不会影响你在delegate中看到的index的值，index值依然是从0开始。
+
+
+13.1.3 footer
+footer属性允许我们指定ListView的页脚，footerItem保存了footer组件创建出来的Item对象，这个Item会被
+到ListView的末尾，在所有可见的Item之后。
+用footer可以干什么呢？随你吧！我这里只是简单地在footer内放置一个Text对象，显示当前选中的Item的数据
+有点像状态栏。
+
+footer组件的定义和header类似，没什么好说的。
+在QML中非只读属性变化时一般都会发射一个信号，通常可以使用类似与on<Propery>Changed的语法来定义对应的
+信号处理器，不过信号不带参数，Qt帮助可就没有告诉我们了，需要自己找源码来读或者不管它，直接在信号处理器中
+访问对应属性来访问当前值。
+
+ListView对应的c++类是QQuickListView,QQuickListView是QQuickItemVie(它没有对应的QML类型)的派生类，
+而QQuickItemView又是QQuickFilckable的派生类，QQuickFilckable对应QML中Flickable。ListView的currentIdex
+属性是从QQuickItemView继承来的，当它变化是发射的信号curentIndexChanged没有参数。
+为了使footer能够跟随当前Item发生变化，我为listView定义了onCurrentIndexChanged信号处理器，因为
+currentIndexChanged信号不带参数，所以只能再次访问currentIndex属性来获取当前Item的索引，然后通过
+ListModel的get()方法获取到对应的数据对象，最后呢，把name， cost，manufacturer三个role拼接在一块
+赋值给footerItem。于是乎，当你点选一个Item或者使用上下键浏览Item是，footer就变化了。
+
+13.1.4 访问与修改 Model
+使用ListView是为了向用户展示某些数据，期望用户根据这些数据做出一些反馈，比如买个东西。而我们多数时候
+需要知道用户选择了ListView中的哪个Item,然后取出对应的数据来做一些处理。还有一些场景，可能需要动态地向ListView
+中添加数据，比如实现一个针对Andriod手机的视频点播应用，初始时只加载少数几个视频信息，当用户滑动时
+才加载更多的视频信息。有时候你可能还会删除某个Item，比如实现一个联系人界面，某人已经从你的生活中
+隐退了，。。。 也就是访问，修改一个ListView的展现数据，需要怎么做？
+
+1. 访问数据
+    在footer中已经用到了，不过那只是惊鸿一瞥，现在从头到来，ListModel的count属性表示Model中有多少条
+    数据，int类型。dynamicRoles属性为布尔类型，为true时表示Model中的role对应的值的类型可以动态改变，
+    默认值为false。要设置dynamicRoles，必须在添加数据之前。不过要注意的是，一旦你使能了 dynamicRoles， ListModel
+    的性能会大大下降，通常他带来的性能损失是使用静态类型的4-6倍。
+    
+    ListModel的get()方法接收一个int类型的参数，用来获取制定索引位置的数据，返回一个QML对象。然后，我们就可以像访问属性那样访问数据
+    的role了，正如我们在前面使用的那样： 
+    var data = listView.model.get(listView.currentIndex);
+    listView.footerItem.text = data.name +" , " + data.cost + " , " + data.manufacturer;
+    
+    
+2. 删除数据
+    如果你想删除一条或多条数据，可以使用ListModel的remove(int index, int count)的方法，他有两个整型参数，
+    第一个参数指明要删除的数据的索引位置，第二个参数表示要删除的数据条数，默认值为1.
+    如果你想要清空一个Model，可以直接调用clear()方法。
+    现在MouseArea对象修改一下
+    
+3. 修改数据
+    要想修改model的数据，可以使用ListModel的setProperty(int index, string property, variant value)方法，
+    该方法有三个参数，第一是数据的索引，第二个是数据内role的名字，第三个是role的值。比如要修改“MI 2s的价格"
+    可以这样： listView.model.setProperty(5, "cost", 16999);
+    如果想替换某一条数据，可以使用set(int index, jsobject dict)方法。我们经常用对象的字面量表示构造一个对象传递给set()
+    方法。比如想要"iPhone3GS" 替换为"Z5smini"，
+    可以这样：listView.model.set(0, {"name":"Z5s mini", "cost":1999, "manufacturer":"zhongxing"});
+    
+4. 添加数据
+    要向Model的尾部添加数据，可以使用append()方法。append()的参数是jsobject,在ECMAScript中可以使用对象的
+    字面量表示法来构造这个jsobject，即花括号加key-value对的集合，类似于这样: {"name":"zhangsan", "age":28}   
+    key-value对之间使用都好分隔。这种方式与QML对象声明的方式略有不同。给个简单的例子：
+    listView.model.append({"name":"MX3", "cost": "1799", "manufacturer":"Meizu"});
+    如果想在指定位置添加数据，可以使用insert()方法，他的第一个参数是整型的，代表插入的索引位置，第二个参数
+    是jsobject。
+    
+13.1.5 动画效果 
+    ListView提供了add，remove, move, populate, displaced几种场景的过渡动画效果，你可以通过设置相应的属性
+    来改变特定场景的过渡动画。这些场景对应的属性，类型都是Transition，一个场景也可能有多个属性，比如新增加
+    Item会触发add过渡动画，同时也可能引起其他Item的位置变化，进而触发addDisplaced或displaced过渡动画。
+    
+    add
+    add属性指定向ListView新增一个Item时针对该Item应用的过度动画，但ListView第一次初始化或者Model
+    发生变化导致Item创建过程并不会出发add过渡动画，而是应用populate动画。另外需要注意的是，尽量不要在
+    add动画中改变Item的高度，因为这样会引起它下面的其他Item被重新布局进而错放位置，也会带来性能上的损耗。
+    
+
+    populate属性指定一个过渡动画，在ListView第一次实例化或者因Model变化而需要创建Item时应用。
+    populate: Transition {
+            NumberAnimation {
+                property: "opacity"
+                from: 0
+                to: 0.1
+                duration: 1000
+            }
+        }
+
+
+13.1.6 section
+所谓view section,其实就是根据model内数据的role-name来给Item分组。比如之前的手机列表示列，可以根据制造商来分组
+   
+    

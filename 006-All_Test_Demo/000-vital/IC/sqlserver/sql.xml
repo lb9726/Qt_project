@@ -1,0 +1,119 @@
+<?xmlversion = "1.0" encoding = "UTF-8"?>
+<root>
+    <FileType>BST SQL File</FileType>
+    <Version>1.0.0.1</Version>
+    <CreateTime>2013-11-30</CreateTime>
+    <Rule>
+        <ID>00 00 00 00 00</ID>
+        <Version Platform="AM3359" Type="bootloader" CreatTime="datetime" Version="0.1">AM3359_bootloader_2012.10.30_0.1</Version>
+    </Rule>
+    <Platform RW="R" Type="int" User="Admin">
+        <ID RW="R" Type="int">01 00 00 00 00</ID>
+        <AM3359 RW="R" Type="int" User="Admin">01 01 00 00 00
+            <ID RW="R" Type="int">01 01 00 00 00</ID>
+            <BurnFiles RW="R" Type="int" User="Admin">01 01 01 00 00
+                <ID RW="R" Type="int">01 01 01 00 00</ID>
+                <BootLoader RW="R" Type="int" User="Admin;Hardware">01 01 01 01 00
+                    <ID RW="R" Type="int">01 01 01 01 00</ID>
+                    <Version RW="RW" Type="char"></Version>
+                    <UploadTime RW="RW" Type="datetime"></UploadTime>
+                    <UploadIP RW="RW" Type="char"></UploadIP>
+                    <UploadPerson RW="RW" Type="char"></UploadPerson>
+                    <KeyWords RW="RW" Type="int">01 01 01 01 01
+                        <ID RW="R" Type="int">01 01 01 01 01</ID>
+                    </KeyWords>
+                    <ResourcesPath RW="RW" Type="char"></ResourcesPath>
+                    <DownloadTime RW="RW" Type="datetime"></DownloadTime>
+                    <DownloadIp RW="RW" Type="int"></DownloadIp>
+                </BootLoader>
+                <Kernel RW="R" Type="int" User="Admin;Hardware">01 01 01 02 00
+                    <ID RW="R" Type="int">01 01 01 02 00</ID>
+                    <Version RW="RW" Type="char"></Version>
+                    <UploadTime RW="RW" Type="datetime"></UploadTime>
+                    <UploadIP RW="RW" Type="char"></UploadIP>
+                    <UploadPerson RW="RW" Type="char"></UploadPerson>
+                    <KeyWords RW="R" Type="int" User="Hardware">01 01 01 02 01
+                        <ID RW="R" Type="int">01 01 01 02 01</ID>
+                        <resolution RW="RW" Type="char" List="1024x768;800x600;400x300"></resolution>
+                    </KeyWords>
+                    <ResourcesPath RW="RW" Type="char"></ResourcesPath>
+                    <DownloadTime RW="RW" Type="datetime"></DownloadTime>
+                    <DownloadIp RW="RW" Type="int"></DownloadIp>
+                </Kernel>
+                <FileSystem RW="R" Type="int" User="Admin;Hardware">01 01 01 03 00
+                    <ID RW="R" Type="int">01 01 01 03 00</ID>
+                    <Version RW="RW" Type="char"></Version>
+                    <UploadTime RW="RW" Type="datetime"></UploadTime>
+                    <UploadIP RW="RW" Type="char"></UploadIP>
+                    <UploadPerson RW="RW" Type="char"></UploadPerson>
+                    <KeyWords RW="R" Type="int">01 01 01 03 01
+                        <ID RW="R" Type="int">01 01 01 03 01</ID>
+                        <Drivers RW="RW" Type="char" List="GPRS;CAM;Opengl;WEB"></Drivers>
+                        <Libs RW="RW" Type="char" List="ffmpeg;fplayer;method"></Libs>
+                    </KeyWords>
+                    <ResourcesPath RW="RW" Type="char"></ResourcesPath>
+                    <DownloadTime RW="R" Type="datetime"></DownloadTime>
+                    <DownloadIp RW="R" Type="int"></DownloadIp>
+                </FileSystem>
+                <exe RW="R" Type="int">01 01 01 04 00
+                    <ID RW="R" Type="int">01 01 01 04 00</ID>
+                    <Version RW="RW" Type="char"></Version>
+                    <UploadTime RW="RW" Type="datetime"></UploadTime>
+                    <UploadIP RW="RW" Type="char"></UploadIP>
+                    <UploadPerson RW="RW" Type="char"></UploadPerson>
+                    <KeyWords RW="R" Type="int">01 01 01 04 01
+                        <ID RW="R" Type="int">01 01 01 04 01</ID>
+                        <exeNames RW="RW" Type="char" List="ffmpeg;ffplay;mplayer;BST_DISPLAY;BST_SODIMAS"></exeNames>
+                    </KeyWords>
+                    <ResourcesDir RW="RW" Type="char"></ResourcesDir>
+                    <DownloadTime RW="RW" Type="datetime"></DownloadTime>
+                    <DownloadIp RW="RW" Type="int"></DownloadIp>
+                </exe>
+                <ui RW="R" Type="int">01 01 01 05 00
+                    <ID RW="R" Type="int">01 01 01 05 00</ID>
+                    <Version RW="RW" Type="char"></Version>
+                    <UploadTime RW="RW" Type="datetime"></UploadTime>
+                    <UploadIP RW="RW" Type="char"></UploadIP>
+                    <UploadPerson RW="RW" Type="char"></UploadPerson>
+                    <KeyWords RW="R" Type="int">01 01 01 05 01
+                        <ID RW="R" Type="int">01 01 01 05 01</ID>
+                        <ui_names RW="RW" Type="char" List="H_1024x768;V_1024x768"></ui_names>
+                    </KeyWords>
+                    <ResourcesDir RW="RW" Type="char"></ResourcesDir>
+                    <DownloadTime RW="R" Type="datetime"></DownloadTime>
+                    <DownloadIp RW="R" Type="int"></DownloadIp>
+                </ui>
+                <bootmdp RW="R" Type="int">01 01 01 06 00
+                    <ID RW="R" Type="int">01 01 01 06 00</ID>
+                    <Version RW="RW" Type="char"></Version>
+                    <UploadTime RW="RW" Type="datetime"></UploadTime>
+                    <UploadIP RW="RW" Type="char"></UploadIP>
+                    <UploadPerson RW="RW" Type="char"></UploadPerson>
+                    <KeyWords RW="R" Type="int">01 01 01 06 01
+                        <ID RW="R" Type="int">01 01 01 06 01</ID>
+                        <nodes RW="RW" Type="char" List="GPRS;CAM;USBNET;USBWIFE"></nodes>
+                    </KeyWords>
+                    <ResourcesDir RW="RW" Type="char"></ResourcesDir>
+                    <DownloadTime RW="RW" Type="datetime"></DownloadTime>
+                    <DownloadIp RW="RW" Type="int"></DownloadIp>
+                </bootmdp>
+            </BurnFiles>
+        </AM3359>
+        <N329></N329>
+        <AM65></AM65>
+        <IM3353></IM3353>
+    </Platform>
+    <OrderMap RW="R" Type="int">
+        <ID RW="R" Type="int">02 00 00 00 00</ID>
+        <SodimasSAF7Inch>02 0001 00 00
+            <ID RW="R" Type="int">02 0001 00 00</ID>
+            <Platform RW="RW" Type="char">AM3359</Platform>
+            <resolution RW="RW" Type="char">1024x768</resolution>
+            <Drivers RW="RW" Type="char">GPRS;CAM;</Drivers>
+            <Libs RW="RW" Type="char">ffmpeg;fplayer;method</Libs>
+            <exeNames RW="RW" Type="char">mplayer;BST_SODIMAS</exeNames>
+            <ui_names RW="RW" Type="char">H_1024x768;V_1024x768</ui_names>
+            <nodes RW="RW" Type="char">GPRS;CAM;USBNET;USBWIFE</nodes>
+        </SodimasSAF7Inch>
+    </OrderMap>
+</root>

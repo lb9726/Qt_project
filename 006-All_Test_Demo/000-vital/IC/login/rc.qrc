@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>rc/check_off.png</file>
+        <file>rc/check_on.png</file>
+        <file>rc/check1_off.png</file>
+        <file>rc/check1_on.png</file>
+        <file>rc/go-goal.png</file>
+        <file>rc/lock.png</file>
+        <file>rc/minus.png</file>
+        <file>rc/usr.png</file>
+        <file>rc/close.png</file>
+        <file>rc/minium.png</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>rc/barcode.png</file>
+    </qresource>
+</RCC>

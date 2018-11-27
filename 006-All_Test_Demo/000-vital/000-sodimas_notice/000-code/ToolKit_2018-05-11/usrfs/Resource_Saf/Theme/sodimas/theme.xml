@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root> 
+  <filetype>theme_define_file</filetype>  
+  <createtime>2017-06-25 18:50:40</createtime>  
+  <lastmoditime>2016-06-25 18:02:56</lastmoditime>  
+  <solution/>  
+  <direction>hv</direction>  
+  <ui> 
+    <desktop> 
+      <rect> 
+        <horizontal>0,0,480,272</horizontal>  
+        <vertical>0,0,272,480</vertical> 
+      </rect>  
+      <resource> 
+        <rc0>desktop/0.png</rc0>  
+        <rc1>desktop/100.png</rc1> 
+      </resource> 
+    </desktop>  
+    <component> 
+      <media> 
+        <rect> 
+          <horizontal>5,242,44,30</horizontal>  
+          <vertical>0,0,44,30</vertical> 
+        </rect>  
+        <resource> 
+          <rc0>media/M0.mp3</rc0>  
+          <rc1>media/M1.mp3</rc1>  
+          <rc2>media/M2.mp3</rc2>  
+          <rc3>media/M3.mp3</rc3>  
+          <rc4>media/M4.mp3</rc4>  
+          <rc5>media/M5.mp3</rc5>  
+          <rc6>media/M6.mp3</rc6>  
+          <rc7>media/M7.mp3</rc7>  
+          <rc8>media/M8.mp3</rc8>  
+          <rc9>media/M9.mp3</rc9>  
+          <rc10>media/M10.mp3</rc10>  
+          <rc11>media/M11.mp3</rc11>  
+          <rc12>media/M12.mp3</rc12>  
+          <rc13>media/M13.mp3</rc13>  
+          <rc14>media/M14.mp3</rc14>  
+          <rc15>media/M15.mp3</rc15>  
+          <rc16>media/M16.mp3</rc16>  
+          <rc17>media/M17.mp3</rc17>  
+          <rc18>media/M18.mp3</rc18>  
+          <rc19>media/M19.mp3</rc19>  
+          <rc20>media/M20.mp3</rc20>  
+          <rc21>media/M21.mp3</rc21>  
+          <rc22>media/M22.mp3</rc22>  
+          <rc23>media/M23.mp3</rc23>  
+          <rc24>media/M24.mp3</rc24>  
+          <rc25>media/M25.mp3</rc25>  
+          <rc26>media/M26.mp3</rc26>  
+          <rc27>media/M27.mp3</rc27>  
+          <rc28>media/M28.mp3</rc28>  
+          <rc29>media/M29.mp3</rc29>  
+          <rc30>media/M30.mp3</rc30>  
+          <rc31>media/M31.mp3</rc31>  
+          <rc33>media/M33.mp3</rc33>  
+          <rc34>media/M34.mp3</rc34>  
+          <rc35>media/M35.mp3</rc35>  
+          <rc36>media/M36.mp3</rc36>  
+          <rc37>media/M37.mp3</rc37>  
+          <rc38>media/M38.mp3</rc38>  
+          <rc39>media/M39.mp3</rc39>  
+          <rc40>media/M40.mp3</rc40>  
+          <rc41>media/M41.mp3</rc41>  
+          <rc42>media/M42.mp3</rc42>  
+          <rc43 parameter="repeat:true;volume:80;">media/M43.mp3</rc43>  
+          <rc44>media/M44.mp3</rc44>  
+          <rc45>media/M45.mp3</rc45>  
+          <rc48 parameter="volume:80;">media/M48.mp3</rc48>  
+          <rc60>media/M60.mp3</rc60>  
+          <rc70>media/M70.mp3</rc70>  
+          <rc71>media/M71.mp3</rc71>  
+          <rc72>media/M72.mp3</rc72>  
+          <rc73>media/M73.mp3</rc73>  
+          <rc74>media/M74.mp3</rc74>  
+          <rc75>media/M75.mp3</rc75>  
+          <rc76>media/M76.mp3</rc76>  
+          <rc77>media/M77.mp3</rc77>  
+          <rc78>media/M78.mp3</rc78>  
+          <rc79>media/M79.mp3</rc79>  
+          <rc80>media/M80.mp3</rc80>  
+          <rc81>media/M81.mp3</rc81>  
+          <rc82>media/M82.mp3</rc82>  
+          <rc83>media/M83.mp3</rc83>  
+          <rc84>media/M84.mp3</rc84> 
+        </resource> 
+		<Map EffectType="SignalMap">
+           <RC0>0</RC0>
+           <RC1>1</RC1>
+           <RC2>2</RC2>
+           <RC3>3</RC3>
+           <RC4>4</RC4>
+           <RC5>5</RC5>
+           <RC6>6</RC6>
+           <RC7>7</RC7>
+           <RC8>8</RC8>
+           <RC9>9</RC9>
+           <RC10>10</RC10>
+           <RC11>11</RC11>
+           <RC12>12</RC12>
+           <RC13>13</RC13>
+           <RC14>14</RC14>
+           <RC15>15</RC15>
+           <RC16>16</RC16>
+           <RC17>17</RC17>
+           <RC18>18</RC18>
+           <RC19>19</RC19>
+           <RC21>39</RC21>
+           <RC22>38</RC22>
+           <RC23>37</RC23>
+           <RC24>36</RC24>
+           <RC25>35</RC25>
+           <RC26>34</RC26>
+           <RC27>33</RC27>
+           <RC28>30</RC28>
+           <RC29>31</RC29>
+           <RC30>20</RC30>
+           <RC31>21</RC31>
+           <RC32>22</RC32>
+           <RC33>23</RC33>
+           <RC34>24</RC34>
+           <RC35>25</RC35>
+           <RC36>26</RC36>
+           <RC37>27</RC37>
+           <RC38>28</RC38>
+           <RC39>29</RC39>
+           <RC61>61</RC61>
+           <RC62>62</RC62>
+           <RC63>63</RC63>
+           <RC64>64</RC64>
+           <RC65>65</RC65>
+           <RC66>66</RC66>
+           <RC67>67</RC67>
+           <RC68>68</RC68>
+           <RC69>69</RC69>
+        </Map>
+      </media> 
+      <fulltext>
+        <rect> 
+          <horizontal>240,206,280,80</horizontal>  
+          <vertical>0,418,272,50</vertical> 
+        </rect>  
+        <rect1> 
+          <horizontal>0,206,280,80</horizontal>  
+          <vertical>0,195,272,50</vertical> 
+        </rect1>  
+        <resource parameter="row:4;rowspace:1;column:50;spaceext:1;font:dejavu sans  mono;weigth:normal;color:white;aligns:center;alignb:left;"/> 
+      </fulltext>  
+      <realtimetext>
+        <rect> 
+          <horizontal>258,200,198,40</horizontal>
+          <vertical>37,418,198,40</vertical>
+        </rect>  
+        <rect1> 
+          <horizontal>24,200,198,40</horizontal>  
+          <vertical>15,195,198,40</vertical> 
+        </rect1>  
+        <resource parameter="row:4;rowspace:1;column:20;spaceext:1;font:dejavu sans  mono;weigth:normal;color:white;aligns:center;alignb:left;"/> 
+      </realtimetext>	  
+      <floor> 
+        <rect> 
+          <horizontal>242,36,198,200</horizontal>  
+          <vertical>37,238,198,200</vertical> 
+        </rect>  
+        <rect1> 
+          <horizontal>24,26,198,200</horizontal>  
+          <vertical>37,27,198,200</vertical> 
+        </rect1>
+        <rect2>
+          <horizontal>252,30,198,165</horizontal>
+          <vertical>34,245,198,165</vertical>
+        </rect2>
+        <rect3>
+          <horizontal>30,30,198,165</horizontal>
+          <vertical>34,35,198,165</vertical>
+        </rect3>
+        <resource> 
+          <rc43>floor/T43.png</rc43>  
+          <rc44>floor/T44.png</rc44>  
+          <rc45>floor/T45.png</rc45>  
+          <rc46>floor/T46.png</rc46>  
+          <rc47>floor/T47.png</rc47>  
+          <rc48>floor/T48.png</rc48>  
+          <rc49>floor/T49.png</rc49>  
+          <rc50>floor/T50.png</rc50>  
+          <rc51>floor/T51.png</rc51>  
+          <rc52>floor/T52.png</rc52>  
+          <rc53>floor/T53.png</rc53>  
+          <rc54>floor/T54.png</rc54>  
+          <rc55>floor/T55.png</rc55>  
+          <rc56>floor/T56.png</rc56>  
+          <rc57>floor/T57.png</rc57>  
+          <rc65>floor/T65.png</rc65>  
+          <rc66>floor/T66.png</rc66>  
+          <rc67>floor/T67.png</rc67>  
+          <rc68>floor/T68.png</rc68>  
+          <rc69>floor/T69.png</rc69>  
+          <rc70>floor/T70.png</rc70>  
+          <rc71>floor/T71.png</rc71>  
+          <rc72>floor/T72.png</rc72>  
+          <rc73>floor/T73.png</rc73>  
+          <rc74>floor/T74.png</rc74>  
+          <rc75>floor/T75.png</rc75>  
+          <rc76>floor/T76.png</rc76>  
+          <rc77>floor/T77.png</rc77>  
+          <rc78>floor/T78.png</rc78>  
+          <rc79>floor/T79.png</rc79>  
+          <rc80>floor/T80.png</rc80>  
+          <rc81>floor/T81.png</rc81>  
+          <rc82>floor/T82.png</rc82>  
+          <rc83>floor/T83.png</rc83>  
+          <rc84>floor/T84.png</rc84>  
+          <rc85>floor/T85.png</rc85>  
+          <rc86>floor/T86.png</rc86>  
+          <rc87>floor/T87.png</rc87>  
+          <rc88>floor/T88.png</rc88>  
+          <rc89>floor/T89.png</rc89>  
+          <rc90>floor/T90.png</rc90>  
+          <rc92>floor/T92.png</rc92>  
+          <rc95>floor/T95.png</rc95> 
+        </resource>
+        <Map>
+          <RC323248>323248</RC323248><!-- 0 -->
+          <RC323249>323249</RC323249><!-- 1 -->
+          <RC323250>323250</RC323250><!-- 2 -->
+          <RC323251>323251</RC323251><!-- 3-->
+          <RC323252>323252</RC323252><!-- 4 -->
+          <RC323253>323253</RC323253><!-- 5 -->
+          <RC323254>323254</RC323254><!-- 6 -->
+          <RC323255>323255</RC323255><!-- 7 -->
+          <RC323256>323256</RC323256><!-- 8 -->
+          <RC323257>323257</RC323257><!-- 9 -->
+          <RC324948>324948</RC324948><!-- 10 -->
+          <RC324949>324949</RC324949><!-- 11 -->
+          <RC324950>324950</RC324950><!-- 12 -->
+          <RC324951>324951</RC324951><!-- 13 -->
+          <RC324952>324952</RC324952><!-- 14 -->
+          <RC324953>324953</RC324953><!-- 15 -->
+          <RC324954>324954</RC324954><!-- 16 -->
+          <RC324955>324955</RC324955><!-- 17 -->
+          <RC324956>324956</RC324956><!-- 18 -->
+          <RC324957>324957</RC324957><!-- 19 -->
+          <RC324549>324549</RC324549><!-- -1 -->
+          <RC324550>324550</RC324550><!-- -2 -->
+          <RC324551>324551</RC324551><!-- -3 -->
+          <RC324552>324552</RC324552><!-- -4 -->
+          <RC324553>324553</RC324553><!-- -5 -->
+          <RC324554>324554</RC324554><!-- -6 -->
+          <RC324555>324555</RC324555><!-- -7 -->
+          <RC325148>325148</RC325148><!-- 30 -->
+          <RC325149>325149</RC325149><!-- 31 -->
+          <RC325048>325048</RC325048><!-- 20 -->
+          <RC325049>325049</RC325049><!-- 21 -->
+          <RC325050>325050</RC325050><!-- 22 -->
+          <RC325051>325051</RC325051><!-- 23 -->
+          <RC325052>325052</RC325052><!-- 24 -->
+          <RC325053>325053</RC325053><!-- 25 -->
+          <RC325054>325054</RC325054><!-- 26 -->
+          <RC325055>325055</RC325055><!-- 27 -->
+          <RC325056>325056</RC325056><!-- 28 -->
+          <RC325057>325057</RC325057><!-- 29 -->
+          <RC325449>323232</RC325449><!-- 61 -->
+          <RC325450>323232</RC325450><!-- 62 -->
+          <RC325451>323232</RC325451><!-- 63 -->
+          <RC325452>323232</RC325452><!-- 64 -->
+          <RC325453>323232</RC325453><!-- 65 -->
+          <RC325454>323232</RC325454><!-- 66 -->
+          <RC325455>323232</RC325455><!-- 67 -->
+          <RC325456>323232</RC325456><!-- 68 -->
+          <RC325457>323232</RC325457><!-- 69 -->
+        </Map>        		
+      </floor>  
+      <arrow> 
+        <rect> 
+          <horizontal>36,36,200,200</horizontal>  
+          <vertical>31,20,200,200</vertical> 
+        </rect>  
+        <rect1> 
+          <horizontal>254,32,200,200</horizontal>  
+          <vertical>31,258,200,200</vertical> 
+        </rect1>
+        <rect2>
+          <horizontal>32,30,200,200</horizontal>
+          <vertical>29,27,200,200</vertical>
+        </rect2>
+        <rect3>
+          <horizontal>248,29,200,200</horizontal>
+          <vertical>29,245,200,200</vertical>
+        </rect3>  
+        <resource> 
+          <rc1>arrow/1.png</rc1>  
+          <rc2>arrow/2.png</rc2>  
+          <rc3>arrow/3.png</rc3>  
+          <rc100>arrow/100.png</rc100> 
+        </resource>
+        <Run> EffectPara="AnimateType:EaseInOut;Interval:2000;FrameRange:20;Direction:V;Orientation:P;" EffectType="Roll"</Run>       
+      </arrow>  
+      <function> 
+        <rect> 
+          <horizontal>257,15,200,200</horizontal>  
+          <vertical>31,235,200,200</vertical> 
+        </rect>  
+        <rect1> 
+          <horizontal>23,15,200,200</horizontal>  
+          <vertical>31,9,200,200</vertical> 
+        </rect1>
+        <rect2>
+          <horizontal>249,23,200,182</horizontal>
+          <vertical>35,234,200,182</vertical>
+        </rect2>
+        <rect3>
+          <horizontal>33,23,200,182</horizontal>
+          <vertical>35,18,200,182</vertical>
+        </rect3>  
+        <resource> 
+          <rc0>mediafloor/T0.png</rc0>  
+          <rc1>floor/T1.png</rc1>  
+          <rc2>floor/T2.png</rc2>  
+          <rc3>floor/T3.png</rc3>  
+          <rc4>floor/T4.png</rc4>  
+          <rc5>floor/T5.png</rc5>  
+          <rc6>floor/T6.png</rc6>  
+          <rc7>floor/T7.png</rc7>  
+          <rc8>floor/T8.png</rc8>  
+          <rc9>floor/T9.png</rc9>  
+          <rc10>floor/T10.png</rc10>  
+          <rc11>floor/T11.png</rc11>  
+          <rc12>floor/T12.png</rc12>  
+          <rc13>floor/T13.png</rc13>  
+          <rc14>floor/T14.png</rc14>  
+          <rc15>floor/T15.png</rc15>  
+          <rc16>floor/T16.png</rc16>  
+          <rc17>floor/T17.png</rc17>  
+          <rc18>floor/T18.png</rc18>  
+          <rc19>floor/T19.png</rc19>  
+          <rc20>floor/T20.png</rc20>  
+          <rc21>floor/T21.png</rc21>  
+          <rc22>floor/T22.png</rc22>  
+          <rc23>floor/T23.png</rc23>  
+          <rc24>floor/T24.png</rc24>  
+          <rc25>floor/T25.png</rc25>  
+          <rc26>floor/T26.png</rc26>  
+          <rc27>floor/T27.png</rc27>  
+          <rc28>floor/T28.png</rc28>  
+          <rc29>floor/T29.png</rc29>  
+          <rc30>floor/T30.png</rc30>  
+          <rc31>floor/T31.png</rc31>  
+          <rc32>floor/T32.png</rc32>  
+          <rc33>floor/T33.png</rc33>  
+          <rc34>floor/T34.png</rc34>  
+          <rc35>floor/T35.png</rc35>  
+          <rc36>floor/T36.png</rc36>  
+          <rc37>floor/T37.png</rc37>  
+          <rc38>floor/T38.png</rc38>  
+          <rc39>floor/T39.png</rc39>  
+          <rc40 text="Maintenance">function/T40.png</rc40>  
+          <rc41 text="Acces interdit">function/T41.png</rc41>  
+          <rc42 text="Surcharge">function/T42.png</rc42>  
+          <rc43 text="Complet">function/T43.png</rc43>  
+          <rc44 text="Pompier">function/T44.png</rc44>  
+          <rc45 text="Liftier">function/T45.png</rc45>  
+          <rc46 text="Cellule">function/T46.png</rc46>  
+          <rc47 text="Fermeture forcee">function/T47.png</rc47>  
+          <rc48 text="Mode secouru">function/T48.png</rc48>  
+          <rc49 text="Code">function/T49.png</rc49>  
+          <rc51 text="">function/T51.png</rc51>  
+          <rc60 text="">function/T60.png</rc60>  
+          <rc61>floor/T40.png</rc61>  
+          <rc62>floor/T41.png</rc62>  
+          <rc63>floor/T42.png</rc63>  
+          <rc64>floor/T96.png</rc64>  
+          <rc65>floor/T97.png</rc65> 
+        </resource> 
+      </function>  
+      <messagebar> 
+        <rect> 
+          <horizontal>124,15,232,80</horizontal>  
+          <vertical>14,28,232,90</vertical> 
+        </rect>  
+        <resource parameter="title:false;font:arial;size:10;bold:normal;"/> 
+      </messagebar>  
+      <progressbar> 
+        <rect> 
+          <horizontal>124,210,232,24</horizontal>  
+          <vertical>18,400,232,24</vertical> 
+        </rect>  
+        <resource/> 
+      </progressbar>  
+      <logo> 
+        <rect> 
+          <horizontal>330,12,113,33</horizontal>  
+          <vertical>143,28,113,33</vertical> 
+        </rect> 
+      </logo> 
+    </component> 
+  </ui> 
+</root>

@@ -1,0 +1,7 @@
+http://download.qt.io/official_releases/qtcreator/ 以往的版本例如：qt4.8.6的creator3.1.2的版本
+
+http://planet.qt.io/
+
+http://releases.ubuntu.com/14.04/  ubuntu 官网下载iso系统
+
+http://download.qt.io/archive/qt/5.5/5.5.1/

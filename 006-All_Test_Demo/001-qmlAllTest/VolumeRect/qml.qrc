@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>RectDefine.qml</file>
+        <file>VolumeRect.qml</file>
+        <file>images/cha.png</file>
+        <file>VolumeRectNew.qml</file>
+    </qresource>
+</RCC>

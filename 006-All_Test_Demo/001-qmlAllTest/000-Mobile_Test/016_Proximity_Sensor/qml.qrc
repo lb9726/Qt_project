@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Proximity_Sensor.qml</file>
+    </qresource>
+</RCC>

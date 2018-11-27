@@ -1,0 +1,14 @@
+1. ftp文件传输的vsftpd.conf                      ----->    /etc/vsftpd.conf
+2. wifi的ip配置文件udhcpd.conf                   ----->    /usr/module/udhcpd.conf
+3. /home/ftp/下需要生成一个pub目录文件            ----->    mkdir -p /home/ftp/pub
+4. 修改/etc/init.d下的reboot时的脚本rcK          ----->   /etc/init.d/rcK
+5. 修改/etc/init.d/S85qt.sh                      ----->   /etc/init.d/S85qt.sh
+6. 拷贝字体到/usr/local/arm-qt5.7.1/lib/fonts
+
+boa web服务器的配置
+将boa拷贝到 /usr/bin下面
+把libcgic.so 拷贝到/usr/lib/下面
+将boa.conf 拷贝到/etc/boa/下
+在/etc/boa/ 下新建 cgi-bin html 文件夹，分别放置cgi程序和html的文件
+在/etc/boa/ 下touch access_log error_log; 生成这两个文件
+

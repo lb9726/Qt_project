@@ -1,0 +1,770 @@
+Starting C:\Users\libo1\Desktop\2018-09-03\DataAggregation\000_ExePath\DataAggregation.exe...
+void DataAggregation::initAllParameters() lines = 77: 
+buffer512 is 10000111101110101111101110111010111000011101101101011010110100101100000010010110000110001111011010110100100010101000001100101001010101001001101101110101010101101001111110111100101100100110111100000010110000100101101011110000001101111101100001011010111010010100111100000001001010101111101000001001000100010110010111001001010010111010001000000100111001011100100110000001101101110000011101100011010110110011100010010011001011011111111001010100000111001001011011110011011111100011100011000111111110100111100010001011
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 101: "res = 1"
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 103: "buffer g = 10000111010110000100111110000101001110010110111011010101010000001100000001000100001110000011001001000000010011011111000111001111011101111101001011111001100011010101110011101100011101101110001010101111"
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 106: "buffer g = 10000111010110000100111110000101001110010110111011010101010000001100000001000100001110000011001001000000010011011111000111001111011101111101001011111001100011010101110011101100011101101110001010101111"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("100", "101", "102", "103", "104")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 0"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines = 205: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("110", "111", "112", "113", "114")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("120", "121", "122", "123", "124")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines = 188: "encounter an empty line will continue"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("130", "131", "132", "133", "134")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::printQList() lines = 217: "the str is 100, 101, 102, 103, 104"
+void DataAggregation::printQList() lines = 218: "the id is 1"
+void DataAggregation::printQList() lines = 217: "the str is 110, 111, 112, 113, 114"
+void DataAggregation::printQList() lines = 218: "the id is 2"
+void DataAggregation::printQList() lines = 217: "the str is 120, 121, 122, 123, 124"
+void DataAggregation::printQList() lines = 218: "the id is 3"
+void DataAggregation::printQList() lines = 217: "the str is 130, 131, 132, 133, 134"
+void DataAggregation::printQList() lines = 218: "the id is 4"
+int DataAggregation::getUserNumbers() const lines = 224: "mUserNumbers is 4"
+buffer512 is 10000111101110101111101110111010111000011101101101011010110100101100000010010110000110001111011010110100100010101000001100101001010101001001101101110101010101101001111110111100101100100110111100000010110000100101101011110000001101111101100001011010111010010100111100000001001010101111101000001001000100010110010111001001010010111010001000000100111001011100100110000001101101110000011101100011010110110011100010010011001011011111111001010100000111001001011011110011011111100011100011000111111110100111100010001011
+buffer512 check is 7108778053346711631464227094380385808960737734476661364755809014023541366313661742765992866302405100773717378617159355979296856363483552013791319394252939
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 258: "mUserNumbers = 4"
+bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177738263
+bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177786181
+bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177716839
+bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177776483
+pDest = 01c0d81a380b12a640f15d1e1e62b5d730f70708
+"01c0d81a380b12a640f15d1e1e62b5d730f70708"
+pDest = 35d3cd1b4a96b4c685dd2c1c91ad807632356d63
+"35d3cd1b4a96b4c685dd2c1c91ad807632356d63"
+pDest = c776fff660fb6e96991cca6ec9029fafddf61b3c
+"c776fff660fb6e96991cca6ec9029fafddf61b3c"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = 01c0d81a380b12a640f15d1e1e62b5d730f70708
+"01c0d81a380b12a640f15d1e1e62b5d730f70708"
+pDest = 27af6d3f9837e0beeb9c2ac88d43090565ab482e
+"27af6d3f9837e0beeb9c2ac88d43090565ab482e"
+pDest = 7c799c5ee559e1c246e54010b265ddfe45d1a7a3
+"7c799c5ee559e1c246e54010b265ddfe45d1a7a3"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = 35d3cd1b4a96b4c685dd2c1c91ad807632356d63
+"35d3cd1b4a96b4c685dd2c1c91ad807632356d63"
+pDest = 27af6d3f9837e0beeb9c2ac88d43090565ab482e
+"27af6d3f9837e0beeb9c2ac88d43090565ab482e"
+pDest = 27dc5e72644f0ff964f1b9a910e3c33bb8974572
+"27dc5e72644f0ff964f1b9a910e3c33bb8974572"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = c776fff660fb6e96991cca6ec9029fafddf61b3c
+"c776fff660fb6e96991cca6ec9029fafddf61b3c"
+pDest = 7c799c5ee559e1c246e54010b265ddfe45d1a7a3
+"7c799c5ee559e1c246e54010b265ddfe45d1a7a3"
+pDest = 27dc5e72644f0ff964f1b9a910e3c33bb8974572
+"27dc5e72644f0ff964f1b9a910e3c33bb8974572"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines =  343 time0 =  37719775
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177738263"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177786181"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177716839"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 306792366286213149067591999871946258133490615791021696495777352003792118911703869858088617254848012097927465916515405088279024318018879906279228177776483"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 2503636030841017066085063622811860463869228980544312884651546661776247738676701563047291371126837963924794040866372419015042340331988221949022625848790071"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 3939477299237313114622814855928114200800747216066961441716489574479867102314490461616554268836555120453916246438155557263543883095317552323816318696194871"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 4929327471191230155671692081460215011683774778818874696407589273816742354337775882172839404079824549204947686785600180508001334060670294420191986747042198"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 3264269743238200830364448019034994467773242264778636940955042741282553055443599614798075571422536093578447058378469113201049580075094995176240772081397981"
+void DataAggregation::encryptionFileData() lines = 395: "mUserNumbers = 4, mObserveObjNum = 5"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = f365eaf71266c8f65c30bb6c46cdaa0edf347157"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("100", "101", "102", "103", "104")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = f365eaf71266c8f65c30bb6c46cdaa0edf347133"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = f365eaf71266c8f65c30bb6c46cdaa0edf347132"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = f365eaf71266c8f65c30bb6c46cdaa0edf347131"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = f365eaf71266c8f65c30bb6c46cdaa0edf347130"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = f365eaf71266c8f65c30bb6c46cdaa0edf34713f"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 5a16297b456513daed8837c62144612c108de885"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("110", "111", "112", "113", "114")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 5a16297b456513daed8837c62144612c108de8eb"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 5a16297b456513daed8837c62144612c108de8ea"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 5a16297b456513daed8837c62144612c108de8f5"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 5a16297b456513daed8837c62144612c108de8f4"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 5a16297b456513daed8837c62144612c108de8f7"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("120", "121", "122", "123", "124")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096047"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096046"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096045"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096044"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096043"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("130", "131", "132", "133", "134")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 9cd33ddae1ed80adbb0833d76b84816a20b0f96f"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 9cd33ddae1ed80adbb0833d76b84816a20b0f96e"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 9cd33ddae1ed80adbb0833d76b84816a20b0f969"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 9cd33ddae1ed80adbb0833d76b84816a20b0f968"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 9cd33ddae1ed80adbb0833d76b84816a20b0f96b"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347133 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347157 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 0 pinjiestr = f365eaf71266c8f65c30bb6c46cdaa0edf347133f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347132 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347157 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 1 pinjiestr = f365eaf71266c8f65c30bb6c46cdaa0edf347132f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347131 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347157 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 2 pinjiestr = f365eaf71266c8f65c30bb6c46cdaa0edf347131f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347130 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347157 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 3 pinjiestr = f365eaf71266c8f65c30bb6c46cdaa0edf347130f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = f365eaf71266c8f65c30bb6c46cdaa0edf34713f jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = f365eaf71266c8f65c30bb6c46cdaa0edf347157 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 4 pinjiestr = f365eaf71266c8f65c30bb6c46cdaa0edf34713ff365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157f365eaf71266c8f65c30bb6c46cdaa0edf347157"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 5a16297b456513daed8837c62144612c108de8eb jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 5a16297b456513daed8837c62144612c108de885 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 5 pinjiestr = 5a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de8eb5a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de885"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 5a16297b456513daed8837c62144612c108de8ea jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 5a16297b456513daed8837c62144612c108de885 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 6 pinjiestr = 5a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de8ea5a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de885"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 5a16297b456513daed8837c62144612c108de8f5 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 5a16297b456513daed8837c62144612c108de885 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 7 pinjiestr = 5a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de8f55a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de885"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 5a16297b456513daed8837c62144612c108de8f4 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 5a16297b456513daed8837c62144612c108de885 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 8 pinjiestr = 5a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de8f45a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de885"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 5a16297b456513daed8837c62144612c108de8f7 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 5a16297b456513daed8837c62144612c108de885 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 9 pinjiestr = 5a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de8f75a16297b456513daed8837c62144612c108de8855a16297b456513daed8837c62144612c108de885"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096047 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 10 pinjiestr = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09604735a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096046 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 11 pinjiestr = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09604635a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096045 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 12 pinjiestr = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09604535a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096044 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 13 pinjiestr = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09604435a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef096043 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 14 pinjiestr = 35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f35a0fe56b6ee5b810ab0bf7d0c0d4a48ef09604335a0fe56b6ee5b810ab0bf7d0c0d4a48ef09603f"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f96f jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 15 pinjiestr = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f96f"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f96e jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 16 pinjiestr = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f96e"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f969 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 17 pinjiestr = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f969"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f968 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 18 pinjiestr = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f968"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f96b jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 19 pinjiestr = 9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f9ed9cd33ddae1ed80adbb0833d76b84816a20b0f96b"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 64000000000000000000000000000000000000006e00000000000000000000000000000000000000780000000000000000000000000000000000000082"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 65000000000000000000000000000000000000006f00000000000000000000000000000000000000790000000000000000000000000000000000000083"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 660000000000000000000000000000000000000070000000000000000000000000000000000000007a0000000000000000000000000000000000000084"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 670000000000000000000000000000000000000071000000000000000000000000000000000000007b0000000000000000000000000000000000000085"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 680000000000000000000000000000000000000072000000000000000000000000000000000000007c0000000000000000000000000000000000000086"
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+
+
+
+CWinApp::ExitInstance()C:\Users\libo1\Desktop\2018-09-03\DataAggregation\000_ExePath\DataAggregation.exe exited with code 0
+
+Starting C:\Users\libo1\Desktop\2018-09-03\DataAggregation\000_ExePath\DataAggregation.exe...
+void DataAggregation::initAllParameters() lines = 77: 
+buffer512 is 10111100110010010101111101010011100011010101101001100011001100101000011011001000001110001100001011110001010010101100000011110110000001100010011011100010010101101000110100100010010000101001100100110111001101110100110110100011010111111100010000000010011000011010111001011101000100000111101100111001100010000011001111001001110001110010010001100100100000110111001010100111100001100001000101111010100000000010011011010110000100101000101101111110011100110011000001011110010000000011000000110111101110010111001011000101
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 101: "res = 1"
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 103: "buffer g = 11010011100101100111010011101101101011100000111011111101111100010000011000110111011101110100101010001000110001111000100011010010001000101001000101101001111111100010101110001101001000010110010000110"
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 106: "buffer g = 11010011100101100111010011101101101011100000111011111101111100010000011000110111011101110100101010001000110001111000100011010010001000101001000101101001111111100010101110001101001000010110010000110"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("100", "101", "102", "103", "104")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 0"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines = 205: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("110", "111", "112", "113", "114")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("120", "121", "122", "123", "124")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines = 188: "encounter an empty line will continue"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("130", "131", "132", "133", "134")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::printQList() lines = 217: "the str is 100, 101, 102, 103, 104"
+void DataAggregation::printQList() lines = 218: "the id is 1"
+void DataAggregation::printQList() lines = 217: "the str is 110, 111, 112, 113, 114"
+void DataAggregation::printQList() lines = 218: "the id is 2"
+void DataAggregation::printQList() lines = 217: "the str is 120, 121, 122, 123, 124"
+void DataAggregation::printQList() lines = 218: "the id is 3"
+void DataAggregation::printQList() lines = 217: "the str is 130, 131, 132, 133, 134"
+void DataAggregation::printQList() lines = 218: "the id is 4"
+int DataAggregation::getUserNumbers() const lines = 224: "mUserNumbers is 4"
+buffer512 is 10111100110010010101111101010011100011010101101001100011001100101000011011001000001110001100001011110001010010101100000011110110000001100010011011100010010101101000110100100010010000101001100100110111001101110100110110100011010111111100010000000010011000011010111001011101000100000111101100111001100010000011001111001001110001110010010001100100100000110111001010100111100001100001000101111010100000000010011011010110000100101000101101111110011100110011000001011110010000000011000000110111101110010111001011000101
+buffer512 check is 9887557099816869484091297127539103103984332511715049999649103877429771042685435402935741813562412625719593919091414114297234516000724152964786608703894213
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 258: "mUserNumbers = 4"
+bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023565879
+bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023418072
+bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023565065
+bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023387778
+pDest = 0fef6e47abaf06a31e5c8ba4716d14d1db15be46
+"0fef6e47abaf06a31e5c8ba4716d14d1db15be46"
+pDest = 1a31223778e3ff97a55bf5675ff3614d43959f9f
+"1a31223778e3ff97a55bf5675ff3614d43959f9f"
+pDest = f7932949e5c316394f7f4db84093cb7384896be9
+"f7932949e5c316394f7f4db84093cb7384896be9"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = 0fef6e47abaf06a31e5c8ba4716d14d1db15be46
+"0fef6e47abaf06a31e5c8ba4716d14d1db15be46"
+pDest = ec74afb47161124b3c535895b5ee1b72bc0d1c8e
+"ec74afb47161124b3c535895b5ee1b72bc0d1c8e"
+pDest = 9d44c54ba6aabd90e6ddd0f3024a20f60f6483a6
+"9d44c54ba6aabd90e6ddd0f3024a20f60f6483a6"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = 1a31223778e3ff97a55bf5675ff3614d43959f9f
+"1a31223778e3ff97a55bf5675ff3614d43959f9f"
+pDest = ec74afb47161124b3c535895b5ee1b72bc0d1c8e
+"ec74afb47161124b3c535895b5ee1b72bc0d1c8e"
+pDest = 2b699688b943d1f05985e202f57c822317f96f34
+"2b699688b943d1f05985e202f57c822317f96f34"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = f7932949e5c316394f7f4db84093cb7384896be9
+"f7932949e5c316394f7f4db84093cb7384896be9"
+pDest = 9d44c54ba6aabd90e6ddd0f3024a20f60f6483a6
+"9d44c54ba6aabd90e6ddd0f3024a20f60f6483a6"
+pDest = 2b699688b943d1f05985e202f57c822317f96f34
+"2b699688b943d1f05985e202f57c822317f96f34"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines =  343 time0 =  33120463
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023565879"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023418072"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023565065"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 780167570280766402140388346561489220125683291224155960315107085987631892407253665468510769718013934562174153973840422464163108415365389363335924023387778"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 8682804733161836927289609468591340584097314346597251131418645819362193044648526782555390965702702301566766035148528584061942314092924288698594650870539062"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 7542471866085476768552624054006944945140069433963794272732768889105718907626498411727650781922246008641766818254292560071407266750224000144663974228502260"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 4823331562760478348723784040823281170556249425754851888410790343421383773142654135841504796652063201975217760996222340424917984850493721495157643453628622"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 8795410408296651797286473094407901221833090198140235467298503042713138146833650611345165259209117019046051209084027684541961149606629563489761986876714698"
+void DataAggregation::encryptionFileData() lines = 395: "mUserNumbers = 4, mObserveObjNum = 5"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = e24d6539368fef0df478337b6e0dbeef1c094a30"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("100", "101", "102", "103", "104")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = e24d6539368fef0df478337b6e0dbeef1c094a54"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = e24d6539368fef0df478337b6e0dbeef1c094a55"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = e24d6539368fef0df478337b6e0dbeef1c094a56"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = e24d6539368fef0df478337b6e0dbeef1c094a57"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = e24d6539368fef0df478337b6e0dbeef1c094a58"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 7edf04b87c64a978c4d203c2c6c92f55687c216e"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("110", "111", "112", "113", "114")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7edf04b87c64a978c4d203c2c6c92f55687c2100"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7edf04b87c64a978c4d203c2c6c92f55687c2101"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7edf04b87c64a978c4d203c2c6c92f55687c211e"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7edf04b87c64a978c4d203c2c6c92f55687c211f"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7edf04b87c64a978c4d203c2c6c92f55687c211c"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("120", "121", "122", "123", "124")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5d"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5c"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5f"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5e"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec59"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 41be7a8afa2a7a59f0277f49b7a569a69c14877b"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("130", "131", "132", "133", "134")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 41be7a8afa2a7a59f0277f49b7a569a69c1487f9"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 41be7a8afa2a7a59f0277f49b7a569a69c1487f8"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 41be7a8afa2a7a59f0277f49b7a569a69c1487ff"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 41be7a8afa2a7a59f0277f49b7a569a69c1487fe"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 41be7a8afa2a7a59f0277f49b7a569a69c1487fd"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = e24d6539368fef0df478337b6e0dbeef1c094a54 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = e24d6539368fef0df478337b6e0dbeef1c094a30 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 0 pinjiestr = e24d6539368fef0df478337b6e0dbeef1c094a54e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = e24d6539368fef0df478337b6e0dbeef1c094a55 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = e24d6539368fef0df478337b6e0dbeef1c094a30 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 1 pinjiestr = e24d6539368fef0df478337b6e0dbeef1c094a55e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = e24d6539368fef0df478337b6e0dbeef1c094a56 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = e24d6539368fef0df478337b6e0dbeef1c094a30 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 2 pinjiestr = e24d6539368fef0df478337b6e0dbeef1c094a56e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = e24d6539368fef0df478337b6e0dbeef1c094a57 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = e24d6539368fef0df478337b6e0dbeef1c094a30 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 3 pinjiestr = e24d6539368fef0df478337b6e0dbeef1c094a57e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = e24d6539368fef0df478337b6e0dbeef1c094a58 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = e24d6539368fef0df478337b6e0dbeef1c094a30 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 4 pinjiestr = e24d6539368fef0df478337b6e0dbeef1c094a58e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30e24d6539368fef0df478337b6e0dbeef1c094a30"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7edf04b87c64a978c4d203c2c6c92f55687c2100 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7edf04b87c64a978c4d203c2c6c92f55687c216e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 5 pinjiestr = 7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c21007edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c216e"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7edf04b87c64a978c4d203c2c6c92f55687c2101 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7edf04b87c64a978c4d203c2c6c92f55687c216e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 6 pinjiestr = 7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c21017edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c216e"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7edf04b87c64a978c4d203c2c6c92f55687c211e jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7edf04b87c64a978c4d203c2c6c92f55687c216e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 7 pinjiestr = 7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c211e7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c216e"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7edf04b87c64a978c4d203c2c6c92f55687c211f jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7edf04b87c64a978c4d203c2c6c92f55687c216e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 8 pinjiestr = 7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c211f7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c216e"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7edf04b87c64a978c4d203c2c6c92f55687c211c jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7edf04b87c64a978c4d203c2c6c92f55687c216e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 9 pinjiestr = 7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c211c7edf04b87c64a978c4d203c2c6c92f55687c216e7edf04b87c64a978c4d203c2c6c92f55687c216e"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5d jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 10 pinjiestr = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5ddd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5c jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 11 pinjiestr = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5cdd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5f jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 12 pinjiestr = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5fdd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5e jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 13 pinjiestr = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec5edd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec59 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25 fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 14 pinjiestr = dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec59dd2c1b0bb0c13c2cc08d4ff01f61f81ce861ec25"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 41be7a8afa2a7a59f0277f49b7a569a69c1487f9 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 41be7a8afa2a7a59f0277f49b7a569a69c14877b fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 15 pinjiestr = 41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c1487f9"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 41be7a8afa2a7a59f0277f49b7a569a69c1487f8 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 41be7a8afa2a7a59f0277f49b7a569a69c14877b fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 16 pinjiestr = 41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c1487f8"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 41be7a8afa2a7a59f0277f49b7a569a69c1487ff jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 41be7a8afa2a7a59f0277f49b7a569a69c14877b fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 17 pinjiestr = 41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c1487ff"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 41be7a8afa2a7a59f0277f49b7a569a69c1487fe jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 41be7a8afa2a7a59f0277f49b7a569a69c14877b fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 18 pinjiestr = 41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c1487fe"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 41be7a8afa2a7a59f0277f49b7a569a69c1487fd jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 41be7a8afa2a7a59f0277f49b7a569a69c14877b fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 19 pinjiestr = 41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c14877b41be7a8afa2a7a59f0277f49b7a569a69c1487fd"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 64000000000000000000000000000000000000006e00000000000000000000000000000000000000780000000000000000000000000000000000000082"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 65000000000000000000000000000000000000006f00000000000000000000000000000000000000790000000000000000000000000000000000000083"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 660000000000000000000000000000000000000070000000000000000000000000000000000000007a0000000000000000000000000000000000000084"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 670000000000000000000000000000000000000071000000000000000000000000000000000000007b0000000000000000000000000000000000000085"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 680000000000000000000000000000000000000072000000000000000000000000000000000000007c0000000000000000000000000000000000000086"
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 43: 
+virtual DataAggregation::~DataAggregation() lines = 52: 
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+virtual DataAggregation::~DataAggregation() lines = 70: "delete success"
+
+
+
+CWinApp::ExitInstance()C:\Users\libo1\Desktop\2018-09-03\DataAggregation\000_ExePath\DataAggregation.exe exited with code 0
+
+Starting C:\Users\libo1\Desktop\2018-09-03\DataAggregation\000_ExePath\DataAggregation.exe...
+void DataAggregation::initAllParameters() lines = 77: 
+buffer512 is 10001011001011100101111000101100011110011100001000011100011000110111011001111110100110110001101000001010110010110001010000111011011000110101001010001100010001100011001000111010111000000001011001001001110111111110110101110100111100000110010010100111001101011100011111101010001100001111011101111110011010101001101001010111101010001100101101100000001011100101001101010010110001100001110011000000000110111111110001110010111010010011110111101100101100000000101011101010010001100010010101011000011011111000101001101011
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 101: "res = 1"
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 103: "buffer g = 11111001111000100000110100011010100010111011000001010001011011110001010111010001010000101011011110010110110110101101111000111111111101100001111010100011000000011011110101100100111100110011011001110100"
+void DataAggregation::generateG(__mpz_struct*, __mpz_struct*) lines = 106: "buffer g = 11111001111000100000110100011010100010111011000001010001011011110001010111010001010000101011011110010110110110101101111000111111111101100001111010100011000000011011110101100100111100110011011001110100"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("100", "101", "102", "103", "104")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 0"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines = 205: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("110", "111", "112", "113", "114")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("120", "121", "122", "123", "124")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::readDataFile(QString) lines = 188: "encounter an empty line will continue"
+void DataAggregation::readDataFile(QString) lines =  199 tmpList =  ("130", "131", "132", "133", "134")
+void DataAggregation::readDataFile(QString) lines = 200: "mObserveObjNum = 5"
+void DataAggregation::readDataFile(QString) lines = 201: "tmpList.length() = 5"
+void DataAggregation::printQList() lines = 217: "the str is 100, 101, 102, 103, 104"
+void DataAggregation::printQList() lines = 218: "the id is 1"
+void DataAggregation::printQList() lines = 217: "the str is 110, 111, 112, 113, 114"
+void DataAggregation::printQList() lines = 218: "the id is 2"
+void DataAggregation::printQList() lines = 217: "the str is 120, 121, 122, 123, 124"
+void DataAggregation::printQList() lines = 218: "the id is 3"
+void DataAggregation::printQList() lines = 217: "the str is 130, 131, 132, 133, 134"
+void DataAggregation::printQList() lines = 218: "the id is 4"
+int DataAggregation::getUserNumbers() const lines = 224: "mUserNumbers is 4"
+buffer512 is 10001011001011100101111000101100011110011100001000011100011000110111011001111110100110110001101000001010110010110001010000111011011000110101001010001100010001100011001000111010111000000001011001001001110111111110110101110100111100000110010010100111001101011100011111101010001100001111011101111110011010101001101001010111101010001100101101100000001011100101001101010010110001100001110011000000000110111111110001110010111010010011110111101100101100000000101011101010010001100010010101011000011011111000101001101011
+buffer512 check is 7289506970557532206146344739707323386840199614491123520720856032389953329718008765210128044771048565549633120169575337922289848278314874072166742960867947
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 258: "mUserNumbers = 4"
+bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990584322
+bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990570988
+bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990583614
+bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990567684
+pDest = 752576b0c558e6dc89681132b30bacb6e505ed52
+"752576b0c558e6dc89681132b30bacb6e505ed52"
+pDest = c8118c0728e37dc9160bf5ef8d0c88535223a3f7
+"c8118c0728e37dc9160bf5ef8d0c88535223a3f7"
+pDest = cb06745c2a66087a558d787c2b008fc37611d94b
+"cb06745c2a66087a558d787c2b008fc37611d94b"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = 752576b0c558e6dc89681132b30bacb6e505ed52
+"752576b0c558e6dc89681132b30bacb6e505ed52"
+pDest = 3752c914181b066aa14fd78528e155a58f5a5cbe
+"3752c914181b066aa14fd78528e155a58f5a5cbe"
+pDest = 4594ab1c14c013b7e39f994e2bef01b0007fdb90
+"4594ab1c14c013b7e39f994e2bef01b0007fdb90"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = c8118c0728e37dc9160bf5ef8d0c88535223a3f7
+"c8118c0728e37dc9160bf5ef8d0c88535223a3f7"
+pDest = 3752c914181b066aa14fd78528e155a58f5a5cbe
+"3752c914181b066aa14fd78528e155a58f5a5cbe"
+pDest = b141d78f6adef7689f6fe4f2d6515806cd5d2085
+"b141d78f6adef7689f6fe4f2d6515806cd5d2085"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+pDest = cb06745c2a66087a558d787c2b008fc37611d94b
+"cb06745c2a66087a558d787c2b008fc37611d94b"
+pDest = 4594ab1c14c013b7e39f994e2bef01b0007fdb90
+"4594ab1c14c013b7e39f994e2bef01b0007fdb90"
+pDest = b141d78f6adef7689f6fe4f2d6515806cd5d2085
+"b141d78f6adef7689f6fe4f2d6515806cd5d2085"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines = 317: "count siyao"
+void DataAggregation::generatePublicKeyAndPrivateKeyAndEncryptionKey() lines =  343 time0 =  42336816
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990584322"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990570988"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990583614"
+void DataAggregation::checkPrivateKey() lines = 373: "bufferpNumLen is 697631481033882567630969569110538123605109234147712721780712878127324558510535022692279503291467153442013919774451142764657619597342766187908750990567684"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 1614939389966249111592383225166512874455002054901022112071094102787511700149611463703811885529858565002981847708497972246635578765612780710257984964819973"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 3869947635155378452419086039568585486232053514812307963217990257697916592986021038654121991620225396655492356633293323447388897910760670311110392225631326"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 2755404252012892096348757548628946004610220992980548774710805163726094510824085699204974476267762286989108221850203062016850590382806613726418329355557808"
+void DataAggregation::checkPubKey() lines = 388: "bufferPubKey is 5432252312198030104418088190189907333178656959386211056961760952369176994053965479069162457115792795288429550736505483376672969257980063676394700722389006"
+void DataAggregation::encryptionFileData() lines = 395: "mUserNumbers = 4, mObserveObjNum = 5"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 76328eebc7dd936fcaee9ca11507ab26c13797ee"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("100", "101", "102", "103", "104")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 76328eebc7dd936fcaee9ca11507ab26c137978a"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 76328eebc7dd936fcaee9ca11507ab26c137978b"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 76328eebc7dd936fcaee9ca11507ab26c1379788"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 76328eebc7dd936fcaee9ca11507ab26c1379789"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 76328eebc7dd936fcaee9ca11507ab26c1379786"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 7e314b8c983f301cbb85ff9b005f8a36a206a7c"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("110", "111", "112", "113", "114")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7e314b8c983f301cbb85ff9b005f8a36a206a12"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7e314b8c983f301cbb85ff9b005f8a36a206a13"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7e314b8c983f301cbb85ff9b005f8a36a206a0c"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7e314b8c983f301cbb85ff9b005f8a36a206a0d"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 7e314b8c983f301cbb85ff9b005f8a36a206a0e"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 4e02929c5a268ccb282bc69873bc85f01024dfcc"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("120", "121", "122", "123", "124")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 4e02929c5a268ccb282bc69873bc85f01024dfb4"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 4e02929c5a268ccb282bc69873bc85f01024dfb5"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 4e02929c5a268ccb282bc69873bc85f01024dfb6"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 4e02929c5a268ccb282bc69873bc85f01024dfb7"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 4e02929c5a268ccb282bc69873bc85f01024dfb0"
+void DataAggregation::encryptionFileData() lines = 407: "the Fakebuf16 = 3fd308cf5478eca5297d05c0d6bed675bb33225e"
+void DataAggregation::encryptionFileData() lines = 415: "tmpList len = 5"
+tmpList is  ("130", "131", "132", "133", "134")
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 3fd308cf5478eca5297d05c0d6bed675bb3322dc"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 3fd308cf5478eca5297d05c0d6bed675bb3322dd"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 3fd308cf5478eca5297d05c0d6bed675bb3322da"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 3fd308cf5478eca5297d05c0d6bed675bb3322db"
+void DataAggregation::encryptionFileData() lines = 428: "tmps = 3fd308cf5478eca5297d05c0d6bed675bb3322d8"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 456: "new char is success"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 76328eebc7dd936fcaee9ca11507ab26c137978a jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 76328eebc7dd936fcaee9ca11507ab26c13797ee fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 0 pinjiestr = 76328eebc7dd936fcaee9ca11507ab26c137978a76328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 76328eebc7dd936fcaee9ca11507ab26c137978b jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 76328eebc7dd936fcaee9ca11507ab26c13797ee fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 1 pinjiestr = 76328eebc7dd936fcaee9ca11507ab26c137978b76328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 76328eebc7dd936fcaee9ca11507ab26c1379788 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 76328eebc7dd936fcaee9ca11507ab26c13797ee fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 2 pinjiestr = 76328eebc7dd936fcaee9ca11507ab26c137978876328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 76328eebc7dd936fcaee9ca11507ab26c1379789 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 76328eebc7dd936fcaee9ca11507ab26c13797ee fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 3 pinjiestr = 76328eebc7dd936fcaee9ca11507ab26c137978976328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee"
+void DataAggregation::encryptionFileData() lines = 480: "row = 0 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 76328eebc7dd936fcaee9ca11507ab26c1379786 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 76328eebc7dd936fcaee9ca11507ab26c13797ee fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 4 pinjiestr = 76328eebc7dd936fcaee9ca11507ab26c137978676328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee76328eebc7dd936fcaee9ca11507ab26c13797ee"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a12 jiamiLen = 39"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a7c fakeLen = 39"
+void DataAggregation::encryptionFileData() lines = 500: "i = 5 pinjiestr = 7e314b8c983f301cbb85ff9b005f8a36a206a7c77e314b8c983f301cbb85ff9b005f8a36a206a12e314b8c983f301cbb85ff9b005f8a36a206a7c7e314b8c983f301cbb85ff9b005f8a36a206a7c"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a13 jiamiLen = 39"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a7c fakeLen = 39"
+void DataAggregation::encryptionFileData() lines = 500: "i = 6 pinjiestr = 7e314b8c983f301cbb85ff9b005f8a36a206a7c77e314b8c983f301cbb85ff9b005f8a36a206a13e314b8c983f301cbb85ff9b005f8a36a206a7c7e314b8c983f301cbb85ff9b005f8a36a206a7c"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a0c jiamiLen = 39"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a7c fakeLen = 39"
+void DataAggregation::encryptionFileData() lines = 500: "i = 7 pinjiestr = 7e314b8c983f301cbb85ff9b005f8a36a206a7c77e314b8c983f301cbb85ff9b005f8a36a206a0ce314b8c983f301cbb85ff9b005f8a36a206a7c7e314b8c983f301cbb85ff9b005f8a36a206a7c"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a0d jiamiLen = 39"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a7c fakeLen = 39"
+void DataAggregation::encryptionFileData() lines = 500: "i = 8 pinjiestr = 7e314b8c983f301cbb85ff9b005f8a36a206a7c77e314b8c983f301cbb85ff9b005f8a36a206a0de314b8c983f301cbb85ff9b005f8a36a206a7c7e314b8c983f301cbb85ff9b005f8a36a206a7c"
+void DataAggregation::encryptionFileData() lines = 480: "row = 1 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a0e jiamiLen = 39"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 7e314b8c983f301cbb85ff9b005f8a36a206a7c fakeLen = 39"
+void DataAggregation::encryptionFileData() lines = 500: "i = 9 pinjiestr = 7e314b8c983f301cbb85ff9b005f8a36a206a7c77e314b8c983f301cbb85ff9b005f8a36a206a0ee314b8c983f301cbb85ff9b005f8a36a206a7c7e314b8c983f301cbb85ff9b005f8a36a206a7c"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 4e02929c5a268ccb282bc69873bc85f01024dfb4 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 4e02929c5a268ccb282bc69873bc85f01024dfcc fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 10 pinjiestr = 4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfb44e02929c5a268ccb282bc69873bc85f01024dfcc"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 4e02929c5a268ccb282bc69873bc85f01024dfb5 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 4e02929c5a268ccb282bc69873bc85f01024dfcc fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 11 pinjiestr = 4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfb54e02929c5a268ccb282bc69873bc85f01024dfcc"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 4e02929c5a268ccb282bc69873bc85f01024dfb6 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 4e02929c5a268ccb282bc69873bc85f01024dfcc fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 12 pinjiestr = 4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfb64e02929c5a268ccb282bc69873bc85f01024dfcc"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 4e02929c5a268ccb282bc69873bc85f01024dfb7 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 4e02929c5a268ccb282bc69873bc85f01024dfcc fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 13 pinjiestr = 4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfb74e02929c5a268ccb282bc69873bc85f01024dfcc"
+void DataAggregation::encryptionFileData() lines = 480: "row = 2 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 4e02929c5a268ccb282bc69873bc85f01024dfb0 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 4e02929c5a268ccb282bc69873bc85f01024dfcc fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 14 pinjiestr = 4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfcc4e02929c5a268ccb282bc69873bc85f01024dfb04e02929c5a268ccb282bc69873bc85f01024dfcc"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 0"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 3fd308cf5478eca5297d05c0d6bed675bb3322dc jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 3fd308cf5478eca5297d05c0d6bed675bb33225e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 15 pinjiestr = 3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb3322dc"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 1"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 3fd308cf5478eca5297d05c0d6bed675bb3322dd jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 3fd308cf5478eca5297d05c0d6bed675bb33225e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 16 pinjiestr = 3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb3322dd"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 2"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 3fd308cf5478eca5297d05c0d6bed675bb3322da jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 3fd308cf5478eca5297d05c0d6bed675bb33225e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 17 pinjiestr = 3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb3322da"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 3"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 3fd308cf5478eca5297d05c0d6bed675bb3322db jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 3fd308cf5478eca5297d05c0d6bed675bb33225e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 18 pinjiestr = 3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb3322db"
+void DataAggregation::encryptionFileData() lines = 480: "row = 3 column = 4"
+void DataAggregation::encryptionFileData() lines = 487: "jiamiBuf = 3fd308cf5478eca5297d05c0d6bed675bb3322d8 jiamiLen = 40"
+void DataAggregation::encryptionFileData() lines = 492: "fakeBuf = 3fd308cf5478eca5297d05c0d6bed675bb33225e fakeLen = 40"
+void DataAggregation::encryptionFileData() lines = 500: "i = 19 pinjiestr = 3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb33225e3fd308cf5478eca5297d05c0d6bed675bb3322d8"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81ea0246a89820f6b3efba4e47c4f9ef8fce016c87aa6cd25f3451bcc31d703da062b05a7295c826ca3c000000000000000000000000000000000000082"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81fa0246a89820f6b3efba4e47c4f9ef8fce016c87aa6dd25f3451bcc31d703da062b05a7295c826ca2c000000000000000000000000000000000000083"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81ca0246a89820f6b3efba4e47c4f9ef8fce016c87aa72d25f3451bcc31d703da062b05a7295c826ca1c000000000000000000000000000000000000084"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81da0246a89820f6b3efba4e47c4f9ef8fce016c87aa73d25f3451bcc31d703da062b05a7295c826ca0c000000000000000000000000000000000000085"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c812a0246a89820f6b3efba4e47c4f9ef8fce016c87aa70d25f3451bcc31d703da062b05a7295c826ca7c000000000000000000000000000000000000086"
+
+在log之中，有两次是能正确取出得到明文数据的，但最后一次得不到明文数据，怀疑是前面的对
+skij = yj^ai mod p = (g^aj mod p)^ai mod p
+skji = yi^aj mod p = (g^ai mod p)^aj mod p
+现在采用的是1,2的方案，也就是不在aiaj的时候mod p，而是单独先mod p的
+那么 (g^aj mod p)^ai 与  (g^ai mod p)^aj 就不一定能保证相等了吧？这样也不能满足幂次方的交换律了吧？
+
+这个东西不一定能保证skij == skji,所以最终异或得不到明文数据，有点时候是相等的，有的时候是不相等的
+
+
+当文本数据内容为
+100, 101, 102, 103, 104
+110, 111, 112, 113, 114
+120, 121, 122, 123, 124
+130, 131, 132, 133, 134
+
+混合之后异或得到的明文是
+
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 64000000000000000000000000000000000000006e00000000000000000000000000000000000000780000000000000000000000000000000000000082"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 65000000000000000000000000000000000000006f00000000000000000000000000000000000000790000000000000000000000000000000000000083"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 660000000000000000000000000000000000000070000000000000000000000000000000000000007a0000000000000000000000000000000000000084"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 670000000000000000000000000000000000000071000000000000000000000000000000000000007b0000000000000000000000000000000000000085"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 680000000000000000000000000000000000000072000000000000000000000000000000000000007c0000000000000000000000000000000000000086"
+
+64(16进制) = 6*16 + 4 = 100， 6e = 6*16 + 14 = 110, 78 = 7*16 + 8 = 120 82 =  8*16 + 2 = 130
+65 = 6*16+5 = 101 6f = 111 79 = 121  83 = 131 
+66 = 102 70 = 112  7a = 123  84 = 
+
+
+64 = 100 6e = 110 78 = 120 82 = 130 
+65 = 101 6f = 111 79 = 121 83 = 131
+66 = 102 70 = 112 7a = 122 84 = 132 
+67 = 103 71 = 113 7b = 123 85 = 133
+68 = 104 72 = 114 7c = 124 86 = 134
+
+以上数据得到的按列来看是一一对应的
+
+本次得到的就不是了，和文本文件内容差距太大
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81ea0246a89820f6b3efba4e47c4f9ef8fce016c87aa6cd25f3451bcc31d703da062b05a7295c826ca3c000000000000000000000000000000000000082"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81fa0246a89820f6b3efba4e47c4f9ef8fce016c87aa6dd25f3451bcc31d703da062b05a7295c826ca2c000000000000000000000000000000000000083"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81ca0246a89820f6b3efba4e47c4f9ef8fce016c87aa72d25f3451bcc31d703da062b05a7295c826ca1c000000000000000000000000000000000000084"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c81da0246a89820f6b3efba4e47c4f9ef8fce016c87aa73d25f3451bcc31d703da062b05a7295c826ca0c000000000000000000000000000000000000085"
+void DataAggregation::encryptionFileData() lines = 542: "mixedBuf = 7e36a89820f6b3efba4e47c4f9ef8fce016c812a0246a89820f6b3efba4e47c4f9ef8fce016c87aa70d25f3451bcc31d703da062b05a7295c826ca7c000000000000000000000000000000000000086"
+
+
+以上问题偶尔会出现，
+更换计算方法，

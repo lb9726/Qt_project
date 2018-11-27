@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <FileType>BST UI File</FileType>
+    <CreateTime>2014-03-08 23:50:40</CreateTime>
+    <LastModiTime>2015-07-13 17:16:33</LastModiTime>
+    <Solution/>
+    <Direction>HV</Direction>
+    <Ui>
+        <Desktop>
+            <Rect>
+                <Horizontal>0,0,480,272</Horizontal>
+                <Vertical>0,0,272,480</Vertical>
+            </Rect>
+            <StateMachine>
+                <Resource EffectType="Image" Prefix="T">
+                    <RC0>Desktop/Resource/Image/T0.png</RC0>
+                    <RC100>Desktop/Resource/Image/T100.png</RC100>
+                </Resource>
+                <Change EffectType="Invalid"/>
+                <HAState EffectType="Invalid"/>
+            </StateMachine>
+        </Desktop>
+        <SubUI>
+            <Media>
+                <Rect>
+                    <Horizontal>5,242,44,30</Horizontal>
+                    <Vertical>0,0,44,30</Vertical>
+                </Rect>
+                <StateMachine>
+                    <Resource EffectType="Audio" Prefix="M" Language="French">
+                        <RC0>Media/Resource/Audio/M0.wav</RC0>
+                        <RC1>Media/Resource/Audio/M1.wav</RC1>
+                        <RC2>Media/Resource/Audio/M2.wav</RC2>
+                        <RC3>Media/Resource/Audio/M3.wav</RC3>
+                        <RC4>Media/Resource/Audio/M4.wav</RC4>
+                        <RC5>Media/Resource/Audio/M5.wav</RC5>
+                        <RC6>Media/Resource/Audio/M6.wav</RC6>
+                        <RC7>Media/Resource/Audio/M7.wav</RC7>
+                        <RC8>Media/Resource/Audio/M8.wav</RC8>
+                        <RC9>Media/Resource/Audio/M9.wav</RC9>
+                        <RC10>Media/Resource/Audio/M10.wav</RC10>
+                        <RC11>Media/Resource/Audio/M11.wav</RC11>
+                        <RC12>Media/Resource/Audio/M12.wav</RC12>
+                        <RC13>Media/Resource/Audio/M13.wav</RC13>
+                        <RC14>Media/Resource/Audio/M14.wav</RC14>
+                        <RC15>Media/Resource/Audio/M15.wav</RC15>
+                        <RC16>Media/Resource/Audio/M16.wav</RC16>
+                        <RC17>Media/Resource/Audio/M17.wav</RC17>
+                        <RC18>Media/Resource/Audio/M18.wav</RC18>
+                        <RC19>Media/Resource/Audio/M19.wav</RC19>
+                        <RC20>Media/Resource/Audio/M20.wav</RC20>
+                        <RC21>Media/Resource/Audio/M21.wav</RC21>
+                        <RC22>Media/Resource/Audio/M22.wav</RC22>
+                        <RC23>Media/Resource/Audio/M23.wav</RC23>
+                        <RC24>Media/Resource/Audio/M24.wav</RC24>
+                        <RC25>Media/Resource/Audio/M25.wav</RC25>
+                        <RC26>Media/Resource/Audio/M26.wav</RC26>
+                        <RC27>Media/Resource/Audio/M27.wav</RC27>
+                        <RC28>Media/Resource/Audio/M28.wav</RC28>
+                        <RC29>Media/Resource/Audio/M29.wav</RC29>
+                        <RC30>Media/Resource/Audio/M30.wav</RC30>
+                        <RC31>Media/Resource/Audio/M31.wav</RC31>
+                        <RC33>Media/Resource/Audio/M33.wav</RC33>
+                        <RC34>Media/Resource/Audio/M34.wav</RC34>
+                        <RC35>Media/Resource/Audio/M35.wav</RC35>
+                        <RC36>Media/Resource/Audio/M36.wav</RC36>
+                        <RC37>Media/Resource/Audio/M37.wav</RC37>
+                        <RC38>Media/Resource/Audio/M38.wav</RC38>
+                        <RC39>Media/Resource/Audio/M39.wav</RC39>
+                        <RC40>Media/Resource/Audio/M40.wav</RC40>
+                        <RC41>Media/Resource/Audio/M41.wav</RC41>
+                        <RC42>Media/Resource/Audio/M42.wav</RC42>
+                        <RC43 Parameter="Repeat:true;SoloTrack:true;Volume:80;">Media/Resource/Audio/M43.wav</RC43>
+                        <RC44>Media/Resource/Audio/M44.wav</RC44>
+                        <RC45>Media/Resource/Audio/M45.wav</RC45>
+                        <RC48 Parameter="Volume:80;">Media/Resource/Audio/M48.wav</RC48>
+                        <RC60>Media/Resource/Audio/M60.wav</RC60>
+                        <RC70>Media/Resource/Audio/M70.wav</RC70>
+                        <RC71>Media/Resource/Audio/M71.wav</RC71>
+                        <RC72>Media/Resource/Audio/M72.wav</RC72>
+                        <RC73>Media/Resource/Audio/M73.wav</RC73>
+                        <RC74>Media/Resource/Audio/M74.wav</RC74>
+                        <RC75>Media/Resource/Audio/M75.wav</RC75>
+                        <RC76>Media/Resource/Audio/M76.wav</RC76>
+                        <RC77>Media/Resource/Audio/M77.wav</RC77>
+                        <RC78>Media/Resource/Audio/M78.wav</RC78>
+                        <RC79>Media/Resource/Audio/M79.wav</RC79>
+                        <RC80>Media/Resource/Audio/M80.wav</RC80>
+                        <RC81>Media/Resource/Audio/M81.wav</RC81>
+                        <RC82>Media/Resource/Audio/M82.wav</RC82>
+                        <RC83>Media/Resource/Audio/M83.wav</RC83>
+                        <RC84>Media/Resource/Audio/M84.wav</RC84>
+                    </Resource>
+                    <HAState EffectType="Invalid"/>
+                    <Map EffectType="SignalMap">
+                    </Map>
+                </StateMachine>
+            </Media>
+            <Floor>
+                <Rect>
+                    <Horizontal>258,26,198,165</Horizontal>
+                    <Vertical>37,238,198,165</Vertical>
+                </Rect>
+                <Rect1>
+                    <Horizontal>24,26,198,165</Horizontal>
+                    <Vertical>37,27,198,165</Vertical>
+                </Rect1>
+                <Rect2>
+                    <Horizontal>252,30,198,165</Horizontal>
+                    <Vertical>34,245,198,165</Vertical>
+                </Rect2>
+                <Rect3>
+                    <Horizontal>30,30,198,165</Horizontal>
+                    <Vertical>34,35,198,165</Vertical>
+                </Rect3>
+                <StateMachine>
+                    <Resource EffectPara="Pattern:Discrete" EffectType="Image" Prefix="T">
+                        <RC43>Floor/Resource/Image/T43.png</RC43>
+                        <RC44>Floor/Resource/Image/T44.png</RC44>
+                        <RC45>Floor/Resource/Image/T45.png</RC45>
+                        <RC46>Floor/Resource/Image/T46.png</RC46>
+                        <RC47>Floor/Resource/Image/T47.png</RC47>
+                        <RC48>Floor/Resource/Image/T48.png</RC48>
+                        <RC49>Floor/Resource/Image/T49.png</RC49>
+                        <RC50>Floor/Resource/Image/T50.png</RC50>
+                        <RC51>Floor/Resource/Image/T51.png</RC51>
+                        <RC52>Floor/Resource/Image/T52.png</RC52>
+                        <RC53>Floor/Resource/Image/T53.png</RC53>
+                        <RC54>Floor/Resource/Image/T54.png</RC54>
+                        <RC55>Floor/Resource/Image/T55.png</RC55>
+                        <RC56>Floor/Resource/Image/T56.png</RC56>
+                        <RC57>Floor/Resource/Image/T57.png</RC57>
+                        <RC65>Floor/Resource/Image/T65.png</RC65>
+                        <RC66>Floor/Resource/Image/T66.png</RC66>
+                        <RC67>Floor/Resource/Image/T67.png</RC67>
+                        <RC68>Floor/Resource/Image/T68.png</RC68>
+                        <RC69>Floor/Resource/Image/T69.png</RC69>
+                        <RC70>Floor/Resource/Image/T70.png</RC70>
+                        <RC71>Floor/Resource/Image/T71.png</RC71>
+                        <RC72>Floor/Resource/Image/T72.png</RC72>
+                        <RC73>Floor/Resource/Image/T73.png</RC73>
+                        <RC74>Floor/Resource/Image/T74.png</RC74>
+                        <RC75>Floor/Resource/Image/T75.png</RC75>
+                        <RC76>Floor/Resource/Image/T76.png</RC76>
+                        <RC77>Floor/Resource/Image/T77.png</RC77>
+                        <RC78>Floor/Resource/Image/T78.png</RC78>
+                        <RC79>Floor/Resource/Image/T79.png</RC79>
+                        <RC80>Floor/Resource/Image/T80.png</RC80>
+                        <RC81>Floor/Resource/Image/T81.png</RC81>
+                        <RC82>Floor/Resource/Image/T82.png</RC82>
+                        <RC83>Floor/Resource/Image/T83.png</RC83>
+                        <RC84>Floor/Resource/Image/T84.png</RC84>
+                        <RC85>Floor/Resource/Image/T85.png</RC85>
+                        <RC86>Floor/Resource/Image/T86.png</RC86>
+                        <RC87>Floor/Resource/Image/T87.png</RC87>
+                        <RC88>Floor/Resource/Image/T88.png</RC88>
+                        <RC89>Floor/Resource/Image/T89.png</RC89>
+                        <RC90>Floor/Resource/Image/T90.png</RC90>
+                        <RC92>Floor/Resource/Image/T92.png</RC92>
+                        <RC95>Floor/Resource/Image/T95.png</RC95>
+                    </Resource>
+                    <Map>
+                    </Map>
+                    <Run EffectType="Invalid"/>
+                    <Halt EffectTcype="Invalid" EffectType="Invalid"/>
+                    <HAState EffetType="Invalid" EffectType="Invalid"/>
+                </StateMachine>
+            </Floor>
+            <Arrow>
+                <Rect>
+                    <Horizontal>26,32,200,200</Horizontal>
+                    <Vertical>31,20,200,200</Vertical>
+                </Rect>
+                <Rect1>
+                    <Horizontal>254,32,200,200</Horizontal>
+                    <Vertical>31,258,200,200</Vertical>
+                </Rect1>
+                <Rect2>
+                    <Horizontal>32,30,200,200</Horizontal>
+                    <Vertical>29,27,200,200</Vertical>
+                </Rect2>
+                <Rect3>
+                    <Horizontal>248,29,200,200</Horizontal>
+                    <Vertical>29,245,200,200</Vertical>
+                </Rect3>
+                <StateMachine>
+                    <Resource EffectType="Image" Prefix="T">
+                        <RC1>Arrow/Resource/Image/T1.png</RC1>
+                        <RC2>Arrow/Resource/Image/T2.png</RC2>
+                        <RC3>Arrow/Resource/Image/T3.png</RC3>
+                        <RC100>Arrow/Resource/Image/T100.png</RC100>
+                    </Resource>
+                    <Change EffectType="Invalid"/>
+                    <Run EffectPara="AnimateType:EaseInOut;Interval:2@6000,3000,2000,1500;FrameRange:20;Direction:V;Orientation:P;" EffectType="Roll"/>
+                    <Halt EffectType="Invalid"/>
+                    <HAState EffectType="Invalid"/>
+                </StateMachine>
+            </Arrow>
+            <Function>
+                <Rect>
+                    <Horizontal>257,15,200,182</Horizontal>
+                    <Vertical>31,235,200,182</Vertical>
+                </Rect>
+                <Rect1>
+                    <Horizontal>23,15,200,182</Horizontal>
+                    <Vertical>31,9,200,182</Vertical>
+                </Rect1>
+                <Rect2>
+                    <Horizontal>249,23,200,182</Horizontal>
+                    <Vertical>35,234,200,182</Vertical>
+                </Rect2>
+                <Rect3>
+                    <Horizontal>33,23,200,182</Horizontal>
+                    <Vertical>35,18,200,182</Vertical>
+                </Rect3>
+                <StateMachine>
+                    <Resource EffectType="Image" Prefix="T">
+						<RC0 >Floor/Resource/Image/T0.png</RC0>
+						<RC1 >Floor/Resource/Image/T1.png</RC1>
+						<RC2 >Floor/Resource/Image/T2.png</RC2>
+						<RC3 >Floor/Resource/Image/T3.png</RC3>
+						<RC4 >Floor/Resource/Image/T4.png</RC4>
+						<RC5 >Floor/Resource/Image/T5.png</RC5>
+						<RC6 >Floor/Resource/Image/T6.png</RC6>
+						<RC7 >Floor/Resource/Image/T7.png</RC7>
+						<RC8 >Floor/Resource/Image/T8.png</RC8>
+						<RC9 >Floor/Resource/Image/T9.png</RC9>
+						<RC10 >Floor/Resource/Image/T10.png</RC10>
+						<RC11 >Floor/Resource/Image/T11.png</RC11>
+						<RC12 >Floor/Resource/Image/T12.png</RC12>
+						<RC13 >Floor/Resource/Image/T13.png</RC13>
+						<RC14 >Floor/Resource/Image/T14.png</RC14>
+						<RC15 >Floor/Resource/Image/T15.png</RC15>
+						<RC16 >Floor/Resource/Image/T16.png</RC16>
+						<RC17 >Floor/Resource/Image/T17.png</RC17>
+						<RC18 >Floor/Resource/Image/T18.png</RC18>
+						<RC19 >Floor/Resource/Image/T19.png</RC19>
+						<RC20 >Floor/Resource/Image/T20.png</RC20>
+						<RC21 >Floor/Resource/Image/T21.png</RC21>
+						<RC22 >Floor/Resource/Image/T22.png</RC22>
+						<RC23 >Floor/Resource/Image/T23.png</RC23>
+						<RC24 >Floor/Resource/Image/T24.png</RC24>
+						<RC25 >Floor/Resource/Image/T25.png</RC25>
+						<RC26 >Floor/Resource/Image/T26.png</RC26>
+						<RC27 >Floor/Resource/Image/T27.png</RC27>
+						<RC28 >Floor/Resource/Image/T28.png</RC28>
+						<RC29 >Floor/Resource/Image/T29.png</RC29>
+						<RC30 >Floor/Resource/Image/T30.png</RC30>
+						<RC31 >Floor/Resource/Image/T31.png</RC31>
+						<RC32 >Floor/Resource/Image/T32.png</RC32>
+						<RC33 >Floor/Resource/Image/T33.png</RC33>
+						<RC34 >Floor/Resource/Image/T34.png</RC34>
+						<RC35 >Floor/Resource/Image/T35.png</RC35>
+						<RC36 >Floor/Resource/Image/T36.png</RC36>
+						<RC37 >Floor/Resource/Image/T37.png</RC37>
+						<RC38 >Floor/Resource/Image/T38.png</RC38>
+						<RC39 >Floor/Resource/Image/T39.png</RC39>
+                        <RC40 Text="Maintenance">Function/Resource/Image/T40.png</RC40>
+                        <RC41 Text="Acces interdit">Function/Resource/Image/T41.png</RC41>
+                        <RC42 Text="Surcharge">Function/Resource/Image/T42.png</RC42>
+                        <RC43 Text="Complet">Function/Resource/Image/T43.png</RC43>
+                        <RC44 Text="Pompier">Function/Resource/Image/T44.png</RC44>
+                        <RC45 Text="Liftier">Function/Resource/Image/T45.png</RC45>
+                        <RC46 Text="Cellule">Function/Resource/Image/T46.png</RC46>
+                        <RC47 Text="Fermeture forcee">Function/Resource/Image/T47.png</RC47>
+                        <RC48 Text="Mode secouru">Function/Resource/Image/T48.png</RC48>
+                        <RC49 Text="Code">Function/Resource/Image/T49.png</RC49>
+                        <RC51 Text="">Function/Resource/Image/T51.png</RC51>
+                        <RC60 Text="">Function/Resource/Image/T60.png</RC60>
+                    </Resource>
+                    <Change EffectType="Invalid"/>
+                    <Steady EffectType="Invalid"/>
+                    <HAState EffectType="Invalid"/>
+                </StateMachine>
+            </Function>
+            <Text>
+                <Rect>
+                    <Horizontal>240,206,240,50</Horizontal>
+                    <Vertical>0,418,272,50</Vertical>
+                </Rect>
+                <Rect1>
+                    <Horizontal>0,206,240,50</Horizontal>
+                    <Vertical>0,195,272,50</Vertical>
+                </Rect1>
+                <Rect2>
+                    <Horizontal>240,205,225,35</Horizontal>
+                    <Vertical>9,415,254,35</Vertical>
+                </Rect2>
+                <Rect3>
+                    <Horizontal>15,205,225,35</Horizontal>
+                    <Vertical>9,205,254,35</Vertical>
+                </Rect3>
+                <StateMachine>
+                    <Resource EffectPara="Row:4;RowSpace:1;Column:50;SpaceExt:1;Font:DejaVu Sans Mono;Weigth:Normal;Color:white;AlignS:Center;AlignB:Left;" EffectType="Text"/>
+                    <HAState EffectType="Invalid"/>
+                    <Steady EffectType="Invalid"/>
+                </StateMachine>
+            </Text>
+            <MessageBar>
+                <Rect>
+                    <Horizontal>124,15,232,80</Horizontal>
+                    <Vertical>14,28,232,90</Vertical>
+                </Rect>
+                <StateMachine>
+                    <Resource EffectPara="Title:false;Font:Arial;Size:10;Bold:Normal;" EffectType="Image"/>
+                    <HAState EffectType="Invalid"/>
+                </StateMachine>
+            </MessageBar>
+            <ProgressBar>
+                <Rect>
+                    <Horizontal>124,210,232,24</Horizontal>
+                    <Vertical>18,400,232,24</Vertical>
+                </Rect>
+                <StateMachine>
+                    <Resource EffectPara="Pattern:PPStream;Font:Arial;Bold:Normal;" EffectType="Image"/>
+                    <HAState EffectType="Invalid"/>
+                </StateMachine>
+            </ProgressBar>
+            <Logo>
+                <Rect>
+                    <Horizontal>330,12,113,33</Horizontal>
+                    <Vertical>143,28,113,33</Vertical>
+                </Rect>
+            </Logo>
+        </SubUI>
+    </Ui>
+</root>

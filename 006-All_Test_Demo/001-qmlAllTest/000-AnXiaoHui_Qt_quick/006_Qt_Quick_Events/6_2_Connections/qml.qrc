@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ConnectionsTest.qml</file>
+        <file>SelfDefineSignal.qml</file>
+    </qresource>
+</RCC>

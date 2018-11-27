@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>image/background.png</file>
+        <file>image/Blue_464.png</file>
+        <file>image/Brown_464.png</file>
+        <file>image/close.png</file>
+        <file>image/gifimg.gif</file>
+        <file>image/greenslider.png</file>
+        <file>image/grey_Close.png</file>
+        <file>image/GreyRectangle.png</file>
+        <file>image/greyslider.png</file>
+        <file>image/handle.png</file>
+        <file>image/kplayer.png</file>
+        <file>image/Layout_img.png</file>
+        <file>image/red_Close.png</file>
+        <file>image/vertical_img.png</file>
+        <file>image/whiteBg.png</file>
+        <file>ButtonSelfDefineLong.qml</file>
+    </qresource>
+</RCC>

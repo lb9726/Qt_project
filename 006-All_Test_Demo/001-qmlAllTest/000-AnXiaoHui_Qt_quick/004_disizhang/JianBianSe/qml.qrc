@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>JianBianSe.qml</file>
+        <file>Z_ProPertyTest.qml</file>
+        <file>Item_Test.qml</file>
+        <file>Anchor_0.qml</file>
+        <file>Anchor_1.qml</file>
+        <file>Key_Action.qml</file>
+        <file>Blue_text_wrap.qml</file>
+        <file>Rich_blue_text.qml</file>
+        <file>Style_Text.qml</file>
+        <file>Button_quit.qml</file>
+        <file>images/buttonIcon.png</file>
+        <file>ButtonStyle_Test.qml</file>
+        <file>Multi_ButtonStyle_Componet.qml</file>
+        <file>Show_Net_Image.qml</file>
+        <file>MutilSelect_FileDialog.qml</file>
+    </qresource>
+</RCC>

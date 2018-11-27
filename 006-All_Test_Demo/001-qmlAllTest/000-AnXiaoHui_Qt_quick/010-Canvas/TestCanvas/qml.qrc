@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>TestCanvas.qml</file>
+        <file>TestCanVas2.qml</file>
+        <file>DrawRectGradient.qml</file>
+        <file>DrawTriangle.qml</file>
+        <file>DrawComplexPath.qml</file>
+        <file>DrawText.qml</file>
+        <file>DrawImage.qml</file>
+        <file>image/arrow/1.png</file>
+        <file>image/arrow/2.png</file>
+        <file>image/arrow/3.png</file>
+        <file>image/arrow/100.png</file>
+        <file>DrawMultiPicture.qml</file>
+        <file>DrawImageItem.qml</file>
+        <file>DrawLocalImage.qml</file>
+        <file>DrawImageData.qml</file>
+        <file>DrawConcentricCircles.qml</file>
+        <file>CanvasTransform.qml</file>
+        <file>CanvasClip.qml</file>
+        <file>main_New.qml</file>
+    </qresource>
+</RCC>

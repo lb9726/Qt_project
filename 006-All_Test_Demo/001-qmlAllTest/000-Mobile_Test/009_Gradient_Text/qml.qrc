@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Gradient_Text.qml</file>
+    </qresource>
+</RCC>

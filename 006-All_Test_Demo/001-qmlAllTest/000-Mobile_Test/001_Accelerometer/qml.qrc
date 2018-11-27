@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Accelerometer_Test.qml</file>
+        <file>Ambient_Light_Sensor_001.qml</file>
+    </qresource>
+</RCC>

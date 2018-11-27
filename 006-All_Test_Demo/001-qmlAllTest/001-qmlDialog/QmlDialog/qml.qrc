@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>ParaMeterConfigDialog.qml</file>
+        <file>Window_Test.qml</file>
+        <file>RectBtn.qml</file>
+        <file>TestDailog.qml</file>
+    </qresource>
+</RCC>

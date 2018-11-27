@@ -1,0 +1,56 @@
+https://www.cnblogs.com/cocoajin/p/3761414.html
+
+http://wiki.ubuntu.org.cn/Vsftpd#.2Fetc.2Fvsftpd.conf
+配置vsftpd.conf
+
+    sudo vim /etc/vsftpd.conf
+
+主要添加以下几项()：
+
+
+# Allow anonymous FTP? (Disabled by default)
+anonymous_enable=YES
+#
+
+# Uncomment this to enable any form of FTP write command.
+write_enable=YES
+#
+
+# Uncomment this to allow the anonymous FTP user to upload files. This only
+# has an effect if the above global write enable is activated. Also, you will
+# obviously need to create a directory writable by the FTP user.
+anon_upload_enable=YES
+#
+
+# Uncomment this if you want the anonymous FTP user to be able to create
+# new directories.
+anon_mkdir_write_enable=YES
+#
+
+# Default umask for local users is 077. You may wish to change this to 022,
+# if your users expect that (022 is used by most other ftpd's)
+local_umask=022
+#
+在文件最后加上了
+anon_root=/home/ftp
+
+sudo chown root:ftp ftp/
+sudo chmod 755 ftp/
+
+sudo mkdir /home/ftp/pub
+sudo chown root:ftp /home/ftp/pub/
+sudo chmod 777 /home/ftp/pub/
+
+
+重命名、删除文件
+开放重命名，删除文件等权限，不开的话没法续传。
+anon_other_write_enable=YES
+
+文件通过匿名用户只能传输到pub下，如果在ftp下匿名用户是不能上传文件的，只能上传文件到pub下面
+另外匿名用户登录时可能会无法下载，此时，应该在每一次upload之后，把文件的属性或者文件夹的属性
+修改为至少是可读的属性：例如：chmod -R 777 /home/ftp/pub，因为上传文件是这个文件对应的属主为ftp，所以可写，而其他用户就
+连read的权限可能都没有了，遇到不能上传或者下载时，可以考虑一下上述的配置，以及读写的属性权限设置是否正确
+sudo service vsftpd restart
+
+匿名用户登录时使用 用户名ftp，密码：ftp，甚至也可以不输入密码，或者为anonymous登录
+在使用FileZilla登录时，可以输入anonymous，密码不输入，只要配置了匿名登录，就可以登录成功

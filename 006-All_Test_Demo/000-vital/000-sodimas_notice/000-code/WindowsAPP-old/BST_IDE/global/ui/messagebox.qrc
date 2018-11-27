@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/Message">
+        <file>rc/Message/error.png</file>
+        <file>rc/Message/question.png</file>
+        <file>rc/Message/success.png</file>
+        <file>rc/Message/btnadd.png</file>
+        <file>rc/Message/btndel.png</file>
+        <file>rc/Message/btndisable.png</file>
+        <file>rc/Message/btnlight.png</file>
+        <file>rc/Message/messagebox.png</file>
+    </qresource>
+</RCC>

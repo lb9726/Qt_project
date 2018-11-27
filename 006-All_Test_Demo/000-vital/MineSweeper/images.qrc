@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/clock.png</file>
+        <file>images/difficult.png</file>
+        <file>images/easy.png</file>
+        <file>images/end.png</file>
+        <file>images/enter.png</file>
+        <file>images/enter_in.png</file>
+        <file>images/flag_h.png</file>
+        <file>images/icon.png</file>
+        <file>images/mine.png</file>
+        <file>images/n0.png</file>
+        <file>images/n1.png</file>
+        <file>images/n2.png</file>
+        <file>images/n3.png</file>
+        <file>images/n4.png</file>
+        <file>images/n5.png</file>
+        <file>images/n6.png</file>
+        <file>images/n7.png</file>
+        <file>images/n8.png</file>
+        <file>images/normal.png</file>
+        <file>images/ques.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,210 @@
+TcpServer 端口为60001 (根据配置文件设定)，Ip: 192.168.1.10(固定不变)
+
+手机客户端协议如下：
+===================================================================================================================
+登录：	
+	手机客户端发送：
+		{	
+			"type"："login",
+			"info":
+				{
+					"ssid":"sodimas",  // wifi名字
+					"password":"1234"  // 密码根据配置文件匹配
+				}
+		}
+	服务器端回复：
+		{	
+		"type"："login",
+		"info":
+			{
+				"result":true   ///false //返回登录结果true，登录成功。否则失败
+			}
+		}
+
+心跳：		
+服务器端发送，服务器端自登录成功后，每5秒发送一次心跳帧
+{"type":"heartBeat","info": "isonline" } 
+	
+手机客户端回复
+{"type":"heartBeat","info": 1 // 0} 1 在线， 0不在线
+
+如果服务器端连续10次收不到回复，服务器端将主动关闭socket
+
+
+手机客户端发送文件
+
+升级：
+	App将theme.zip和application.zip均上传到ftp服务器的"/home/ftp/pub"目录下，登录名和密码均为ftp
+
+手机端发送命令
+{"type":"sendfile","info":{"flag" :true,"filename": "sodimas.zip"}}
+
+接收到flag 为true 和文件名之后，删除ftp/pub/下面已经存在的同名的文件，然后回复手机端
+服务器端回复
+{"type":"sendfile","info": true}
+
+手机端在接收到之后启动ftp客户端上传文件
+
+
+显示进度条，准备接受文件
+发送文件时，显示文件传输的进度，需要手机端发送百分比给服务器
+
+手机客户端发送上传文件的进度
+{
+    "type":"updateProgress",
+    "info": 0
+}
+	
+传输完成时 手机客户端发送结束
+{
+    "type":"appupdateFinished",
+    "info":true
+}
+
+
+获取参数信息：
+	手机客户端向设备请求获取参数信息
+		{
+			"type":"getallparameter",
+			"info":"get"
+		}
+	服务器端回复参数：
+		{
+			"type":"sendallparameter",
+			"info":
+				{
+					"autotest":false
+					
+					"liftflrvol":50,   //设置  message  
+						
+					"liftarvvol":50,    //设置  gong 
+					
+					"admusicvol":100,   //设置  music 
+						 
+					"luminance":75,     //设置  normal
+					
+					"darklevel":30,     //standby为显示器进入standby模式后的背光亮度
+					
+					"standby":230765,   //设置  delay before standby
+					
+					"rotation": 90,     //0;90;180;270
+					
+					"layout":0         //0;1;2;3
+			  }
+		}
+
+		手机客户端向设备设置参数：
+		{
+			"type":"setparameter",
+			"info":
+				{
+					"autotest":false
+			    }
+		}
+	
+重启：
+	{
+		"type":"reboot",
+		"info":true
+	}
+为true时服务器端需要保存修改的配置参数到文件中，然后重启
+为false时，不需要保存文件，也不需要重启。
+
+===================================================================================================================
+
+
+
+
+
+window App客户端协议如下：
+====================================================================================================================
+windowApp客户端发送：
+		{	
+			"type"："login",
+			"info":
+				{
+					"ssid":"sodimas",  // wifi名字
+					"password":"1234"  // 密码根据配置文件匹配
+				}
+		}
+	服务器端回复：
+		{	
+		"type"："login",
+		"info":
+			{
+				"result":true   ///false //返回登录结果true，登录成功。否则失败
+			}
+		}
+
+
+服务器端发送，服务器端自登录成功后，每5秒发送一次心跳帧
+{"type":"heartBeat","info": "isonline" } 
+	
+windowApp客户端回复
+{"type":"heartBeat","info": 1 // 0} 1 在线， 0不在线
+
+如果连续10次收不到回复，服务器端将主动关闭socket
+
+
+windowApp客户端发送文件
+升级：
+	windowApp将theme.zip和application.zip均上传到ftp服务器的"/home/ftp/pub"目录下，登录名和密码均为ftp
+
+windowApp端发送命令
+{"type":"sendfile","info":{"flag" :true,"filename": "sodimas.zip"}}
+
+接收到flag 为true 和文件名之后，删除ftp/pub/下面已经存在的同名的文件，然后回复windowApp端
+服务器端回复
+{"type":"sendfile","info": true}
+
+windowApp端在接收到之后启动ftp客户端上传文件
+
+
+显示进度条，准备接受文件
+发送文件时，显示文件传输的进度，需要windowApp端发送百分比给服务器
+
+windowApp客户端发送上传文件的进度
+{
+    "type":"updateProgress",
+    "info": 0
+}
+	
+传输完成时 windowApp客户端发送结束
+{
+    "type":"appupdateFinished",
+    "info":true
+}
+
+
+下载文件
+windowApp端发送命令
+{"type":"download","info":{"flag" :true,"filename": "sodimas.zip"}}
+
+需要等待服务器端，将正在使用的资源文件打包成zip文件后，才能下载，打包完成后
+服务器端回复windowApp
+{"type":"download","info":true}
+
+windowApp接收到命令之后，启动ftp客户端进行下载文件的操作
+====================================================================================================================
+
+
+====================================================================================================================
+嵌入式web的文件上传方案调整
+需要追加一个命令，为了不干涉windowApp的代码，重新追加一个命令来执行解压等操作
+{"type":"webUpload","info":{"flag" :true,"filename": "sodimas.zip"}}
+
+再次追加一个显示文件正在上传的弹框
+{"type":"webUploadShowMessage","info":true}
+====================================================================================================================
+
+{"type":"sendallparameter","info":{"admusicvol":0}}
+{"type":"sendallparameter","info":{"admusicvol":30}}
+{"type":"sendallparameter","info":{"luminance":0}}
+{"type":"sendallparameter","info":{"luminance":30}}
+
+{"type":"sendallparameter","info":{"autotest":true}}
+{"type":"sendallparameter","info":{"autotest":false}}
+{"type":"sendallparameter","info":{"layout":0}}
+{"type":"sendallparameter","info":{"layout":1}}
+{"type":"sendallparameter","info":{"rotation":90}}
+{"type":"sendallparameter","info":{"rotation":180}}

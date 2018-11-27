@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ColorDialogTab.qml</file>
+        <file>MessageDialogTab.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,38 @@
+QSpinBox{
+    background: qlineargradient(x1: 0, y1: 0,
+                                x2: 0, y2: 1,
+                                stop: 0 rgba(100,0,0,150),
+                                stop: 0.4 rgba(180,160,95,230),
+                                stop: 0.5 rgba(180,160,100,230),
+                                stop: 1.0 rgba(250,230,105,230));
+
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: rgba(100,45,5,145);
+    outline:#00ff00 dotted thick;
+
+    color:rgba(200,95,75,230);
+    text-align: center;
+    text-decoration: underline;
+
+    font-family: "Times New Roman",Georgia,Serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 900;
+
+    padding-top: 0%;
+    padding-left: 10%;
+}
+
+QSpinBox::down-button{
+    subcontrol-origin: border-box;
+}
+
+QSpinBox::up-button:hover{
+    border-image: url(:/Menu/rc/Menu/eye.png) 1;
+}
+
+QSpinBox::down-button:hover{
+    border-image: url(:/Menu/rc/Menu/eye.png) 1;
+}

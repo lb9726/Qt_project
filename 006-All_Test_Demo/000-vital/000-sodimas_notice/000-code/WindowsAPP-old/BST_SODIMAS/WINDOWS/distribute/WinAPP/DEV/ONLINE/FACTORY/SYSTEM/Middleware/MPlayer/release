@@ -1,0 +1,2 @@
+#!/bin/sh
+killall -9 /usr/bst/SYSTEM/Middleware/MPlayer/mplayer_brdg

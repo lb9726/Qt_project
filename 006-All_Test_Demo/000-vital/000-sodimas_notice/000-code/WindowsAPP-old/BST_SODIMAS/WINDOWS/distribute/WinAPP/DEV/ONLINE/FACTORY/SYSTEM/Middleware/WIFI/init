@@ -1,0 +1,13 @@
+#!/bin/sh
+
+mkdir -p /etc/Wireless/RT2870AP/
+
+cd /usr/bst/SYSTEM/Middleware/WIFI/
+#insmod mt7601Uap.ko
+insmod rtutil5370ap.ko
+insmod rt5370ap.ko
+insmod rtnet5370ap.ko
+cd /
+
+mkdir -p /var/lib/misc
+touch /var/lib/misc/udhcpd.leases

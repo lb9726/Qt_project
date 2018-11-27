@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ifconfig eth0 down
+remod asix.ko

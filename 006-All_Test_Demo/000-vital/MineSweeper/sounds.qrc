@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sounds/bong.wav</file>
+        <file>sounds/click.wav</file>
+        <file>sounds/critical.wav</file>
+        <file>sounds/question.wav</file>
+        <file>sounds/victory.wav</file>
+    </qresource>
+</RCC>

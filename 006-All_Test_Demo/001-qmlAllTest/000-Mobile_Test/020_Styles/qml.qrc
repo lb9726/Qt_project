@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>SBusyIndicatorStyle.qml</file>
+        <file>SButtonStyle.qml</file>
+    </qresource>
+</RCC>

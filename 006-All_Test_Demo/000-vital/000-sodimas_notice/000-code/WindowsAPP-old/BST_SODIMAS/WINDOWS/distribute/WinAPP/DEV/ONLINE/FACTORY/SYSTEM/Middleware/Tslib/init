@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export QWS_MOUSE_PROTO="Tslib:/dev/input/event0"
+export TSLIB_CONFFILE=/usr/gui/tslib/ts.conf
+export TSLIB_PLUGINDIR=/usr/gui/tslib
+export TSLIB_TSDEVICE=/dev/input/event0
+export TSLIB_CALIBFILE=/mnt/nand1-1/pointercal
+/usr/ts_calibrate

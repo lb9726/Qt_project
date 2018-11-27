@@ -1,0 +1,7 @@
+﻿/win
+/5_7IMX6UL
+/IMX6UL
+/usrfs/TFT*
+/usrfs/TFT.exe
+TFT.pro.*
+*autosave

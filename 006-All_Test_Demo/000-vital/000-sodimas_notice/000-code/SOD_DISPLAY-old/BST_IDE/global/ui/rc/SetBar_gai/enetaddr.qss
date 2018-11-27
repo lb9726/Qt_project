@@ -1,0 +1,28 @@
+QPushButton{
+    border-image: url(:/SetBar/rc/SetBar/button-off.png);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(100,45,5,145);
+    outline:#00ff00 dotted thick;
+
+    color:rgba(200,180,75,230);
+    text-align: center;
+    text-decoration: underline;
+
+    font-family: "Times New Roman",Georgia,Serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+QPushButton:checked{
+    border-image: url(:/SetBar/rc/SetBar/button-on.png);
+    border-style: inset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(100,45,5,145);
+    outline:#00ff00 dotted thick;
+
+    color:rgba(200,130,55,230);
+}

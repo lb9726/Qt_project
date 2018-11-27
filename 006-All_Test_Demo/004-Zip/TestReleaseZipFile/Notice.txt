@@ -1,0 +1,27 @@
+/usr/bin/ld: unzip.o: undefined reference to symbol 'inflateInit2_'
+//lib/x86_64-linux-gnu/libz.so.1: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+make: *** [TestReleaseZipFile] Error 1
+13:58:45: The process "/usr/bin/make" exited with code 2.
+Error while building/deploying project TestReleaseZipFile (kit: Desktop Qt 5.7.1 GCC 64bit)
+When executing step "Make"
+
+以上的错误提示差不多是表示缺什么libz.so的库文件，libz.so的文件是对
+libz  压缩库（Z）
+librt 实时库（real time）
+libm  数学库（math）
+libc  标准C库（C lib）
+      
+很多次， 在编译的时候， 看到-lz
+
+unix:!macx: LIBS += -L$$PWD/lib_system -lz
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
+
+使用Qt的add library，添加外部库文件，从ubuntu系统中拷贝库文件出来，生成一个软链接
+从/usr/lib/x86_64-linux-gnu路径中拷贝 libz.so.1.2.8出来  
+ln -s libz.so.1.2.8 libz.so
+
+find / -name "libz.so" 不知道路径直接搜索路径 /usr/lib/x86_64-linux-gnu/libz.so
+
