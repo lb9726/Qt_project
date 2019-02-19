@@ -233,7 +233,7 @@ Item {
     states: [
         State {
             name: "horizental"
-            when: transformedRot == 0  ||transformedRot == 180
+            when: transformedRot == 0 || transformedRot == 180
             PropertyChanges {
                 target: id_rootWindow
                 y:0;
@@ -243,7 +243,7 @@ Item {
         },
         State {
             name: "vertical"
-            when: transformedRot == 90  ||transformedRot == 270
+            when: transformedRot == 90 || transformedRot == 270
             PropertyChanges {
                 target: id_rootWindow
                 y:rotateYOffset;

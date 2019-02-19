@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-11-23T14:47:06
+# Project created by QtCreator 2018-12-03T13:40:22
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = TestQProcessControlMplayer
+TARGET = TestQstateMachine
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -16,8 +16,6 @@ TEMPLATE = app
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
-DEFINES += UBUTUN14_04
-DESTDIR += $$PWD/000_ExePath
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -26,10 +24,8 @@ DESTDIR += $$PWD/000_ExePath
 
 
 SOURCES += main.cpp\
-        widget.cpp \
-    mplayerqprocess.cpp
+        widget.cpp
 
-HEADERS  += widget.h \
-    mplayerqprocess.h
+HEADERS  += widget.h
 
 FORMS    += widget.ui

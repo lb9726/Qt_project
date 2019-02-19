@@ -45,7 +45,7 @@
     
     例子：
     hello       匹配字面字符串hello
-    c*at        量词:c出现零次或多次，at紧跟气候，例如：at，cat，ccat等等
+    c*at        量词:c出现零次或多次，at紧跟其后，例如：at，cat，ccat等等
     C?at        匹配C出现零次或者一次，之后紧跟at 仅at或者Cat
     c.t         c后面紧跟任意字符，其后面又紧跟t的字符串匹配，例如 cat,cot,c3t, c%t等
     c.*t        字符c后面紧跟0个或者多个任意字符，然后紧跟t,例如: ct, caaatttt, carsdf$#S8ft等

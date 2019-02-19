@@ -7,7 +7,7 @@ Window {
     height: 600
     color: "black"
     PictureAnimation {
-        width: 156; height: 191
+        width: 156; height: 191 + 5
     }
 }
 

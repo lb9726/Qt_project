@@ -43,6 +43,7 @@ private:
     QTimer mTimer1;
     QTimer mTimer2;
     int lastVolume;
+    QString mRunPath;
 };
 
 #endif // MPLAYERQPROCESS_H

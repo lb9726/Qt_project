@@ -1,5 +1,6 @@
 #include "mplayerqprocess.h"
 #include <QDebug>
+#include <QCoreApplication>
 
 MPlayerQProcess::MPlayerQProcess(QObject *parent) : QObject(parent)
 {    
@@ -10,6 +11,12 @@ MPlayerQProcess::MPlayerQProcess(QObject *parent) : QObject(parent)
     mTimer1.setInterval(10000);
     mTimer1.setSingleShot(true);
     mTimer1.start();
+    mRunPath = QCoreApplication::applicationDirPath();
+    if (!mRunPath.endsWith("/"))
+    {
+        mRunPath += "/";
+    }
+    qDebug()<<__PRETTY_FUNCTION__<<"lines = "<<__LINE__<<mRunPath;
 }
 
 void MPlayerQProcess::stop()
@@ -46,7 +53,7 @@ void MPlayerQProcess::pause()
 
 void MPlayerQProcess::setMusicVolume(int pVolume)
 {
-    qDebug()<<__PRETTY_FUNCTION__<<"lines = "<<__LINE__;
+    qDebug()<<__PRETTY_FUNCTION__<<"lines = "<<__LINE__<<"Volume set "<<pVolume;
     QString volumeCmd = QString("volume %1 1\n").arg(pVolume);
     mBackGroundProcess.write(volumeCmd.toLocal8Bit().constData());
 }
@@ -68,11 +75,15 @@ void MPlayerQProcess::initParameter()
     mBackGroundLoopFlag = true;
     mLoopMusicFlag  = true;
     mBackGroundMuiscStatus = QString("play\n");
-
+#if defined(UBUTUN14_04)
+    mCmd = mRunPath + QString("mplayer");
+    mBackGroundMusicPath = mRunPath + "M0.wav";
+    mLoopMusicPath = mRunPath + "M43.wav";
+#else
+    mCmd = QString("mplayer");
     mBackGroundMusicPath = QString("/usr/bst/usrfs/Theme/sodimas/music/M0.wav");
     mLoopMusicPath = QString("/usr/bst/usrfs/Theme/sodimas/media/M43.wav");
-
-    mCmd = QString("mplayer");
+#endif
     QStringList arguments;
     arguments << QString("-slave");
     arguments << QString("-quiet");
@@ -126,8 +137,8 @@ void MPlayerQProcess::onFinished(int exitCode, QProcess::ExitStatus pErrorNo)
 
 void MPlayerQProcess::onTimeOut()
 {
-//    static int flag = -1;
-    static int flag = -10;
+//    static int flag = -10;
+    static int flag = -1;
     qDebug()<<__PRETTY_FUNCTION__<<"lines = "<<__LINE__<<" flag = "<<flag;
     if (-1 == flag) //  第一次播放音乐
     {

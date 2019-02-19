@@ -10,25 +10,31 @@ Item {
 
     Item {
         id: id_scrollArrow
+        width: showarea.width
+        height: showarea.height
         Image {
             id: imagefirstpos
-            width: showarea.width; height: showarea.height
+            width: showarea.width
+            height: showarea.height - 5
             source: imagesource
+            y: -5
         }
         Image {
-//            id: imagesecondpos
-            width: showarea.width; height: showarea.height
+            width: showarea.width
+            height: showarea.height - 5
             source: imagesource
             y: showarea.height
         }
     }
 
     function animationCtrl(){
-        if(orienteRun){
+        if(orienteRun)
+        {
             animaUp.stop();
             animaDw.start();
-
-        }else{
+        }
+        else
+        {
             animaDw.stop();
             animaUp.start();
         }
@@ -38,7 +44,7 @@ Item {
         id: animaUp
         target: id_scrollArrow
         property: "y"
-        from:0; to:-showarea.height ;
+        from:0; to:-showarea.height - 2.5;
         alwaysRunToEnd: true
         duration: 1000
         loops: Animation.Infinite
@@ -48,7 +54,7 @@ Item {
         id: animaDw
         target: id_scrollArrow
         property: "y"
-        from: -showarea.height; to: 0;
+        from: -showarea.height - 2.5; to: 0;
         duration: 1000
         loops: Animation.Infinite
     }

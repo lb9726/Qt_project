@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>ArrowAnimation.qml</file>
+        <file>images/ArrowDouble1.png</file>
+        <file>images/ArrowDouble2.png</file>
+        <file>images/ArrowDown1.png</file>
+        <file>images/ArrowDown2.png</file>
+        <file>images/ArrowUp1.png</file>
+        <file>images/ArrowUp2.png</file>
+        <file>images/empty.png</file>
+        <file>TestQmlStates.qml</file>
+    </qresource>
+</RCC>
